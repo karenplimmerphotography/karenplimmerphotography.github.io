@@ -19,6 +19,7 @@
 }
 
 html {
+    background-color: #240975;
     font-size: 16px;
 }
 
@@ -134,7 +135,7 @@ li {
 
 /*header*/
 
-h2#title {
+h1#title {
     color: #fff;
     font-family: Raleway, sans-serif;
     font-size: 2rem;
@@ -144,7 +145,7 @@ h2#title {
     letter-spacing: 0.14rem;
 }
 
-h2#subtitle {
+h1#subtitle {
     color: #f98562;
     font-family: FlorenceScript, Raleway;
     font-size: 2rem;

@@ -20,6 +20,7 @@
 
 html {
     font-size: 16px;
+    background-color: #240975;
 }
 
 @media only screen and (min-resolution: 200dpi) {
@@ -111,7 +112,7 @@ li {
 
 /*header*/
 
-h2#title {
+h1#title {
     font-family: Raleway, sans-serif;
     font-size: 2rem;
     font-weight: 100;
@@ -120,7 +121,7 @@ h2#title {
     letter-spacing: 0.14rem;
 }
 
-h2#subtitle {
+h1#subtitle {
     font-family: FlorenceScript, Raleway, sans-serif;
     font-size: 2rem;
     color: #f98562;

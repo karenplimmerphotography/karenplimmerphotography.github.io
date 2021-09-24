@@ -1,0 +1,2487 @@
+/* Universal Syles------------------------------------------------------------------------------------------------------------------------------------------*/
+html, body {
+   box-sizing: border-box;
+   background-color: white;
+}
+
+*, figure.wp-block-image {
+   margin: 0;
+   padding: 0;
+   margin-block-start: 0;
+   margin-block-end: 0;
+   margin-inline-start: 0;
+   margin-inline-end: 0;
+   box-sizing: inherit;
+   background-color: white;
+}
+
+html {
+   margin: 0 important !;
+}
+
+body {
+   color: #222;
+   font-family: 'Quicksand', sans-serif;
+   font-size: 15px;
+   font-weight: 400;
+   letter-spacing: 0em;
+   word-spacing: 0em;
+   line-height: 170%;
+}
+
+main {
+   margin: 0 auto;
+}
+
+header {
+   padding: 50px;
+}
+
+p {
+   padding-bottom: 20px;
+}
+
+ul {
+   list-style: square;
+   list-style-position: inside;
+   padding-bottom: 20px;
+}
+
+li {
+   padding-bottom: 10px;
+}
+
+li.note {
+   font-family: 'Forum', cursive;
+   font-style: italic;
+   color: #666;
+}
+
+.bold {
+   font-weight: bold;
+}
+
+.center {
+   text-align: center;
+}
+
+.red {
+   color: #aa0000;
+}
+
+.addSpace {
+   padding-top: 10px;
+   padding-bottom: 10px;
+}
+
+.addMoreSpace {
+   padding-top: 15px;
+   padding-bottom: 15px;
+}
+
+.addEvenMoreSpace {
+   padding-top: 20px;
+   padding-bottom: 20px;
+}
+
+.padTop {
+   padding-top: 10px;
+}
+
+.padMoreTop {
+   padding-top: 20px;
+}
+
+.padTopMore {
+   padding-top: 30px;
+}
+
+.padBottom {
+   padding-bottom: 10px;
+}
+
+.la-icon {
+   font-size: 20px;
+   padding-right: 10px;
+   color: rgb(115, 174, 168);
+}
+
+.la-icon.la-toggle-on {
+   color: #fff;
+   opacity: 0.3;
+   background-color: inherit;
+   font-size: 28px;
+   padding: 0 5px;
+}
+
+/*Headings---------------------------------------------------------------------------------------------------------------------------*/
+/*
+font-family: 'Forum', cursive;
+font-family: 'Nixie One', cursive;
+*/
+h2,
+h3,
+.h2,
+.h3,
+h4,
+h5,
+h6,
+.h4,
+.h5,
+.h6 {
+   font-weight: bold;
+}
+
+h2,
+h3,
+.h2,
+.h3 {
+   font-family: 'Forum', cursive;
+   color: rgb(9, 38, 51);
+}
+
+h4,
+h5,
+h6,
+.h4,
+.h5,
+.h6 {
+   font-family: 'Quicksand', sans-serif;
+   font-style: italic;
+   line-height: 200%;
+}
+
+h1,
+.h1 {
+   text-align: center;
+   font-family: 'Nixie One', cursive;
+   font-size: 50px;
+   line-height: 170%;
+}
+
+h2,
+.h2 {
+   text-align: center;
+   width: 100%;
+   font-size: 28px;
+   line-height: 150%;
+   padding: 30px 0;
+}
+
+h3,
+.h3 {
+   font-size: 22px;
+   line-height: 170%;
+   padding-top: 30px;
+   padding-bottom: 5px;
+}
+
+h4,
+.h4 {
+   font-size: 16px;
+   color: rgb(41, 120, 140);
+}
+
+h5,
+.h5 {
+   color: #5ba1af;
+   font-size: 14px;
+}
+
+@media only screen and (max-width: 767px) {
+
+   h1,
+   h2 {
+      padding-left: 3%;
+      padding-right: 3%;
+   }
+}
+
+div.darkHeader,
+div.darkHeader h2 {
+   background-color: rgb(9, 38, 51);
+}
+
+div.contrastHeader,
+div.contrastHeader h2 {
+   background-color: #320614;
+}
+
+div.lightHeader,
+div.lightHeader h2,
+div.lightHeader h2 span#user {
+   background-color: rgb(255, 255, 255);
+}
+
+div.darkHeader h2,
+div.contrastHeader h2 {
+   color: white;
+}
+
+/*Links------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+a {
+   text-decoration: none;
+   color: rgb(9, 38, 51);
+   cursor: pointer;
+}
+
+a:visited {
+   color: #5ba1af;
+}
+
+a:hover,
+a:active {
+   color: rgb(41, 120, 140);
+}
+
+
+/*-------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/* HEADER */
+header,
+header h1,
+header h2,
+header h4,
+header h4 span,
+div#helloAndDates,
+div.dates {
+   background-color: rgb(9, 38, 51);
+   color: white;
+}
+
+header {
+   padding-bottom: 20px;
+}
+
+h2.tagline {
+   font-size: 14px;
+   font-style: italic;
+   padding-top: 0;
+   padding-bottom: 80px;
+   border-bottom: 1px solid rgb(115, 174, 168);
+}
+
+div#helloAndDates {
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   padding-top: 20px;
+   justify-items: center;
+   align-items: center;
+}
+
+div#helloAndDates h4,
+#hello h4,
+#helloUser,
+span#date,
+span#startDate,
+div.dates {
+   font-style: italic;
+   color: rgb(115, 174, 168);
+}
+
+h4#hello {
+   line-height: 100%;
+}
+
+h4#reportDate,
+h4#startingDate {
+   font-size: 10px;
+}
+
+span#date,
+span#startDate {
+   font-size: 15px;
+}
+
+/*SECONDARY NAV*/
+nav ul.secondaryNav {
+   display: inline-flex;
+   width: 100%;
+   justify-content: space-between;
+   padding: 15px 50px 10px 50px;
+}
+
+nav div#navOptions,
+nav div#navUsers {
+   list-style: none;
+   color: rgb(9, 38, 51);
+   font-weight: bold;
+}
+
+nav ul.secondaryNav #navOptions li {
+   display: inline;
+   color: rgb(115, 174, 168);
+   padding-right: 50px;
+}
+
+nav ul.secondaryNav #navOptions li a {
+   color: rgb(95, 17, 41);
+   font-size: 10px;
+   transition: color 600ms;
+}
+
+nav ul.secondaryNav #navOptions li a:hover {
+   color: rgb(9, 38, 51);
+}
+
+nav div#navUsers li {
+   display: inline;
+   width: 50%;
+   padding-left: 50px;
+}
+
+nav div#navUsers li a {
+   color: rgb(95, 17, 41);
+   font-size: 10px;
+   transition: color 600ms;
+}
+
+nav div#navUsers li a:hover {
+   color: rgb(9, 38, 51);
+}
+
+@media only screen and (max-width: 1199px) {
+
+   nav ul.secondaryNav #navOptions li,
+   nav div#navUsers li {
+      display: block;
+      line-height: 100%;
+   }
+}
+
+/*YOUR GROCERY LIST SECTION */
+
+section#allGroceryListSection,
+div#groceryListSectionLayoutGrid {
+   background-color: rgb(5, 22, 29);
+}
+
+div#groceryListSectionLayoutGrid {
+   display: grid;
+   grid-template-columns: 1fr 600px 1fr;
+   padding-bottom: 0;
+}
+
+div#groceryImageGridLeft {
+   background-color: rgb(5, 22, 29);
+   background-image: url("https://karenplimmercom.stage.site/wp-content/uploads/2021/05/Deluxe-buckinis-and-fruit-salad-left.jpg");
+   background-size: cover;
+   background-position-x: right;
+   background-position-y: top;
+}
+
+div#groceryImageGridRight {
+   background-color: rgb(5, 22, 29);
+   background-image: url("https://karenplimmercom.stage.site/wp-content/uploads/2021/05/Deluxe-buckinis-and-fruit-salad-right.jpg");
+   background-size: cover;
+   background-position-x: right;
+   background-position-y: top;
+}
+
+div#groceryListGridMiddle {
+   width: 100%;
+   justify-self: center;
+}
+
+div#groceryListGridMiddle,
+div#groceryListGridMiddle span,
+div#groceryListGridMiddle p,
+table#groceryList,
+table#groceryList tbody,
+td.groceryListCategoryHeading,
+td.groceryItem,
+th.groceryHeading {
+   background-color: rgb(250, 250, 250);
+}
+
+table#groceryList {
+   max-width: 1000px;
+   margin: 0 auto;
+   padding-top: 20px;
+   padding-bottom: 40px;
+}
+
+td.groceryListCategoryHeading {
+   color: rgb(115, 174, 168);
+   font-style: oblique;
+   font-weight: 600;
+   padding: 20px 0 4px 0;
+}
+
+table#groceryList span.la-icon {
+   color: rgb(115, 174, 168);
+   opacity: 0.7;
+}
+
+table#groceryList tbody {
+   padding-left: 100px;
+   padding-right: 100px;
+   display: block;
+   max-height: 1200px;
+   overflow-y: auto;
+}
+
+table#groceryList,
+table#groceryList tbody,
+th.groceryHeading,
+table#groceryList tr {
+   border-color: rgb(250, 250, 250);
+}
+
+.groceryItemAmount,
+.groceryItemCost,
+th.groceryHeadingAmount,
+th.groceryHeadingCost {
+   padding-left: 10px;
+   padding-right: 60px,
+}
+
+.groceryItemAmount {
+   font-style: oblique;
+}
+
+div#groceryListSummary,
+div#groceryListSummary p,
+div#groceryListSummary p span,
+#groceryCost,
+#numDays,
+#costPerDay,
+#totalWeeklyCost,
+aside#defineServingSize,
+aside#defineServingSize h4,
+aside#defineServingSize ul,
+aside#defineServingSize li,
+div#defineServingSizeContainer {
+   background-color: rgb(245, 245, 245);
+}
+
+div#groceryListSummary,
+div#groceryListSummary p,
+aside#defineServingSize {
+   padding-left: 50px;
+   padding-right: 50px;
+}
+
+div#groceryListSummary {
+   max-width: 1000px;
+   margin: 0 auto;
+   padding-bottom: 40px;
+}
+
+div#groceryListSummary p {
+   font-weight: 500;
+}
+
+.pleaseCheck,
+.providesAverageEnergy {
+   font-style: italic;
+   padding-top: 10px;
+}
+
+.pleaseCheck {
+   padding-top: 30px;
+   padding-bottom: 30px;
+}
+
+#groceryCost,
+#numDays,
+#costPerDay,
+#totalWeeklyCost {
+   font-weight: bold;
+   line-height: 200%;
+}
+
+aside#defineServingSize {
+   padding-top: 20px;
+   display: none;
+}
+
+button#servingSizeButton {
+   margin-top: 30px;
+   margin-bottom: 20px;
+   margin-left: 50px;
+   margin-right: 50px;
+   background-color: #5ba1af;
+   border: 1px solid #eee;
+   border-radius: 20px;
+   overflow: hidden;
+   transition: background-color 0.4s linear;
+}
+
+button#servingSizeButton h4 {
+   background-color: #5ba1af;
+   color: #fff;
+   font-style: normal;
+   font-size: 14px;
+   font-weight: 300;
+   padding-top: 4px;
+   padding-bottom: 5px;
+   padding-left: 20px;
+   padding-right: 20px;
+   transition: background-color 0.4s linear;
+}
+
+button#servingSizeButton:hover,
+button#servingSizeButton h4:hover {
+   background-color: rgb(41, 120, 140);
+
+   overflow: hidden;
+}
+
+aside#defineServingSize p {
+   padding-left: 0;
+   padding-bottom: 10px;
+}
+
+aside#defineServingSize li {
+   list-style-type: square;
+   list-style-position: inside;
+   line-height: 200%;
+}
+
+@media only screen and (max-width: 1399px) {
+
+   table#groceryList tbody,
+   div#groceryListSummary,
+   div#groceryListSummary p {
+      padding-left: 5%;
+      padding-right: 5%;
+   }
+
+   aside#defineServingSize {
+      padding-left: 0;
+      padding-right: 0;
+   }
+}
+
+@media only screen and (max-width: 992px) {
+
+   div#groceryImageGridLeft,
+   div#groceryImageGridRight {
+      display: none;
+   }
+
+   div#groceryListSectionLayoutGrid {
+      grid-template-columns: 1fr;
+      max-width: 500px;
+      margin: 0 auto;
+   }
+
+   div.lightHeader,
+   div.lightHeader h2,
+   div.lightHeader h2 span#user {
+      background-color: rgb(9, 38, 51);
+   }
+
+   div.lightHeader h2 {
+      color: #fff;
+      border-top: 1px solid #fff;
+   }
+
+   div#groceryListSummary p {
+      padding-left: 0;
+      padding-right: 0;
+   }
+}
+
+@media only screen and (max-width: 767px) {
+
+   div#groceryListGridMiddle,
+   div#groceryListSummary,
+   table#groceryList tbody {
+      padding-left: 3%;
+      padding-right: 3%;
+   }
+}
+
+/*YOUR GROCERIES PROVIDE THE FOLLOWING NUTRIENTS*/
+
+div#groceryResultsContentGrid {
+   max-width: 1100px;
+   margin: 0 auto;
+   padding: 0 50px 40px 50px;
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+div.blueBorder {
+   border-bottom: 1px solid #5ba1af;
+   max-width: 1000px;
+   margin: 0 auto 20px auto;
+}
+
+div#mineralsAndRatios h4,
+div#allLipids h4 {
+   padding-top: 32px;
+}
+
+div#mineralsAndRatios h4#mineralRatios {
+   padding-top: 10px;
+}
+
+ul#macronutrientList,
+ul#vitaminList,
+ul#mineralList,
+ul#lipidList,
+ul#macrolipidList,
+ul#ratioList {
+   list-style: none;
+}
+
+ul#macronutrientList li,
+ul#vitaminList li,
+ul#mineralList li,
+ul#lipidList li,
+ul#macrolipidList li,
+ul#ratioList li {
+   padding-bottom: 0;
+   line-height: 180%;
+}
+
+.warn {
+   color: #aa0000;
+   font-weight: 500;
+}
+
+.warning {
+   color: #aa0000;
+   font-weight: bold;
+}
+
+@media only screen and (max-width: 991px) {
+   div#groceryResultsContentGrid {
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+   }
+}
+
+@media only screen and (max-width: 767px) {
+   div#groceryResultsContentGrid {
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      padding-left: 3%;
+      padding-right: 3%;
+   }
+}
+
+/* EVALUATING MINERAL RATIOS AND EVALUATING LIPIDS */
+
+div#mineralRatiosOuterContainer,
+div#mineralRatiosOuterContainer ul,
+div#mineralRatiosOuterContainer li,
+div#mineralRatiosOuterContainer h3,
+div#mineralRatiosOuterContainer p,
+#mineralRatiosOuterContainer span,
+div#evaluatingLipidsOuterContainer,
+div#evaluatingLipidsInnerContainer h3,
+div#evaluatingLipids,
+div#evaluatingLipids p,
+div#evaluatingLipids ul,
+div#evaluatingLipids li {
+   background-color: #5ba1af;
+   color: #fff;
+}
+
+div#mineralRatiosOuterContainer,
+div#evaluatingLipidsOuterContainer {
+   max-width: 1000px;
+   margin: 0 auto;
+}
+
+div#mineralRatiosOuterContainer,
+div#evaluatingLipidsOuterContainer {
+   position: relative;
+   padding-left: 50px;
+   padding-right: 50px;
+   margin-bottom: 60px;
+}
+
+div#mineralRatiosInnerContainer h3,
+div#evaluatingLipidsInnerContainer h3 {
+   padding-top: 40px;
+}
+
+button#toggleMineralRatios,
+button#toggleEvaluatingLipids {
+   position: absolute;
+   right: 0px;
+   top: 0px;
+   border: none;
+   background-color: inherit;
+   z-index: 12;
+}
+
+ul#explainMineralRatios li {
+   list-style: none;
+   padding-bottom: 20px;
+}
+
+ul#notesForMineralRatios {
+   padding-left: 20px;
+   padding-right: 20px;
+}
+
+ul#notesForMineralRatios li:first-child {
+   padding-top: 0;
+}
+
+#evaluatingLipids li:last-child,
+#notesForMineralRatios li:last-child {
+   padding-bottom: 20px;
+}
+
+ul#explainMineralRatios li:last-child {
+   padding-bottom: 0;
+}
+
+#evaluatingLipids p:last-child {
+   padding-bottom: 60px;
+}
+
+@media only screen and (max-width: 767px) {
+
+   div#mineralRatiosOuterContainer,
+   div#evaluatingLipidsOuterContainer {
+      padding-left: 3%;
+      padding-right: 3%;
+   }
+}
+
+/* YOU WERE DEFICIENT OR BORDERLINE IN THE FOLLOWING NUTRIENTS */
+
+div#deficiencyAndExcessGrid,
+div#deficiencies,
+div#highAlerts,
+div#deficiencies h3,
+div#highAlerts h3,
+div#deficiencies p,
+div#deficiencies ul,
+div#deficiencies ul li span,
+div#deficiencies em,
+#deficiencyMessages li.note span.bold,
+div#deficiencyMessages,
+div#deficiencyMessages li,
+div#deficiencyMessages li span,
+div#highAlerts p,
+div#deficiencies li,
+div#highAlerts p,
+div#highAlerts li,
+div#alertHighNutrients,
+div#yourHighNutrients,
+div#highAlerts span,
+#alertHighNutrients ul,
+#alertHighNutrients ul span,
+#alertHighNutrients span {
+   background-color: rgb(9, 38, 51);
+   color: white;
+}
+
+div#deficiencyAndExcessGrid {
+   padding-top: 60px;
+   padding-bottom: 60px;
+   padding-left: 20%;
+   padding-right: 20%;
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   gap: 0 100px;
+   position: relative;
+}
+
+div#deficiencies,
+div#highAlerts {
+   max-width: 1000px;
+   margin: 0 auto;
+   padding-left: 50px;
+   padding-right: 50px;
+   border: 1px solid #fff;
+}
+
+#deficiencyMessages li.note span.bold,
+#alertHighNutrients ul span,
+#alertHighNutrients span {
+   color: rgb(115, 174, 168);
+}
+
+div#deficiencies li {
+   list-style: none;
+}
+
+#alertHighNutrients li:first-child {
+   padding-top: 20px;
+}
+
+#alertHighNutrients li:last-child {
+   padding-bottom: 40px;
+}
+
+#deficiencies {
+   padding-bottom: 40px;
+}
+
+#deficiencyMessages li,
+#alertHighNutrients li {
+   padding-top: 10px;
+}
+
+#deficiencyMessages li.note {
+   padding-bottom: 20px;
+}
+
+#yourHighNutrients p {
+   padding-top: 20px;
+}
+
+.nutrientHeading {
+   padding-top: 30px;
+}
+
+.la-icon.la-ambulance {
+   color: #fff;
+   font-size: 24px;
+}
+
+.la-icon.la-stethoscope {
+   color: #fff;
+   font-size: 24px;
+}
+
+button#toggleDeficiencies,
+button#toggleHighAlerts {
+   padding-bottom: 0;
+   position: absolute;
+   top: 5px;
+   border: none;
+   background-color: inherit;
+   z-index: 10;
+}
+
+button#toggleHighAlerts {
+   right: 10px;
+}
+
+button#toggleDeficiencies {
+   left: 10px;
+}
+
+button#toggleDeficiencies .la-icon,
+button#toggleHighAlerts .la-icon {
+   color: white;
+   opacity: 0.3;
+}
+
+@media only screen and (min-width: 1800px) and (max-width: 1999px) {
+   div#deficiencyAndExcessGrid {
+      gap: 0 75px;
+      padding-left: 15%;
+      padding-right: 15%
+   }
+}
+
+@media only screen and (min-width: 1400px) and (max-width: 1799px) {
+   div#deficiencyAndExcessGrid {
+      padding-left: 10%;
+      padding-right: 10%
+   }
+}
+
+@media only screen and (max-width: 1399px) {
+   div#deficiencyAndExcessGrid {
+      grid-template-columns: 1fr;
+      padding-left: 5%;
+      padding-right: 5%
+   }
+
+   div#deficiencies {
+      margin-bottom: 40px;
+      padding-left: 50px;
+      padding-right: 50px;
+   }
+
+   div#highAlerts {
+      margin-top: 40px;
+      padding-left: 50px;
+      padding-right: 50px;
+   }
+}
+
+@media only screen and (max-width: 999px) {
+   div#deficiencyAndExcessGrid {
+      padding-left: 3%;
+      padding-right: 3%
+   }
+}
+
+/* LET'S GO SHOPPING */
+
+div#shoppingContainer {
+   background-color: rgb(5, 22, 29);
+   padding-bottom: 60px;
+}
+
+div#FAQContainer,
+div#endOfFAQ {
+   max-width: 1100px;
+   margin: 0 auto;
+}
+
+div#faq,
+div#FAQContainer,
+div#shoppingContainer p:first-child,
+div#shoppingContainer p:first-child em,
+div#faq h3,
+div#faq h4,
+div#faq p,
+div#Q1,
+div#Q2,
+div#Q3,
+div#Q4,
+div#Q5,
+div#Q6,
+#endOfFAQ,
+#endOfFAQ p {
+   background-color: rgb(245, 245, 245);
+}
+
+div#faq,
+div#shoppingContainer p:first-child {
+   padding-left: 50px;
+   padding-right: 50px;
+}
+
+div#faq {
+   padding-top: 10px;
+}
+
+div#FAQContainer {
+   padding-top: 40px;
+   padding-bottom: 40px;
+}
+
+div#FAQContainer p.bold {
+   padding-bottom: 0;
+}
+
+#endOfFAQ p#severelyLowMessage.bold {
+   padding-top: 10px;
+}
+
+.foodGroup {
+   list-style: none;
+   line-height: 250%;
+}
+
+div#eatMore {
+   max-width: 1100px;
+   margin: 0 auto;
+   padding: 0 50px 40px 50px;
+}
+
+div#eatMore div#recommendRichFoodsText p,
+div #eatMore div#recommendRichFoodsText p em {
+   background-color: #fff;
+}
+
+div#importantFoods,
+div#recommendRichFoodsText div#importantFoods p,
+div#importantFoods p span,
+div#recommendRichFoodsText div#importantFoods p em,
+div#richFoodsText p.bold.addMoreSpace {
+   color: #fff;
+   background-color: #320614;
+}
+
+div#richFoodsText p.bold.addMoreSpace {
+   padding: 15px 20px;
+   margin-top: 40px;
+}
+
+div#richFoodsText p.bold.addMoreSpace:first-child {
+   margin-top: 20px;
+}
+
+div#recommendRichFoodsText div#importantFoods {
+   padding-bottom: 30px;
+   margin-top: 30px;
+   margin-bottom: 40px;
+}
+
+div#importantFoods,
+div#recommendRichFoodsText div#importantFoods p {
+   padding-top: 20px;
+   padding-left: 20px;
+   padding-right: 20px;
+}
+
+div#recommendRichFoodsText p:first-child {
+   padding-left: 0;
+   padding-bottom: 20px;
+}
+
+#remindImportantFoods #remindImportantFoodsCongrats {
+   padding-bottom: 25px;
+   padding-top: 20px;
+}
+
+div#eatMore div#hide,
+div#eatMore div#hide p,
+div#eatMore div#hide p em {
+   padding: 0;
+   background-color: #fff;
+}
+
+div#topPriorityFoodGroupSelection {
+   padding-bottom: 20px;
+}
+
+div#eatMore div#hide p#moreSuggestionsLater {
+   padding-top: 30px;
+   padding-bottom: 30px;
+}
+
+@media only screen and (max-width: 767px) {
+
+   div#faq,
+   div#shoppingContainer p:first-child,
+   div#eatMore {
+      padding-left: 3%;
+      padding-right: 3%;
+   }
+}
+
+/* EAT THE RAINBOW */
+
+section#eatTheRainbowSection {
+   padding-bottom: 40px;
+}
+
+.rainbow,
+#eatTheRainbowSection h3 {
+   max-width: 1100px;
+   margin: 0 auto;
+   padding-left: 50px;
+   padding-right: 50px;
+}
+
+.rainbowList {
+   list-style: none;
+   line-height: 250%;
+}
+
+li.green {
+   color: green;
+}
+
+li.purple {
+   color: purple;
+}
+
+li.orange {
+   color: rgb(211, 58, 3);
+}
+
+li.yellow {
+   color: rgb(247, 170, 29);
+}
+
+.rainbow #challenge {
+   padding-top: 20px;
+}
+
+@media only screen and (max-width: 767px) {
+
+   .rainbow,
+   #eatTheRainbowSection h3 {
+      padding-left: 3%;
+      padding-right: 3%;
+   }
+}
+
+/* EAT LOTS OF PLANTS */
+
+section#eatLotsOfPlantsSection {
+   padding-bottom: 40px;
+}
+
+div#eatLots {
+   max-width: 1100px;
+   margin: 0 auto;
+   padding-left: 50px;
+   padding-right: 50px;
+}
+
+#eatLotsOfPlantsSection h2 {
+   margin-top: 40px;
+}
+
+li.plantsList {
+   list-style: none;
+   line-height: 200%;
+}
+
+.la-icon.la-lemon {
+   color: rgb(247, 170, 29);
+}
+
+.la-icon.la-carrot {
+   color: rgb(211, 58, 3);
+}
+
+.la-icon.la-brain {
+   color: saddlebrown;
+}
+
+.la-icon.la-hotdog {
+   color: rgb(95, 17, 41);
+}
+
+.la-icon.la-seedling {
+   color: rgb(115, 174, 168);
+   vertical-align: middle;
+}
+
+#eatLots ul {
+   padding-bottom: 0;
+}
+
+#eatLots li.plantsList {
+   padding-top: 10px;
+}
+
+div#differentPlants em p {
+   line-height: 200%;
+   padding-bottom: 0;
+}
+
+@media only screen and (max-width: 767px) {
+   div#eatLots {
+      padding-left: 3%;
+      padding-right: 3%;
+   }
+}
+
+/* SEASONAL PRODUCE*/
+
+section#seasonalProduceInAustralia {
+   background-color: rgb(5, 22, 29);
+}
+
+span#season {
+   background-color: rgb(9, 38, 51);
+}
+
+div#seasons {
+   max-width: 1100px;
+   margin: 0 auto;
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   padding-bottom: 0;
+}
+
+.seasonalFruits,
+.seasonalVegetables,
+.seasonalHerbs {
+   padding-top: 30px;
+   padding-bottom: 60px;
+   padding-left: 50px;
+   padding-right: 50px;
+   color: #fff;
+}
+
+.seasonalFruits h3,
+.seasonalVegetables h3,
+.seasonalHerbs h3 {
+   color: #fff;
+}
+
+.seasonalFruits,
+.seasonalFruits h3,
+.seasonalFruits p {
+   background-color: rgb(135, 41, 29);
+}
+
+.seasonalVegetables,
+.seasonalVegetables h3,
+.seasonalVegetables p {
+   background-color: #320614;
+}
+
+.seasonalHerbs,
+.seasonalHerbs h3,
+.seasonalHerbs p {
+   background-color: #5ba1af;
+}
+
+@media only screen and (max-width: 767px) {
+
+   .seasonalFruits,
+   .seasonalVegetables,
+   .seasonalHerbs {
+      padding-left: 30px;
+      padding-right: 30px;
+   }
+}
+
+/* WHAT FOODS ARE YOU EATING MOST OF?*/
+
+section#whatFoodsEatingMost {
+   background-color: rgb(5, 22, 29);
+}
+
+div#eatingMost,
+div#eatingMost h3,
+div#eatingMost p,
+div#mostEnergyFoods p,
+div#mostEnergyFoods p em,
+div#mostEnergyFoods li,
+div#mostEnergyFoods li em,
+div#mostEnergyFoods p span {
+   background-color: rgb(255, 255, 255);
+}
+
+div#eatingMost {
+   max-width: 1100px;
+   margin: 0 auto;
+   padding: 40px 50px;
+}
+
+div#eatingMost ul {
+   background-color: #5ba1af;
+   color: #fff;
+   padding: 40px 50px 30px 50px;
+   margin-top: 20px;
+   margin-bottom: 40px;
+}
+
+div#eatingMost ul li,
+div#eatingMost ul li em,
+div#eatingMost ul li span {
+   background-color: #5ba1af;
+   color: #fff;
+}
+
+div#eatingMost li {
+   padding-bottom: 20px;
+}
+
+div#mostEnergyFoods p {
+   padding-bottom: 20px;
+}
+
+@media only screen and (max-width: 767px) {
+   div#eatingMost {
+      padding-left: 3%;
+      padding-right: 3%;
+   }
+
+   div#eatingMost ul {
+      padding-left: 30px;
+      padding-right: 30px;
+   }
+}
+
+/* MORE FOOD SUGGESTIONS */
+
+section#moreNewFoodsSection {
+   background-color: rgb(5, 22, 29);
+}
+
+#moreNewFoodsGrid {
+   display: grid;
+   grid-template-columns: 1fr 1100px 1fr;
+   padding-bottom: 0;
+}
+
+.newFoodsImageLeft {
+   background-image: url("https://karenplimmercom.stage.site/wp-content/uploads/2021/05/Life-Changing-Loaf-left.jpg");
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: right bottom;
+}
+
+.newFoodsImageRight {
+   background-image: url("https://karenplimmercom.stage.site/wp-content/uploads/2021/05/Life-Changing-Loaf-right.jpg");
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: left center;
+}
+
+div#moreNewFoods,
+div#evenMoreNewFoods {
+   max-width: 1100px;
+   margin: 0 auto;
+   padding-left: 50px;
+   padding-right: 50px;
+}
+
+div#moreNewFoods {
+   padding-top: 40px;
+}
+
+div#evenMoreNewFoods {
+   padding-bottom: 40px;
+}
+
+div#moreNewFoods p:first-child,
+div#evenMoreNewFoods p:first-child {
+   padding-bottom: 40px;
+}
+
+div#evenMoreNewFoods p.mask {
+   padding-top: 10px;
+}
+
+div#remindTopPriority {
+   max-width: 1100px;
+   margin: 0 auto;
+   padding-left: 50px;
+   padding-right: 50px;
+}
+
+div#remindImportantFoods,
+div#remindImportantFoods p,
+div#remindImportantFoods p span,
+div#remindImportantFoods p em {
+   color: #fff;
+   background-color: #330614;
+}
+
+div#remindImportantFoods {
+   padding: 40px 50px 30px 50px;
+   margin-top: 30px;
+   margin-bottom: 40px;
+}
+
+@media only screen and (max-width: 1099px) {
+
+   .newFoodsImageLeft,
+   .newFoodsImageRight {
+      display: none;
+   }
+
+   #moreNewFoodsGrid {
+      grid-template-columns: 1fr;
+   }
+}
+
+@media only screen and (max-width: 767px) {
+
+   div#moreNewFoods,
+   div#evenMoreNewFoods,
+   div#remindTopPriority {
+      padding-left: 3%;
+      padding-right: 3%;
+   }
+}
+
+/* HELP SAVE ME MONEY*/
+section#priceOfMyFoodsSection {
+   background-color: rgb(5, 22, 29);
+   padding-bottom: 40px;
+}
+
+div.darkHeader.priceOfFoodsButton {
+   position: relative;
+}
+
+div#priceOfMyFoodsContentContainer {
+   background-color: rgb(5, 22, 29);
+   padding-top: 0px;
+   padding-bottom: 20px;
+}
+
+div#priceOfMyFoodsContentContainer li {
+   max-width: 100%;
+}
+
+div#priceOfMyFoodsContentContainer ul {
+   max-width: 1100px;
+   margin: 0 auto;
+   padding-left: 50px;
+   padding-right: 50px;
+}
+
+button#togglePriceOfFoods {
+   position: absolute;
+   right: 10px;
+   top: 5px;
+   padding-bottom: 0;
+   border: none;
+   background-color: inherit;
+   z-index: 10;
+}
+
+div#priceOfFoodsContainer {
+   max-width: 1100px;
+   margin: 0 auto;
+   padding-left: 50px;
+   padding-right: 50px;
+   padding-bottom: 40px;
+}
+
+div#priceOfFoodsInnerGridPriceLists {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   gap: 0 40px;
+   width: 100%;
+   margin: 0 auto;
+   align-content: start;
+   padding-top: 10px;
+   padding-bottom: 50px;
+}
+
+div#priceOfFoodsInnerGridPriceLists .la-icon {
+   color: rgb(115, 174, 168);
+}
+
+section#priceOfMyFoodsSection h3,
+section#priceOfMyFoodsSection p {
+   max-width: 1100px;
+   margin: 0 auto;
+   padding-left: 50px;
+   padding-right: 50px;
+}
+
+div#priceOfMyFoods table {
+   background-color: rgb(245, 245, 245);
+}
+
+div#priceOfMyFoods .la-icon {
+   color: rgb(115, 174, 168);
+   opacity: 0.7;
+}
+
+th.priceFoods {
+   text-align: left;
+   padding-left: 10px;
+}
+
+div#priceOfMyFoods1 td,
+div#priceOfMyFoods2 td {
+   padding-left: 10px;
+   padding-right: 30px;
+}
+
+div.priceOfVegetables {
+   background-color: #5ba1af;
+   max-width: 100%;
+   margin: 0 auto;
+   padding-left: 50px;
+   padding-right: 50px;
+   padding-top: 20px;
+   margin-bottom: 40px;
+   ;
+}
+
+div.priceOfVegetables h4,
+div.priceOfVegetables p {
+   background-color: #5ba1af;
+   color: #fff;
+}
+
+div#priceOfVegetablesColouredBlocks div.priceOfVegetables p {
+   padding-left: 0;
+   padding-right: 0;
+}
+
+div#priceOfVegetablesColouredBlocks {
+   margin-bottom: 40px;
+}
+
+div#budgetTipForPriceOfFoods {
+   max-width: 1100px;
+   margin: 0 auto;
+}
+
+div#budgetTipForPriceOfFoods h3#keenToLower,
+div#budgetTipForPriceOfFoods ul {
+   padding-left: 0;
+   padding-right: 0;
+}
+
+div#budgetTipForPriceOfFoods li.budgetTip:first-child {
+   padding-top: 10px;
+}
+
+@media only screen and (max-width: 767px) {
+
+   div#priceOfMyFoods,
+   section#priceOfMyFoodsSection h3,
+   section#priceOfMyFoodsSection p,
+   div#budgetTipForPriceOfFoods {
+      padding-left: 3%;
+      padding-right: 3%;
+   }
+
+   div#priceOfFoodsInnerGrid {
+      grid-template-columns: 1fr;
+   }
+}
+
+/*FOOTER*/
+footer,
+footer span {
+   background-color: rgb(5, 22, 29);
+   color: rgb(115, 174, 168);
+   font-size: 13px;
+   text-align: center;
+}
+
+footer {
+   padding: 10px 50px 20px 50px;
+}
+
+p#linkToTop,
+p#linkToTop a {
+   max-width: 1100px;
+   margin: 0 auto;
+   text-align: left;
+   color: rgb(115, 174, 168);
+   background-color: rgb(5, 22, 29);
+   padding-top: 20px;
+}
+
+
+/*NAV NICI OR KAREN*/
+
+header div#helloAndArchives {
+   background-color: rgb(9, 38, 51);
+   display: grid;
+   grid-template-columns: 0.5fr 1.5fr;
+   gap: o 20px;
+   padding-top: 20px;
+   justify-items: space-between;
+   align-items: center;
+   padding-left: 50px;
+   padding-right: 50px;
+}
+
+div.archives {
+   background-color: rgb(9, 38, 51);
+}
+
+div#helloAndArchives div.hello h4 {
+   color: rgb(115, 174, 168);
+}
+
+div.archives h4 {
+   font-size: 13px;
+   float: right;
+   background-color: rgb(9, 38, 51);
+   color: rgb(115, 174, 168);
+}
+
+div#navPage {
+   width: 100%;
+   padding-left: 50px;
+   padding-right: 50px;
+   list-style: none;
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr 1fr;
+   gap: 50px;
+   justify-content: space-between;
+}
+
+nav ul {
+   list-style: none;
+}
+
+nav ul li a {
+   color: rgb(9, 38, 51);
+}
+
+nav ul li a:hover {
+   color: rgb(41, 120, 140);
+}
+
+#navPage .hidden,
+li.hidden>a {
+   display: none;
+}
+
+@media only screen and (max-width: 767px) {
+   header div#helloAndArchives {
+      padding-left: 20px;
+      padding-right: 20px;
+   }
+
+   div#navPage {
+      grid-template-columns: 1fr 1fr 1fr;
+   }
+}
+
+@media only screen and (max-width: 479px) {
+   div#navPage {
+      grid-template-columns: 1fr 1fr;
+   }
+}
+
+div#wordCloudsButtons {
+   position: relative;
+   width: 100%;
+   max-width: 1200px;
+   margin: 0 auto;
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+}
+
+button#toggleEnergy,
+button#toggleVolume,
+button#toggleCost {
+   color: rgb(115, 174, 168);
+   font-size: 28px;
+   z-index: 12;
+   border: none;
+   position: absolute;
+   top: 10px;
+   left: 15px;
+}
+
+button#toggleVolume {
+   left: 35%;
+}
+
+button#toggleCost {
+   left: 69%;
+}
+
+button#toggleEnergy .la-toggle-on,
+button#toggleVolume .la-toggle-on,
+button#toggleCost .la-toggle-on {
+   color: rgb(115, 174, 168);
+   opacity: 0.3;
+   font-size: 28px;
+   z-index: 12;
+}
+
+div#wordClouds {
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   gap: 0 50px;
+   border: 1px solid rgb(115, 174, 168);
+   padding: 10px 20px;
+   margin: 0 auto 50px auto;
+   display: grid;
+}
+
+#wordCloudEnergy,
+#wordCloudVol,
+#wordCloudPrice {
+   line-height: 50px;
+   padding: 0 0 20px 0;
+}
+
+#wordCloudEnergy span {
+   color: rgb(95, 17, 41);
+}
+
+#wordCloudVol span {
+   color: rgb(247, 170, 29);
+}
+
+#wordCloudPrice span {
+   color: rgb(41, 120, 140);
+}
+
+@media only screen and (max-width: 767px) {
+   div#wordClouds {
+      padding-left: 3%;
+      padding-right: 3%;
+   }
+
+   div#wordClouds {
+      grid-template-columns: 1fr;
+   }
+
+   div#wordCloudsButtons {
+      display: none;
+   }
+}
+
+.food6 {
+   font-size: 6px;
+}
+
+.food7 {
+   font-size: 7px;
+}
+
+.food8 {
+   font-size: 8px;
+}
+
+.food9 {
+   font-size: 9px;
+}
+
+.food10 {
+   font-size: 10px;
+}
+
+.food11 {
+   font-size: 11px;
+}
+
+.food12 {
+   font-size: 12px;
+}
+
+.food13 {
+   font-size: 13px;
+}
+
+.food14 {
+   font-size: 14px;
+}
+
+.food15 {
+   font-size: 15px;
+}
+
+.food16 {
+   font-size: 16px;
+}
+
+.food17 {
+   font-size: 17px;
+}
+
+.food18 {
+   font-size: 18px;
+}
+
+.food19 {
+   font-size: 19px;
+}
+
+.food20 {
+   font-size: 20px;
+}
+
+.food21 {
+   font-size: 21px;
+}
+
+.food22 {
+   font-size: 22px;
+}
+
+.food23 {
+   font-size: 23px;
+}
+
+.food24 {
+   font-size: 24px;
+}
+
+.food25 {
+   font-size: 25px;
+}
+
+.food26 {
+   font-size: 26px;
+}
+
+.food27 {
+   font-size: 27px;
+}
+
+.food28 {
+   font-size: 28px;
+}
+
+.food29 {
+   font-size: 29px;
+}
+
+.food30 {
+   font-size: 30px;
+}
+
+.food31 {
+   font-size: 31px;
+}
+
+.food32 {
+   font-size: 32px;
+}
+
+.food33 {
+   font-size: 33px;
+}
+
+.food34 {
+   font-size: 34px;
+}
+
+.food35 {
+   font-size: 35px;
+}
+
+.food36 {
+   font-size: 36px;
+}
+
+.food37 {
+   font-size: 37px;
+}
+
+.food38 {
+   font-size: 38px;
+}
+
+.food39 {
+   font-size: 39px;
+}
+
+.food40 {
+   font-size: 40px;
+}
+
+.food41 {
+   font-size: 41px;
+}
+
+.food42 {
+   font-size: 42px;
+}
+
+.food43 {
+   font-size: 43px;
+}
+
+.food44 {
+   font-size: 44px;
+}
+
+.food45 {
+   font-size: 45px;
+}
+
+.food46 {
+   font-size: 46px;
+}
+
+.food47 {
+   font-size: 47px;
+}
+
+.food48 {
+   font-size: 48px;
+}
+
+.food49 {
+   font-size: 49px;
+}
+
+.food50 {
+   font-size: 50px;
+}
+
+.food51 {
+   font-size: 51px;
+}
+
+.food52 {
+   font-size: 52px;
+}
+
+.food53 {
+   font-size: 53px;
+}
+
+.food54 {
+   font-size: 54px;
+}
+
+.food55 {
+   font-size: 55px;
+}
+
+.food56 {
+   font-size: 56px;
+}
+
+.food57 {
+   font-size: 57px;
+}
+
+.food58 {
+   font-size: 58px;
+}
+
+.food59 {
+   font-size: 59px;
+}
+
+.food60 {
+   font-size: 60px;
+}
+
+.food61 {
+   font-size: 61px;
+}
+
+.food62 {
+   font-size: 62px;
+}
+
+.food63 {
+   font-size: 63px;
+}
+
+.food64 {
+   font-size: 64px;
+}
+
+.food65 {
+   font-size: 65px;
+}
+
+.food66 {
+   font-size: 66px;
+}
+
+.food67 {
+   font-size: 67px;
+}
+
+.food68 {
+   font-size: 68px;
+}
+
+.food69 {
+   font-size: 69px;
+}
+
+.food70 {
+   font-size: 70px;
+}
+
+.food71 {
+   font-size: 71px;
+}
+
+.food72 {
+   font-size: 72px;
+}
+
+.food73 {
+   font-size: 73px;
+}
+
+.food74 {
+   font-size: 74px;
+}
+
+.food75 {
+   font-size: 75px;
+}
+
+.food76 {
+   font-size: 76px;
+}
+
+.food77 {
+   font-size: 77px;
+}
+
+.food78 {
+   font-size: 78px;
+}
+
+.food79 {
+   font-size: 79px;
+}
+
+.food80 {
+   font-size: 80px;
+}
+
+.food81 {
+   font-size: 81px;
+}
+
+.food82 {
+   font-size: 82px;
+}
+
+.food83 {
+   font-size: 83px;
+}
+
+.food84 {
+   font-size: 84px;
+}
+
+.food85 {
+   font-size: 85px;
+}
+
+.food86 {
+   font-size: 86px;
+}
+
+.food87 {
+   font-size: 87px;
+}
+
+.food88 {
+   font-size: 88px;
+}
+
+.food89 {
+   font-size: 89px;
+}
+
+.food90 {
+   font-size: 90px;
+}
+
+.food91 {
+   font-size: 91px;
+}
+
+.food92 {
+   font-size: 92px;
+}
+
+.food93 {
+   font-size: 93px;
+}
+
+.food94 {
+   font-size: 94px;
+}
+
+.food95 {
+   font-size: 95px;
+}
+
+.food96 {
+   font-size: 96px;
+}
+
+.food97 {
+   font-size: 97px;
+}
+
+.food98 {
+   font-size: 98px;
+}
+
+.food99 {
+   font-size: 99px;
+}
+
+.food100 {
+   font-size: 100px;
+}
+
+.food101 {
+   font-size: 101px;
+}
+
+.food102 {
+   font-size: 102px;
+}
+
+.food103 {
+   font-size: 103px;
+}
+
+.food104 {
+   font-size: 104px;
+}
+
+.food105 {
+   font-size: 105px;
+}
+
+.food106 {
+   font-size: 106px;
+}
+
+.food107 {
+   font-size: 107px;
+}
+
+.food108 {
+   font-size: 108px;
+}
+
+.food109 {
+   font-size: 109px;
+}
+
+.food110 {
+   font-size: 110px;
+}
+
+.food111 {
+   font-size: 111px;
+}
+
+.food112 {
+   font-size: 112px;
+}
+
+.food113 {
+   font-size: 113px;
+}
+
+.food114 {
+   font-size: 114px;
+}
+
+.food115 {
+   font-size: 115px;
+}
+
+.food116 {
+   font-size: 116px;
+}
+
+.food117 {
+   font-size: 117px;
+}
+
+.food118 {
+   font-size: 118px;
+}
+
+.food119 {
+   font-size: 119px;
+}
+
+.food120 {
+   font-size: 120px;
+}
+
+.food121 {
+   font-size: 121px;
+}
+
+.food122 {
+   font-size: 122px;
+}
+
+.food123 {
+   font-size: 123px;
+}
+
+.food124 {
+   font-size: 124px;
+}
+
+.food125 {
+   font-size: 125px;
+}
+
+.food126 {
+   font-size: 126px;
+}
+
+.food127 {
+   font-size: 127px;
+}
+
+.food128 {
+   font-size: 128px;
+}
+
+.food129 {
+   font-size: 129px;
+}
+
+.food130 {
+   font-size: 130px;
+}
+
+.food131 {
+   font-size: 131px;
+}
+
+.food132 {
+   font-size: 132px;
+}
+
+.food133 {
+   font-size: 133px;
+}
+
+.food134 {
+   font-size: 134px;
+}
+
+.food135 {
+   font-size: 135px;
+}
+
+.food136 {
+   font-size: 136px;
+}
+
+.food137 {
+   font-size: 137px;
+}
+
+.food138 {
+   font-size: 138px;
+}
+
+.food139 {
+   font-size: 139px;
+}
+
+.food140 {
+   font-size: 140px;
+}
+
+.food141 {
+   font-size: 141px;
+}
+
+.food142 {
+   font-size: 142px;
+}
+
+.food143 {
+   font-size: 143px;
+}
+
+.food144 {
+   font-size: 144px;
+}
+
+.food145 {
+   font-size: 145px;
+}
+
+.food146 {
+   font-size: 146px;
+}
+
+.food147 {
+   font-size: 147px;
+}
+
+.food148 {
+   font-size: 148px;
+}
+
+.food149 {
+   font-size: 149px;
+}
+
+.food150 {
+   font-size: 150px;
+}
+
+#nutrientRichFoodsSection,
+#heartHealthySection {
+   background-color: rgb(5, 22, 29);
+}
+
+#nutrientRichFoods,
+#heartHealthy {
+   max-width: 1200px;
+   background-color: rgb(5, 22, 29);
+   margin: 0 auto;
+   padding: 0 50px;
+}
+
+#heartHealthySection h5 {
+   max-width: 1200px;
+   background-color: rgb(5, 22, 29);
+   margin: 0 auto;
+   padding: 30px 50px;
+   text-align: center;
+}
+
+#nutrientRichFoods *,
+#heartHealthy * {
+   background-color: rgb(5, 22, 29);
+}
+
+#nutrientRichFoods p.showAverage,
+#heartHealthy p.showAverage {
+   padding-left: 0;
+   padding-top: 0;
+   line-height: 100%;
+   font-size: 12px;
+   font-style: oblique;
+}
+
+#nutrientRichFoods p,
+#heartHealthy p {
+   line-height: 35px;
+}
+
+#nutrientRichFoods p.tall {
+   line-height: 50px;
+}
+
+#nutrientRichFoods p.extratall {
+   line-height: 80px;
+}
+
+#nutrientRichFoods .altdark *,
+#heartHealthy .altdark * {
+   color: #fff;
+   background-color: rgb(95, 17, 41);
+}
+
+#nutrientRichFoods .altlight *,
+#heartHealthy .altlight * {
+   background-color: rgb(247, 170, 29);
+}
+
+#satFatRatios.altlight *,
+#fatRatios {
+   background-color: #fff;
+}
+
+#nutrientRichFoods h3,
+#nutrientRichFoods p,
+#heartHealthy h3,
+#heartHealthy h4,
+#heartHealthy p {
+   padding-left: 50px;
+   padding-right: 50px;
+}
+
+#nutrientRichFoods .altlight,
+#nutrientRichFoods .altdark,
+#heartHealthy .altdark,
+#heartHealthy .altlight {
+   padding-bottom: 40px;
+}
+
+p#vitaminAFoods,
+p#vitaminB1Foods,
+p#vitaminB2Foods,
+p#vitaminB5Foods,
+p#vitaminB6Foods,
+p#cholineFoods,
+p#folateFoods,
+p#vitaminCFoods,
+p#vitaminKFoods,
+p#copperFoods,
+p#ironFoods,
+p#magnesiumFoods,
+p#manganeseFoods,
+p#phosphorusFoods,
+p#potassiumFoods,
+p#sodiumFoods {
+   display: none;
+}
+
+p#vitaminB3Foods,
+p#vitaminB12Foods,
+p#vitaminDFoods,
+p#vitaminEFoods,
+p#calciumFoods,
+p#seleniumFoods,
+p#zincFoods,
+p#omega3Foods,
+p#omega6Foodsp#monosatFatFoods,
+p#polyunsatFatFoods,
+p#satFatFoods {
+   display: block;
+}
+
+h3#vitaminAHeader,
+h3#vitaminB1Header,
+h3#vitaminB2Header,
+h3#vitaminB3Header,
+h3#vitaminB5Header,
+h3#vitaminB6Header,
+h3#vitaminB12Header,
+h3#cholineHeader,
+h3#folateHeader,
+h3#vitaminCHeader,
+h3#vitaminDHeader,
+h3#vitaminEHeader,
+h3#vitaminKHeader,
+h3#calciumHeader,
+h3#copperHeader,
+h3#ironHeader,
+h3#magnesiumHeader,
+h3#manganeseHeader,
+h3#phosphorusHeader,
+h3#potassiumHeader,
+h3#seleniumHeader,
+h3#sodiumHeader,
+h3#zincHeader,
+h3#omega3Header,
+h3#omega6Header,
+h3#monosatFatHeader,
+h3#polyunsatFatHeader,
+h3#satFatHeader {
+   padding-top: 20px;
+   padding-bottom: 20px;
+}
+
+#heartHealthySection h5 {
+   padding-bottom: 20px;
+}
+
+#heartHealthySection h5.highFibre {
+   padding-top: 0;
+   padding-bottom: 30px;
+}
+
+#heartHealthySection h5.polyFat {
+   padding-top: 0;
+}
+
+#satFatRatios p {
+   padding-bottom: 20px;
+   line-height: 170%;
+}
+
+#fatServingSizes p.fatServing {
+   display: inline;
+   padding-left: 10px;
+}
+
+#fatServingSizes span.la-icon.la-seedling {
+   padding-left: 50px;
+}
+
+#fatServingSizes {
+   padding-top: 15px;
+   padding-bottom: 50px;
+}
+
+#heartHealthy table {
+   width: 1000px;
+   max-width: 100%;
+   margin: 0 auto 30px auto;
+   padding: 20px 50px 40px 50px;
+}
+
+#heartHealthy #lessHealthyTable {
+   margin-top: 30px;
+   border-bottom: 50px solid #fff;
+}
+
+#heartHealthySection #heartHealthy table,
+#heartHealthySection #heartHealthy table * {
+   color: #fff;
+   background-color: #5ba1af;
+}
+
+
+#heartHealthy table th,
+#heartHealthy table td {
+   padding-left: 20px;
+   padding-right: 20px;
+}
+
+#heartHealthy table th {
+   font-weight: bold;
+   padding-top: 10px;
+   padding-bottom: 10px;
+   text-align: left;
+}

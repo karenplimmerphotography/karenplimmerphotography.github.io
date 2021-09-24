@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<!--
+        
+        /Users/karenplimmer/Documents/Projects/plateWise/test.html
+    
+    -->
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Forum&family=Nixie+One&family=Quicksand:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link href="./test.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/Users/karenplimmer/Documents/Projects/Icons/1.3.0/css/line-awesome.css">
+  <link rel="stylesheet"
+    href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+  <title>plateWise</title>
+  <script src="./test.js" defer></script>
+</head>
+
+<body>
+
+  <main>
+    <nav>
+      <ul class="secondaryNav">
+        <div id="navOptions">
+          <li><a href="#provideTheseNutrients">My Nutrients</a></li>
+          <li><a href="#letsGoShoppingSection">Lets Go Shopping</a></li>
+          <li><a href="#eatTheRainbowSection">Eat The Rainbow</a></li>
+          <li><a href="#seasonalProduceInAustralia">Seasonal Produce</a></li>
+          <li><a href="#eatLotsOfPlantsSection">Eat Lots Of Plants</a></li>
+          <li><a href="#whatFoodsEatingMost">Eating Most</a></li>
+          <li><a href="#moreNewFoodsSection">New Foods To Try</a></li>
+          <li><a href="#priceOfMyFoodsSection">My Grocery Bill</a></li>
+          <li><a href="#heartHealthySection">Heart Healthy Foods</a></li>
+          <li><a href="#nutrientRichFoodsSection">Best Sources Of Micronutrients</a></li>
+        </div>
+        <div id="navUsers">
+          <li><a href="https://karenplimmercom.stage.site/plateWise/Nici">Nici</a></li>
+          <li><a href="https://karenplimmercom.stage.site/plateWise/Karen">Karen</a></li>
+        </div>
+      </ul>
+      <!--end of -->
+    </nav>
+
+    <header>
+      <h1 id="title">plateWise</h1>
+      <h2 class="tagline">leave the healthy nutrition balancing act to us</h2>
+      <div id="helloAndDates">
+        <div class="dates">
+          <h4 id="hello">hello <span id="helloUser"></span></h4>
+        </div>
+        <div class="dates">
+          <h4 id="startingDate">you first shopped on : <br><span id="startDate"></span></h4>
+        </div>
+        <div class="dates">
+          <h4 id="reportDate">updated on : <br><span id="date"></span></h4>
+        </div>
+      </div>
+      <!--end of helloAndDate-->
+    </header>
+    <section id="allGroceryListSection">
+      <div class="lightHeader">
+        <h2><span id="user"></span>your grocery list is</h2>
+      </div>
+      <!--end of lightHeader-->
+      <div id="groceryListSectionLayoutGrid">
+        <div id=groceryImageGridLeft></div>
+        <!---end of groceryImageGridLeft-->
+        <div id="groceryListGridMiddle">
+          <table id="groceryList"></table>
+          <div id="groceryListSummary">
+            <p class="pleaseCheck">Please check that you have entered everything correctly. (You may need to scroll down
+              your list).</p>
+            <p>The cost of your groceries is <span id="totalWeeklyCost"></span></p>
+            <p>Your groceries are intended to last for <span id=numDays></span> days. This is a cost of <span
+                id="costPerDay"></span> per day.</p>
+            <p class="providesAverageEnergy">This quantity of food provides <span id="averageEnergy"></span> kcal per
+              day.</p>
+            <div id="defineServingSizeContainer">
+              <button id="servingSizeButton">
+                <h4>Serving sizes</h4>
+              </button>
+              <aside id="defineServingSize">
+                <h4>Australian Dietary Guidelines</h4>
+                <ul>
+                  <li>A serving of fruit is about 150g (or 85kcal)</li>
+                  <li>A serving of fruit with healthy fats is about 60g</li>
+                  <li>A serving of vegetables is about 75g (or 25-85kcal)</li>
+                  <li>A serving of nuts or seeds is 30g</li>
+                  <li>A serving of legumes is 150g (120-140kcal)</li>
+                  <li>A serving of eggs is 2 large eggs</li>
+                  <li> A serving of grains is about 120kcal</li>
+                  <li> A serving of dairy or plant based alternative contains about 250mg of calcium</li>
+                </ul>
+              </aside>
+              <!--end of defineServingSize-->
+            </div>
+            <!--end of defineServingSizeContainer-->
+          </div><!-- end of groceryListSummary-->
+        </div>
+        <!--end of groceryListGridMiddle-->
+        <div id=groceryImageGridRight></div>
+        <!--end of groceryImageGridRight-->
+      </div>
+      <!--end of groceryListSectionLayoutGrid-->
+    </section><!-- end of allGroceryListSection-->
+    <section id="provideTheseNutrients">
+      <div class="darkHeader">
+        <h2>Your groceries provide the following nutrients</h2>
+      </div>
+      <!--end darkHeader-->
+      <div id="groceryResultsContentGrid">
+        <div id="macronutrients">
+          <h3>Macronutrients</h3>
+          <ul id="macronutrientList">
+            <li>Carbohydrates : <span id="carbohydrates"></span>g</li>
+            <li>Net Carbohydrates : <span id="netCarbohydrates"></span>g</li>
+            <li>Fibre : <span id="fibre"></span>g</li>
+            <li>Protein : <span id="protein"></span>g</li>
+            <li class="endMacronutrients">Fat : <span id="fat"></span>g</li>
+          </ul>
+        </div>
+        <!--end of macronutrients-->
+        <div id="micronutrients">
+          <h3>Micronutrients</h3>
+          <h4>Vitamins</h4>
+          <ul id="vitaminList"></ul>
+        </div>
+        <!--end of micronutrients-->
+        <div id=mineralsAndRatios>
+          <h4 id="minerals">Minerals</h4>
+          <ul id="mineralList"></ul>
+          <h4 id="mineralRatios">Mineral Ratios</h4>
+          <ul id="ratioList"></ul>
+        </div><!-- end of mineralsAndRatios-->
+        <div id="allLipids">
+          <h4 id="lipids">Lipids</h4>
+          <ul id="lipidList"></ul>
+          <ul id="macrolipidList"></ul>
+        </div>
+        <!--end of allLipids-->
+      </div>
+      <!--end of groceryResultsContentGrid-->
+      <div class="blueBorder"></div>
+      <div id="mineralRatiosOuterContainer">
+        <button id="toggleMineralRatios" onclick="toggleMineralRatios()">
+          <span class="la-icon la la-toggle-on"></span>
+        </button>
+        <div id="mineralRatiosInnerContainer">
+          <h3>Evaluating your mineral ratios</h3>
+          <ul id="explainMineralRatios">
+            <li>Your zinc will ideally be 8 to 15 times your copper (but in reality it's hard to see how plant eaters
+              could achieve this). Your zinc to copper ratio was <span id="znCuRatio"></span> : 1.</li>
+            <li>Your calcium will ideally be 1 to 3 times your magnesium. Your calcium to magnesium ratio was <span
+                id="caMgRatio"></span> : 1.</li>
+            <li>Your potassium ideally will be 4 to 8 times your sodium. Your potassium sodium ratio was <span
+                id="kNaRatio"></span> : 1.</li>
+          </ul>
+          <ul id="notesForMineralRatios">
+            <li class="note">Very high potassium foods are spinach, coriander, bok choy, lettuce, parsley, mushrooms,
+              tomatoes, coconut water and cauliflower but almost all fruits, vegetables and legumes are excellent
+              sources of potassium.</li>
+            <li class="note">This ratio should be of great concern to you if you are, even minimally, hypertensive.
+              Normal BP is 120/80 or less. Be aware of the "whitecoat effect" and monitor your BP at home or another
+              calm environment. An age related increase in blood pressure should not be accepted as normal.</li>
+            <li class="note">Athletes will need supplemental salt to replace losses in sweat.</p>
+          </ul>
+        </div>
+        <!--end of mineralRatiosInnerContainer-->
+      </div>
+      <!--end of mineralRatiosContainer-->
+      <div id="evaluatingLipidsOuterContainer">
+        <button id="toggleEvaluatingLipids" onclick="toggleEvaluatingLipids()">
+          <span id="evalLipid" class="la-icon la la-toggle-on"></span>
+        </button>
+        <div id="evaluatingLipidsInnerContainer">
+          <h3>Evaluating your lipids</h3>
+          <div id="evaluatingLipids"></div>
+          <!--end of evaluatingLipids-->
+        </div>
+        <!--end of evaluatingLipidsInnerContainer-->
+      </div>
+      <!--end of evaluatingLipidsOuterContainer-->
+      <div id="deficiencyAndExcessGrid">
+        <button id="toggleDeficiencies" onclick="toggleDeficiencies()">
+          <span class="la-icon la la-toggle-on"></span>
+        </button>
+        <button id="toggleHighAlerts" onclick="toggleHighAlerts()">
+          <span class="la-icon la la-toggle-on"></span>
+        </button>
+        <div id="deficiencies">
+          <h3>You were deficient or borderline in the following nutrients</h3>
+          <div id="deficiencyMessages"></div>
+          <!--end fo deficiencyMessages-->
+          <p><em>Don't worry about remembering these values as they will be noted again as needed.</em></p>
+        </div>
+        <!--end of deficiencies-->
+        <div id="highAlerts">
+          <h3>Some nutrients can be eaten in excess!</h3>
+          <div id="yourHighNutrients"></div>
+          <div id="alertHighNutrients"></div>
+        </div>
+        <!--end of highAlerts-->
+      </div>
+      <!--end of deficiencyAndExcessContainer-->
+    </section>
+    <!--end of provideTheseNutrientsSection-->
+    <section id="letsGoShoppingSection">
+      <div class="contrastHeader">
+        <h2>Let's go shopping!</h2>
+      </div>
+      <!--end of contrastHeader-->
+      <div id="shoppingContainer">
+        <div id="FAQContainer">
+          <p class="bold"><em>Meeting your nutrient targets starts with adding nutrient dense healthy foods that are
+              selected specifically for you. The foods on your grocery list are low in some essential nutrients and
+              these food suggestions are intended to go a long way to resolving those deficiencies.</em></p>
+          <div id="faq">
+            <h3>Frequently Asked Questions</h3>
+            <div id="Q1">
+              <h4>How are the food suggestion lists generated?</h4>
+              <p>The foods are listed with the most nutrient rich first. They are compared on an equal energy
+                (kilocalorie) basis rather than by weight or portion size. So in these recommendations 200 kcal of
+                spinach (30 cups) is comparable to 200kcal of nuts (a large handful). It may be challenging to eat 30
+                cups of spinach so the nuts will be a better choice even if much lower down on the list.</p>
+            </div>
+            <!--end of Q1-->
+            <div id="Q2">
+              <h4>What's the RDI?</h4>
+              <p>The RDI is the average daily dietary intake level that is sufficient to meet the nutrient requirements
+                of nearly all (97–98 per cent) healthy individuals in a particular life stage and gender group. An
+                average individuals' requirement might, in fact, be closer to only 80% of the RDI as a generous margin
+                is already built into this value.</p>
+            </div>
+            <!--end of Q2-->
+            <div id="Q3">
+              <h4>What does RDI on an energy basis (used in the food lists) mean?</h4>
+              <p>In the food recommendation lists a hypothetical situation is created. This make belief scenario is that
+                over a day you eat exclusively 2000 calories of just the one food. The single food diet is then
+                evaluated to see if you met the RDIs for each nutrient. This way the foods can be compared to one
+                another. 2000 calories is not a magic number (just a nice round one for maths calculations) but if your
+                diet is significantly lower in kilocalories than this it becomes harder to reach nutrient targets.
+                Likewise if you eat more it is easier.</p>
+            </div>
+            <!--end of Q3-->
+            <div id="Q4">
+              <h4>How do I best utilise the lists?</h4>
+              <p>If you are just ever so slightly low in a nutrient you really should feel free to choose the food that
+                appeals most. However if your nutrient deficiency is very significant you'll have to be more attentive.
+              </p>
+              <p>Have a look at the lists and think could I make a meal I would like with these ingredients?</p>
+              <p>It can't be stressed enough that it can be difficult (and also very expensive) to eat enough very low
+                calorie watery vegetables (and even more so herbs) to make an impact. For this reason special attention
+                is drawn to the higher energy foods. You will be guided as to how much of a particular food you should
+                aim to eat to help you determine a realistic approach to improving any deficiencies.</p>
+            </div>
+            <!--end of Q4-->
+            <div id="Q5">
+              <h4>Wondering how each of the top priority foods recommended for your next grocery list were selected?
+              </h4>
+              <p>They are the most nutrient rich foods from the nutrients you scored under 80%! It is hoped to provide,
+                if possible, at least 6 food choices for each deficient nutrient. The top priority foods are slightly
+                different from the individual nutrient lists because, where there are very long lists, only the best
+                foods are selected. The other foods aren't forgotten and they are included in the recommended lists that
+                you will see later. It's important to focus on the top priority foods until you have resolved any
+                nutrient deficiencies of importance to you. If a food appears in multiple nutrient lists it's really
+                calling your name.</p>
+            </div>
+            <!--end of Q5-->
+          </div> <!-- end faq-->
+          <div id="endOfFAQ">
+            <p id="severelyLowMessage" class="bold"></p>
+            <p id="congratulationsMessage"></p>
+          </div> <!-- endOfFAQ-->
+        </div>
+        <!--end of FAQContainer-->
+        <div id="eatMore">
+          <h3>Eat more of these foods!</h3>
+          <div id="richFoodsText"></div>
+          <div id="recommendRichFoodsText"></div>
+          <div id="topPriorityFoodGroupSelection"></div>
+          <div id="hide"></div>
+          <div id="fast"></div>
+        </div>
+        <!--end of eatMore-->
+      </div><!-- end of shoppingContainer-->
+    </section>
+    <!--end letsGoShoppingSection-->
+    <section id="eatTheRainbowSection">
+      <div class="darkHeader">
+        <h2>Eat the rainbow!</h2>
+      </div>
+      <!--end darkHeader-->
+      <h3>How colourful is your grocery list?</h3>
+      <div class="rainbow">
+        <ul>
+          <li class="green rainbowList"><span class="bold">green foods</span> : <span id="greenFoods"></span></li>
+          <li class="purple rainbowList"><span class="bold">purple foods</span> : <span id="purpleFoods"></span></li>
+          <li class="red rainbowList"><span class="bold">red foods</span> : <span id="redFoods"></span></li>
+          <li class="orange rainbowList"><span class="bold">orange foods</span> : <span id="orangeFoods"></span></li>
+          <li class="yellow rainbowList"><span class="bold">yellow foods</span> : <span id="yellowFoods"></span></li>
+        </ul>
+        <p id="rainbowCongrats"></p>
+      </div>
+      <!--end of unnamed-->
+      <div class="rainbow">
+        <ul>
+          <li class="green rainbowList">Other <span class="bold">green foods </span>you may like are <span
+              id="greenFoodsToTry"></span></li>
+          <li class="purple rainbowList">Other <span class="bold">purple foods </span>you may like are <span
+              id="purpleFoodsToTry"></span></li>
+          <li class="red rainbowList">Other <span class="bold">red foods </span>you may like are <span
+              id="redFoodsToTry"></span></li>
+          <li class="orange rainbowList">Other <span class="bold">orange foods </span>you may like are <span
+              id="orangeFoodsToTry"></span></li>
+          <li class="yellow rainbowList">Other <span class="bold">yellow foods </span>you may like are <span
+              id="yellowFoodsToTry"></span></li>
+        </ul>
+        <p id="challenge"><em>Challenge yourself to try something new!</em></p>
+      </div>
+      <!--end of unnamed-->
+    </section>
+    <!--end of eatTheRainbowSection -->
+    <section id="seasonalProduceInAustralia">
+      <div class="darkHeader">
+        <h2>Which fruit, vegetables and herbs are in season now (<span id="season"></span>) in Australia?</h2>
+      </div>
+      <!--end of darkHeader-->
+      <div id="seasons"></div>
+      </div>
+      <!--end of seasonalProduce-->
+    </section>
+    <!--end of seasonalProduceInAustralia-->
+    <section id="eatLotsOfPlantsSection">
+      <div class="darkHeader">
+        <h2>Eat lots of plants!</h2>
+      </div>
+      <!--end darkHeader-->
+      <div id="eatLots">
+        <h3>How many different plant foods are you eating?</h3>
+        <ul>
+          <li class="plantsList"><span id="fruitsList"></span></li>
+          <li class="plantsList"><span id="fruitsButAlsoFatsList"></span></li>
+          <li class="plantsList"><span id="vegetablesList"></li>
+          <li class="plantsList"><span id="nutsList"></li>
+          <li class="plantsList"><span id="legumesList"></li>
+          <li class="plantsList"><span id="herbsList"></li>
+        </ul>
+        <div id="differentPlants"></div>
+        <p id="plantEatingLevel" class="addMoreSpace bold"></p>
+      </div>
+      <!--end of eatLots-->
+    </section>
+    <!--end of eatLotsOfPlantsSection-->
+    <section id="whatFoodsEatingMost">
+      <div class="darkHeader">
+        <h2> What foods are you eating most of?</h2>
+      </div>
+      <!--end of darkHeader-->
+      <div id="eatingMost">
+        <div id="wordCloudsButtons">
+          <button id="toggleEnergy" onclick="toggleByEnergy()">
+            <span class="la-icon la la-toggle-on"></span>
+          </button>
+          <button id="toggleVolume" onclick="toggleByVolume()">
+            <span class="la-icon la la-toggle-on"></span>
+          </button>
+          <button id="toggleCost" onclick="toggleByCost()">
+            <span class="la-icon la la-toggle-on"></span>
+          </button>
+        </div>
+        <!--// end wordCloudsbuttons-->
+        <div id="wordClouds">
+          <div id="wordCloudsEnergyContainer">
+            <h3 class="wordCloudHeader">By Energy</h3>
+            <p id="wordCloudEnergy"></p>
+          </div>
+          <div id="wordCloudsVolumeContainer">
+            <h3 class="wordCloudHeader">By Volume</h3>
+            <p id="wordCloudVol"></p>
+          </div>
+          <div id="wordCloudsPriceContainer">
+            <h3 class="wordCloudHeader">By Cost</h3>
+            <p id="wordCloudPrice"></p>
+          </div>
+        </div> <!-- end of wordClouds-->
+        <p>The foods contributing the most energy to your diet were evaluated in regards to whether they help you reach
+          your nutrient targets. This is independent of any other potentially very significant (and perhaps even
+          greater) value the foods may have such as being rich in phytonutrients or beneficial to your gut microbiome.
+        </p>
+        <p>These ratings are only based on the most valuable nutrients for you this week (or these few days). A
+          non-rated food may be very high in many nutrients but your diet is already plentiful in those nutrients. A
+          food's rating is not a reflection of how "healthy" it is.</p>
+        <div id="mostEnergyFoods"></div>
+        <!--end of mostEnergyFoods-->
+      </div>
+      <!--end of eatingMost-->
+    </section>
+    <!--whatFoodsEatingMost-->
+    <section id="moreNewFoodsSection">
+      <div class="darkHeader">
+        <h2>Looking for more new foods to try?</h2>
+      </div>
+      <!--end darkHeader-->
+      <div id="moreNewFoodsGrid">
+        <div class=newFoodsImageLeft></div>
+        <div>
+          <div id="moreNewFoods"></div>
+          <!--end of moreNewFoods-->
+          <div id="remindTopPriority"></div>
+          <!--end of remindTopPriority-->
+          <div id="evenMoreNewFoods"></div>
+          <!--end of evenMoreNewFoods-->
+        </div>
+        <div class=newFoodsImageRight></div>
+      </div>
+      <!--end of moreNewFoodsGrid-->
+    </section>
+    <!--end of moreNewFoodsSection-->
+    <section id=priceOfMyFoodsSection>
+      <div class="darkHeader priceOfFoodsButton">
+        <h2>Comparing the cost of my foods</h2>
+        <button id="togglePriceOfFoods" onclick="togglePriceOfFoodsOnOff()">
+          <span class="la-icon la la-toggle-on"></span>
+        </button>
+      </div>
+      <!--end of darkHeader-->
+      <div id=priceOfMyFoodsContentContainer>
+        <h3>What do my foods cost per 100 calories?</h3>
+        <p>This list tends to mirror the energy content of the foods. </p>
+        <ul>
+          <li>Many of the superstar foods like leafy greens top the list as most expensive but their nutrient density
+            makes them keepers, nonetheless.</li>
+          <li>Amongst the very cheapest on the list, healthy fats, combine nutrient density and great value for money.
+          </li>
+          <li>Legumes are also excellent value, and even more so, if purchased dried versus canned.</li>
+          <li>Eggs, fruits and starchy vegetables tend to fall in the middle of the price range.</li>
+          <li> Frozen vegetables compete with well priced fresh ones.</li>
+          <li>That leaves most non-starchy fresh vegetables as the most expensive (and most nutrient dense) foods on the
+            list.</li>
+        </ul>
+        <div id="priceOfFoodsContainer">
+          <div id="priceOfFoodsInnerGridPriceLists">
+            <div id="priceOfMyFoods1"></div>
+            <!--end of priceOfMyFoods1-->
+            <div id="priceOfMyFoods2"></div>
+            <!--end of priceOfMyFoods2-->
+          </div>
+          <!--end of priceOfFoodsInnerGridPriceLists-->
+          <div id="priceOfVegetablesColouredBlocks">
+            <div class="priceOfVegetables">
+              <h4>Cheapest vegetables</h4>
+              <p id="cheapestVegetables"></p>
+            </div>
+            <div class="priceOfVegetables">
+              <h4>Moderately priced vegetables</h4>
+              <p id="moderatePriceVegetables"></p>
+            </div>
+            <div class="priceOfVegetables">
+              <h4>Most expensive vegetables</h4>
+              <p id="expensiveVegetables"></p>
+            </div>
+          </div>
+          <!--end of priceOfVegetablesColouredBlocks-->
+          <div id="budgetTipForPriceOfFoods">
+            <h3 id="keenToLower">Keen to lower your grocery bill but still include fresh fruit and vegetables?</h3>
+            <ul>
+              <li class="budgetTip">Fruit and vegetables, which are significantly less expensive than most, are found in
+                the lower half of this list.</li>
+              <li class="budgetTip">Eat seasonally and keep an eye on specials.</li>
+              <li class="budgetTip">Frozen fruit and vegetables may be a lot cheaper than the same fresh, especially out
+                of season.</li>
+              <li class="budgetTip">Low calorie but expensive foods can be combined with high calorie inexpensive foods
+                to moderate the price.</li>
+              <li class="budgetTip">Try eating vegetables cooked in oil or with nut butter or tahini. </li>
+              <li class="budgetTip">Depending on the price, adding avocado (or mango) may reduce the cost of a salad.
+              </li>
+              <li class="budgetTip">For an even cheaper salad add - oils, tahini or nut butter, legumes, eggs.</li>
+              <li class="budgetTip">Most higher energy foods are relatively inexpensive but olives are moderate to high
+                in price.</li>
+            </ul>
+          </div>
+          <!--end of budgetTipForPriceOfFoods-->
+        </div>
+        <!--end of priceOfFoodsContainer-->
+      </div>
+      <!--end of priceOfMyFoodsContentContainer-->
+    </section>
+    <!--end of priceOfMyFoodsSection-->
+    <section id="heartHealthySection">
+      <div class="darkHeader">
+        <h2>Heart Healthy Foods</h2>
+      </div>
+      <!--end of darkHeader-->
+      <h5>A heart healthy diet is high in polyunsaturated and plant sourced monosaturated fats whilst very low in
+        saturated fats</h5>
+      <h5 class="polyFat">Polyunsaturated fats are of greater benefit than monosaturated fats</h5>
+      <h5 class="highFibre">Additionally this heart healthy diet is high in fibre and minimally processed wholefood
+        carbohydrates</h5>
+      <div id="heartHealthy">
+        <div id="monosatFat" class="altdark">
+          <h3 id="monosatFatHeader">Monosaturated fat</h3>
+          <p id="monosatFatFoods"></p>
+        </div>
+        <div id="polyunsatFat" class="altlight">
+          <h3 id="polyunsatFatHeader">Polyunsaturated fat</h3>
+          <p id="polyunsatFatFoods"></p>
+        </div>
+        <div id="satFat" class="altdark">
+          <h3 id="satFatHeader">Saturated fat (minimise)</h3>
+          <p id="satFatFoods"></p>
+        </div>
+        <div id="satFatRatios" class="altlight">
+          <h3>Healthy Fat Ratios</h3>
+          <p class="ratioInfo">Ideally polyunsaturated fats and monosaturated fat from plants should be at least 3 times
+            saturated fat. In the tables below this is equivalent to a Sat : Mono + Poly ratio below 0.33. Keep in mind
+            that the important result is achieving this over the average of your diet rather than a need to exclude any
+            individual food.</p>
+          <p>Monosaturated fat of animal origin is not associated with heart health benefits and is generally considered
+            a negative in this regard. This is in contrast to plant derived monosaturated fats.</p>
+          <div id="fatServingSizes">
+            <span class="la-icon la la-seedling"></span>
+            <p class="fatServing">A serving of nuts is 30g.</p>
+            <br>
+            <span class="la-icon la la-seedling"></span>
+            <p class="fatServing">A serving of avocado or olives is 60g.</p>
+            <br>
+            <span class="la-icon la la-seedling"></span>
+            <p class="fatServing">A serving of eggs is 2 large eggs which is just over 100g.</p>
+            <br>
+          </div>
+          <!--end of fatServingSizes-->
+          <div id="fatRatios"></div>
+        </div>
+        <!--end of satFatRatios-->
+      </div>
+      <!--end of heartHealthyFoods-->
+    </section>
+    <!--end of heartHealthyFoodsSection-->
+    <section id="nutrientRichFoodsSection">
+      <div class="darkHeader">
+        <h2>Best Sources Of Micronutrients</h2>
+      </div>
+      <!--end of darkHeader-->
+      <div id="nutrientRichFoods">
+        <div id="vitaminA" class="altlight">
+          <h3 id="vitaminAHeader">Vitamin A (scaled to 1/10th)</h3>
+          <p id="vitaminAFoods" class="extratall"></p>
+        </div>
+        <div id="vitaminB1" class="altdark">
+          <h3 id="vitaminB1Header">Vitamin B1</h3>
+          <p id="vitaminB1Foods"></p>
+        </div>
+        <div id="vitaminB2" class="altlight">
+          <h3 id="vitaminB2Header">Vitamin B2</h3>
+          <p id="vitaminB2Foods" class="tall"></p>
+        </div>
+        <div id="vitaminB3" class="altdark">
+          <h3 id="vitaminB3Header">Vitamin B3</h3>
+          <p id="vitaminB3Foods"></p>
+        </div>
+        <div id="vitaminB5" class="altlight">
+          <h3 id="vitaminB5Header">Vitamin B5</h3>
+          <p id="vitaminB5Foods"></p>
+        </div>
+        <div id="vitaminB6" class="altdark">
+          <h3 id="vitaminB6Header">Vitamin B6</h3>
+          <p id="vitaminB6Foods"></p>
+        </div>
+        <div id="vitaminB12" class="altlight">
+          <h3 id="vitaminB12Header">Vitamin B12</h3>
+          <p id="vitaminB12Foods"></p>
+        </div>
+        <div id="choline" class="altdark">
+          <h3 id="cholineHeader">Choline</h3>
+          <p id="cholineFoods"></p>
+        </div>
+        <div id="folate" class="altlight">
+          <h3 id="folateHeader">Folate</h3>
+          <p id="folateFoods" class="tall"></p>
+        </div>
+        <div id="vitaminC" class="altdark">
+          <h3 id="vitaminCHeader">Vitamin C (scaled to 1/4)</h3>
+          <p id="vitaminCFoods" class="tall"></p>
+        </div>
+        <div id="vitaminD" class="altlight">
+          <h3 id="vitaminDHeader">Vitamin D</h3>
+          <p id="vitaminDFoods"></p>
+        </div>
+        <div id="vitaminE" class="altdark">
+          <h3 id="vitaminEHeader">Vitamin E</h3>
+          <p id="vitaminEFoods"></p>
+        </div>
+        <div id="vitaminK" class="altlight">
+          <h3 id="vitaminKHeader">Vitamin K (scaled to 1/10th)</h3>
+          <p id="vitaminKFoods" class="tall"></p>
+        </div>
+        <div id="calcium" class="altdark">
+          <h3 id="calciumHeader">Calcium</h3>
+          <p id="calciumFoods"></p>
+        </div>
+        <div id="copper" class="altlight">
+          <h3 id="copperHeader">Copper</h3>
+          <p id="copperFoods" class="tall"></p>
+        </div>
+        <div id="iron" class="altdark">
+          <h3 id="ironHeader">Iron</h3>
+          <p id="ironFoods" class="tall"></p>
+        </div>
+        <div id="magnesium" class="altlight">
+          <h3 id="magnesiumHeader">Magnesium</h3>
+          <p id="magnesiumFoods"></p>
+        </div>
+        <div id="manganese" class="altdark">
+          <h3 id="manganeseHeader">Manganese</h3>
+          <p id="manganeseFoods" class="tall"></p>
+        </div>
+        <div id="phosphorus" class="altlight">
+          <h3 id="phosphorusHeader">Phosphorus</h3>
+          <p id="phosphorusFoods"></p>
+        </div>
+        <div id="potassium" class="altdark">
+          <h3 id="potassiumHeader">Potassium</h3>
+          <p id="potassiumFoods"></p>
+        </div>
+        <div id="selenium" class="altlight">
+          <h3 id="seleniumHeader">Selenium</h3>
+          <p id="seleniumFoods"></p>
+        </div>
+        <div id="sodium" class="altdark">
+          <h3 id="sodiumHeader">Sodium</h3>
+          <p id="sodiumFoods"></p>
+        </div>
+        <div id="zinc" class="altlight">
+          <h3 id="zincHeader">Zinc</h3>
+          <p id="zincFoods"></p>
+        </div>
+        <div id="omega3" class="altdark">
+          <h3 id="omega3Header">Omega 3 (scaled to 1/3rd)</h3>
+          <p id="omega3Foods" class="tall"></p>
+        </div>
+        <div id="omega6" class="altlight">
+          <h3 id="omega6Header">Omega 6</h3>
+          <p id="omega6Foods"></p>
+        </div>
+      </div>
+      <!--end of nutrientRichFoods-->
+    </section>
+    <!--end of nutrientRichFoodsSection-->
+
+
+
+  </main>
+  <footer>
+    <p id="linkToTop"><a href="#navOptions">Back To Top</a></p>
+    <span>&copy; plateWise 2021</span>
+
+  </footer>
+</body>
+
+</html>
