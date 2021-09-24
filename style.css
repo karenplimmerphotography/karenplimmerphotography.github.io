@@ -1,0 +1,272 @@
+@font-face {
+    font-family: "FlorenceScript";
+    font-weight: 400;
+    font-display: swap;
+    src: url("https://karenplimmercom.stage.site/wp-content/uploads/oxygen/custom_fonts/FlorenceScript.woff2") format("woff2"),
+        url("https://karenplimmercom.stage.site/wp-content/uploads/oxygen/custom_fonts/FlorenceScript.woff") format("woff"),
+        url("../../Fonts/FlorenceScriptRegular/FlorenceScript.woff") format("woff")
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    max-width: 100%;
+}
+
+html {
+    font-size: 16px;
+}
+
+@media only screen and (min-resolution: 200dpi) {
+    html {
+        font-size: 18px;
+    }
+}
+
+body {
+    color: #240975;
+    background-color: #fff;
+    font-family: Raleway, sans-serif;
+    font-weight: 400;
+    line-height: 1.4;
+    letter-spacing: 0.06rem;
+}
+
+header {
+    text-align: center;
+    padding: 4rem 0;
+    background-color: #240975;
+    background-image: url("https://www.karenplimmer.com/wp-content/uploads/2021/01/Colour-gradient-block.jpg");
+    background-size: contain;
+    background-position: center center;
+    background-repeat: repeat-y;
+}
+
+main {
+    background-color: #fff;
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+@media only screen and (max-width: 767px) {
+    main {
+        padding: 0 1rem;
+    }
+}
+
+section {
+    margin-bottom: 3rem;
+}
+
+article {
+    margin-bottom: 3rem;
+}
+
+h1,
+h2,
+h3 {
+    padding: 1rem 0;
+    font-weight: 200;
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: 2.75rem;
+    padding-top: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+}
+
+h3 {
+    font-size: 2rem;
+    font-family: FlorenceScript;
+}
+
+p:last-child {
+    margin-bottom: 1rem;
+}
+
+a {
+    text-decoration: none;
+    transition: color 400ms ease-in-out;
+}
+
+ul {
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+}
+
+li {
+    line-height: 1.6;
+    list-style-position: inside;
+    list-style-type: square;
+}
+
+/*header*/
+
+h2#title {
+    font-family: Raleway, sans-serif;
+    font-size: 2rem;
+    font-weight: 100;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.14rem;
+}
+
+h2#subtitle {
+    font-family: FlorenceScript, Raleway;
+    font-size: 2rem;
+    color: #f98562;
+    font-weight: lighter;
+    font-weight: 100;
+    text-transform: none;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+header nav {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header nav ul {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header nav li {
+    display: inline;
+    list-style-type: none;
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.06rem;
+    line-height: 4;
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+@media only screen and (max-width: 1699px) {
+    header nav li {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    }
+}
+
+@media only screen and (max-width: 1499px) {
+    header nav li {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    line-height: 1.4;
+    }
+}
+
+header nav a {
+    color: #fff;
+    transition: color 600ms ease-in-out, font-weight 600ms ease-in-out;
+}
+
+header nav a:visited {
+    color: #f9b19b;
+}
+
+header nav a:hover,
+header nav a:focus {
+    color: #f98562;
+    font-weight: 700;
+}
+
+@media only screen and (max-width: 730px) {
+    header nav {
+        flex-wrap: wrap;
+        align-content: flex-start;
+    }
+
+    header nav li {
+        display: block;
+    }
+}
+
+#hero-image {
+    display: block;
+    max-width: 100%;
+    margin: 0 auto;
+    height: auto;
+    padding-bottom: 2rem;
+}
+
+#welcome h2,
+#welcome h3,
+#welcome p {
+    text-align: center;
+}
+
+#welcome h2 {
+    color: #f98562;
+    font-size: 2rem;
+}
+
+#welcome p {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+footer nav {
+    padding: 1rem 0;
+    background-size: contain;
+    background-attachment: scroll;
+    background-color: #240975;
+    background-image: url("https://www.karenplimmer.com/wp-content/uploads/2021/01/Colour-gradient-block.jpg");
+    background-position: center center;
+    background-repeat: repeat-y;
+}
+
+footer nav li {
+    list-style-type: none;
+    line-height: 2;
+    text-align: center;
+    margin: 0.5rem 0;
+}
+
+footer nav a {
+    color: #fff;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06rem;
+    transition: color 300ms ease-in-out, font-weight 300ms ease-in-out;
+}
+
+footer nav li:hover, footer nav li:focus {
+    background-color: #f9b19b;
+}
+
+footer nav li a:hover, footer nav li a:focus {
+    color: #240975;
+    font-weight: 700;
+}
+
+footer p,
+footer p>span {
+    color: #240975;
+    background-color: #fff;
+    font-size: 0.8rem;
+    line-height: 2;
+    padding-top: 1rem;
+    text-align: center;
+}

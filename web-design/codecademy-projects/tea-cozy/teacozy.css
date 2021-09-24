@@ -1,0 +1,186 @@
+html {
+    font-size: 18px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Helvetica;
+    text-align: center;
+    color: seashell;
+    position: relative;
+}
+
+/* Universal Styles */
+
+h2 {
+  font-size: 1.6rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+}
+
+a {
+    color: seashell;
+}
+
+a:visited {
+    color: rgb(255, 161, 161);
+}
+
+a:hover, a:focus {
+  color: rgb(200, 161, 161);
+}
+
+/* Layout and spacing*/
+
+header, main, section {
+    width: 1300px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+header {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 5;
+}
+
+section {
+   margin-bottom: 3rem;
+}
+
+li {
+    margin: 0.5rem 1rem;
+}
+
+figcaption {
+    margin: 0.56rem 0;
+}
+
+p:last-child {
+    padding-bottom: 1rem;
+}
+
+/* Header------------------------------------- */
+header {
+    background-color: black;
+    border-bottom: 1px solid seashell;
+}
+
+header figure {
+    margin-inline-start: 0.56rem;
+}
+
+header #logo img {
+  height: 50px;
+}
+
+nav > ul {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    align-content: center;
+    list-style: none;
+  }
+
+/* main */
+  main {
+    background-color: black;
+    opacity: 0.9;
+}
+
+/* Hero--------------------------------------- */
+#hero-section {
+  height: 700px;
+  width: 1200px;
+  background-image: url("img-mission-background.jpg");
+  background-position: center center;
+  display: flex;
+  align-items: center;
+}
+
+#mission {
+    background-color: black;
+    opacity: 0.9;
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+/* Tea Of The Month------------------------- */
+
+#tea-images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#tea-images img {
+    width: 300px;
+    height: 200px;
+}
+
+/* Locations -----------------------------------*/
+#locations-section {
+ width: 1200px;
+ height: 500px;
+  background-color: seashell;
+  background-image: url("img-locations-background.jpg");
+  background-size: cover;
+  background-position: center center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#locations-section h2 {
+    margin-block-start: 0;
+}
+
+#our-sites {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    background-color: transparent;
+}
+
+.location {
+    background-color: black;
+    width: 300px;
+    margin: 0 20px;
+}
+
+@media only screen and (max-width: 1036px) {
+    #locations-section {
+        height: auto;
+    }
+    #locations-section h2 {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+    #our-sites {
+        margin-bottom: 1rem;
+    }
+    .location {
+        margin-bottom: 2rem;
+    }
+}
+
+/* Footer --------------------------------------*/
+footer p {
+    font-size: 16px;
+}
+
+footer #copyright  p {
+    text-align: left;
+    font-size: 14px;
+    padding: 0 20px 2rem 1rem;
+}
