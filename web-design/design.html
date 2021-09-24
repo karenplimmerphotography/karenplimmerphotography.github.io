@@ -13,6 +13,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Antic&family=Nothing+You+Could+Do&family=Rozha+One&display=swap"
         rel="stylesheet">
+    <link href="../style.css" rel="stylesheet">
     <link href="./design.css" rel="stylesheet">
     <title>Karen Plimmer photography and design</title>
     <script src="../script.js" defer></script>
@@ -20,34 +21,35 @@
 </head>
 
 <body>
-    <header>
+    <header id="top">
         <nav>
             <ul>
                 <li><a href="../index.html">Home</a></li>
-                <li><a href="https://www.karenplimmer.com">Photography</a></li>
+                <li><a href="../about-me/about-me.html">About Me</a></li>
+                <li><a href="https://www.karenplimmer.com/galleries">Galleries</a></li>
             </ul>
         </nav>
         <div>
             <h1 id="title">Karen Plimmer</h1>
-            <h1 id="subtitle">web design</h1>
+            <h1 id="subtitle">photography and web design</h1>
         </div>
         <nav>
             <ul>
+                <li><a href="https://www.karenplimmer.com/prints">Prints</a></li>
+                <li><a href="#top">Web design</a></li>
                 <li><a href="https://www.karenplimmer.com/contact">Contact</a></li>
             </ul>
         </nav>
     </header>
-    <img id="hero-image"
-        src="https://karenplimmercom.stage.site/wp-content/uploads/2021/01/For-the-non-believers-Lake-Tekapo.jpg">
     <main>
         <section>
             <h2>Web Design Projects</h2>
             <section id="personal-projects">
                 <ul>
-                    <li>Projects are listed with the most recent first</li>
-                    <li>To visit the project's website click on the large project title</li>
+                    <p><em>To visit the project's website click on the large project title</em></p>
                 </ul>
-                <h3>Personal Projects</h3>
+                <br>
+                <h3 class="less-space">Personal Projects</h3>
                 <article id="platewise-article">
                     <div id="platewise-header">
                         <h2 id="pw-title"><a href="./my-projects/platewise/test.html">plateWise</a></h2>
@@ -55,17 +57,17 @@
                     </div>
                     <h4><span>plateWise</span> is a design, html, css and javascript project created in 2021</h4>
                     <ul>
+                        <li><span>plateWise</span> helps plant-based eaters easily get all of their essential
+                            vitamins and minerals whilst eating a wide variety of wholefoods
+                        </li>
                         <li>The user inputs their weekly grocery items and is returned an in-depth report of their
                             diet's nutritional quality</li>
                         <!--<li>They are then guided on how to make gentle improvements to diet quality</li>
                         <li>Currently <span>plateWise</span> is targeted for vegans and vegetarians eating predominantly
                             wholefoods</li>-->
-                        <li><span>plateWise</span> helps plant-based eaters easily get all of their essential
-                            vitamins and minerals whilst eating a wide variety of wholefoods
-                        </li>
-                        <li>It is in the build stage with emphasis on the types of features it will offer users</li>
-                        <li>The code utilised in the final format will be substantially different</li>
-                        <li>It isn't yet connected to a database</li>
+                        <li>This project is in the build stage with emphasis on the types of features it will offer users</li>
+                        <!--<li>The code utilised in the final format will be substantially different</li>-->
+                        <li>It isn't yet connected to a database so a sample user's entry is provided</li>
                     </ul>
                 </article>
                 <article id="fox-terrier-article">
@@ -86,6 +88,7 @@
                 <h3>Codecademy Projects</h3>
                 <ul>
                     <li>Codecademy projects were created as part of the front-end developer course</li>
+                    <li>Projects are listed with the most <em>recent</em> first</li>
                 </ul>
                 <article id="tea-cozy-article">
                     <div id="tea-cozy-header">
@@ -129,7 +132,7 @@
                             project created from a <a
                                 href="https://github.com/karenplimmerphotography/karenplimmerphotography.github.io/blob/main/web-design/codecademy-projects/dasmoto/dasmotos-arts_redline.jpg">designer's
                                 specs</a></li>
-                        <li>Introduces creating a project off-platform utilising Visual Studio Code</li>
+                        <li>Introduces off-platform project creation utilising Visual Studio Code</li>
                         <li>Created 2 September 2021; module 2/29</li>
                     </ul>
                 </article>
@@ -157,6 +160,16 @@
             </section>
     </main>
     <footer>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../about-me/about-me.html">About Me</a></li>
+                <li><a href="https://www.karenplimmer.com/galleries">Galleries</a></li>
+                <li><a href="https://www.karenplimmer.com/prints">Prints</a></li>
+                <li><a href="#top">Web design</a></li>
+                <li><a href="https://www.karenplimmer.com/contact">Contact</a></li>
+            </ul>
+        </nav>
         <p>&copy Karen Plimmer <span id="year">2021</span></p>
     </footer>
 </body>
