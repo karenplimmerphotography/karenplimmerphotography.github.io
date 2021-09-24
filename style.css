@@ -204,7 +204,7 @@ header nav li {
     header {
         grid-template-columns: 1fr 1fr;
         grid-template-areas: 'left right'
-                                               'logo logo';
+            'logo logo';
         row-gap: 2rem;
         padding-top: 2rem;
         column-gap: 0;
@@ -223,7 +223,8 @@ header nav li {
     #logo {
         grid-area: logo;
     }
-    nav#left ul{
+
+    nav#left ul {
         justify-content: flex-end;
         width: 100%;
     }
@@ -268,10 +269,10 @@ header nav a:focus {
 .sidenav {
     position: fixed;
     top: 0;
-    left: 0px;
+    left: 0;
     z-index: 1;
     height: 100vh;
-    width: 0px;
+    width: 0;
     opacity: 0;
     background-color: #f98562;
     border-right: 1px solid#e0e4e6;
@@ -287,7 +288,7 @@ header nav a:focus {
     text-transform: uppercase;
     display: block;
     width: 100%;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
 }
 
 .sidenav a:hover {
@@ -295,29 +296,49 @@ header nav a:focus {
     background-color: #f9b19b;
 }
 
-span#hamburger,
-span#mobile-menu-x {
-    font-size: 50px;
-    background-color: transparent;
+#mobile-menu-open {
     position: absolute;
-    top: 15px;
-    left: 25px;
-    cursor: pointer;
+    transform: rotate(90deg);
+    z-index: 5;
+    height: 60px;
+    width: 60px;
+    top: 25px;
+    left: 35px;
 }
 
 span#hamburger {
-    transform: rotate(90deg);
+    position: relative;
+    height: 60px;
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+span#line1,
+span#line2,
+span#line3 {
+    position: relative;
+    color:#240975;
+    background-color: transparent;
+    display: inline-block;
+    font-size: 50px;
+    line-height: 1;
+    opacity: 1;
+    transition: all 500ms ease-in-out;
+}
+
+span#line1 {
+    transform-origin: bottom left;
+}
+
+span#line3 {
+    transform-origin: top right;
 }
 
 span#hamburger:hover {
-    color: #453575
-}
-
-span#mobile-menu-x {
-    font-size: 100px;
-    font-weight: 200;
-    top: -29px;
-    left: 23px;
+    color: #453575;
 }
 
 /*large screens hide mobile menu*/
