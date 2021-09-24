@@ -226,23 +226,26 @@ header nav a:focus {
 .sidenav {
     position: fixed;
     top: 0;
-    left: 0;
+    left: 0px;
     z-index: 1;
-    height: 100%;
+    height: 100vh;
     width: 0px;
+    opacity: 0;
     background-color: #f98562;
     border-right: 1px solid#e0e4e6;
     overflow-x: hidden;
-    transition: 0.4s;
+    transition: all 1000ms ease-in-out;
 }
 
 .sidenav a {
     position: relative;
-    top: 160px;
-    padding: 15px 0 15px 30px;
+    top: 100px;
+    padding: 15px 0;
     color: white;
+    text-transform: uppercase;
     display: block;
-    transition: 0.3s;
+    width: 100%;
+    font-size: 0.9rem;
 }
 
 .sidenav a:hover {
@@ -251,9 +254,9 @@ header nav a:focus {
 }
 
 span#hamburger,
-#mobile-menu-x {
-    height: 50px;
-    width: 50px;
+span#mobile-menu-x {
+    font-size: 50px;
+    background-color: transparent;
     position: absolute;
     top: 15px;
     left: 25px;
@@ -261,23 +264,18 @@ span#hamburger,
 }
 
 span#hamburger {
-    font-size: 50px;
-    background-color: transparent;
     transform: rotate(90deg);
 }
 
-@media only screen and (min-width: 979px) {
-    #mobile-menu-open, .sidenav {
-        display: none;
-    }
+span#mobile-menu-x  {
+    font-size: 100px;
+    font-weight: 200;
+    top: -29px;
+    left: 23px;
 }
 
-#mobile-menu-x {
-    font-size: 120px;
-    position: absolute;
-    top: 17px;
-    left: 22px;
-    cursor: pointer;
+.sidenav a {
+    padding-left: 3rem;
 }
 
 #mobile-menu-open:hover {
@@ -286,7 +284,16 @@ span#hamburger {
 
 /*large screens hide mobile menu*/
 @media only screen and (min-width: 1200px) {
-    .mobile-nav {
+    #mobile-menu-open {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 1199px) {
+    header {
+        grid-template-columns: 1fr;
+    }
+    header nav {
         display: none;
     }
 }
@@ -344,6 +351,11 @@ footer nav a {
 
 footer nav li:hover, footer nav li:focus {
     background-color: #f9b19b;
+}
+
+footer nav li a:visited {
+    color: #fff;
+    font-weight: 700;
 }
 
 footer nav li a:hover, footer nav li a:focus {
