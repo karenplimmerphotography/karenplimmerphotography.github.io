@@ -105,6 +105,7 @@ h2#pw-title a {
     font-family: "Nixie One", cursive;
     font-size: 50px;
     font-weight: 700;
+    font-style: normal;
     text-align: center;
     letter-spacing: 0;
     text-transform: none;
@@ -149,6 +150,7 @@ h2#pw-title a {
     letter-spacing: 0.2rem;
     text-align: center;
     font-weight: normal;
+    font-style: normal;
 }
 
 #fox-terrier-article h3 {
