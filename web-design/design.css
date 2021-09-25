@@ -56,7 +56,7 @@ article ul a:focus {
 
 #hero-image-design {
     position: relative;
-    display:flex;
+    display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
@@ -166,6 +166,68 @@ h2#pw-title a {
 
 #fox-terrier-article h4 {
     color: #ef5406;
+}
+
+/* personal portfolio*/
+
+header#portfolio-header {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 'left right'
+        'logo logo';
+    row-gap: 0;
+    padding: 2rem 0;
+    column-gap: 0;
+    margin: 3rem 0 2rem 0;
+}
+
+#portfolio-header nav#left {
+    grid-area: left;
+    justify-content: flex-end;
+}
+
+#portfolio-header nav#right {
+    grid-area: right;
+    justify-content: flex-start;
+}
+
+#portfolio-header nav#right li:nth-child(2) {
+    font-size:1rem;
+    line-height: 1.4;
+}
+
+#portfolio-header #logo {
+    grid-area: logo;
+}
+
+#portfolio-header nav#left ul {
+    justify-content: flex-end;
+    width: 100%;
+}
+
+#portfolio-header nav#right ul {
+    justify-content: flex-start;
+    width: 100%;
+}
+
+#portfolio-header nav#left li:last-child {
+    padding-right: 0;
+}
+
+#portfolio-header nav#right li:first-child {
+    padding-left: 0;
+}
+
+#portfolio-header nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#portfolio-header nav a:visited {
+    color: #f9b19b;
+}
+
+#portfolio-header nav a:hover {
+    color: #f98562;
 }
 
 /*tea cozy*/
