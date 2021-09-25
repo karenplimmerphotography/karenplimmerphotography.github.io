@@ -170,6 +170,35 @@ h2#pw-title a {
     color: #ef5406;
 }
 
+/* default */
+/*style-guide*/
+.default {
+    padding: 2rem 0;
+    background-color: #240975;
+    background-image: url("https://www.karenplimmer.com/wp-content/uploads/2021/01/Colour-gradient-block.jpg");
+    background-size: contain;
+    background-position: center center;
+    background-repeat: repeat-y;
+    margin-bottom: 2rem;
+}
+
+.default h2 {
+    font-family: Raleway, sans-serif;
+    font-size: 2rem;
+    font-weight: 100;
+    text-transform: uppercase;
+    letter-spacing: 0.14rem;
+    font-style: normal;
+    text-align: center;
+    color: #fff;
+}
+
+.default h3 {
+    font-family: FlorenceScript, Raleway, sans-serif;
+    text-align: center;
+    color: #f98562;
+}
+
 /* personal portfolio*/
 
 header#portfolio-header {
@@ -276,7 +305,38 @@ header#portfolio-header {
     color: rgb(200, 161, 161);
 }
 
+/*website-design*/
+/*
+#website-design-header {
+    padding: 2rem 0;
+    background-color: #240975;
+    background-image: url("https://www.karenplimmer.com/wp-content/uploads/2021/01/Colour-gradient-block.jpg");
+    background-size: contain;
+    background-position: center center;
+    background-repeat: repeat-y;
+    margin-bottom: 2rem;
+}
+
+#website-design-header h2 {
+    font-family: Raleway, sans-serif;
+    font-size: 2rem;
+    font-weight: 100;
+    text-transform: uppercase;
+    letter-spacing: 0.14rem;
+    font-style: normal;
+    text-align: center;
+    color: #fff;
+}
+
+#website-design-header h3 {
+    font-family: FlorenceScript, Raleway, sans-serif;
+    text-align: center;
+    color: #f98562;
+}
+*/
+
 /*cheat sheet*/
+/*
 #cheat-sheet-header {
     padding: 2rem 0;
     background-color: #240975;
@@ -303,7 +363,7 @@ header#portfolio-header {
     text-align: center;
     color: #f98562;
 }
-
+*/
 /*dasmoto*/
 
 div#dasmoto-header h2 {
