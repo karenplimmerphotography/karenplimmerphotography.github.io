@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="../florence.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;400;700&display=swap" rel="stylesheet">
     <link
         href="https://fonts.googleapis.com/css2?family=Forum&family=Nixie+One&family=Quicksand:wght@400;500;600;700&display=swap"
@@ -29,12 +30,12 @@
         </span>
     </div>
     <nav id="mySideNav" class="sidenav">
-            <a href="../index.html/">Home</a>
-            <a href="../about-me/about-me.html">About me</a>
-            <a href="https://www.karenplimmer.com/galleries/">Galleries</a>
-            <a href="https://www.karenplimmer.com/prints/">Prints</a>
-            <a href="#top">Web design</a>
-            <a href="https://www.karenplimmer.com/contact/">Contact</a>
+        <a href="../index.html/">Home</a>
+        <a href="../about-me/about-me.html">About me</a>
+        <a href="https://www.karenplimmer.com/galleries/">Galleries</a>
+        <a href="https://www.karenplimmer.com/prints/">Prints</a>
+        <a href="#top">Web design</a>
+        <a href="https://www.karenplimmer.com/contact/">Contact</a>
     </nav>
     <!--mobile menu-->
     <header id="top">
@@ -57,112 +58,118 @@
             </ul>
         </nav>
     </header>
-    <main>
-        <section>
+    <section id="hero-image-design">
+        <div>
             <h2>Web Design Projects</h2>
-            <section id="personal-projects">
+        </div>
+        <figure>
+            <img
+                src='https://www.karenplimmer.com/wp-content/uploads/2021/09/PreludebyKarenPlimmer-W-3000x1200px-epson-entry-scaled.jpg'>
+        </figure>
+    </section>
+
+    <main>
+        <p id="hint"><em>To visit a project's website click on the large project title</em></p>
+        <section id="personal-projects">
+            <h3 class="less-space">Personal Projects</h3>
+            <article id="platewise-article">
+                <div id="platewise-header">
+                    <h2 id="pw-title"><a href="./my-projects/platewise/test.html">plateWise</a></h2>
+                    <h3 id="pw-tagline">leave the healthy nutrition balancing act to us</h3>
+                </div>
+                <h4><span>plateWise</span> is a design, html, css and javascript project created in 2021</h4>
                 <ul>
-                    <p><em>To visit the project's website click on the large project title</em></p>
-                </ul>
-                <br>
-                <h3 class="less-space">Personal Projects</h3>
-                <article id="platewise-article">
-                    <div id="platewise-header">
-                        <h2 id="pw-title"><a href="./my-projects/platewise/test.html">plateWise</a></h2>
-                        <h3 id="pw-tagline">leave the healthy nutrition balancing act to us</h3>
-                    </div>
-                    <h4><span>plateWise</span> is a design, html, css and javascript project created in 2021</h4>
-                    <ul>
-                        <li><span>plateWise</span> helps plant-based eaters easily get all of their essential
-                            vitamins and minerals whilst eating a wide variety of wholefoods
-                        </li>
-                        <li>The user inputs their weekly grocery items and is returned an in-depth report of their
-                            diet's nutritional quality</li>
-                        <!--<li>They are then guided on how to make gentle improvements to diet quality</li>
+                    <li><span>plateWise</span> helps plant-based eaters easily get all of their essential
+                        vitamins and minerals whilst eating a wide variety of wholefoods
+                    </li>
+                    <li>The user inputs their weekly grocery items and is returned an in-depth report of their
+                        diet's nutritional quality</li>
+                    <!--<li>They are then guided on how to make gentle improvements to diet quality</li>
                         <li>Currently <span>plateWise</span> is targeted for vegans and vegetarians eating predominantly
                             wholefoods</li>-->
-                        <li>This project is in the build stage with emphasis on the types of features it will offer users</li>
-                        <!--<li>The code utilised in the final format will be substantially different</li>-->
-                        <li>It isn't yet connected to a database so a sample user's entry is provided</li>
-                    </ul>
-                </article>
-                <article id="fox-terrier-article">
-                    <div id="fox-terrier-header"><a href="https:www.foxterrier.co.nz">
-                            <h2>Tamsam</h2>
-                            <h3>Fox Terriers</h3>
-                        </a>
-                    </div>
-                    <h4>foxterrier.co.nz is a design, html and css project created in 2021</h4>
-                    <ul>
-                        <li>Showcases Tamsam Fox Terrier dog breeding kennels</li>
-                        <li>Gallery photos provided by Karen Plimmer Photography</li>
-                    </ul>
-                </article>
-            </section>
-            <!--end of #personal-projects-->
-            <section id="codecademy-projects">
-                <h3>Codecademy Projects</h3>
-                <ul>
-                    <li>Codecademy projects were created as part of the front-end developer course</li>
-                    <li>Projects are listed with the most <em>recent</em> first</li>
+                    <li>This project is in the build stage with emphasis on the types of features it will offer
+                        users</li>
+                    <!--<li>The code utilised in the final format will be substantially different</li>-->
+                    <li>It isn't yet connected to a database so a sample user's entry is provided</li>
                 </ul>
-                <article id="tea-cozy-article">
-                    <div id="tea-cozy-header">
-                        <div id="logo">
-                            <a href="./codecademy-projects/tea-cozy/teacozy.html">
-                                <img src="./codecademy-projects/tea-cozy/images/img-tea-cozy-logo.png">
-                                </figure>
-                        </div>
-                        <nav>
-                            <ul>
-                                <li><a href="#" class="tea-cozy-menu">Mission</a></li>
-                                <li><a href="#" class="tea-cozy-menu">Featured Tea</a></li>
-                                <li><a href="#" class="tea-cozy-menu">Locations</a></li>
-                            </ul>
-                        </nav>
+            </article>
+            <article id="fox-terrier-article">
+                <div id="fox-terrier-header"><a href="https:www.foxterrier.co.nz">
+                        <h2>Tamsam</h2>
+                        <h3>Fox Terriers</h3>
+                    </a>
+                </div>
+                <h4>foxterrier.co.nz is a design, html and css project created in 2021</h4>
+                <ul>
+                    <li>Showcases Tamsam Fox Terrier dog breeding kennels</li>
+                    <li>Gallery photos provided by Karen Plimmer Photography</li>
+                </ul>
+            </article>
+        </section>
+        <!--end of #personal-projects-->
+        <section id="codecademy-projects">
+            <h3>Codecademy Projects</h3>
+            <ul>
+                <li>Codecademy projects were created as part of the front-end developer course</li>
+                <li>Projects are listed with the most <em>recent</em> first</li>
+            </ul>
+            <article id="tea-cozy-article">
+                <div id="tea-cozy-header">
+                    <div id="logo">
+                        <a href="./codecademy-projects/tea-cozy/teacozy.html">
+                            <img src="./codecademy-projects/tea-cozy/images/img-tea-cozy-logo.png">
+                            </figure>
                     </div>
-                    <h4>Tea Cozy is a single webpage for a fictional tea shop</h4>
-                    <ul id="tea-cozy-description">
-                        <li><a
-                                href="https://github.com/karenplimmerphotography/karenplimmerphotography.github.io/blob/main/web-design/codecademy-projects/tea-cozy/teacozy.html">Html</a>
-                            and <a
-                                href="https://github.com/karenplimmerphotography/karenplimmerphotography.github.io/blob/main/web-design/codecademy-projects/tea-cozy/teacozy.css">css</a>
-                            project created from a <a
-                                href="https://github.com/karenplimmerphotography/karenplimmerphotography.github.io/blob/main/web-design/codecademy-projects/tea-cozy/images/img-tea-cozy-redline.jpg">designer's
-                                specs</a></li>
-                        <li>Introduces flexbox, media queries and git pages</li>
-                        <li>Created 8 September 2021; module 4/29</li>
-                    </ul>
-                </article>
-                <article id="dasmoto-article">
-                    <div id="dasmoto-header"><a href="./codecademy-projects/dasmoto/dasmoto.html">
-                            <h2>Dasmoto Arts & Crafts</h2>
-                        </a>
-                    </div>
-                    <h4>Dasmoto Arts & Crafts is a single webpage for a fictional arts and crafts store</h4>
-                    <ul>
-                        <li><a
-                                href="https://github.com/karenplimmerphotography/karenplimmerphotography.github.io/blob/main/web-design/codecademy-projects/dasmoto/dasmoto.html">Html</a>
-                            and <a
-                                href="https://github.com/karenplimmerphotography/karenplimmerphotography.github.io/blob/main/web-design/codecademy-projects/dasmoto/dasmoto.css">css</a>
-                            project created from a <a
-                                href="https://github.com/karenplimmerphotography/karenplimmerphotography.github.io/blob/main/web-design/codecademy-projects/dasmoto/dasmotos-arts_redline.jpg">designer's
-                                specs</a></li>
-                        <li>Introduces off-platform project creation utilising Visual Studio Code</li>
-                        <li>Created 2 September 2021; module 2/29</li>
-                    </ul>
-                </article>
-            </section>
-            <!--end of #codecademy-projects-->
-            <section id="skills">
-                <h3>Skills</h3>
-                <div id="skills-container">
-                    <i class="fab fa-html5"></i>
-                    <i class="fab fa-css3-alt"></i>
-                    <i class="fab fa-js"></i>
-                    <i class="fab fa-git"></i>
-                    <i class="fab fa-github"></i>
-                    <!--<i class="fab fa-react"></i>
+                    <nav>
+                        <ul>
+                            <li><a href="#" class="tea-cozy-menu">Mission</a></li>
+                            <li><a href="#" class="tea-cozy-menu">Featured Tea</a></li>
+                            <li><a href="#" class="tea-cozy-menu">Locations</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <h4>Tea Cozy is a single webpage for a fictional tea shop</h4>
+                <ul id="tea-cozy-description">
+                    <li><a
+                            href="https://github.com/karenplimmerphotography/karenplimmerphotography.github.io/blob/main/web-design/codecademy-projects/tea-cozy/teacozy.html">Html</a>
+                        and <a
+                            href="https://github.com/karenplimmerphotography/karenplimmerphotography.github.io/blob/main/web-design/codecademy-projects/tea-cozy/teacozy.css">css</a>
+                        project created from a <a
+                            href="https://github.com/karenplimmerphotography/karenplimmerphotography.github.io/blob/main/web-design/codecademy-projects/tea-cozy/images/img-tea-cozy-redline.jpg">designer's
+                            specs</a></li>
+                    <li>Introduces flexbox, media queries and git pages</li>
+                    <li>Created 8 September 2021; module 4/29</li>
+                </ul>
+            </article>
+            <article id="dasmoto-article">
+                <div id="dasmoto-header"><a href="./codecademy-projects/dasmoto/dasmoto.html">
+                        <h2>Dasmoto Arts & Crafts</h2>
+                    </a>
+                </div>
+                <h4>Dasmoto Arts & Crafts is a single webpage for a fictional arts and crafts store</h4>
+                <ul>
+                    <li><a
+                            href="https://github.com/karenplimmerphotography/karenplimmerphotography.github.io/blob/main/web-design/codecademy-projects/dasmoto/dasmoto.html">Html</a>
+                        and <a
+                            href="https://github.com/karenplimmerphotography/karenplimmerphotography.github.io/blob/main/web-design/codecademy-projects/dasmoto/dasmoto.css">css</a>
+                        project created from a <a
+                            href="https://github.com/karenplimmerphotography/karenplimmerphotography.github.io/blob/main/web-design/codecademy-projects/dasmoto/dasmotos-arts_redline.jpg">designer's
+                            specs</a></li>
+                    <li>Introduces off-platform project creation utilising Visual Studio Code</li>
+                    <li>Created 2 September 2021; module 2/29</li>
+                </ul>
+            </article>
+        </section>
+        <!--end of #codecademy-projects-->
+        <section id="skills">
+            <h3>Skills</h3>
+            <div id="skills-container">
+                <i class="fab fa-html5"></i>
+                <i class="fab fa-css3-alt"></i>
+                <i class="fab fa-js"></i>
+                <i class="fab fa-git"></i>
+                <i class="fab fa-github"></i>
+                <!--<i class="fab fa-react"></i>
                   <i class="fab fa-aws"></i>
                   <i class="fab fa-sketch"></i>
                   <i class="fab fa-figma"></i>
@@ -172,8 +179,8 @@
                   <i class="fab fa-npm"></i>
                   <i class="fab fa-node"></i>
                   -->
-                </div>
-            </section>
+            </div>
+        </section>
     </main>
     <footer>
         <nav>
