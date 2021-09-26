@@ -182,7 +182,7 @@ h2#pw-title a {
 }
 
 /* default */
-/*style-guide*/
+
 .default {
     padding: 2rem 0;
     background-color: #240975;
@@ -317,17 +317,8 @@ header#portfolio-header {
     color: rgb(200, 161, 161);
 }
 
-/*website-design*/
-/*
-#website-design-header {
-}
+/* style guide*/
 
-#website-design-header h2 {
-}
-
-#website-design-header h3 {
-}
-*/
 
 /*cheat sheet*/
 /*
