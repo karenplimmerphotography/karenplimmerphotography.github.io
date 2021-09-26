@@ -3,4 +3,4 @@ const createProjectTemplate = (projectName, day, month, year, module) => {
     return content;
 }
 
-createProjectTemplate("website-design", 12, "September", 2021, 3);
+createProjectTemplate("flex-company", 14, "September", 2021, 3);

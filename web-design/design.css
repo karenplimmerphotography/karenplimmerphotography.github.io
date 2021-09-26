@@ -270,6 +270,7 @@ header#portfolio-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 2rem 1rem;
 }
 
 #tea-cozy-article img {
@@ -379,7 +380,7 @@ div#dasmoto-header h2 {
     background-size: cover;
     background-repeat: no-repeat;
     margin-bottom: 25px;
-    padding: 30px 20px;
+    padding: 2.5rem 1.5rem;
 }
 
 /*skills*/
