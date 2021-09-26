@@ -1,14 +1,66 @@
-
-body, h1, h2, h3, h4 {
-    color: #222;
+html {
+    font-size: 16px;;
 }
 
-/*body, h1, h2, h3, h4 {
-    color: #240975;
-}*/
-
-h2, h3 {
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #222;
     text-align: left;
+    font-family: Raleway, sans-serif;
+    text-transform: none;
+}
+
+/*headings*/
+
+h2 {
+    font-size: 3rem;
+    font-style: oblique;
+    text-transform: uppercase;
+    letter-spacing: 0.14rem;
+}
+
+h3 {
+font-size: 2rem;
+text-transform: uppercase;
+letter-spacing: 0.14rem;
+}
+
+h4, .h4 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    font-style: oblique;
+    text-transform: none;
+    padding-bottom: 0.5rem;
+    letter-spacing: 0.01rem;
+}
+
+h5, .h5 {
+    font-size: 1.25rem;
+    font-weight: 300;
+    padding-bottom: 0.5rem;
+    letter-spacing: 0.01rem;
+}
+
+h6, .h6 {
+    font-size: 1.125rem;
+    font-weight: 300;
+    padding-bottom: 0.5rem;
+    letter-spacing: 0.01rem;
+}
+
+p {
+    letter-spacing: 0.06rem;
+}
+
+/* header navigation*/
+
+header nav li {
+    font-size: 0.8rem;
 }
 
 ul {
@@ -30,36 +82,6 @@ article:first-of-type:not(#links-and-lists article:first-of-type) {
     margin-top: 3rem;
 }
 
-.hide {
-    display: none;
-}
-
-.blue {
-    color:#62a9fd;
-}
-
-.orange {
-    color: #f98562;
-}
-
-.pale-orange {
-    color:#f9b19b;
-    background-color: #240975;
-}
-
-.pale-purple {
-    margin-left: 2rem;
-    color: #7756db;
-    background-color:#fff;
-}
-
-.white {
-    color: #fff;
-}
-
-.margin-above {
-    margin-top: 0.8rem;
-}
 
 #colours {
     display: grid;
@@ -84,32 +106,7 @@ article:first-of-type:not(#links-and-lists article:first-of-type) {
     border-radius: 50%;
 }
 
-#purple-sample {
-    background-color: #240975;
-}
-
-#pale-purple-sample {
-    background-color: #453575;
-}
-
-#orange-sample {
-    background-color: #f98562;
-}
-
-#pale-orange-sample {
-    background-color: #f9b19b;
-}
-
-#blue-sample {
-    background-color: #62a9fd;
-}
-
-#pale-blue-sample {
-    background-color: #aad0fd;
-}
-
 #grey-sample {
-    background-color: #e0e4e6;
     position: relative;
 }
 
@@ -126,11 +123,11 @@ article:first-of-type:not(#links-and-lists article:first-of-type) {
 }
 
 #pure-grey-sample span {
-    color:rgb(100, 100, 100);
+    color: rgb(100, 100, 100);
     background-color: rgb(225, 225, 225);
     position: absolute;
     border-radius: 50%;
-    top: 15px;
+    top: 7px;
     left: 18px;
 }
 
@@ -154,16 +151,21 @@ article:first-of-type:not(#links-and-lists article:first-of-type) {
         gap: 1rem;
         margin-bottom: 2rem;
     }
+
     .font-example {
         grid-area: 1 / 1 / span 1 / span 1;
     }
+
     .font-description {
         grid-area: 1 / 2 / span 1 / span 1;
     }
+
     .font-description ul {
         display: inline;
     }
-    .text, .text-pair {
+
+    .text,
+    .text-pair {
         grid-area: 2 /1 /span 2 / span 2;
     }
 }
@@ -172,7 +174,7 @@ article:first-of-type:not(#links-and-lists article:first-of-type) {
     font-weight: bold;
 }
 
- .text {
+.text {
     display: flex;
     align-items: center;
     background-color: rgb(248, 248, 248);
@@ -188,7 +190,9 @@ article:first-of-type:not(#links-and-lists article:first-of-type) {
 }
 
 @media only screen and (max-width: 1199px) {
-    .text, .text-pair {
+
+    .text,
+    .text-pair {
         margin: 0;
     }
 }
@@ -198,6 +202,7 @@ article:first-of-type:not(#links-and-lists article:first-of-type) {
     background-color: #240975;
     text-align: center;
     font-size: 2rem;
+    font-weight: 100;
     text-transform: uppercase;
     letter-spacing: 0.14rem;
     border-bottom-left-radius: 0;
@@ -211,15 +216,24 @@ article:first-of-type:not(#links-and-lists article:first-of-type) {
     text-align: center;
     font-family: FlorenceScript;
     font-size: 2rem;
+    font-weight: 100;
+    letter-spacing: 0;
+    text-transform: none;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
+}
+
+#h2-font-sample {
+ height: auto
 }
 
 #h2-sample {
     color: #f98562;
     text-align: center;
+    font-style: normal;
 }
-    /*border-bottom-left-radius: 0;
+
+/*border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
 }
 
@@ -228,36 +242,43 @@ article:first-of-type:not(#links-and-lists article:first-of-type) {
     text-align: center;
     font-family: FlorenceScript;
     font-size: 2.5rem;
+     font-style: normal;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
 }*/
 
 #h3-sample {
-    color: #62a9fd;
+    color: #f98562;
     text-align: center;
+    font-size: 2rem;
+    font-weight: 200;
+    text-transform: uppercase;
+    line-height: 1.2;
+    letter-spacing: 0.14rem;
 }
 
 #h4-sample {
     color: #f98562;
     text-align: center;
     font-size: 1.5rem;
-    font-weight: normal;
+    font-weight: 200;
+    font-style: normal;
     text-transform: uppercase;
-    line-height: 1.6;
-    letter-spacing: 0.3rem;
+    line-height: 1.2;
+    letter-spacing: 0.14rem;
 }
 
 #h5-sample {
     color: #f98562;
     text-align: center;
     font-size: 1.25rem;
-    font-weight: normal;
+    font-weight: 200;
     text-transform: uppercase;
-    line-height: 1.6;
-    letter-spacing: 0.3rem;
+    line-height: 1.2;
+    letter-spacing: 0.14rem;
 }
 
-#h6-sample {
+#p-bold-sample {
     color: #240975;
     font-weight: bold;
     font-style: oblique;
@@ -274,6 +295,7 @@ article:first-of-type:not(#links-and-lists article:first-of-type) {
     font-family: FlorenceScript;
     font-size: 2rem;
     color: #62a9fd;
+    text-align: center;
 }
 
 .font-description {
@@ -293,7 +315,7 @@ article:first-of-type:not(#links-and-lists article:first-of-type) {
     #links-and-lists {
         grid-template-columns: 1fr;
         gap: 0;
-}
+    }
 }
 
 #links-and-lists article {
@@ -302,13 +324,47 @@ article:first-of-type:not(#links-and-lists article:first-of-type) {
     border-radius: 0.5rem;
 }
 
- #header-article, #header-nav, #footer-article {
+#header-article,
+#header-nav,
+#footer-article {
     background-image:
-    url("https://www.karenplimmer.com/wp-content/uploads/2021/01/Colour-gradient-block.jpg");
+        url("https://www.karenplimmer.com/wp-content/uploads/2021/01/Colour-gradient-block.jpg");
     color: #fff;
     padding: 1rem;
     border-radius: 0.5rem;
- }
+}
+
+#header-article-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1.5rem;
+}
+
+#header-article h2 {
+    color: white;
+}
+
+#header-nav h2 {
+    color: white;
+}
+
+#header-nav-content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 1.5rem;
+}
+
+@media only screen and (max-width: 1199px) {
+    #header-nav-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    #header-nav-content {
+        grid-template-columns:1fr;
+    }
+}
 
 #header-nav .white {
     background-color: #240975;
@@ -323,5 +379,12 @@ article:first-of-type:not(#links-and-lists article:first-of-type) {
     color: #fff;
     padding: 1rem;
     border-radius: 0.5rem;
- }
+}
 
+#mobile-nav h2 {
+    color: #fff;
+}
+
+#footer-article h2 {
+    color: #fff;
+}

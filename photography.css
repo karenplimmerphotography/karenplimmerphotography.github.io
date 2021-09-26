@@ -1,53 +1,9 @@
-html {
-    font-size: 14px;
-}
-
-@media only screen and (min-resolution: 200dpi) {
-    html {
-        font-size: 16px;
-    }
-}
-
-body {
-    color: #240975;
-    line-height: 1.4;
-}
-
-main {
-    width: 1600px;
-}
-
-h3 {
-    font-size: 2rem;
-    letter-spacing: normal;
-}
-
-p {
-    line-height: 1.8;
-    letter-spacing: 0.1rem;
-    padding-bottom: 20px;
-}
-
-blockquote {
-    font-family: FlorenceScript, Raleway, sans-serif;
-    text-align: center;
-    font-size: 26px;
-    color: #fff;
-}
-
-blockquote:hover {
-    color: #240975;
-}
-
-.bold {
-    font-style: bold;
-}
-
-.center {
-    text-align: center;
-}
 
 /*about me*/
+
+#about-main {
+    width: 1600px;
+}
 
 h2#about-heading {
     padding: 3rem 0;
@@ -65,23 +21,14 @@ h2#about-heading {
     justify-content: center;
 }
 
-.a1 {
-    background-color: #f9b19b;
-}
-
-.a2 {
-    background-color: #240975;
+.a2, .a8 {
     text-align: center;
-}
-
-.a3 {
-    background-color: #aad0fd;
 }
 
 .a4,
 .a5,
-.a6 {
-    background-color: #e0e4e6;
+.a6, 
+.a11 {
     padding: 5%;
 }
 
@@ -91,33 +38,10 @@ h2#about-heading {
     padding: 15%;
 }
 
-.a7 {
-    background-color: #f9b19b;
-}
-
-.a8 {
-    background-color: #240975;
-    color: #ffffff;
-}
-
-.a9 {
-    background-color: #aad0fd;
-    color: #ffffff;
-}
-
 .a10,
 .a11,
 .a12 {
-    background-color: #e0e4e6;
     padding: 0;
-}
-
-.a11 {
-    padding: 5%;
-}
-
-.purple {
-    color: #ffffff;
 }
 
 img {

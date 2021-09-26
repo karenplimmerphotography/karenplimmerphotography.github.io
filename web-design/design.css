@@ -1,60 +1,80 @@
-body, h1, h2, h3, h4, h5, h6 {
+html {
+    font-size: 16px;
+}
+
+body,
+h2,
+h3,
+h4,
+h5,
+h6 {
     color: #222;
+    text-align: left;
+    font-family: Raleway, sans-serif;
+    text-transform: none;
 }
 
 /*headings*/
 
-h2 {
+h2, .h2 {
+    font-size: 3rem;
     font-style: oblique;
-    text-transform: none;
-    letter-spacing: 0;
-    text-align: left;
+    text-transform: uppercase;
+    letter-spacing: 0.14rem;
 }
 
-h3 {
-    font-family: Raleway, sans-serif;
-    text-align: left;
+h3, .h3 {
+    font-size: 2,125rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14rem;
 }
 
-h4 {
-    font-size: 1.25rem;
+h4, .h4 {
+    font-size: 1.5rem;
     font-weight: 300;
     font-style: oblique;
-    padding-top: 1rem;
+    text-transform: none;
     padding-bottom: 0.5rem;
+    letter-spacing: 0.01rem;
 }
 
-/*quick classes*/
-.less-space {
-    padding-bottom: 0;
+h5, .h5 {
+    font-size: 1.25rem;
+    font-weight: 300;
+    padding-bottom: 0.5rem;
+    letter-spacing: 0.01rem;
 }
 
-/*lists*/
+h6, .h6 {
+    font-size: 1.125rem;
+    font-weight: 300;
+    padding-bottom: 0.5rem;
+    letter-spacing: 0.01rem;
+}
 
-li {
-    line-height: 1.75;
+p {
+    letter-spacing: 0.06rem;
+}
+
+/* header navigation*/
+
+header nav li {
+    font-size: 0.8rem;
 }
 
 /*projects*/
-#codecademy-projects article:first-of-type {
-    margin-top: 2rem;
-}
 
 article ul a {
     text-decoration: underline;
-    color: #62a9fd;
-    transition: underline 400ms ease-in-out;
 }
 
 article ul a:visited {
     text-decoration: underline;
-    color: #240975;
 }
 
 article ul a:hover,
 article ul a:focus {
     text-decoration: none;
-    color: #f98562;
 }
 
 /*hero image*/
@@ -84,24 +104,12 @@ article ul a:focus {
 
 #hero-image-design h2 {
     color: #fff;
-    width: 100%;
     text-align: center;
-    margin: 0 auto;
-    font-size: 3rem;
-    font-weight: 100;
-    text-transform: uppercase;
-    letter-spacing: 0.14rem;
 }
 
 #hero-image-design h3 {
     color: #fff;
-    font-family: Raleway, sans-serif;
-    font-weight: 100;
-    font-style: oblique;
-    width: 100%;
     text-align: center;
-    margin: 0 auto;
-    font-size: 1.5rem;
 }
 
 #hint {
@@ -199,6 +207,7 @@ h2#pw-title a {
 }
 
 .default h2 {
+    color: #fff;
     font-family: Raleway, sans-serif;
     font-size: 2rem;
     font-weight: 100;
@@ -206,13 +215,14 @@ h2#pw-title a {
     letter-spacing: 0.14rem;
     font-style: normal;
     text-align: center;
-    color: #fff;
 }
 
 .default h3 {
-    font-family: FlorenceScript, Raleway, sans-serif;
-    text-align: center;
     color: #f98562;
+    font-family: FlorenceScript, Raleway, sans-serif;
+    font-weight: 100;
+    font-size: 2rem;
+    text-align: center;
 }
 
 /* personal portfolio*/
@@ -238,7 +248,7 @@ header#portfolio-header {
 }
 
 #portfolio-header nav#right li:nth-child(2) {
-    font-size:1rem;
+    font-size: 1rem;
     line-height: 1.4;
 }
 
