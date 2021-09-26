@@ -5,13 +5,15 @@ body {
 /*headings*/
 
 h2 {
-    font-style: italic;
+    font-style: oblique;
     text-transform: none;
     letter-spacing: 0;
+    text-align: left;
 }
 
 h3 {
     font-family: Raleway, sans-serif;
+    text-align: left;
 }
 
 h4 {

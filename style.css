@@ -39,12 +39,6 @@ body {
     letter-spacing: 0.06rem;
 }
 
-@media only screen and (max-width: 1800px) {
-    header {
-        grid-template-columns: 1fr 200px 1fr;
-    }
-}
-
 main {
     background-color: #fff;
     width: 1200px;
@@ -69,25 +63,63 @@ article {
 
 /*headings*/
 
+h1#title {
+    color: #fff;
+    font-family: Raleway, sans-serif;
+    font-size: 2rem;
+    font-weight: 100;
+    text-transform: uppercase;
+    letter-spacing: 0.14rem;
+}
+
+h1#subtitle {
+    font-family: FlorenceScript, Raleway, sans-serif;
+    font-size: 2rem;
+    color: #f98562;
+    font-weight: 100;
+    text-transform: none;
+}
+
 h1,
 h2,
 h3 {
-    padding: 1rem 0;
-    font-weight: 200;
+    text-align: center;
+    font-weight: 100;
     line-height: 1.2;
+    padding: 1rem 0;
 }
 
 h2 {
+    color: #f98562;
     font-size: 2rem;
-    font-weight: 100;
-    padding-top: 1.5rem;
+    font-weight: 200;
     text-transform: uppercase;
     letter-spacing: 0.14rem;
+    padding-top: 1.5rem;
+}
+
+h2.florence {
+    color:#240975;
+    font-family: FlorenceScript, Raleway, sans-serif;
+    font-size: 2.5rem;
+    font-weight: 100;
+    text-transform: normal;
+    letter-spacing: normal;
 }
 
 h3 {
     font-size: 2rem;
     font-family: FlorenceScript, Raleway, sans-serif;
+}
+
+#h4-sample {
+    color: #f98562;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: normal;
+    text-transform: uppercase;
+    line-height: 2;
+    letter-spacing: 0.3rem;
 }
 
 p:last-child {
@@ -97,6 +129,7 @@ p:last-child {
 /*links*/
 
 a {
+    color: #62a9fd;
     text-decoration: none;
     transition: color 400ms ease-in-out;
 }
@@ -107,7 +140,11 @@ a:active {
 }
 
 a:visited {
-    color: #f9b19b;
+    color: #f9b19b; /*change for white background*/
+}
+
+a.dark:visited  {
+    color:#453575;
 }
 
 /*lists*/
@@ -136,7 +173,6 @@ ul li ul li {
 header {
     display: grid;
     grid-template-columns: 1fr 450px 1fr;
-    text-align: center;
     padding: 4rem 0;
     background-color: #240975;
     background-image: url("https://www.karenplimmer.com/wp-content/uploads/2021/01/Colour-gradient-block.jpg");
@@ -145,22 +181,10 @@ header {
     background-repeat: repeat-y;
 }
 
-h1#title {
-    color: #fff;
-    font-family: Raleway, sans-serif;
-    font-size: 2rem;
-    font-weight: 100;
-    text-transform: uppercase;
-    letter-spacing: 0.14rem;
-}
-
-h1#subtitle {
-    font-family: FlorenceScript, Raleway, sans-serif;
-    font-size: 2rem;
-    color: #f98562;
-    font-weight: lighter;
-    font-weight: 100;
-    text-transform: none;
+@media only screen and (max-width: 1799px) {
+    header {
+        grid-template-columns: 1fr 200px 1fr;
+    }
 }
 
 /*header nav*/
@@ -184,13 +208,25 @@ header nav li {
     display: inline;
     list-style-type: none;
     font-size: 0.8rem;
-    font-weight: 400;
-    color: #fff;
     text-transform: uppercase;
-    letter-spacing: 0.06rem;
     line-height: 4;
     padding-left: 3rem;
     padding-right: 3rem;
+}
+
+header nav a {
+    color: #fff;
+    transition: all 600ms ease-in-out;
+}
+
+header nav a:visited {
+    color: #f9b19b; 
+}
+
+header nav a:hover,
+header nav a:focus {
+    color: #f98562;
+    font-weight: bold;
 }
 
 @media only screen and (max-width: 1699px) {
@@ -255,21 +291,6 @@ header nav li {
     header nav {
         display: none;
     }
-}
-
-header nav a {
-    color: #fff;
-    transition: color 600ms ease-in-out, font-weight 600ms ease-in-out;
-}
-
-header nav a:visited {
-    color: #f9b19b;
-}
-
-header nav a:hover,
-header nav a:focus {
-    color: #f98562;
-    font-weight: 700;
 }
 
 /*mobile nav*/

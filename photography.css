@@ -14,18 +14,7 @@ body {
 }
 
 main {
-    width: 1599px;
-}
-
-h2,
-h3 {
-    text-align: center;
-    padding-bottom: 20px;
-}
-
-h2 {
-    font-size: 2.5rem;
-    letter-spacing: normal;
+    width: 1600px;
 }
 
 h3 {
@@ -61,7 +50,6 @@ blockquote:hover {
 /*about me*/
 
 h2#about-heading {
-    font-family: "FlorenceScript", "Raleway", sans-serif;
     padding: 3rem 0;
 }
 
