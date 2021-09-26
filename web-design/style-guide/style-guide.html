@@ -41,8 +41,8 @@
             </ul>
         </nav>
         <div id="logo">
-            <h1 id="title">Karen Plimmer</h1>
-            <h1 id="subtitle">style guide</h1>
+            <h1 id="title">Karen Plimmer
+                <span id="subtitle">style guide</span></h1>
         </div>
         <nav id="right">
             <ul>
@@ -67,7 +67,7 @@
                     </div>
                     <div class="hide">
                         <div id="pale-purple-sample" class="colour-sample"></div>
-                        <p>#453575</p>
+                        <p>#7756db</p>
                     </div>
                     <div>
                         <div id="orange-sample" class="colour-sample"></div>
@@ -86,7 +86,7 @@
                         <p>#62a9fd</p>
                     </div>
                     <div>
-                        <div id="grey-sample" class="colour-sample"></div>
+                        <div id="grey-sample" class="colour-sample"><div id="pure-grey-sample"><span>pure grey</span></div></div>
                         <p>#e0e4e6</p>
                     </div>
                 </section>
@@ -112,16 +112,16 @@
                                 <li>padding: 1rem o</li>
                             </ul>
                         </div>
-                        <div>
-                            <h1 id="h1-sample" class="text">The quick brown fox jumped over the lazy dog</h1>
-                            <h1 id="h1-sample2" class="text">The quick brown fox jumped over the lazy dog</h1>
+                        <div class="text-pair">
+                            <h1 id="h1-sample" class="text">The quick brown fox</h1>
+                            <h1 id="h1-sample2" class="text"> jumped over the lazy dog</h1>
                         </div>
                     </div>
                     <div class="font-sample">
                         <div class="font-example">Heading 2</div>
                         <div class="font-description">
                             <ul>
-                                <li>color: orange (home page) or purple (about page)</li>
+                                <li>color: orange (home) or purple (about)</li>
                                 <li>text-align: center</li>
                                 <li>font-family: Raleway (home) or FlorenceScript (about)</li>
                                 <li>font-size: 2rem (home) or 2.5rem (about)</li>
@@ -133,10 +133,7 @@
                                 <li>padding: 1.5rem 0 1rem 0</li>
                             </ul>
                         </div>
-                        <div>
-                            <h2 id="h2-sample" class="text">The quick brown fox jumped over the lazy dog</h2>
-                            <h2 id="h2-sample2" class="text">The quick brown fox jumped over the lazy dog</h2>
-                        </div>
+                        <h2 id="h2-sample" class="text">The quick brown fox jumped over the lazy dog</h2>
                     </div>
                     <div class="font-sample">
                         <div class="font-example">Heading 3</div>
@@ -252,20 +249,21 @@
             <section id="links-and-lists">
                 <article>
                     <h2>Links</h2>
-                    <span class="selector">anchor</span>
+                    <span class="selector blue">anchor</span>
                     <ul>
                         <li>color: blue</li>
                         <li>text-decoration: none</li>
                         <li>transition: color 400ms ease-in-out</li>
                     </ul>
-                    <span class="selector">anchor (active or hover)</span>
+                    <span class="selector orange">anchor (active or hover)</span>
                     <ul>
                         <li>color: orange</li>
                         <li>text-decoration: none</li>
                     </ul>
-                    <span class="selector">anchor (visited)</span>
-                    <ul>
-                        <li>color: pale orange (not on white background)</li>
+                    <span class="selector pale-orange">anchor (visited)</span>
+                    <span class="selector pale-purple">anchor (visited)</span>
+                    <ul class=margin-above>
+                        <li>color: pale orange or pale purple</li>
                         <li>text-decoration: none</li>
                     </ul>
                 </article>
@@ -318,15 +316,15 @@
                 <h2>Header</h2>
                 <span class="selector">header</span>
                 <ul>
-                    <li>display: grid</li>
-                    <li>grid-template-columns: 1fr 450px 1fr or media queries</li>
-                    <li>text-align: center</li>
-                    <li>>padding: 4rem 0</li>
+                    <li>spans the full page</li>
+                    <li>padding: 4rem 0</li>
+                    <li>display: grid (left nav | logo | right nav) / media queries</li>
+                    <li>grid-template-columns: 1fr 450px 1fr / media queries</li>
                     <li>background-color: #240975</li>
                     <li>background-image:
                         url("https://www.karenplimmer.com/wp-content/uploads/2021/01/Colour-gradient-block.jpg")</li>
                     <li>background-size: contain</li>
-                    <li>>background-position: center center</li>
+                    <li>background-position: center center</li>
                     <li>background-repeat: repeat-y</li>
                 </ul>
             </article>
@@ -343,14 +341,14 @@
                     <li>text-decoration: none (inherited)</li>
                     <li>transition: all 600ms ease-in-out </li>
                     <li>display: inline</li>
-                    <li>padding-left and right: 3rem, reduces for smaller devices;</li>
+                    <li>padding-left and right: 3rem, reduces for smaller devices</li>
                 </ul>
                 <span class="selector">navigation anchor (active or hover)</span>
                 <ul>
                     <li>color: orange</li>
                     <li>font-weight: bold</li>
                 </ul>
-                <span class="selector">naviigation anchor (visited)</span>
+                <span class="selector">navigation anchor (visited)</span>
                 <ul>
                     <li>color: pale orange</li>
                 </ul>

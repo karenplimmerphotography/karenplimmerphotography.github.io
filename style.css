@@ -6,6 +6,7 @@
         url("https://karenplimmercom.stage.site/wp-content/uploads/oxygen/custom_fonts/FlorenceScript.woff") format("woff"),
         url("./resources/fonts/FlorenceScript.woff") format("woff")
 }
+
 /*Universal Styles*/
 
 * {
@@ -63,30 +64,32 @@ article {
 
 /*headings*/
 
-h1#title {
-    color: #fff;
-    font-family: Raleway, sans-serif;
-    font-size: 2rem;
-    font-weight: 100;
-    text-transform: uppercase;
-    letter-spacing: 0.14rem;
-}
-
-h1#subtitle {
-    font-family: FlorenceScript, Raleway, sans-serif;
-    font-size: 2rem;
-    color: #f98562;
-    font-weight: 100;
-    text-transform: none;
-}
-
 h1,
 h2,
-h3 {
+h3,
+#title,
+#subtitle {
+    color: #240975;
     text-align: center;
     font-weight: 100;
     line-height: 1.2;
     padding: 1rem 0;
+}
+
+#title {
+    color: #fff;
+    font-family: Raleway, sans-serif;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14rem;
+}
+
+#subtitle {
+    display: block;
+    color: #f98562;
+    font-family: FlorenceScript, Raleway, sans-serif;
+    font-size: 2rem;
+    text-transform: none;
 }
 
 h2 {
@@ -99,7 +102,7 @@ h2 {
 }
 
 h2.florence {
-    color:#240975;
+    color: #240975;
     font-family: FlorenceScript, Raleway, sans-serif;
     font-size: 2.5rem;
     font-weight: 100;
@@ -108,6 +111,7 @@ h2.florence {
 }
 
 h3 {
+    color: #240975;
     font-size: 2rem;
     font-family: FlorenceScript, Raleway, sans-serif;
 }
@@ -140,11 +144,12 @@ a:active {
 }
 
 a:visited {
-    color: #f9b19b; /*change for white background*/
+    color: #f9b19b;
+    /*change for white background*/
 }
 
-a.dark:visited  {
-    color:#453575;
+a.dark:visited {
+    color: #453575;
 }
 
 /*lists*/
@@ -220,7 +225,7 @@ header nav a {
 }
 
 header nav a:visited {
-    color: #f9b19b; 
+    color: #f9b19b;
 }
 
 header nav a:hover,
@@ -349,7 +354,7 @@ span#line1,
 span#line2,
 span#line3 {
     position: relative;
-    color:#240975;
+    color: #240975;
     background-color: transparent;
     display: inline-block;
     font-size: 50px;
