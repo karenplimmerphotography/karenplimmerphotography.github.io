@@ -1,5 +1,6 @@
 html {
-    font-size: 16px;;
+    font-size: 16px;
+    ;
 }
 
 body,
@@ -25,12 +26,13 @@ h2 {
 }
 
 h3 {
-font-size: 2rem;
-text-transform: uppercase;
-letter-spacing: 0.14rem;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14rem;
 }
 
-h4, .h4 {
+h4,
+.h4 {
     font-size: 1.5rem;
     font-weight: 300;
     font-style: oblique;
@@ -39,14 +41,16 @@ h4, .h4 {
     letter-spacing: 0.01rem;
 }
 
-h5, .h5 {
+h5,
+.h5 {
     font-size: 1.25rem;
     font-weight: 300;
     padding-bottom: 0.5rem;
     letter-spacing: 0.01rem;
 }
 
-h6, .h6 {
+h6,
+.h6 {
     font-size: 1.125rem;
     font-weight: 300;
     padding-bottom: 0.5rem;
@@ -165,7 +169,8 @@ article:first-of-type:not(#links-and-lists article:first-of-type) {
     }
 
     .text,
-    .text-pair {
+    .text-pair,
+    #h2-font-sample {
         grid-area: 2 /1 /span 2 / span 2;
     }
 }
@@ -177,10 +182,10 @@ article:first-of-type:not(#links-and-lists article:first-of-type) {
 #buttons {
     margin-left: 4rem;
     display: grid;
-   grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(8, 1fr);
     justify-content: space-between;
     justify-items: center;
-    margin: 1rem 0 3rem 4rem;
+    margin: 3rem 0;
     gap: 1rem;
 }
 
@@ -231,11 +236,14 @@ article:first-of-type:not(#links-and-lists article:first-of-type) {
     .text-pair {
         margin: 0;
     }
+    #buttons {
+        margin-left: 0;
+    }
 }
 
 #h1-sample {
     color: #fff;
-    font-family:Raleway;
+    font-family: Raleway;
     background-color: #240975;
     background-image: none;
     text-align: center;
@@ -260,17 +268,18 @@ article:first-of-type:not(#links-and-lists article:first-of-type) {
     text-transform: none;
 }
 
-#h1-font-sample .text, #h2-font-sample .text{
- height: auto;
+#h1-font-sample .text,
+#h2-font-sample .text {
+    height: auto;
 }
 
 #h1-font-sample .text {
     padding: 1.5rem 1rem 1rem 1rem;
-   }
+}
 
 #h2-font-sample .text {
     padding: 1rem;
-   }
+}
 
 #h2-sample {
     text-align: center;
@@ -337,12 +346,6 @@ article:first-of-type:not(#links-and-lists article:first-of-type) {
     overflow: scroll;
 }
 
-#h2-font-sample .font-description {
-    font-size: 0.8rem;
-    height: 275px;
-    overflow: scroll;
-}
-
 #links-and-lists {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -365,9 +368,10 @@ article:first-of-type:not(#links-and-lists article:first-of-type) {
     background-repeat: repeat-y;
     padding: 2rem;
     border-radius: 0.5rem;
+    margin-top: 3rem;
 }
 
-#links-and-lists article  h3 {
+#links-and-lists article h3 {
     color: #fff;
 }
 
@@ -413,7 +417,7 @@ span.selector.pale-purple {
 
 @media only screen and (max-width: 767px) {
     #header-nav-content {
-        grid-template-columns:1fr;
+        grid-template-columns: 1fr;
     }
 }
 
