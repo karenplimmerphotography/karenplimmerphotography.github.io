@@ -176,6 +176,8 @@ article:first-of-type:not(#links-and-lists article:first-of-type) {
 
 .text {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
     background-color: rgb(248, 248, 248);
     margin-left: 4rem;
@@ -190,7 +192,6 @@ article:first-of-type:not(#links-and-lists article:first-of-type) {
 }
 
 @media only screen and (max-width: 1199px) {
-
     .text,
     .text-pair {
         margin: 0;
@@ -205,12 +206,12 @@ article:first-of-type:not(#links-and-lists article:first-of-type) {
     font-weight: 100;
     text-transform: uppercase;
     letter-spacing: 0.14rem;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
+    line-height: 1;
     padding-bottom: 0;
 }
 
 #h1-sample2 {
+    display: block;
     color: #f98562;
     background-color: #240975;
     text-align: center;
@@ -219,13 +220,19 @@ article:first-of-type:not(#links-and-lists article:first-of-type) {
     font-weight: 100;
     letter-spacing: 0;
     text-transform: none;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
 }
 
-#h2-font-sample {
- height: auto
+#h1-font-sample .text, #h2-font-sample .text{
+ height: auto;
 }
+
+#h1-font-sample .text {
+    padding: 1.5rem 1rem 1rem 1rem;
+   }
+
+#h2-font-sample .text {
+    padding: 1rem;
+   }
 
 #h2-sample {
     color: #f98562;
@@ -253,7 +260,7 @@ article:first-of-type:not(#links-and-lists article:first-of-type) {
     font-size: 2rem;
     font-weight: 200;
     text-transform: uppercase;
-    line-height: 1.2;
+    line-height: 1.4;
     letter-spacing: 0.14rem;
 }
 
@@ -264,7 +271,7 @@ article:first-of-type:not(#links-and-lists article:first-of-type) {
     font-weight: 200;
     font-style: normal;
     text-transform: uppercase;
-    line-height: 1.2;
+    line-height: 1.4;
     letter-spacing: 0.14rem;
 }
 
@@ -274,7 +281,7 @@ article:first-of-type:not(#links-and-lists article:first-of-type) {
     font-size: 1.25rem;
     font-weight: 200;
     text-transform: uppercase;
-    line-height: 1.2;
+    line-height: 1.4;
     letter-spacing: 0.14rem;
 }
 
