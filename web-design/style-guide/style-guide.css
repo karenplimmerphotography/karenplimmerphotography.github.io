@@ -174,12 +174,43 @@ article:first-of-type:not(#links-and-lists article:first-of-type) {
     font-weight: bold;
 }
 
+#buttons {
+    margin-left: 4rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: center;
+    margin: 1rem 0 2rem 4rem;
+}
+
+.text-example-button {
+    width: 5rem;
+    height: 3rem;
+    color: #240975;
+    background-color: #aad0fd;
+    border: 3px solid #fff;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    padding: 7px 7px 10px 7px;
+    cursor: pointer;
+    transition: all 400ms ease-in-out;
+    margin-right: 0.5rem;
+}
+
+.text-example-button:hover {
+    /*background-color: #f19b9b;*/
+    border: 1px solid #fff;
+}
+
 .text {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    background-color: rgb(248, 248, 248);
+    color: #fff;
+    background-color: #240975;
+    font-family: Raleway;
+    font-style: normal;
     margin-left: 4rem;
     padding: 2rem;
     border-radius: 0.5rem;
@@ -200,6 +231,7 @@ article:first-of-type:not(#links-and-lists article:first-of-type) {
 
 #h1-sample {
     color: #fff;
+    font-family:Raleway;
     background-color: #240975;
     text-align: center;
     font-size: 2rem;
@@ -235,15 +267,9 @@ article:first-of-type:not(#links-and-lists article:first-of-type) {
    }
 
 #h2-sample {
-    color: #f98562;
+
     text-align: center;
     font-style: normal;
-}
-
-#h2-sample:hover {
-    color:#fff;
-    background-color: #240975;
-    font-family: FlorenceScript;
 }
 
 /*border-bottom-left-radius: 0;
@@ -261,7 +287,7 @@ article:first-of-type:not(#links-and-lists article:first-of-type) {
 }*/
 
 #h3-sample {
-    color: #f98562;
+    font-family: 'Raleway';
     text-align: center;
     font-size: 2rem;
     font-weight: 200;
@@ -271,15 +297,9 @@ article:first-of-type:not(#links-and-lists article:first-of-type) {
     transition: all 400ms ease-in-out;
 }
 
-#h3-sample:hover {
-    color:#fff;
-    background-color: #240975;
-    font-family: FlorenceScript;
-}
-
 #h4-sample {
-    color: #f98562;
     text-align: center;
+    font-family: 'Raleway';
     font-size: 1.5rem;
     font-weight: 200;
     font-style: normal;
@@ -289,15 +309,9 @@ article:first-of-type:not(#links-and-lists article:first-of-type) {
     transition: all 800ms ease-in-out;
 }
 
-#h4-sample:hover {
-    color:#fff;
-    background-color: #240975;
-    font-family: FlorenceScript; 
-}
-
 #h5-sample {
-    color: #f98562;
     text-align: center;
+    font-family: 'Raleway';
     font-size: 1.25rem;
     font-weight: 200;
     text-transform: uppercase;
@@ -306,39 +320,24 @@ article:first-of-type:not(#links-and-lists article:first-of-type) {
 }
 
 #p-bold-sample {
-    color: #240975;
+    color: #fff;
+    font-family: 'Raleway';
     font-weight: bold;
     font-style: oblique;
     font-size: 14px;
 }
 
-#p-bold-sample:hover {
-    color:#fff;
-    background-color: #240975;
-}
-
 #paragraph-sample {
-    color: #240975;
+    color: #fff;
+    font-family: 'Raleway';
     font-weight: normal;
     font-size: 14px;
-}
-
-#paragraph-sample:hover {
-    color:#fff;
-    background-color: #240975;
 }
 
 #quote-sample {
     font-family: FlorenceScript;
     font-size: 2rem;
-    color: #62a9fd;
     text-align: center;
-}
-
-#quote-sample:hover {
-    color:#240975;
-    background-color: #aad0fd;
-    font-family: FlorenceScript;
 }
 
 .font-description {
