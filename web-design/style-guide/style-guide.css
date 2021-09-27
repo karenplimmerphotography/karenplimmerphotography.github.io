@@ -1,15 +1,20 @@
 html {
     font-size: 16px;
-    ;
 }
 
 body,
 h1,
+.h1,
 h2,
+.h2,
 h3,
+.h3,
 h4,
+.h4,
 h5,
-h6 {
+.h5,
+h6,
+.h6 {
     color: #222;
     text-align: left;
     font-family: Raleway, sans-serif;
@@ -232,10 +237,12 @@ article:first-of-type:not(#links-and-lists article:first-of-type) {
 }
 
 @media only screen and (max-width: 1199px) {
+
     .text,
     .text-pair {
         margin: 0;
     }
+
     #buttons {
         margin-left: 0;
     }
@@ -395,12 +402,17 @@ span.selector.pale-purple {
     column-gap: 1.5rem;
 }
 
-#header-article h2 {
+#header-article h3,
+#header-article h4,
+#header-nav h3,
+#mobile-nav h3,
+#footer-article h3 {
     color: white;
 }
 
-#header-nav h2 {
-    color: white;
+#header-nav .selector {
+    text-transform: uppercase;
+    font-size: 0.8rem;
 }
 
 #header-nav-content {
@@ -436,10 +448,3 @@ span.selector.pale-purple {
     border-radius: 0.5rem;
 }
 
-#mobile-nav h2 {
-    color: #fff;
-}
-
-#footer-article h2 {
-    color: #fff;
-}

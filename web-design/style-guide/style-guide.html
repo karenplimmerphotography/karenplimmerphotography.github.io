@@ -120,7 +120,7 @@
                                 <li>font-style: normal</li>
                                 <li>text-transform: uppercase and normal</li>
                                 <li>line-height: 1.2</li>
-                                <li>letter-spacing: 0.14rem and 0</li>
+                                <li>letter-spacing: 0.14rem and normal</li>
                                 <li>padding: 1rem o</li>
                             </ul>
                         </div>
@@ -139,7 +139,7 @@
                                 <li>font-weight: 200</li>
                                 <li>font-style: normal</li>
                                 <li>text-transform: uppercase</li>
-                                <li>line-height: 1.2</li>
+                                <li>line-height: 1.2 (h1-h3)</li>
                                 <li>letter-spacing: o.14rem</li>
                                 <li>padding: 1rem 0</li>
                             </ul>
@@ -158,7 +158,7 @@
                                 <li>font-weight: 200</li>
                                 <li>font-style: normal</li>
                                 <li>text-transform: uppercase or normal</li>
-                                <li>line-height: 1.4</li>
+                                <li>line-height: 1.4 (h4-h6)</li>
                                 <li>letter-spacing: 0.14rem or normal</li>
                                 <li>padding: 1rem 0</li>
                             </ul>
@@ -213,7 +213,7 @@
                                 <li>font-style: oblique</li>
                                 <li>text-transform: none</li>
                                 <li>line-height: 1.8</li>
-                                <li>letter-spacing: 0.1</li>
+                                <li>letter-spacing: 0.08</li>
                                 <li>padding-bottom: 1rem</li>
                             </ul>
                         </div>
@@ -226,12 +226,12 @@
                             <ul>
                                 <li>color: purple</li>
                                 <li>font-family: Raleway</li>
-                                <li>font-size: 1rem (14px)</li>
+                                <li>font-size: 1rem (14px) *</li>
                                 <li>font-weight: normal</li>
                                 <li>font-style: normal</li>
                                 <li>text-transform: none</li>
                                 <li>line-height: 1.8</li>
-                                <li>letter-spacing: 0.1rem</li>
+                                <li>letter-spacing: 0.08rem</li>
                                 <li>padding-bottom: 1rem</li>
                             </ul>
                         </div>
@@ -243,20 +243,21 @@
                         <div class="font-example">block-quote</div>
                         <div class="font-description">
                             <ul>
-                                <li>color: blue or white on blue background</li>
+                                <li>color: blue or white with blue background</li>
                                 <li>text-align: center</li>
                                 <li>font-family: FlorenceScript</li>
-                                <li>font-size: 2rem</li>
+                                <li>font-size: 1.85rem</li>
                                 <li>font-weight: normal</li>
                                 <li>font-style: normal</li>
                                 <li>text-transform: normal</li>
-                                <li>line-height: 2</li>
+                                <li>line-height: 1.4</li>
                                 <li>letter-spacing: normal</li>
                                 <li>padding: to fit content</li>
+                                <li>:hover color: purple</li>
                             </ul>
                         </div>
-                        <block-quote id="quote-sample" class="text">The quick brown fox
-                            jumped over the lazy dog</block-quote>
+                        <blockquote id="quote-sample" class="text">The quick brown fox
+                            jumped over the lazy dog</blockquote>
                     </div>
                 </section>
             </article>
@@ -292,39 +293,42 @@
                     <ul>
                         <li>list-style-type: square</li>
                         <li>list-style-position: inside</li>
-                        <li>line-height: 1.6</li>
+                        <li>line-height: 2</li>
                     </ul>
                     <span class="selector">list item of nested list</span>
                     <ul>
                         <li>list-style-type: circle</li>
-                        <li>list-style-position: inside (inherited)</li>
-                        <li>line-height: 1.6 (inherited)</li>
+                        <li>list-style-position: inside *</li>
+                        <li>line-height: 2 *</li>
                         <li>margin-left: 2rem (on parent ul)</li>
                     </ul>
                 </article>
             </section>
-            <!--<article>
+            <article>
                 <h3>Buttons</h3>
-            </article>-->
+                <ul>
+                    <li>font-family: Raleway, sans-serif</li>
+                </ul>
+            </article>
             <article>
                 <h3>Layout</h3>
-                <span class="selector">main</span>
+                <h4 class="h5 selector">main</h4>
                 <ul>
                     <li>background-color: white (#fff)</li>
                     <li>width: 1200px (home page), 1600px (about page)</li>
                     <li>max-width: 100%</li>
-                    <li>margin: 0 auto</li>
+                    <li>margin: 2rem auto</li>
                     <li>padding: 0 2rem or (device max-width:767px) padding: 0 1rem</li>
                 </ul>
-                <span class="selector">section and article</span>
+                <h4 class="h5 selector">section and article</h4>
                 <ul>
                     <li>margin-bottom: 3rem</li>
                 </ul>
-                <span class="selector">paragraph</span>
+                <h4 class=" h5 selector">paragraph</h4>
                 <ul>
-                    <li>last-child: margin-bottom: 1rem</li>
+                    <li>margin-bottom: 1rem</li>
+                    <li>last-child: padding-bottom: 1rem</li>
                 </ul>
-
             </article>
             <article id="header-article">
                 <h3>Header</h3>
@@ -356,7 +360,7 @@
             <article id="header-nav">
                 <h3>Header Navigation</h3>
                 <div id="header-nav-content">
-                    <div><span class="selector white">all navigation anchor states</span>
+                    <div><span class="selector white">all states</span>
                         <ul>
                             <li>font-size: 0.9rem</li>
                             <li>text-transform: uppercase</li>
@@ -375,14 +379,14 @@
                         </ul>
                     </div>
                     <div>
-                        <span class="selector orange">navigation anchor (active or hover)</span>
+                        <span class="selector orange">active or hover</span>
                         <ul>
                             <li>color: orange*</li>
                             <li>font-weight: bold</li>
                         </ul>
                     </div>
                     <div>
-                        <span class="selector pale-orange">navigation anchor (visited)</span>
+                        <span class="selector pale-orange">visited</span>
                         <ul>
                             <li>color: pale orange</li>
                         </ul>
@@ -393,11 +397,12 @@
                 <h3>Mobile Navigation</h3>
             </article>
             <article id="footer-article">
-                <h2>Footer</h2>
+                <h3>Footer</h3>
             </article>
 
             <article id="reset">
                 <h3>Reset styles</h3>
+                <h4 class='h5'>applied to *</h4>
                 <ul>
                     <li>box-sizing: border-box</li>
                     <li>margin: 0</li>
