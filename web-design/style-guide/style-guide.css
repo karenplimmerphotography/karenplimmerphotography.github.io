@@ -240,6 +240,12 @@ article:first-of-type:not(#links-and-lists article:first-of-type) {
     font-style: normal;
 }
 
+#h2-sample:hover {
+    color:#fff;
+    background-color: #240975;
+    font-family: FlorenceScript;
+}
+
 /*border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
 }
@@ -262,6 +268,13 @@ article:first-of-type:not(#links-and-lists article:first-of-type) {
     text-transform: uppercase;
     line-height: 1.4;
     letter-spacing: 0.14rem;
+    transition: all 400ms ease-in-out;
+}
+
+#h3-sample:hover {
+    color:#fff;
+    background-color: #240975;
+    font-family: FlorenceScript;
 }
 
 #h4-sample {
@@ -273,6 +286,13 @@ article:first-of-type:not(#links-and-lists article:first-of-type) {
     text-transform: uppercase;
     line-height: 1.4;
     letter-spacing: 0.14rem;
+    transition: all 800ms ease-in-out;
+}
+
+#h4-sample:hover {
+    color:#fff;
+    background-color: #240975;
+    font-family: FlorenceScript; 
 }
 
 #h5-sample {
@@ -292,10 +312,20 @@ article:first-of-type:not(#links-and-lists article:first-of-type) {
     font-size: 14px;
 }
 
+#p-bold-sample:hover {
+    color:#fff;
+    background-color: #240975;
+}
+
 #paragraph-sample {
     color: #240975;
     font-weight: normal;
     font-size: 14px;
+}
+
+#paragraph-sample:hover {
+    color:#fff;
+    background-color: #240975;
 }
 
 #quote-sample {
@@ -303,6 +333,12 @@ article:first-of-type:not(#links-and-lists article:first-of-type) {
     font-size: 2rem;
     color: #62a9fd;
     text-align: center;
+}
+
+#quote-sample:hover {
+    color:#240975;
+    background-color: #aad0fd;
+    font-family: FlorenceScript;
 }
 
 .font-description {
