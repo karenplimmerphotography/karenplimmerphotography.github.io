@@ -199,6 +199,11 @@ ul li ul {
 
 ul li ul li {
     list-style-type: circle;
+
+}
+/*buttons*/
+button {
+    font-family: Raleway, sans-serif;
 }
 
 /*header*/
@@ -247,27 +252,27 @@ header {
 }
 
 .orange {
-    color: #f98562
+    color: #f98562;
 }
 
 .bg-orange {
-    background-color: #f98562
+    background-color: #f98562;
 }
 
 .pale-orange {
-    color: #f9b19b
+    color: #f9b19b;
 }
 
 .bg-pale-orange {
-    background-color: #f9b19b
+    background-color: #f9b19b;
 }
 
 .blue {
-    color:#62a9fd
+    color:#62a9fd;
 }
 
 .bg-blue {
-    background-color:#62a9fd
+    background-color:#62a9fd;
 }
 
 .pale-blue {

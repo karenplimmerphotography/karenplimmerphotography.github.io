@@ -176,18 +176,19 @@ article:first-of-type:not(#links-and-lists article:first-of-type) {
 
 #buttons {
     margin-left: 4rem;
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+   grid-template-columns: repeat(4, 1fr);
     justify-content: space-between;
-    align-content: center;
-    margin: 1rem 0 2rem 4rem;
+    justify-items: center;
+    margin: 1rem 0 3rem 4rem;
+    gap: 1rem;
 }
 
 .text-example-button {
     width: 5rem;
     height: 3rem;
     color: #240975;
-    background-color: #aad0fd;
+    background-color: #f9b19b;
     border: 3px solid #fff;
     border-radius: 0.5rem;
     overflow: hidden;
@@ -209,12 +210,15 @@ article:first-of-type:not(#links-and-lists article:first-of-type) {
     align-items: center;
     color: #fff;
     background-color: #240975;
+    background-image: url("https://www.karenplimmer.com/wp-content/uploads/2021/01/Colour-gradient-block.jpg");
+    background-position: center center;
+    background-size: contain;
     font-family: Raleway;
     font-style: normal;
     margin-left: 4rem;
     padding: 2rem;
     border-radius: 0.5rem;
-    height: 150px;
+    height: 170px;
     overflow: scroll;
 }
 
@@ -233,6 +237,7 @@ article:first-of-type:not(#links-and-lists article:first-of-type) {
     color: #fff;
     font-family:Raleway;
     background-color: #240975;
+    background-image: none;
     text-align: center;
     font-size: 2rem;
     font-weight: 100;
@@ -246,6 +251,7 @@ article:first-of-type:not(#links-and-lists article:first-of-type) {
     display: block;
     color: #f98562;
     background-color: #240975;
+    background-image: none;
     text-align: center;
     font-family: FlorenceScript;
     font-size: 2rem;
@@ -267,24 +273,9 @@ article:first-of-type:not(#links-and-lists article:first-of-type) {
    }
 
 #h2-sample {
-
     text-align: center;
     font-style: normal;
 }
-
-/*border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-}
-
-#h2-sample2 {
-    color: #240975;
-    text-align: center;
-    font-family: FlorenceScript;
-    font-size: 2.5rem;
-     font-style: normal;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-}*/
 
 #h3-sample {
     font-family: 'Raleway';
@@ -346,6 +337,12 @@ article:first-of-type:not(#links-and-lists article:first-of-type) {
     overflow: scroll;
 }
 
+#h2-font-sample .font-description {
+    font-size: 0.8rem;
+    height: 275px;
+    overflow: scroll;
+}
+
 #links-and-lists {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -361,9 +358,21 @@ article:first-of-type:not(#links-and-lists article:first-of-type) {
 }
 
 #links-and-lists article {
-    background-color: rgb(248, 248, 248);
+    color: #fff;
+    background-color: #240975;
+    background-image: url("https://www.karenplimmer.com/wp-content/uploads/2021/01/Colour-gradient-block.jpg");
+    background-position: top center;
+    background-repeat: repeat-y;
     padding: 2rem;
     border-radius: 0.5rem;
+}
+
+#links-and-lists article  h3 {
+    color: #fff;
+}
+
+span.selector.pale-purple {
+    margin-left: 2rem;
 }
 
 #header-article,

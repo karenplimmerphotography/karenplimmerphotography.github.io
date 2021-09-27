@@ -7,11 +7,14 @@ const blueButton = document.getElementById("blue-button");
 const paleBlueButton = document.getElementById("pale-blue-button");
 const purpleButton = document.getElementById("purple-button");
 const whiteButton = document.getElementById("white-button");
+const resetButton = document.getElementById("reset-button");
+const logoText =document.getElementById('h1-sample');
+
 
 const changeFont = (list, newFont) => {
     for (const item of list) {
         if (item.style.fontFamily !== newFont) {
-            item.style.fontFamily = newFont;    
+            item.style.fontFamily = newFont;
         } else {
             item.style.fontFamily = '';
         }
@@ -20,15 +23,13 @@ const changeFont = (list, newFont) => {
 
 const changeButtonColor = (name, newBackgroundColor) => {
     if (name.style.backgroundColor !== newBackgroundColor) {
-        name.style.backgroundColor = newBackgroundColor;  
-    } else {
-        name.style.backgroundColor = '';
+        name.style.backgroundColor = newBackgroundColor;
     }
 }
 
-florenceButton.addEventListener('click', function() {
+florenceButton.addEventListener('click', function () {
     changeFont(text, 'FlorenceScript');
-    changeButtonColor(florenceButton, '#f9b19b');
+    changeButtonColor(florenceButton, '#aad0fd');
 })
 
 const changeTextColor = (list, newColor, newBackgroundColor) => {
@@ -36,41 +37,44 @@ const changeTextColor = (list, newColor, newBackgroundColor) => {
         if (item.style.color !== newColor) {
             item.style.color = newColor;
             item.style.backgroundColor = newBackgroundColor;
-        } else {
-            item.style.color = '#f98562';
-            item.style.backgroundColor = '#e0e4e6';
-        }
-        if (item.style.backgroundColor === '#fff') {
-            item.style.border = '1px solid #240975;'
-        }
-    }
+            item.style.backgroundImage = 'none';
+        } 
+}
 }
 
-paleOrangeButton.addEventListener('click', function() {
+const changeBgImage = list => {
+    for (const item of list) {
+    item.style.color = '#fff';
+    item.style.backgroundColor = '#240975';
+    item.style.backgroundImage = '';
+}
+}
+
+paleOrangeButton.addEventListener('click', function () {
     changeTextColor(textToColor, '#f9b19b', '#240975');
-    changeButtonColor(paleOrangeButton, '#f9b19b');
+    changeButtonColor(paleOrangeButton, '#aad0fd');
 })
-orangeButton.addEventListener('click', function() {
+orangeButton.addEventListener('click', function () {
     changeTextColor(textToColor, '#f98562', '#fff');
-    changeButtonColor(orangeButton, '#f8b19b');
+    changeButtonColor(orangeButton, '#aad0fd');
 })
-blueButton.addEventListener('click', function() {
+blueButton.addEventListener('click', function () {
     changeTextColor(textToColor, '#62a9fd', '#fff');
-    changeButtonColor(blueButton, '#f9b19b');
+    changeButtonColor(blueButton, '#aad0fd');
 })
-paleBlueButton.addEventListener('click', function() {
+paleBlueButton.addEventListener('click', function () {
     changeTextColor(textToColor, '#aad0fd', '#240975');
-    changeButtonColor(paleBlueButton, '#f9b19b');
+    changeButtonColor(paleBlueButton, '#aad0fd');
 })
-purpleButton.addEventListener('click', function() {
+purpleButton.addEventListener('click', function () {
     changeTextColor(textToColor, '#240975', '#fff');
-    changeButtonColor(purpleButton, '#f9b19b');
+    changeButtonColor(purpleButton, '#aad0fd');
 })
-whiteButton.addEventListener('click', function() {
+whiteButton.addEventListener('click', function () {
     changeTextColor(textToColor, '#fff', '#240975');
-    changeButtonColor(whiteButton, '#f9b19b');
+    changeButtonColor(whiteButton, '#aad0fd');
 })
-
-
-
-
+resetButton.addEventListener('click', function () {
+    changeBgImage(textToColor);
+    changeButtonColor(resetButton, '#f9b19b');
+})
