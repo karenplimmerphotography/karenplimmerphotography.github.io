@@ -1,6 +1,6 @@
 
 /*lists*/
-ul {
+ul { /* changed from 1.25rem top and bottom*/
     padding-top: 0.5rem;
     padding-bottom: 2rem;
 }

@@ -41,7 +41,8 @@ h6,
 
 /*headings*/
 
-h2, .h2 {
+h2,
+.h2 {
     font-size: 3rem;
     font-style: oblique;
 }
@@ -52,17 +53,19 @@ h5,
 .h5,
 h6,
 .h6 {
-    padding: 1rem 0 0.5rem 0;
+    padding-bottom: 0.5rem;
 }
 
 h3,
 .h3 {
     font-size: 2.5rem;
+    font-style: normal;
 }
 
 h4,
 .h4 {
     font-size: 2rem;
+    font-style: normal;
 }
 
 h5,
@@ -155,7 +158,7 @@ article ul a:focus {
     margin: 2.5rem 0;
 }
 
-h2#pw-title a {
+#pw-title a {
     display: block;
     color: #fff;
     background-color: inherit;
@@ -197,7 +200,7 @@ h2#pw-title a {
 
 /*fox terrier*/
 
-#fox-terrier-article h2 {
+#fox-terrier-article .article-title {
     font-family: "Rozha One", serif;
     text-transform: uppercase;
     letter-spacing: 0.2rem;
@@ -210,7 +213,7 @@ h2#pw-title a {
     font-style: normal;
 }
 
-#fox-terrier-article h3 {
+#fox-terrier-article .article-subtitle {
     font-family: "Nothing You Could Do", cursive;
     color: #ef5406;
     font-weight: normal;
@@ -239,7 +242,7 @@ h2#pw-title a {
     margin-bottom: 2rem;
 }
 
-.default h2 {
+.default h3 {
     color: #fff;
     font-family: Raleway, sans-serif;
     font-size: 2rem;
@@ -250,7 +253,7 @@ h2#pw-title a {
     text-align: center;
 }
 
-.default h3 {
+.default h4 {
     color: #f98562;
     font-family: FlorenceScript, Raleway, sans-serif;
     font-weight: 100;
@@ -382,7 +385,7 @@ header#portfolio-header {
 */
 /*dasmoto*/
 
-div#dasmoto-header h2 {
+div#dasmoto-header h3 {
     font-family: Helvetica, sans-serif;
     font-size: 80px;
     font-weight: bold;
