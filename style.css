@@ -71,6 +71,7 @@ article {
     font-weight: 100;
     line-height: 1.2;
     padding: 1rem 0;
+    font-style: normal;
 }
 
 h2,
@@ -101,41 +102,39 @@ h6 {
     letter-spacing: normal;
 }
 
-h2, .h2 {
+h2,
+.h2 {
     color: #f98562;
     font-size: 3rem;
     line-height: 1.2;
 }
 
-h3, .h3 {
+h3,
+.h3 {
     color: #f98562;
     font-size: 2.5rem;
+    line-height: 1.2;
 }
 
-h4, .h4 {
+h4,
+.h4 {
     color: #f98562;
     font-size: 2rem;
 }
 
-h5, .h5 {
+h5,
+.h5 {
     color: #f98562;
     font-size: 1.5rem;
 }
 
-h6, .h6 {
+h6,
+.h6 {
     color: #f98562;
     font-size: 1.25rem;
 }
 
-h3.florence, .h3.florence {
-    font-family: FlorenceScript, Raleway, sans-serif;
-    font-size: 2.5rem;
-    text-transform: normal;
-    letter-spacing: normal;
-}
-
-h4.florence, .h4.florence {
-    font-size: 2rem;
+.florence {
     font-family: FlorenceScript, Raleway, sans-serif;
 }
 
@@ -201,6 +200,7 @@ ul li ul li {
     list-style-type: circle;
 
 }
+
 /*buttons*/
 button {
     font-family: Raleway, sans-serif;
@@ -268,11 +268,11 @@ header {
 }
 
 .blue {
-    color:#62a9fd;
+    color: #62a9fd;
 }
 
 .bg-blue {
-    background-color:#62a9fd;
+    background-color: #62a9fd;
 }
 
 .pale-blue {
@@ -284,7 +284,7 @@ header {
 }
 
 .grey {
-   color: #e0e4e6;
+    color: #e0e4e6;
 }
 
 .bg-grey {
@@ -296,7 +296,7 @@ header {
 }
 
 .bold {
-    font-style: bold;
+    font-weight: bold;
 }
 
 .center {

@@ -4,12 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./florence.css" rel="stylesheet"> 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="./florence.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;400;700&display=swap" rel="stylesheet">
     <link href="../../florence.css" rel="stylesheet">
     <link href="../../style.css" rel="stylesheet">
+    <link href="../design.css" rel="stylesheet">
     <link href="./style-guide.css" rel="stylesheet">
     <title>Karen Plimmer Style Guide</title>
     <script src="../../script.js" defer></script>
@@ -42,8 +45,8 @@
             </ul>
         </nav>
         <div id="logo">
-            <h1 id="title">Karen Plimmer
-                <span id="subtitle">style guide</span></h1>
+            <h1 id="title">Karen Plimmer</h1>
+            <h2 id="subtitle">style guide</h2>
         </div>
         <nav id="right">
             <ul>
@@ -59,9 +62,9 @@
 
     <body>
         <main>
-            <h2 class="hidden">Style guide for karenplimmer.com</h2>
+            <!--colours-->
             <article>
-                <h3>Colours</h3>
+                <h3 class="h4">Colours</h3>
                 <section id="colours">
                     <div>
                         <div id="purple-sample" class="colour-sample bg-purple"></div>
@@ -95,11 +98,58 @@
                     </div>
                 </section>
             </article>
+            <!--font family-->
+            <article id="font-family">
+                <h3 class="h4">Fonts</h3>
+                <section id="font-family-content">
+                    <div class="family-example">
+                        <p>Raleway thin</p>
+                        <p>font-weight: 100</p>
+                        <p class="weight-100 uppercase">The quick brown fox jumped over the lazy dog</p>
+                    </div>
+                    <div class="family-example">
+                        <p>Raleway extra light</p>
+                        <p>font-weight: 200</p>
+                        <p class="weight-200 uppercase">The quick brown fox jumped over the lazy dog</p>
+                    </div>
+                    <div class="family-example">
+                        <p>Raleway</p>
+                        <p>font-weight: 400</p>
+                        <p>The quick brown fox jumped over the lazy dog</p>
+                    </div>
+                    <div class="family-example">
+                        <p>Raleway italic</p>
+                        <p>font-weight: 400 </p>
+                        <p class="italic">The quick brown fox jumped over the lazy dog</p>
+                    </div>
+                    <div class="family-example">
+                        <p>Raleway italic bold</p>
+                        <p>font-weight: bold</p>
+                        <p class="bold italic">The quick brown fox jumped over the lazy dog</p>
+                    </div>
+                    <div class="family-example">
+                        <p>Raleway bold</p>
+                        <p>font-weight: bold</p>
+                        <p class="bold">The quick brown fox jumped over the lazy dog</p>
+                    </div>
+                    <div class="family-example">
+                        <p>Florence</p>
+                        <p>font-weight: 400</p>
+                        <p class="florence">The quick brown fox jumped over the lazy dog</p>
+                    </div>
+                    <div class="family-example">
+                        <p>Florence bold</p>
+                        <p>font-weight: bold</p>
+                        <p class="florence bold">The quick brown fox jumped over the lazy dog</p>
+                    </div>
+                </section>
+            </article>
+            <!--font-headings-->
             <article>
-                <h3>Fonts</h3>
-                <section id="fonts">
+                <h3 class="h4">Headings</h3>
+                <section id="font-heading-levels">
                     <div id="buttons">
-                        <button id="florence-button"class="text-example-button">font</button>
+                        <button id="florence-button" class="text-example-button">font</button>
                         <button id="purple-button" class="text-example-button">purple</button>
                         <button id="orange-button" class="text-example-button">orange</button>
                         <button id="pale-orange-button" class="text-example-button">pale orange</button>
@@ -124,11 +174,11 @@
                                 <li>padding: 1rem o</li>
                             </ul>
                         </div>
-                        <h1 id="h1-sample" class="text">The quick brown fox
-                            <span id="h1-sample2" class="text"> jumped over the lazy dog</span>
-                        </h1>
+                        <p id="h1-sample" class="text">The quick brown fox<span id="h1-sample2" class="text"> jumped
+                                over the lazy dog</span>
+                        </p>
                     </div>
-                    <div class="font-sample" id="h2-font-sample">
+                    <div class="font-sample">
                         <div class="font-example">Heading 2 <span class="small">(not in use)</span></div>
                         <div class="font-description">
                             <ul>
@@ -144,7 +194,7 @@
                                 <li>padding: 1rem 0</li>
                             </ul>
                         </div>
-                            <h2 id="h2-sample" class="text">The quick brown fox jumped over the lazy dog</h2>
+                        <p id="h2-sample" class="text">The quick brown fox jumped over the lazy dog</p>
                     </div>
                     <div class="font-sample">
                         <div class="font-example">Heading 3 <span class="small">(&amp; florence script variation)</span>
@@ -163,7 +213,8 @@
                                 <li>padding: 1rem 0</li>
                             </ul>
                         </div>
-                        <h3 id="h3-sample" class="text text-to-change-font">The quick brown fox jumped over the lazy dog</h3>
+                        <p id="h3-sample" class="text text-to-change-font">The quick brown fox jumped over the lazy dog
+                        </p>
                     </div>
                     <div class="font-sample">
                         <div class="font-example">Heading 4 <span class="small">(&amp; florence script variation)</span>
@@ -179,13 +230,14 @@
                                 <li>text-transform: uppercase or normal</li>
                                 <li>line-height: 1.4</li>
                                 <li>letter-spacing: 0.14rem or normal</li>
+                                <li>padding: 1rem o</li>
                             </ul>
                         </div>
-                        <h4 id="h4-sample" class="text text-to-change-font">The quick brown fox jumped over the lazy dog
-                        </h4>
+                        <p id="h4-sample" class="text text-to-change-font">The quick brown fox jumped over the lazy dog
+                        </p>
                     </div>
                     <div class="font-sample">
-                        <div class="font-example">Heading 5 <span class="small">(not in use)</span></div>
+                        <div class="font-example">Heading 5 </div>
                         <div class="font-description">
                             <ul>
                                 <li>color: orange</li>
@@ -197,20 +249,39 @@
                                 <li>text-transform: uppercase</li>
                                 <li>line-height: 1.4</li>
                                 <li>letter-spacing: 0.14rem</li>
+                                <li>padding: 1rem o</li>
                             </ul>
                         </div>
-                        <h5 id="h5-sample" class="text">The quick brown fox jumped over the lazy dog
-                        </h5>
+                        <p id="h5-sample" class="text">The quick brown fox jumped over the lazy dog
+                        </p>
                     </div>
                     <div class="font-sample">
-                        <div class="font-example">paragraph <span class="small">(bold emphasis)</span></div>
+                        <div class="font-example">Heading 6 </span></div>
+                        <div class="font-description">
+                            <ul>
+                                <li>color: purple</li>
+                                <li>font-family: Raleway</li>
+                                <li>font-size: 1.25rem</li>
+                                <li>font-weight: 200</li>
+                                <li>font-style: normal</li>
+                                <li>text-transform: uppercase</li>
+                                <li>line-height: 1.4</li>
+                                <li>letter-spacing: 0..14</li>
+                                <li>padding: 1rem o</li>
+                            </ul>
+                        </div>
+                        <p id="h6-sample" class="text">The quick brown fox jumped over the lazy dog
+                        </p>
+                    </div>
+                    <div class="font-sample">
+                        <div class="font-example">paragraph <span class="small">(bold)</span></div>
                         <div class="font-description">
                             <ul>
                                 <li>color: purple</li>
                                 <li>font-family: Raleway</li>
                                 <li>font-size: 1rem (14px)</li>
                                 <li>font-weight: bold</li>
-                                <li>font-style: oblique</li>
+                                <li>font-style: normal</li>
                                 <li>text-transform: none</li>
                                 <li>line-height: 1.8</li>
                                 <li>letter-spacing: 0.08</li>
@@ -261,41 +332,46 @@
                     </div>
                 </section>
             </article>
+            <!--links and lists-->
             <section id="links-and-lists">
+                <!--links-->
                 <article>
-                    <h3>Links</h3>
-                    <span class="selector blue">anchor</span>
+                    <h3 class="h4">Links</h3>
+                    <h4 class="h6 blue">anchor</h4>
                     <ul>
                         <li>color: blue</li>
                         <li>text-decoration: none</li>
                         <li>transition: color 400ms ease-in-out</li>
                     </ul>
-                    <span class="selector orange">anchor (active or hover)</span>
+                    <h4 class="h6 orange">anchor (active or hover)</h4>
                     <ul>
                         <li>color: orange</li>
                         <li>text-decoration: none</li>
                     </ul>
-                    <span class="selector pale-orange bg-purple">anchor (visited)</span>
-                    <span class="selector pale-purple bg-white">anchor (visited)</span>
+                    <h4>
+                        <span class="selector pale-orange bg-purple">anchor (visited)</span>
+                        <span class="selector pale-purple bg-white">anchor (visited)</span>
+                    </h4>
                     <ul class=margin-above>
                         <li>color: pale orange or pale purple</li>
                         <li>text-decoration: none</li>
                     </ul>
                 </article>
+                <!--lists-->
                 <article>
-                    <h3>Lists</h3>
-                    <span class="selector">unordered list</span>
+                    <h3 class="h4">Lists</h3>
+                    <h4 class="h6">unordered list</h4>
                     <ul>
                         <li>padding-top: 1.25rem</li>
                         <li>padding-bottom: 1.25rem</li>
                     </ul>
-                    <span class="selector">list item</span>
+                    <h4 class="h6">list item</h4>
                     <ul>
                         <li>list-style-type: square</li>
                         <li>list-style-position: inside</li>
                         <li>line-height: 2</li>
                     </ul>
-                    <span class="selector">list item of nested list</span>
+                    <h4 class="h6">list item of nested list</h4>
                     <ul>
                         <li>list-style-type: circle</li>
                         <li>list-style-position: inside *</li>
@@ -304,15 +380,17 @@
                     </ul>
                 </article>
             </section>
+            <!--buttons-->
             <article>
-                <h3>Buttons</h3>
+                <h3 class="h4">Buttons</h3>
                 <ul>
                     <li>font-family: Raleway, sans-serif</li>
                 </ul>
             </article>
+            <!--layout-->
             <article>
-                <h3>Layout</h3>
-                <h4 class="h5 selector">main</h4>
+                <h3 class="h4">Layout</h3>
+                <h4 class="h6 selector">main</h4>
                 <ul>
                     <li>background-color: white (#fff)</li>
                     <li>width: 1200px (home page), 1600px (about page)</li>
@@ -320,21 +398,22 @@
                     <li>margin: 2rem auto</li>
                     <li>padding: 0 2rem or (device max-width:767px) padding: 0 1rem</li>
                 </ul>
-                <h4 class="h5 selector">section and article</h4>
+                <h4 class="h6 selector">section and article</h4>
                 <ul>
                     <li>margin-bottom: 3rem</li>
                 </ul>
-                <h4 class=" h5 selector">paragraph</h4>
+                <h4 class=" h6 selector">paragraph</h4>
                 <ul>
                     <li>margin-bottom: 1rem</li>
                     <li>last-child: padding-bottom: 1rem</li>
                 </ul>
             </article>
+            <!--header-->
             <article id="header-article">
-                <h3>Header</h3>
+                <h3 class="h4">Header</h3>
                 <div id="header-article-content">
                     <div>
-                        <h4>Layout</h4>
+                        <h4 class="h6">Layout</h4>
                         <ul>
                             <li>spans the full page</li>
                             <li>padding: 4rem 0</li>
@@ -343,7 +422,7 @@
                         </ul>
                     </div>
                     <div>
-                        <h4>Background</h4>
+                        <h4 class="h6">Background</h4>
                         <ul>
                             <li>background-color: #240975</li>
                             <li>background-image:
@@ -357,8 +436,9 @@
                     </div>
                 </div>
             </article>
+            <!--header nav-->
             <article id="header-nav">
-                <h3>Header Navigation</h3>
+                <h3 class="h4">Header Navigation</h3>
                 <div id="header-nav-content">
                     <div><span class="selector white">all states</span>
                         <ul>
@@ -393,16 +473,18 @@
                     </div>
                 </div>
             </article>
+            <!--mobile nav-->
             <article id="mobile-nav">
-                <h3>Mobile Navigation</h3>
+                <h3 class="h4">Mobile Navigation</h3>
             </article>
+            <!--footer-->
             <article id="footer-article">
-                <h3>Footer</h3>
+                <h3 class="h4">Footer</h3>
             </article>
-
+            <!--reset-->
             <article id="reset">
-                <h3>Reset styles</h3>
-                <h4 class='h5'>applied to *</h4>
+                <h3 class="h4">Reset styles</h3>
+                <h4 class='h6'>applied to *</h4>
                 <ul>
                     <li>box-sizing: border-box</li>
                     <li>margin: 0</li>
@@ -414,8 +496,9 @@
                     <li>max-width: 100%</li>
                 </ul>
             </article>
+            <!--media queries-->
             <article>
-                <h3>Media queries</h3>
+                <h3 class="h4">Media queries</h3>
                 <p>@ media screen only and (min-resolution: 200px) {
                     <br>html {<br>
                     font-size: 16px;<br>
@@ -423,6 +506,7 @@
                 </p>
             </article>
         </main>
+        <!--footer-->-->
         <footer>
             <nav>
                 <ul>

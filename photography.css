@@ -5,8 +5,8 @@
     width: 1600px;
 }
 
-h2#about-heading {
-    padding: 3rem 0;
+h2#about-heading { /*usually 1rem 0* for h1-h6*/
+    padding: 2rem 0 3rem 0;
 }
 
 .about-grid-container {
@@ -323,7 +323,6 @@ img {
 }
 
 @media only screen and (max-width: 479px) {
-
     .a4,
     .a5,
     .a6,

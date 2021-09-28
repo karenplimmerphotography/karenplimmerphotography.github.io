@@ -1,97 +1,13 @@
-html {
-    font-size: 16px;
-}
 
-body,
-h1,
-.h1,
-h2,
-.h2,
-h3,
-.h3,
-h4,
-.h4,
-h5,
-.h5,
-h6,
-.h6 {
-    color: #222;
-    text-align: left;
-    font-family: Raleway, sans-serif;
-    text-transform: none;
-}
-
-/*headings*/
-
-h2 {
-    font-size: 3rem;
-    font-style: oblique;
-    text-transform: uppercase;
-    letter-spacing: 0.14rem;
-}
-
-h3 {
-    font-size: 2rem;
-    text-transform: uppercase;
-    letter-spacing: 0.14rem;
-}
-
-h4,
-.h4 {
-    font-size: 1.5rem;
-    font-weight: 300;
-    font-style: oblique;
-    text-transform: none;
-    padding-bottom: 0.5rem;
-    letter-spacing: 0.01rem;
-}
-
-h5,
-.h5 {
-    font-size: 1.25rem;
-    font-weight: 300;
-    padding-bottom: 0.5rem;
-    letter-spacing: 0.01rem;
-}
-
-h6,
-.h6 {
-    font-size: 1.125rem;
-    font-weight: 300;
-    padding-bottom: 0.5rem;
-    letter-spacing: 0.01rem;
-}
-
-p {
-    letter-spacing: 0.06rem;
-}
-
-/* header navigation*/
-
-header nav li {
-    font-size: 0.8rem;
-}
-
+/*lists*/
 ul {
     padding-top: 0.5rem;
     padding-bottom: 2rem;
 }
 
-.font-description ul {
-    padding-top: 1.25rem;
-    padding-bottom: 1.25rem;
-}
+/*UNIQUE CONTENT*/
 
-span.selector {
-    font-style: italic;
-    font-weight: bold;
-}
-
-article:first-of-type:not(#links-and-lists article:first-of-type) {
-    margin-top: 3rem;
-}
-
-
+/*colors*/
 #colours {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
@@ -145,12 +61,109 @@ article:first-of-type:not(#links-and-lists article:first-of-type) {
     margin: 2rem;
 }
 
+/*font-family*/
+
+#font-family {
+    background-color: #240975;
+    background-image: url("https://www.karenplimmer.com/wp-content/uploads/2021/01/Colour-gradient-block.jpg");
+    background-position: center center;
+    background-size: contain;
+    border-radius: 0.5rem;
+    padding: 1rem 2rem;
+}
+
+#font-family h3.h4 {
+    color: #fff;
+}
+
+.family-example {
+    display: grid;
+    grid-template-columns: 0.8fr 1fr 3.2fr;
+    gap: 2rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.family-example p:first-child {
+    color: #fff;
+    font-weight: bold;
+}
+
+.family-example p:nth-child(2) {
+    color: #fff;
+    font-size: 0.8rem;
+}
+
+.family-example p:last-child {
+    color: #fff;
+    font-size: 1.25rem;
+    margin-left: 4rem;
+    padding: 1 2rem;
+}
+
+@media only screen and (max-width:1199px) {
+    .family-example {
+        grid-template: 1fr 1fr / 1fr 1fr;
+        justify-content: start;
+        gap: 1rem;
+        margin-bottom: 3rem;
+    }
+
+    .family-example p:first-child {
+        grid-area: 1 / 1 / span 1 / span 1;
+        padding-bottom: 0;
+    }
+
+    .family-example p:nth-child(2) {
+        grid-area: 1 / 2 / span 1 / span 1;
+        padding-bottom: 0;
+        font-size: 1rem;
+    }
+
+    .family-example p:last-child {
+        margin-left: 0rem;
+        padding-bottom: 0;
+        grid-area: 2 /1 /span 2 / span 2;
+    }
+}
+
+.weight-100 {
+    font-weight: 100;
+}
+
+.weight-200 {
+    font-weight: 200;
+}
+
+.weight-300 {
+    font-weight: 300;
+}
+
+.weight-400 {
+    font-weight: 400;
+}
+
+.oblique {
+    font-style: oblique;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+/*font-headings*/
+
 .font-sample {
     display: grid;
     grid-template-columns: 0.6fr 1.2fr 3.2fr;
     gap: 2rem;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 2rem;
 }
 
 @media only screen and (max-width: 999px) {
@@ -158,7 +171,6 @@ article:first-of-type:not(#links-and-lists article:first-of-type) {
         grid-template: 1fr 1fr / 1fr 1fr;
         justify-content: start;
         gap: 1rem;
-        margin-bottom: 2rem;
     }
 
     .font-example {
@@ -169,13 +181,7 @@ article:first-of-type:not(#links-and-lists article:first-of-type) {
         grid-area: 1 / 2 / span 1 / span 1;
     }
 
-    .font-description ul {
-        display: inline;
-    }
-
-    .text,
-    .text-pair,
-    #h2-font-sample {
+    .text {
         grid-area: 2 /1 /span 2 / span 2;
     }
 }
@@ -258,7 +264,7 @@ article:first-of-type:not(#links-and-lists article:first-of-type) {
     font-weight: 100;
     text-transform: uppercase;
     letter-spacing: 0.14rem;
-    line-height: 1;
+    line-height: 1.2;
     padding-bottom: 0;
 }
 
@@ -271,8 +277,10 @@ article:first-of-type:not(#links-and-lists article:first-of-type) {
     font-family: FlorenceScript;
     font-size: 2rem;
     font-weight: 100;
+    line-height: 1.2;
     letter-spacing: 0;
     text-transform: none;
+    margin-left: 0;
 }
 
 #h1-font-sample .text,
@@ -284,42 +292,48 @@ article:first-of-type:not(#links-and-lists article:first-of-type) {
     padding: 1.5rem 1rem 1rem 1rem;
 }
 
-#h2-font-sample .text {
-    padding: 1rem;
-}
-
 #h2-sample {
     text-align: center;
     font-style: normal;
+    font-size: 42px;
+    font-weight: 200;
+    text-transform: uppercase;
+    line-height: 1.2;
+    letter-spacing: 0.14rem;
+    padding: 1rem;
 }
 
 #h3-sample {
-    font-family: 'Raleway';
     text-align: center;
-    font-size: 2rem;
+    font-size: 35px;
     font-weight: 200;
     text-transform: uppercase;
-    line-height: 1.4;
+    line-height: 1.2;
     letter-spacing: 0.14rem;
-    transition: all 400ms ease-in-out;
 }
 
 #h4-sample {
     text-align: center;
-    font-family: 'Raleway';
-    font-size: 1.5rem;
+    font-size: 28px;
     font-weight: 200;
     font-style: normal;
     text-transform: uppercase;
     line-height: 1.4;
     letter-spacing: 0.14rem;
-    transition: all 800ms ease-in-out;
 }
 
 #h5-sample {
     text-align: center;
-    font-family: 'Raleway';
-    font-size: 1.25rem;
+    font-size: 21px;
+    font-weight: 200;
+    text-transform: uppercase;
+    line-height: 1.4;
+    letter-spacing: 0.14rem;
+}
+
+#h6-sample {
+    text-align: center;
+    font-size: 17.5px;
     font-weight: 200;
     text-transform: uppercase;
     line-height: 1.4;
@@ -328,10 +342,9 @@ article:first-of-type:not(#links-and-lists article:first-of-type) {
 
 #p-bold-sample {
     color: #fff;
-    font-family: 'Raleway';
     font-weight: bold;
-    font-style: oblique;
     font-size: 14px;
+    letter-spacing: 0.08rem;
 }
 
 #paragraph-sample {
@@ -339,19 +352,27 @@ article:first-of-type:not(#links-and-lists article:first-of-type) {
     font-family: 'Raleway';
     font-weight: normal;
     font-size: 14px;
+    letter-spacing: 0.08rem;
 }
 
 #quote-sample {
     font-family: FlorenceScript;
-    font-size: 2rem;
+    font-size: 26px;
     text-align: center;
+    letter-spacing: 0.08rem;
+}
+
+blockquote#quote-sample:hover { /*default is purple*/
+    color: #fff;
 }
 
 .font-description {
     font-size: 0.8rem;
-    height: 200px;
+    height: 160px;
     overflow: scroll;
 }
+
+/*links and lists*/
 
 #links-and-lists {
     display: grid;
@@ -378,8 +399,26 @@ article:first-of-type:not(#links-and-lists article:first-of-type) {
     margin-top: 3rem;
 }
 
-#links-and-lists article h3 {
+#links-and-lists article h3, 
+#links-and-lists article h4 {
     color: #fff;
+}
+
+.h6.orange {
+    color: #f98562
+}
+
+.h6.blue {
+    color: #62a9fd;
+}
+
+.selector.pale-purple,
+.selector.pale-orange {
+    font-size: 1rem;
+    font-weight: bold;
+    font-weight: 900;
+    font-style: normal;
+    text-transform: none;
 }
 
 span.selector.pale-purple {
@@ -392,7 +431,7 @@ span.selector.pale-purple {
     background-image:
         url("https://www.karenplimmer.com/wp-content/uploads/2021/01/Colour-gradient-block.jpg");
     color: #fff;
-    padding: 1rem;
+    padding: 2rem;
     border-radius: 0.5rem;
 }
 
@@ -444,7 +483,7 @@ span.selector.pale-purple {
 #mobile-nav {
     background-color: #f98562;
     color: #fff;
-    padding: 1rem;
+    text-transform: uppercase;
+    padding: 2rem;
     border-radius: 0.5rem;
 }
-
