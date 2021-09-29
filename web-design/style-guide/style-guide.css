@@ -1,6 +1,6 @@
-
 /*lists*/
-ul { /* changed from 1.25rem top and bottom*/
+ul {
+    /* changed from 1.25rem top and bottom*/
     padding-top: 0.5rem;
     padding-bottom: 2rem;
 }
@@ -31,6 +31,20 @@ ul { /* changed from 1.25rem top and bottom*/
     border-radius: 50%;
 }
 
+@media only screen and (max-width: 549px) {
+    #colours div.colour-sample {
+      width: 125px;
+      height: 125px;
+    }
+}
+
+@media only screen and (max-width: 485px) {
+    #colours div.colour-sample {
+      width: 100px;
+      height: 100px;
+    }
+}
+
 #grey-sample {
     position: relative;
 }
@@ -54,6 +68,12 @@ ul { /* changed from 1.25rem top and bottom*/
     border-radius: 50%;
     top: 7px;
     left: 18px;
+}
+
+@media only screen and (max-width: 549px) {
+   #pure-grey-sample {
+       display: none;
+    }
 }
 
 #colours p {
@@ -200,6 +220,13 @@ ul { /* changed from 1.25rem top and bottom*/
     gap: 1rem;
 }
 
+@media only screen and (max-width: 767px) {
+    #buttons {
+        grid-template-columns: repeat(4, 1fr);
+        margin-left: 0;
+    }
+}
+
 .text-example-button {
     width: 5rem;
     height: 3rem;
@@ -247,10 +274,6 @@ ul { /* changed from 1.25rem top and bottom*/
     .text,
     .text-pair {
         margin: 0;
-    }
-
-    #buttons {
-        margin-left: 0;
     }
 }
 
@@ -362,7 +385,8 @@ ul { /* changed from 1.25rem top and bottom*/
     letter-spacing: 0.08rem;
 }
 
-blockquote#quote-sample:hover { /*default is purple*/
+blockquote#quote-sample:hover {
+    /*default is purple*/
     color: #fff;
 }
 
@@ -399,7 +423,7 @@ blockquote#quote-sample:hover { /*default is purple*/
     margin-top: 3rem;
 }
 
-#links-and-lists article h3, 
+#links-and-lists article h3,
 #links-and-lists article h4 {
     color: #fff;
 }
@@ -425,6 +449,38 @@ span.selector.pale-purple {
     margin-left: 2rem;
 }
 
+/*buttons*/
+
+#buttons-buttons {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 2rem;
+    justify-content: space-between;
+}
+
+@media only screen and (max-width: 767px) {
+    #buttons-buttons {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media only screen and (max-width: 599px) {
+    #buttons-buttons {
+        grid-template-columns: repeat(, 1fr);
+    }
+}
+
+button {
+    width: 10rem;
+    color: #fff;
+    padding: 1rem;
+    border: none;
+    border-radius: 2rem;
+    margin-top: 2rem;
+}
+
+
+/*header*/
 #header-article,
 #header-nav,
 #footer-article {
@@ -441,6 +497,12 @@ span.selector.pale-purple {
     column-gap: 1.5rem;
 }
 
+@media only screen and (max-width: 767px) {
+    #header-article-content {
+        grid-template-columns: 1fr;
+    }
+}
+
 #header-article h3,
 #header-article h4,
 #header-nav h3,
@@ -449,6 +511,7 @@ span.selector.pale-purple {
     color: white;
 }
 
+/*header nav*/
 #header-nav .selector {
     text-transform: uppercase;
     font-size: 0.8rem;
@@ -480,6 +543,7 @@ span.selector.pale-purple {
     background-color: #240975;
 }
 
+/*mobile nav*/
 #mobile-nav {
     background-color: #f98562;
     color: #fff;

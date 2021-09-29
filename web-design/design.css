@@ -35,7 +35,7 @@ h6,
     font-family: Raleway, sans-serif;
     font-weight: 100;
     text-transform: uppercase;
-    letter-spacing: 0.14;
+    letter-spacing: 0.14rem;
     padding: 1rem 0;
 }
 
@@ -136,7 +136,7 @@ article ul a:focus {
     padding-bottom: 2rem;
 }
 
-#hero-image-design h2 {
+#hero-image-design h1 {
     color: #fff;
     text-align: center;
 }
