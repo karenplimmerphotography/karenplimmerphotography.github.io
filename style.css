@@ -88,12 +88,14 @@ h6 {
 }
 
 #title {
+    /* may be h1 or h2*/
     color: #fff;
     text-transform: uppercase;
     letter-spacing: 0.14rem;
 }
 
 #subtitle {
+    /* may be span, h1 or h2*/
     display: block;
     color: #f98562;
     font-family: FlorenceScript, Raleway, sans-serif;
@@ -114,21 +116,27 @@ h3,
 }
 
 h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+    line-height: 1.4;
+}
+
+h4,
 .h4 {
     font-size: 2rem;
-    line-height: 1.4;
 }
 
 h5,
 .h5 {
     font-size: 1.5rem;
-    line-height: 1.4;
 }
 
 h6,
 .h6 {
     font-size: 1.25rem;
-    line-height: 1.4;
 }
 
 .florence {
