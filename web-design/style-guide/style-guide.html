@@ -4,12 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="./florence.css" rel="stylesheet"> 
+    <link href="../../florence.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com"> 
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
-<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;400;700&display=swap" rel="stylesheet">
+    <link  rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;400;700&display=swap">
+    <link  rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
     <link href="../../florence.css" rel="stylesheet">
     <link href="../../style.css" rel="stylesheet">
     <link href="../design.css" rel="stylesheet">
@@ -337,20 +336,20 @@
                 <!--links-->
                 <article>
                     <h3 class="h4">Links</h3>
-                    <h4 class="h6 blue">anchor</h4>
+                    <h4 class="h6 blue"><i class="la la-link"></i>anchor</h4>
                     <ul>
                         <li>color: blue</li>
                         <li>text-decoration: none</li>
                         <li>transition: color 400ms ease-in-out</li>
                     </ul>
-                    <h4 class="h6 orange">anchor (active or hover)</h4>
+                    <h4 class="h6 orange"><i class="la la-link"></i>anchor (active or hover)</h4>
                     <ul>
                         <li>color: orange</li>
                         <li>text-decoration: none</li>
                     </ul>
                     <h4>
-                        <span class="selector pale-orange bg-purple">anchor (visited)</span>
-                        <span class="selector pale-purple bg-white">anchor (visited)</span>
+                        <span class="selector pale-orange bg-purple"><i class="la la-link"></i>anchor (visited)</span>
+                        <span class="selector pale-purple bg-white"><i class="la la-link"></i>anchor (visited)</span>
                     </h4>
                     <ul class=margin-above>
                         <li>color: pale orange or pale purple</li>
@@ -360,18 +359,18 @@
                 <!--lists-->
                 <article>
                     <h3 class="h4">Lists</h3>
-                    <h4 class="h6">unordered list</h4>
+                    <h4 class="h6"><i class="la la-list"></i>unordered list</h4>
                     <ul>
                         <li>padding-top: 1.25rem</li>
                         <li>padding-bottom: 1.25rem</li>
                     </ul>
-                    <h4 class="h6">list item</h4>
+                    <h4 class="h6"><i class="la la-list"></i>list item</h4>
                     <ul>
                         <li>list-style-type: square</li>
                         <li>list-style-position: inside</li>
                         <li>line-height: 2</li>
                     </ul>
-                    <h4 class="h6">list item of nested list</h4>
+                    <h4 class="h6"><i class="la la-list"></i>list item of nested list</h4>
                     <ul>
                         <li>list-style-type: circle</li>
                         <li>list-style-position: inside *</li>
@@ -383,6 +382,7 @@
             <!--buttons-->
             <article>
                 <h3 class="h4">Buttons</h3>
+                <div id="change-button-bg"><button>change background color</button></div>
                 <section id="buttons-buttons">
                     <button class="bg-purple">purple</button>
                     <button class="bg-pale-purple">pale purple</button>
@@ -396,7 +396,9 @@
                     <li>font-family: Raleway, sans-serif</li>
                     <li>width: 10rem</li>
                     <li>padding: 1rem</li>
+                    <li>border: 3px solid bkgd-color</li>
                     <li>border-radius: 2rem</li>
+                    <li>:active border 3px solid bkgd-color</li>
                 </ul>
             </article>
             <!--layout-->
@@ -408,7 +410,8 @@
                     <li>width: 1200px (home page), 1600px (about page)</li>
                     <li>max-width: 100%</li>
                     <li>margin: 2rem auto</li>
-                    <li>padding: 0 2rem or (device max-width:767px) padding: 0 1rem</li>
+                    <li>padding: 0 2rem</li>
+                    <li>@media (max-width:767px) padding: 0 1rem</li>
                 </ul>
                 <h4 class="h6 selector">section and article</h4>
                 <ul>
@@ -443,8 +446,6 @@
                             <li>background-size: contain</li>
                             <li>background-position: center center</li>
                             <li>background-repeat: repeat-y</li>
-                        </ul>
-                        </ul>
                     </div>
                 </div>
             </article>
@@ -456,12 +457,10 @@
                         <ul>
                             <li>font-size: 0.9rem</li>
                             <li>text-transform: uppercase</li>
-                            <li>line-height; 4</li>
-                            <li>letter-spacing: 0.06rem *</li>
+                            <li>line-height; 2</li>
+                            <li>letter-spacing: 0.08rem*</li>
                             <li>text-decoration: none *</li>
                             <li>transition: all 600ms ease-in-out </li>
-                            <li>display: inline</li>
-                            <li>padding-left and right: 3rem, reduces for smaller devices</li>
                         </ul>
                     </div>
                     <div><span class="selector white">navigation anchor</span>
@@ -481,6 +480,7 @@
                         <span class="selector pale-orange">visited</span>
                         <ul>
                             <li>color: pale orange</li>
+                            <li>font-weight: normal *</li>
                         </ul>
                     </div>
                 </div>
@@ -488,34 +488,40 @@
             <!--mobile nav-->
             <article id="mobile-nav">
                 <h3 class="h4">Mobile Navigation</h3>
+                <div id="mobile-nav-content"></div>
+                <h4 class="h6">layout</h4>
+                <ul>
+                    <li>position: fixed (left top)</li>
+                    <li>width: 250px, slides from left</li>
+                    <li>background-color: orange</li>
+                    <li>border: 1px solid white</li>
+                    <li> white uppercase text, font size 0.8rem</li>
+                    <li>animated open-close icon, purple, font-size: 50px</li>
+                </ul>
             </article>
             <!--footer-->
             <article id="footer-article">
                 <h3 class="h4">Footer</h3>
-            </article>
-            <!--reset-->
-            <article id="reset">
-                <h3 class="h4">Reset styles</h3>
-                <h4 class='h6'>applied to *</h4>
-                <ul>
-                    <li>box-sizing: border-box</li>
-                    <li>margin: 0</li>
-                    <li>padding: 0</li>
-                    <li>margin-block-start: 0</li>
-                    <li>margin-block-end: 0</li>
-                    <li>margin-inline-start: 0</li>
-                    <li>margin-inline-end: 0</li>
-                    <li>max-width: 100%</li>
-                </ul>
-            </article>
-            <!--media queries-->
-            <article>
-                <h3 class="h4">Media queries</h3>
-                <p>@ media screen only and (min-resolution: 200px) {
-                    <br>html {<br>
-                    font-size: 16px;<br>
-                    }
-                </p>
+                <div>
+                    <ul>
+                        <li>spans the full page</li>
+                        <li>background: as for header</li>
+                        <li>default links: white</li>
+                        <li>a:visited white bold</li>
+                        <li>a: hover or focus pale orange background full page width</li>
+                        <li>a:hover or focuscolor: bold purple </li>
+                        <li>font-size: 0.8rem</li>
+                        <li>text-transform: uppercase</li>
+                        <li>line-height; 2</li>
+                        <li>letter-spacing: 0.08rem*</li>
+                        <li>text-decoration: none *</li>
+                        <li>transition: all 300ms ease-in-out </li>
+                        <li>copyright purple on white background, 0.8rem</li>
+                        <li>copyright centered with 1rem top and bottom padding</li>
+                    
+                    </ul>
+                </div>
+
             </article>
         </main>
         <!--footer-->

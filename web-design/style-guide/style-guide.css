@@ -5,6 +5,15 @@ ul {
     padding-bottom: 2rem;
 }
 
+.la {
+    color: inherit;
+    font-size: 1.5rem;
+    vertical-align: baseline;
+    position: relative;
+    top: 0.1rem;
+    padding-right: 0.5rem;
+}
+
 /*UNIQUE CONTENT*/
 
 /*colors*/
@@ -265,18 +274,6 @@ ul {
     overflow: scroll;
 }
 
-.text-pair h1.text {
-    height: auto;
-}
-
-@media only screen and (max-width: 1199px) {
-
-    .text,
-    .text-pair {
-        margin: 0;
-    }
-}
-
 #h1-sample {
     color: #fff;
     font-family: Raleway;
@@ -385,11 +382,6 @@ ul {
     letter-spacing: 0.08rem;
 }
 
-blockquote#quote-sample:hover {
-    /*default is purple*/
-    color: #fff;
-}
-
 .font-description {
     font-size: 0.8rem;
     height: 160px;
@@ -421,6 +413,7 @@ blockquote#quote-sample:hover {
     padding: 2rem;
     border-radius: 0.5rem;
     margin-top: 3rem;
+    margin-bottom: 0;
 }
 
 #links-and-lists article h3,
@@ -428,25 +421,33 @@ blockquote#quote-sample:hover {
     color: #fff;
 }
 
-.h6.orange {
-    color: #f98562
+#links-and-lists article i {
+    color: inherit;
 }
 
-.h6.blue {
+#links-and-lists .h6.blue {
     color: #62a9fd;
+    font-style: normal;
 }
 
-.selector.pale-purple,
-.selector.pale-orange {
+#links-and-lists .h6.orange {
+    color: #f98562;                       
+    font-style: normal;
+}
+
+#links-and-lists .selector.pale-purple,
+#links-and-lists .selector.pale-orange {
     font-size: 1rem;
     font-weight: bold;
-    font-weight: 900;
-    font-style: normal;
+    font-style: normal;                               
     text-transform: none;
+    letter-spacing: 0.08rem;
+    border-radius: 0.2rem;
 }
 
-span.selector.pale-purple {
+#links-and-lists .selector.pale-purple {
     margin-left: 2rem;
+    padding: 0.35rem 1rem;
 }
 
 /*buttons*/
@@ -454,11 +455,19 @@ span.selector.pale-purple {
 #buttons-buttons {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    gap: 2rem;
+    gap: 2rem 1rem;
     justify-content: space-between;
+    justify-items: center;
+    padding: 2rem 1rem 4rem 1rem;
+    background-color: rgb(248, 248, 248);
+    border-radius: 0.5rem;
 }
 
-@media only screen and (max-width: 767px) {
+#buttons-buttons button {
+    border: 1px solid #fff;
+}
+
+@media only screen and (max-width: 1199px) {
     #buttons-buttons {
         grid-template-columns: repeat(3, 1fr);
     }
@@ -466,23 +475,21 @@ span.selector.pale-purple {
 
 @media only screen and (max-width: 599px) {
     #buttons-buttons {
-        grid-template-columns: repeat(, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
-button {
-    width: 10rem;
-    color: #fff;
-    padding: 1rem;
-    border: none;
-    border-radius: 2rem;
-    margin-top: 2rem;
+#change-button-bg button {
+    background-color: #240975;
+    margin: 1rem 0 2rem 0;
+    padding-top: 0.5rem;
+    padding-bottom: 0.8rem;
 }
-
 
 /*header*/
 #header-article,
 #header-nav,
+#header-nav-layout,
 #footer-article {
     background-image:
         url("https://www.karenplimmer.com/wp-content/uploads/2021/01/Colour-gradient-block.jpg");
@@ -547,7 +554,6 @@ button {
 #mobile-nav {
     background-color: #f98562;
     color: #fff;
-    text-transform: uppercase;
     padding: 2rem;
     border-radius: 0.5rem;
 }

@@ -83,7 +83,6 @@ h6 {
     text-align: center;
     font-weight: 200;
     text-transform: uppercase;
-    line-height: 1.4;
     letter-spacing: 0.14rem;
     padding: 1rem 0;
 }
@@ -104,34 +103,32 @@ h6 {
 
 h2,
 .h2 {
-    color: #f98562;
     font-size: 3rem;
     line-height: 1.2;
 }
 
 h3,
 .h3 {
-    color: #f98562;
     font-size: 2.5rem;
     line-height: 1.2;
 }
 
 h4,
 .h4 {
-    color: #f98562;
     font-size: 2rem;
+    line-height: 1.4;
 }
 
 h5,
 .h5 {
-    color: #f98562;
     font-size: 1.5rem;
+    line-height: 1.4;
 }
 
 h6,
 .h6 {
-    color: #f98562;
     font-size: 1.25rem;
+    line-height: 1.4;
 }
 
 .florence {
@@ -152,10 +149,6 @@ blockquote {
     font-size: 1.85rem;
     color: #fff;
     line-height: 1.4;
-}
-
-blockquote:hover {
-    color: #240975;
 }
 
 /*links*/
@@ -198,12 +191,21 @@ ul li ul {
 
 ul li ul li {
     list-style-type: circle;
-
 }
 
 /*buttons*/
 button {
+    color: #fff;
     font-family: Raleway, sans-serif;
+    width: 10rem;
+    padding: 1.2rem;
+    border: 3px solid #fff;
+    border-radius: 2rem;
+    margin-top: 2rem;
+}
+
+button:active {
+    border: 1px solid #fff;
 }
 
 /*header*/
@@ -320,14 +322,15 @@ header {
 }
 
 .margin-top-2 {
-    margin-top: 1rem;
+    margin-top: 2rem;
 }
 
 .indent-2 {
     margin-left: 2rem;
 }
 
-.hidden {
+.hidden,
+.hide {
     display: none;
 }
 
@@ -345,21 +348,20 @@ header nav ul {
     width: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 
 header nav li {
     display: inline;
     list-style-type: none;
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    line-height: 4;
     padding-left: 3rem;
     padding-right: 3rem;
 }
 
 header nav a {
     color: #fff;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    line-height: 2;
     transition: all 600ms ease-in-out;
 }
 
@@ -569,9 +571,9 @@ footer nav li {
 
 footer nav a {
     color: #fff;
-    font-size: 0.75rem;
+    font-size: 0.8rem;
     text-transform: uppercase;
-    letter-spacing: 0.06rem;
+    letter-spacing: 0.08rem;
     transition: color 300ms ease-in-out, font-weight 300ms ease-in-out;
 }
 

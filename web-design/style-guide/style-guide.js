@@ -8,7 +8,7 @@ const paleBlueButton = document.getElementById("pale-blue-button");
 const purpleButton = document.getElementById("purple-button");
 const whiteButton = document.getElementById("white-button");
 const resetButton = document.getElementById("reset-button");
-const logoText =document.getElementById('h1-sample');
+const logoText = document.getElementById('h1-sample');
 
 
 const changeFont = (list, newFont) => {
@@ -38,16 +38,16 @@ const changeTextColor = (list, newColor, newBackgroundColor) => {
             item.style.color = newColor;
             item.style.backgroundColor = newBackgroundColor;
             item.style.backgroundImage = 'none';
-        } 
-}
+        }
+    }
 }
 
 const changeBgImage = list => {
     for (const item of list) {
-    item.style.color = '#fff';
-    item.style.backgroundColor = '#240975';
-    item.style.backgroundImage = '';
-}
+        item.style.color = '#fff';
+        item.style.backgroundColor = '#240975';
+        item.style.backgroundImage = '';
+    }
 }
 
 paleOrangeButton.addEventListener('click', function () {
@@ -78,3 +78,18 @@ resetButton.addEventListener('click', function () {
     changeBgImage(textToColor);
     changeButtonColor(resetButton, '#f9b19b');
 })
+
+const bgButton = document.getElementById('change-button-bg');
+const buttonBg = document.getElementById('buttons-buttons');
+const buttonBgColour = window.getComputedStyle(buttonBg).getPropertyValue('background-color');
+let backgroundColours = [ 'rgb(248, 248, 248)','#fff', '#240975', '#62a9fd', '#aad0fd', '#f98562', '#f9b19b'];
+
+buttonBg.style.backgroundColor = buttonBgColour;
+
+const changeBgColour = () => {
+    backgroundColours.push(backgroundColours[0]);
+    backgroundColours.shift(backgroundColours[0]);
+    buttonBg.style.backgroundColor = backgroundColours[0];
+}
+
+bgButton.addEventListener('click', changeBgColour);
