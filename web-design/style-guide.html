@@ -411,10 +411,10 @@
                     <li>color: white</li>
                     <li>font-family: Raleway, sans-serif</li>
                     <li>width: 10rem</li>
-                    <li>padding: 1rem</li>
-                    <li>border: 3px solid white</li>
+                    <li>padding: 1.2rem</li>
+                    <li>border: 1px solid white</li>
                     <li>border-radius: 2rem</li>
-                    <li>:active border: 1px solid white</li>
+                    <li>:active padding: 1.35rem</li>
                 </ul>
             </article>
             <!--layout-->
@@ -500,8 +500,8 @@
                     </div>
                 </div>
                 <div>
-                    <button id="show-nav-layout">navigation layout</button>
-                    <div id="nav-layout">
+                    <button id="show-nav-layout">more styles</button>
+                    <div id="nav-layout-content">
                         <div>
                             <h4 class="h6">Layout</h4>
                             <ul>
@@ -510,51 +510,142 @@
                                 <li>align-items: center</li>
                             </ul>
                         </div>
+                        <div>
+                            <h4 class="h6">List items</h4>
+                            <ul>
+                                <li>display: inline</li>
+                                <li>list-style-type: none</li>
+                                <li>padding-left : 3rem</li>
+                                <li>padding-right : 3rem</li>
+                            </ul>
+                        </div>
                     </div>
+                </div>
                 </div>
             </article>
             <!--mobile nav-->
             <article id="mobile-nav">
                 <h3>Mobile Navigation</h3>
-                <div id="mobile-nav-content"></div>
-                <h4 class="h6">Layout</h4>
-                <ul>
-                    <li>position: fixed (left top)</li>
-                    <li>width: 250px, slides from left</li>
-                    <li>background-color: orange</li>
-                    <li>border: 1px solid white</li>
-                    <li> white uppercase text, font size 0.8rem</li>
-                    <li>animated open-close icon, purple, font-size: 50px</li>
-                </ul>
+                <div id="mobile-nav-content">
+                    <div>
+                        <h4 class="h6">Slide-out</h4>
+                        <ul>
+                            <li>position: fixed (left: 0; top: 0)</li>
+                            <li>z-index: 5</li>
+                            <li>height: 100vh</li>
+                            <li>width: 0 to 250px; slides from left</li>
+                            <li>opacity: 0 to 1</li>
+                            <li>background-color: orange</li>
+                            <li>border: 1px solid white</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="h6">Menu links</h4>
+                        <ul>
+                            <li>position: relative (top: 100px)</li>
+                            <li>padding: 1rem 3rem</li>
+                            <li>color: white</li>
+                            <li>text-transform: uppercase</li>
+                            <li>display: block</li>
+                        </ul>
+                    </div>
+                </div>
+                <button id="show-mobile">more styles</button>
+                <div id="more-mobile-content">
+                    <div>
+                        <h4 class="h6">Menu icon container</h4>
+                        <ul>
+                            <li>position: absolute (top: 25px; left: 25px)</li>
+                            <li>transform: rotate(90deg)</li>
+                            <li>z-index: 6</li>
+                            <li>height: 60px</li>
+                            <li>width: 60px</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="h6">Hamburger</h4>
+                        <ul>
+                            <li>position: relative</li>
+                            <li>height: 60px</li>
+                            <li>width: 60px</li>
+                            <li>display: flex</li>
+                            <li>justify-content: center</li>
+                            <li>align-items: center</li>
+                            <li>cursor: pointer</li>
+                            <li>:hover color: pale purple</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="h6">Bars</h4>
+                        <ul>
+                            <li>position: relative</li>
+                            <li>color: purple</li>
+                            <li>background-color: transparent</li>
+                            <li>display: inline-block</li>
+                            <li>font-size: 50px</li>
+                            <li>line-height: 1</li>
+                            <li>opacity: 1</li>
+                            <li>transition: all 500ms ease-in-out</li>
+                            <li>transform-origin: bottom left (line 1)</li>
+                            <li>transform-origin: top right (line 3)</li>
+                        </ul>
+                    </div>
+                </div>
             </article>
             <!--footer-->
             <article id="footer-article">
                 <h3>Footer</h3>
-                <div>
-                    <ul>
-                        <li>spans the full page</li>
-                        <li>background: as for header</li>
-                        <li>default links: white</li>
-                        <li>a:visited white bold</li>
-                        <li>a: hover or focus pale orange background full page width</li>
-                        <li>a:hover or focuscolor: bold purple </li>
-                        <li>font-size: 0.8rem</li>
-                        <li>text-transform: uppercase</li>
-                        <li>line-height; 2</li>
-                        <li>letter-spacing: 0.08rem*</li>
-                        <li>text-decoration: none *</li>
-                        <li>transition: all 300ms ease-in-out </li>
-                        <li>copyright purple on white background, 0.8rem</li>
-                        <li>copyright centered with 1rem top and bottom padding</li>
-
-                    </ul>
+                <div id="footer-content">
+                    <div id="footer-layout">
+                        <h4 class="h6">Layout</h4>
+                        <ul>
+                            <li>spans the full page</li>
+                            <li>background: as for header except top/bottom padding</li>
+                            <li>background-color: #240975</li>
+                            <li>background-image:
+                                url("https://www.karenplimmer.com/wp-content/uploads/2021/01/Colour-gradient-block.jpg")
+                            </li>
+                            <li>background-size: contain</li>
+                            <li>background-repeat: repeat-y</li>
+                            <li>padding: 2rem 0</li>
+                        </ul>
+                    </div>
+                    <div id="footer-links">
+                        <h4 class="h6">Links</h4>
+                        <ul>
+                            <li>default links: white</li>
+                            <li>a:visited bold white</li>
+                            <li>a:hover or focus color: bold purple (text only) </li>
+                            <li>a: hover or focus pale orange background full page width</li>
+                            <li>font-size: 0.8rem</li>
+                            <li>text-transform: uppercase</li>
+                            <li>line-height; 2</li>
+                            <li>letter-spacing: 0.08rem*</li>
+                            <li>text-decoration: none *</li>
+                            <li>transition: all 300ms ease-in-out</li>
+                        </ul>
+                    </div>
+                    <div id="copyright">
+                        <h4 class="h6">Copyright</h4>
+                        <ul>
+                            <li>color: purple </li>
+                            <li>background-color: white</li>
+                            <li>text-align: center</li>
+                            <li>font-size: 0.8rem</li>
+                            <li>line-height: 2</li>
+                            <li>padding: 1 rem 0</li>
+                        </ul>
+                    </div>
                 </div>
             </article>
+            <div id="tabs">
+                <button id="show-reset">reset styles</button>
+                <button id="show-media-queries">media queries</button>
+                <button id="show-shortcuts">shortcuts</button>
+            </div>
             <section id="expand">
-                <div id="tabs"></div>
-                <article id="reset">
-                    <button id="show-reset">reset styles</button>
-                    <div id="reset-content">
+                <article id="reset-content">
+                    <div>
                         <ul>
                             <li>box-sizing: border-box</li>
                             <li>margin: 0</li>
@@ -567,9 +658,8 @@
                         </ul>
                     </div>
                 </article>
-                <article id="media">
-                    <button id="show-media-queries">media queries</button>
-                    <div id="media-content">
+                <article id="media-content">
+                    <div>
                         <p>
                             @media only screen and (min-resolution: 200dpi) {
                             html {
@@ -577,13 +667,67 @@
                             }
                             }
                             <br>
-
+                            @media only screen and (min-width: 1400px) and (max-width: 1799px) {
+                            header #split-nav {
+                            grid-template-columns: 1fr 200px 1fr;
+                            }
+                            }
+                            <br>
+                            @media only screen and (max-width: 1399px) {
+                            nav#left, nav#right {
+                            display: none;
+                            }
+                            header #split-nav {
+                            grid-template-columns: 1fr;
+                            }
+                            }
+                            <br>
+                            @media only screen and (min-width: 1400px) {
+                            nav#narrow-nav {
+                            display: none;
+                            }
+                            }
+                            @media only screen and (max-width: 1699px) {
+                            header nav li {
+                            padding-left: 2.5rem;
+                            padding-right: 2.5rem;
+                            }
+                            }
+                            <br>
+                            @media only screen and (max-width: 1499px) {
+                            header nav li {
+                            padding-left: 2rem;
+                            padding-right: 2rem;
+                            line-height: 1.4;
+                            }
+                            }
+                            <br>
+                            @media only screen and (max-width: 767px) {
+                            header nav {
+                            display: none;
+                            }
+                            }
+                            <br>
+                            @media only screen and (min-width: 950px) {
+                            #mobile-menu-open {
+                            display: none;
+                            }
+                            }
+                            <br>
+                            @media only screen and (max-width: 949px) {
+                            header {
+                            grid-template-columns: 1fr;
+                            }
+                            <br>
+                            header nav {
+                            display: none;
+                            }
+                            }
                         </p>
                     </div>
                 </article>
-                <article id='shortcuts'>
-                    <button id="show-shortcuts">shortcuts</button>
-                    <div id="shortcuts-content">
+                <article id='shortcuts-content'>
+                    <div>
                         <p>.white {
                             color: #fff;
                             }

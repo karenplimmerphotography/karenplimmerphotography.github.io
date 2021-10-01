@@ -225,7 +225,7 @@ button {
 }
 
 button:active {
-    border: 1px solid #fff;
+    padding: 1.35rem;
 }
 
 /*header*/
@@ -327,12 +327,12 @@ header nav a:focus {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 10;
+    z-index: 5;
     height: 100vh;
     width: 0;
     opacity: 0;
     background-color: #f98562;
-    border-right: 1px solid#e0e4e6;
+    border-right: 1px solid#fff;
     overflow-x: hidden;
     transition: all 1000ms ease-in-out;
 }
@@ -340,7 +340,7 @@ header nav a:focus {
 .sidenav a {
     position: relative;
     top: 100px;
-    padding: 15px 3rem;
+    padding: 1rem 3rem;
     color: white;
     text-transform: uppercase;
     display: block;
@@ -356,7 +356,7 @@ header nav a:focus {
 #mobile-menu-open {
     position: absolute;
     transform: rotate(90deg);
-    z-index: 15;
+    z-index: 6;
     height: 60px;
     width: 60px;
     top: 25px;

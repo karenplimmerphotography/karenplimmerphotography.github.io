@@ -43,3 +43,14 @@ const toggleDisplay = name => {
       name.style.display = 'block';
   }
 }
+
+const toggleDisplayToGrid = name => {
+  if (name.style.display == '') {
+      name.style.display = window.getComputedStyle(name).getPropertyValue('display');  
+  } 
+  if (name.style.display === 'grid') {
+      name.style.display = 'none';
+  } else {
+      name.style.display = 'grid';
+  }
+}

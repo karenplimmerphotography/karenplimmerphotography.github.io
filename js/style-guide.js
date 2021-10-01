@@ -94,11 +94,23 @@ const changeBgColour = () => {
 
 bgButton.addEventListener('click', changeBgColour);
 
+const navButton = document.getElementById('show-nav-layout');
+const navContent = document.getElementById('nav-layout-content');
+
+
+navButton.addEventListener('click', function() {
+    toggleDisplayToGrid(navContent)
+});
+
 const resetSectionButton = document.getElementById('show-reset');
 const  resetContent = document.getElementById('reset-content');
 
  resetSectionButton.addEventListener('click', function() {
      toggleDisplay(resetContent);
+     if (resetContent.style.display === 'block') {
+        shortcutsContent.style.display = 'none';
+        mediaContent.style.display = 'none';
+    }
  });
 
  const mediaButton = document.getElementById('show-media-queries');
@@ -106,6 +118,10 @@ const  resetContent = document.getElementById('reset-content');
 
  mediaButton.addEventListener('click', function() {
     toggleDisplay(mediaContent);
+    if (mediaContent.style.display === 'block') {
+        resetContent.style.display = 'none';
+        shortcutsContent.style.display = 'none';
+    }
 });
 
  const shortcutButton = document.getElementById('show-shortcuts');
@@ -113,4 +129,15 @@ const  resetContent = document.getElementById('reset-content');
 
  shortcutButton.addEventListener('click', function() {
     toggleDisplay(shortcutsContent);
+    if (shortcutsContent.style.display === 'block') {
+        resetContent.style.display = 'none';
+        mediaContent.style.display = 'none';
+    }
+});
+
+const mobileButton = document.getElementById('show-mobile');
+const mobileContent = document.getElementById('more-mobile-content')
+
+mobileButton.addEventListener('click', function() {
+    toggleDisplayToGrid(mobileContent)
 });

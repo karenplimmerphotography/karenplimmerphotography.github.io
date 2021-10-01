@@ -6,8 +6,9 @@
     src: url("https://karenplimmercom.stage.site/wp-content/uploads/oxygen/custom_fonts/FlorenceScript.woff2") format("woff2"),
         url("https://karenplimmercom.stage.site/wp-content/uploads/oxygen/custom_fonts/FlorenceScript.woff") format("woff"),
         url("../resources/fonts/FlorenceScript.woff") format("woff")
+}
 
-}html {
+html {
     font-size: 16px;
 }
 
@@ -108,8 +109,12 @@ h6,
 
 /*header and footer navigation*/
 
-header nav li a, footer nav li a { /*adjust for increase in html font-size to 16px*/
+header nav li a { /*adjust for increase in html font-size to 16px*/
     font-size: 0.8rem;
+}
+
+footer nav li a { /*adjust for increase in html font-size to 16px*/
+    font-size: 0.7rem;
 }
 
 /*projects*/
