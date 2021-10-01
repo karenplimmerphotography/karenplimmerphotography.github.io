@@ -9,14 +9,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../florence.css" rel="stylesheet">
+    <link href="./css/florence.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-    <link href="../style.css" rel="stylesheet">
-    <link href="./about-me.css" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet">
+    <link href="./css/about-me.css" rel="stylesheet">
     <title>About Me</title>
-    <script src="../script.js" defer></script>
+    <script src="./js/script.js" defer></script>
 </head>
 
 <body>
@@ -29,41 +29,59 @@
         </span>
     </div>
     <nav id="mySideNav" class="sidenav">
-            <a href="../index.html/">Home</a>
+            <a href="./index.html/">Home</a>
             <a href="#top">About me</a>
             <a href="https://www.karenplimmer.com/galleries/">Galleries</a>
             <a href="https://www.karenplimmer.com/prints/">Prints</a>
-            <a href="../web-design/design.html">Web design</a>
+            <a href="./web-design/design.html">Web design</a>
             <a href="https://www.karenplimmer.com/contact/">Contact</a>
     </nav>
     <!--mobile menu-->
 
     <header id="top">
-        <nav id="left">
+        <nav id="narrow-nav">
             <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="#top">About me</a></li>
-                <li><a href="https://www.karenplimmer.com/galleries/">Galleries</a></li>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="#top">About Me</a></li>
+                <li><a href="https://www.karenplimmer.com/galleries">Galleries</a></li>
+                <li><a href="https://www.karenplimmer.com/prints">Prints</a></li>
+                <li><a href="./web-design/design.html">Web design</a></li>
+                <!--<ul>
+                    <li class="submenu"><a href="./web-design/design.html">Style guide</a></li>
+                </ul>-->
+                <li><a href="https://www.karenplimmer.com/contact">Contact</a></li>
             </ul>
         </nav>
-        <div id="logo">
-            <h1 id="title">Karen Plimmer
-            <span id="subtitle">photography</span></h1>
+        <div id="split-nav">
+            <nav id="left">
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="#top">About Me</a></li>
+                    <li><a href="https://www.karenplimmer.com/galleries">Galleries</a></li>
+                </ul>
+            </nav>
+            <div id="logo">
+                <h1 id="title">Karen Plimmer</h1>
+                <h2 id="subtitle">photography</h2>
+            </div>
+            <nav id="right">
+                <ul>
+                    <li><a href="https://www.karenplimmer.com/prints">Prints</a></li>
+                    <li><a href="./web-design/design.html">Web design</a></li>
+                    <!--<ul>
+                    <li class="submenu"><a href="./web-design/design.html">Style guide</a></li>
+                </ul>-->
+                    <li><a href="https://www.karenplimmer.com/contact">Contact</a></li>
+                </ul>
+            </nav>
         </div>
-        <nav id="right">
-            <ul>
-                <li><a href="https://www.karenplimmer.com/prints/">Prints</a></li>
-                <li><a href="../web-design/design.html">Web design</a></li>
-                <li><a href="https://www.karenplimmer.com/contact/">Contact</a></li>
-            </ul>
-        </nav>
     </header>
 
     <main id=about-main>
-        <h2 id="about-heading" class=" h3 florence purple">About me</h2>
+        <h2 id="about-heading" class="florence purple">About me</h2>
         <section class="about-grid-container">
             <div class="about a1 bg-pale-orange">
-                <h3 class="h4 florence purple">Beginnings</h3>
+                <h3 class="florence purple">Beginnings</h3>
                 <p>As I lay back down on the grass they launch themselves simultaneously on top of me.
                     Although it's fun to play tug-o-war with my sleeves by far the greatest prize is a healthy mouthful
                     of hair.
@@ -78,12 +96,12 @@
                             whenever I can.</em></strong></p>
             </div>
             <div class="about a2 bg-purple">
-                <h3 class="h4 florence white">Second love</h3>
+                <h3 class="florence white">Second love</h3>
                 <p class="white small-quote"><strong><em>My love of all things nature soon developed into a passion for landscape
                             photography.</em></strong></p>
             </div>
             <div class="about a3 bg-pale-blue">
-                <h3 class="h4 florence purple" >Where you can find me plus my favourite places</h3>
+                <h3 class="florence purple" >Where you can find me plus my favourite places</h3>
                 <p>I live on the Gold Coast, Australia but at heart I'm a New Zealander. So I love to return home to
                     marvel at snowcapped mountains
                     mirrored in azure lakes and to capture the soul of wild and desolate beaches in my photographs.
@@ -110,7 +128,7 @@
                     alt="pastel colours at sunrise over the Lake Wanaka willow tree give a feeling of serenity.">
             </div>
             <div class="about a8 bg-purple">
-                <h3 class="h4 florence white">I hope that</h3>
+                <h3 class="florence white">I hope that</h3>
                 <p class="white small-quote"> Through my photographs I hope to inspire people to travel and see the world.
                     For travel can act in a powerful way to change people for the better.
                     I hope that on returning home they act in ways that are kinder to animals, the environment and to
@@ -140,11 +158,11 @@
     <footer>
         <nav>
             <ul>
-                <li><a href="../index.html">Home</a></li>
+                <li><a href="./index.html">Home</a></li>
                 <li><a href="#top">About me</a></li>
                 <li><a href="https://www.karenplimmer.com/galleries/">Galleries</a></li>
                 <li><a href="https://www.karenplimmer.com/prints/">Prints</a></li>
-                <li><a href="../web-design/design.html">Web design</a></li>
+                <li><a href="./web-design/design.html">Web design</a></li>
                 <li><a href="https://www.karenplimmer.com/contact/">Contact</a></li>
             </ul>
         </nav>

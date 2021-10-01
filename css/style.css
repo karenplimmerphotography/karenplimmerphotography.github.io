@@ -4,7 +4,7 @@
     font-display: swap;
     src: url("https://karenplimmercom.stage.site/wp-content/uploads/oxygen/custom_fonts/FlorenceScript.woff2") format("woff2"),
         url("https://karenplimmercom.stage.site/wp-content/uploads/oxygen/custom_fonts/FlorenceScript.woff") format("woff"),
-        url("./resources/fonts/FlorenceScript.woff") format("woff")
+        url("../resources/fonts/FlorenceScript.woff") format("woff")
 }
 
 /*Universal Styles*/
@@ -105,38 +105,47 @@ h6 {
 
 h2,
 .h2 {
-    font-size: 3rem;
+    font-size: 2.5rem;
     line-height: 1.2;
+    font-weight: 200;
+}
+
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5 {
+    line-height: 1.4;
 }
 
 h3,
 .h3 {
-    font-size: 2.5rem;
-    line-height: 1.2;
-}
-
-h4,
-.h4,
-h5,
-.h5,
-h6,
-.h6 {
-    line-height: 1.4;
+    font-size: 1.85rem;
+    font-weight: bold;
 }
 
 h4,
 .h4 {
-    font-size: 2rem;
+    font-size: 1.5rem;
+    font-weight: normal;
 }
 
 h5,
 .h5 {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
+    font-weight: normal;
 }
 
-h6,
-.h6 {
-    font-size: 1.25rem;
+h6, .h6 {
+    color: #240975;
+    text-align: left;
+    font-size: 1,125rem;
+    font-weight: bold;
+    font-style: italic;
+    text-transform: none;
+    line-height: 1.4;
+    letter-spacing: 0.08rem;
 }
 
 .florence {
@@ -189,8 +198,9 @@ ul {
 
 li {
     line-height: 2;
-    list-style-position: inside;
+    list-style-position: outside;
     list-style-type: square;
+    margin-left: 1rem;
 }
 
 ul li ul {
@@ -202,14 +212,16 @@ ul li ul li {
 }
 
 /*buttons*/
+
 button {
     color: #fff;
+    background-color: #240975;
     font-family: Raleway, sans-serif;
     width: 10rem;
     padding: 1.2rem;
-    border: 3px solid #fff;
+    border: 1px solid #fff;
     border-radius: 2rem;
-    margin-top: 2rem;
+    margin: 2rem 0;
 }
 
 button:active {
@@ -219,21 +231,190 @@ button:active {
 /*header*/
 
 header {
-    display: grid;
-    grid-template-columns: 1fr 450px 1fr;
-    padding: 4rem 0;
     background-color: #240975;
     background-image: url("https://www.karenplimmer.com/wp-content/uploads/2021/01/Colour-gradient-block.jpg");
     background-size: contain;
-    background-position: center center;
     background-repeat: repeat-y;
+    padding: 4rem 0;
 }
 
-@media only screen and (max-width: 1799px) {
-    header {
+header #split-nav {
+    display: grid;
+    grid-template-columns: 1fr 450px 1fr;
+}
+
+header #narrow-nav {
+    position: relative;
+    top: -2rem;
+}
+
+@media only screen and (min-width: 1400px) and (max-width: 1799px) {
+    header #split-nav {
         grid-template-columns: 1fr 200px 1fr;
     }
 }
+
+@media only screen and (max-width: 1399px) {
+    nav#left, nav#right {
+        display: none;
+    }
+    header #split-nav {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media only screen and (min-width: 1400px) {
+    nav#narrow-nav {
+        display: none;
+    }
+}
+
+header nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header nav li {
+    display: inline;
+    list-style-type: none;
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+header nav a {
+    color: #fff;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    line-height: 2;
+    transition: all 600ms ease-in-out;
+}
+
+header nav a:visited {
+    color: #f9b19b;
+}
+
+header nav a:hover,
+header nav a:focus {
+    color: #f98562;
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 1699px) {
+    header nav li {
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+    }
+}
+
+@media only screen and (max-width: 1499px) {
+    header nav li {
+        padding-left: 2rem;
+        padding-right: 2rem;
+        line-height: 1.4;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    header nav {
+        display: none;
+    }
+}
+
+/*mobile nav*/
+
+.sidenav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    height: 100vh;
+    width: 0;
+    opacity: 0;
+    background-color: #f98562;
+    border-right: 1px solid#e0e4e6;
+    overflow-x: hidden;
+    transition: all 1000ms ease-in-out;
+}
+
+.sidenav a {
+    position: relative;
+    top: 100px;
+    padding: 15px 3rem;
+    color: white;
+    text-transform: uppercase;
+    display: block;
+    width: 100%;
+    font-size: 0.8rem;
+}
+
+.sidenav a:hover {
+    color: #240975;
+    background-color: #f9b19b;
+}
+
+#mobile-menu-open {
+    position: absolute;
+    transform: rotate(90deg);
+    z-index: 15;
+    height: 60px;
+    width: 60px;
+    top: 25px;
+    left: 35px;
+}
+
+span#hamburger {
+    position: relative;
+    height: 60px;
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+span#line1,
+span#line2,
+span#line3 {
+    position: relative;
+    color: #240975;
+    background-color: transparent;
+    display: inline-block;
+    font-size: 50px;
+    line-height: 1;
+    opacity: 1;
+    transition: all 500ms ease-in-out;
+}
+
+span#line1 {
+    transform-origin: bottom left;
+}
+
+span#line3 {
+    transform-origin: top right;
+}
+
+span#hamburger:hover {
+    color: #453575;
+}
+
+/*large screens hide mobile menu*/
+@media only screen and (min-width: 950px) {
+    #mobile-menu-open {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 949px) {
+    header {
+        grid-template-columns: 1fr;
+    }
+
+    header nav {
+        display: none;
+    }
+}
+
 
 /*shortcuts*/
 
@@ -342,233 +523,14 @@ header {
     display: none;
 }
 
-/*header nav*/
-
-header nav {
-    width: 90%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-header nav ul {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
-header nav li {
-    display: inline;
-    list-style-type: none;
-    padding-left: 3rem;
-    padding-right: 3rem;
-}
-
-header nav a {
-    color: #fff;
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    line-height: 2;
-    transition: all 600ms ease-in-out;
-}
-
-header nav a:visited {
-    color: #f9b19b;
-}
-
-header nav a:hover,
-header nav a:focus {
-    color: #f98562;
-    font-weight: bold;
-}
-
-@media only screen and (max-width: 1699px) {
-    header nav li {
-        padding-left: 2.5rem;
-        padding-right: 2.5rem;
-    }
-}
-
-@media only screen and (max-width: 1499px) {
-    header nav li {
-        padding-left: 2rem;
-        padding-right: 2rem;
-        line-height: 1.4;
-    }
-}
-
-@media only screen and (max-width: 1399px) {
-    header {
-        grid-template-columns: 1fr 1fr;
-        grid-template-areas: 'left right'
-            'logo logo';
-        row-gap: 2rem;
-        padding-top: 2rem;
-        column-gap: 0;
-    }
-
-    nav#left {
-        grid-area: left;
-        justify-content: flex-end;
-    }
-
-    nav#right {
-        grid-area: right;
-        justify-content: flex-start;
-    }
-
-    #logo {
-        grid-area: logo;
-    }
-
-    nav#left ul {
-        justify-content: flex-end;
-        width: 100%;
-    }
-
-    nav#right ul {
-        justify-content: flex-start;
-        width: 100%;
-    }
-
-    nav#left li:last-child {
-        padding-right: 0;
-    }
-
-    nav#right li:first-child {
-        padding-left: 0;
-    }
-}
-
-@media only screen and (max-width: 767px) {
-    header nav {
-        display: none;
-    }
-}
-
-/*mobile nav*/
-
-.sidenav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 10;
-    height: 100vh;
-    width: 0;
-    opacity: 0;
-    background-color: #f98562;
-    border-right: 1px solid#e0e4e6;
-    overflow-x: hidden;
-    transition: all 1000ms ease-in-out;
-}
-
-.sidenav a {
-    position: relative;
-    top: 100px;
-    padding: 15px 3rem;
-    color: white;
-    text-transform: uppercase;
-    display: block;
-    width: 100%;
-    font-size: 0.8rem;
-}
-
-.sidenav a:hover {
-    color: #240975;
-    background-color: #f9b19b;
-}
-
-#mobile-menu-open {
-    position: absolute;
-    transform: rotate(90deg);
-    z-index: 15;
-    height: 60px;
-    width: 60px;
-    top: 25px;
-    left: 35px;
-}
-
-span#hamburger {
-    position: relative;
-    height: 60px;
-    width: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-}
-
-span#line1,
-span#line2,
-span#line3 {
-    position: relative;
-    color: #240975;
-    background-color: transparent;
-    display: inline-block;
-    font-size: 50px;
-    line-height: 1;
-    opacity: 1;
-    transition: all 500ms ease-in-out;
-}
-
-span#line1 {
-    transform-origin: bottom left;
-}
-
-span#line3 {
-    transform-origin: top right;
-}
-
-span#hamburger:hover {
-    color: #453575;
-}
-
-/*large screens hide mobile menu*/
-@media only screen and (min-width: 950px) {
-    #mobile-menu-open {
-        display: none;
-    }
-}
-
-@media only screen and (max-width: 949px) {
-    header {
-        grid-template-columns: 1fr;
-    }
-
-    header nav {
-        display: none;
-    }
-}
-
-/*Home Page*/
-
-#hero-image {
-    display: block;
-    max-width: 100%;
-    margin: 0 auto;
-    height: auto;
-    padding-bottom: 2rem;
-}
-
-#welcome p {
-    text-align: center;
-}
-
-#welcome p {
-    padding-top: 1rem;
-    padding-bottom: 2rem;
-}
-
 /*footer*/
 
 footer nav {
-    padding: 2rem 0;
-    background-size: contain;
     background-color: #240975;
     background-image: url("https://www.karenplimmer.com/wp-content/uploads/2021/01/Colour-gradient-block.jpg");
-    background-position: center center;
+    background-size: contain;
     background-repeat: repeat-y;
+    padding: 2rem 0;
 }
 
 footer nav li {
@@ -609,4 +571,24 @@ footer p>span {
     line-height: 2;
     text-align: center;
     padding: 1rem 0;
+}
+
+/*Home Page*/
+
+#hero-image {
+    display: block;
+    max-width: 100%;
+    margin: 0 auto;
+    height: auto;
+    padding-bottom: 2rem;
+}
+
+#welcome h2 {
+   padding-bottom: 2rem;
+}
+
+#welcome p {
+    text-align: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 }

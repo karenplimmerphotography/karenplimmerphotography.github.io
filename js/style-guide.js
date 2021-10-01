@@ -93,3 +93,24 @@ const changeBgColour = () => {
 }
 
 bgButton.addEventListener('click', changeBgColour);
+
+const resetSectionButton = document.getElementById('show-reset');
+const  resetContent = document.getElementById('reset-content');
+
+ resetSectionButton.addEventListener('click', function() {
+     toggleDisplay(resetContent);
+ });
+
+ const mediaButton = document.getElementById('show-media-queries');
+ const mediaContent = document.getElementById('media-content')
+
+ mediaButton.addEventListener('click', function() {
+    toggleDisplay(mediaContent);
+});
+
+ const shortcutButton = document.getElementById('show-shortcuts');
+ const shortcutsContent = document.getElementById('shortcuts-content')
+
+ shortcutButton.addEventListener('click', function() {
+    toggleDisplay(shortcutsContent);
+});

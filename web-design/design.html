@@ -4,20 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../florence.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com"> 
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
-    <link rel="preconnect" href="https://fonts.googleapis.com"> 
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="../css/florence.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;400;700&display=swap" rel="stylesheet">
     <link
-    href="https://fonts.googleapis.com/css2?family=Forum&family=Nixie+One&family=Quicksand:wght@400;500;600;700&display=swap"
-    rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Antic&family=Nothing+You+Could+Do&family=Rozha+One&display=swap" rel="stylesheet">
-    <link href="../style.css" rel="stylesheet">
-    <link href="./design.css" rel="stylesheet">
+        href="https://fonts.googleapis.com/css2?family=Forum&family=Nixie+One&family=Quicksand:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Antic&family=Nothing+You+Could+Do&family=Rozha+One&display=swap"
+        rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/design.css" rel="stylesheet">
     <title>Karen Plimmer photography and design</title>
-    <script src="../script.js" defer></script>
+    <script src="../js/script.js" defer></script>
     <script src="https://kit.fontawesome.com/53b8fdfab2.js" crossorigin="anonymous"></script>
 </head>
 
@@ -31,7 +33,7 @@
     </div>
     <nav id="mySideNav" class="sidenav">
         <a href="../index.html/">Home</a>
-        <a href="../about-me/about-me.html">About me</a>
+        <a href="../about-me.html">About me</a>
         <a href="https://www.karenplimmer.com/galleries/">Galleries</a>
         <a href="https://www.karenplimmer.com/prints/">Prints</a>
         <a href="#top">Web design</a>
@@ -39,30 +41,48 @@
     </nav>
     <!--mobile menu-->
     <header id="top">
-        <nav id="left">
+        <nav id="narrow-nav">
             <ul>
                 <li><a href="../index.html">Home</a></li>
-                <li><a href="../about-me/about-me.html">About Me</a></li>
+                <li><a href="../about-me.html">About Me</a></li>
                 <li><a href="https://www.karenplimmer.com/galleries">Galleries</a></li>
-            </ul>
-        </nav>
-        <div id="logo">
-            <h2 id="title">Karen Plimmer
-                <span id="subtitle">photography and web design</span></h2>
-        </div>
-        <nav id="right">
-            <ul>
                 <li><a href="https://www.karenplimmer.com/prints">Prints</a></li>
                 <li><a href="#top">Web design</a></li>
+                <!--<ul>
+                    <li class="submenu"><a href="./web-design/design.html">Style guide</a></li>
+                </ul>-->
                 <li><a href="https://www.karenplimmer.com/contact">Contact</a></li>
             </ul>
         </nav>
+        <div id="split-nav">
+            <nav id="left">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../about-me.html">About Me</a></li>
+                    <li><a href="https://www.karenplimmer.com/galleries">Galleries</a></li>
+                </ul>
+            </nav>
+            <div id="logo">
+                <h1 id="title">Karen Plimmer</h1>
+                <h2 id="subtitle">style guide</h2>
+            </div>
+            <nav id="right">
+                <ul>
+                    <li><a href="https://www.karenplimmer.com/prints">Prints</a></li>
+                    <li><a href="#top">Web design</a></li>
+                    <!--<ul>
+                    <li class="submenu"><a href="./web-design/design.html">Style guide</a></li>
+                </ul>-->
+                    <li><a href="https://www.karenplimmer.com/contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
     <!--hero image-->
     <section id="hero-image-design">
         <div>
-            <h1 class="h2 white">Web Design Projects</h1>
-            <h3 class="h5">~ Follow along as I learn to code ~</h3>
+            <h1 class="white">Web Design Projects</h1>
+            <p class="h4">~ Follow along as I learn to code ~</p>
         </div>
         <figure>
             <img
@@ -73,13 +93,13 @@
     <main>
         <p id="hint"><em>To visit a project's website click on the large project title</em></p>
         <section id="personal-projects">
-            <h2 class="h3">Personal Projects</h2>
+            <h2>Personal Projects</h2>
             <article id="platewise-article">
                 <div id="platewise-header">
-                    <h3 id="pw-title"><a href="./my-projects/platewise/test.html">plateWise</a></h4>
-                    <p id="pw-tagline">leave the healthy nutrition balancing act to us</p>
+                    <h3 id="pw-title"><a href="./platewise.html">plateWise</a></h4>
+                        <p id="pw-tagline">leave the healthy nutrition balancing act to us</p>
                 </div>
-                <h4 class ="h5"><span>plateWise</span> is a design, html, css and javascript project created in 2021</h4>
+                <h4><span>plateWise</span> is a design, html, css and javascript project created in 2021</h4>
                 <ul>
                     <li><span>plateWise</span> helps plant-based eaters easily get all of their essential
                         vitamins and minerals whilst eating a wide variety of wholefoods
@@ -96,12 +116,12 @@
                 </ul>
             </article>
             <article id="fox-terrier-article">
-                <div id="fox-terrier-header"><a href="https:www.foxterrier.co.nz">
+                <div id="fox-terrier-header"><a href="https://www.foxterrier.co.nz">
                         <h3 class="article-title">Tamsam</h3>
                         <h3 class="article-subtitle">Fox Terriers</h3>
                     </a>
                 </div>
-                <h4 class ="h5">foxterrier.co.nz is a design, html and css project created in 2021</h4>
+                <h4>foxterrier.co.nz is a design, html and css project created in 2021</h4>
                 <ul>
                     <li>Showcases Tamsam Fox Terrier dog breeding kennels</li>
                     <li>Gallery photos provided by Karen Plimmer Photography</li>
@@ -123,7 +143,7 @@
         }
     -->
         <section id="codecademy-projects">
-            <h2 class="h3">Codecademy Projects</h2>
+            <h2>Codecademy Projects</h2>
             <section>
                 <ul>
                     <li>Codecademy projects were created as part of the front-end developer course</li>
@@ -134,7 +154,7 @@
                 <div class="update-header default">
                     <h3>What have I been learning?</h3>
                 </div>
-                <h4 class="h5">Module 12</h4>
+                <h4>Module 12</h4>
                 <ul class="update-description">
                     <li>Javascript
                         <ul>
@@ -149,7 +169,7 @@
                     <h4>this webpage</h4>
                 </div>
                 </div>
-                <h4 class ="h5">Build a personal portfolio website to show projects completed during the front-end engineer path
+                <h4>Build a personal portfolio website to show projects completed during the front-end engineer path
                 </h4>
                 <ul>
                     <li>Developed competence in GIT version control, Git Hub Pages and file navigation</li>
@@ -166,7 +186,7 @@
                 <div class="update-header default">
                     <h3>What have I been learning?</h3>
                 </div>
-                <h4 class ="h5">Modules 5-10</h4>
+                <h4>Modules 5-10</h4>
                 <ul class="update-description">
                     <li>Javascript
                         <ul>
@@ -183,15 +203,18 @@
                 </ul>
             </article>
             <article id="flex-company-article">
-                <div id="flex-company-header" class="default">
-                    <h3>Company home page</h3>
-                    <h4>coming soon</h4>
-                </div>
-                <h4 class ="h5">Create a home page for a company using flex-box</h4>
-                <ul id="flex-company-description">
-                    <li><a href="#">html</a>, <a href="#">css</a> and <a href="#">js</a> project</li>
-                    <li>Created 10 September 2021; module 3/29</li>
-                </ul>
+                <a href="./codecademy-projects/flex-company/flex.html">
+                    <div id="flex-company-header" class="default">
+                        <h3>Company home page</h3>
+                        <h4>coming soon</h4>
+                    </div>
+                </a>
+            </article>
+            <h4>Create a home page for a company using flex-box</h4>
+            <ul id="flex-company-description">
+                <li><a href="#">html</a>, <a href="#">css</a> and <a href="#">js</a> project</li>
+                <li>Created 10 September 2021; module 3/29</li>
+            </ul>
             </article>
             <article id="tea-cozy-article">
                 <div id="tea-cozy-header">
@@ -208,7 +231,7 @@
                         </ul>
                     </nav>
                 </div>
-                <h4 class ="h5">Tea Cozy is a single webpage for a fictional tea shop</h4>
+                <h4>Tea Cozy is a single webpage for a fictional tea shop</h4>
                 <ul id="tea-cozy-description">
                     <li><a
                             href="https://github.com/karenplimmerphotography/karenplimmerphotography.github.io/blob/main/web-design/codecademy-projects/tea-cozy/teacozy.html">Html</a>
@@ -222,29 +245,32 @@
                 </ul>
             </article>
             <article id="style-guide-article">
-                <a href="./style-guide/style-guide.html">
+                <a href="./style-guide.html">
                     <div id="style-guide-header" class="default">
                         <h3>Karen Plimmer</h3>
                         <h4>style guide</h4>
                     </div>
                 </a>
-                <h4 class ="h5"> A website style guide that can be used for future web design projects</h4>
+                <h4> A website style guide that can be used for future web design projects</h4>
                 <ul id="style-guide-description">
                     <!--<li><a href="#">HTML,</a><a href="#">CSS</a> and <a href="#">JS</a> project</li>-->
-                    <li>Colours, fonts, lists, link, layout styles and more!</li>
-                    <li>Motivated a complete overhaul of my css files</li>
+                    <li>Colours, fonts, lists, links, layout styles and more!</li>
+                    <li>Motivated a complete overhaul of my css files, removing redundant or incorrect rules</li>
                     <li>Prompted restructuring of my html files to have semantic headings with no levels skipped</li>
-                    <li>I created javascript functions to build default html and css files</li>
+                    <li>Created javascript functions to build default html and css files</li>
+                    <li>Practiced DOM manipulations using buttons to alter page content</li>
                     <li>Enhanced my competence in using chrome web developer tools to build very clean stylesheets </li>
                     <li>Created 7 September 2021 (ongoing project); module 3/29</li>
                 </ul>
             </article>
             <article id="cheat-sheet-article">
-                <div id="cheat-sheet-header" class="default">
-                    <h3>Cheat sheet</h3>
-                    <h4>Coming soon</h4>
-                </div>
-                <h4 class ="h5">Build your own cheat sheet</h4>
+                <a href="./codecademy-projects/cheat-sheet/cheat-sheet.html">
+                    <div id="cheat-sheet-header" class="default">
+                        <h3>Cheat sheet</h3>
+                        <h4>Coming soon</h4>
+                    </div>
+                </a>
+                <h4>Build your own cheat sheet</h4>
                 <ul id="cheat-sheet-description">
                     <li>Builds a reference cheat sheet for a HTML or CSS feature</li>
                     <li>Created 6 September 2021; module 2/29</li>
@@ -255,7 +281,7 @@
                         <h3>Dasmoto Arts & Crafts</h3>
                     </a>
                 </div>
-                <h4 class ="h5">Dasmoto Arts & Crafts is a single webpage for a fictional arts and crafts store</h4>
+                <h4>Dasmoto Arts & Crafts is a single webpage for a fictional arts and crafts store</h4>
                 <ul>
                     <li><a
                             href="https://github.com/karenplimmerphotography/karenplimmerphotography.github.io/blob/main/web-design/codecademy-projects/dasmoto/dasmoto.html">Html</a>
@@ -271,8 +297,8 @@
         </section>
         <!--end of #codecademy-projects-->
         <section id="skills">
-            <h2 class="h3">Skills</h2>
-            <div id="skills-container">
+            <h2>Skills</h2>
+            <div id="skills-icons">
                 <i class="fab fa-html5"></i>
                 <i class="fab fa-css3-alt"></i>
                 <i class="fab fa-js"></i>
@@ -295,7 +321,7 @@
         <nav>
             <ul>
                 <li><a href="../index.html">Home</a></li>
-                <li><a href="../about-me/about-me.html">About Me</a></li>
+                <li><a href="../about-me.html">About Me</a></li>
                 <li><a href="https://www.karenplimmer.com/galleries">Galleries</a></li>
                 <li><a href="https://www.karenplimmer.com/prints">Prints</a></li>
                 <li><a href="#top">Web design</a></li>

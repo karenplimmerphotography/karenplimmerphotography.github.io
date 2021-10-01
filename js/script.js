@@ -32,3 +32,14 @@ function openCloseNav() {
 }
 
 open.addEventListener('click', openCloseNav);
+
+const toggleDisplay = name => {
+  if (name.style.display == '') {
+      name.style.display = window.getComputedStyle(name).getPropertyValue('display');  
+  } 
+  if (name.style.display === 'block') {
+      name.style.display = 'none';
+  } else {
+      name.style.display = 'block';
+  }
+}

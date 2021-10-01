@@ -4,13 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="./florence.css" rel="stylesheet">
+    <link href="./css/florence.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-    <link href="./style.css" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet">
     <title>Karen Plimmer Photography</title>
-    <script src="./script.js" defer></script>
+    <script src="./js/script.js" defer></script>
 </head>
 
 <body>
@@ -23,7 +23,7 @@
     </div>
     <nav id="mySideNav" class="sidenav">
             <a href="#top">Home</a>
-            <a href=".about-me/about-me.html">About me</a>
+            <a href="./about-me.html">About me</a>
             <a href="https://www.karenplimmer.com/galleries/">Galleries</a>
             <a href="https://www.karenplimmer.com/prints/">Prints</a>
             <a href="./web-design/design.html">Web design</a>
@@ -31,31 +31,49 @@
     </nav>
     <!--mobile menu-->
     <header id="top">
-        <nav id="left">
+        <nav id="narrow-nav">
             <ul>
-                <li><a href="./index.html">Home</a></li>
-                <li><a href="./about-me/about-me.html">About Me</a></li>
+                <li><a href="#top">Home</a></li>
+                <li><a href="./about-me.html">About Me</a></li>
                 <li><a href="https://www.karenplimmer.com/galleries">Galleries</a></li>
-            </ul>
-        </nav>
-        <div id="logo">
-            <h1 id="title">Karen Plimmer
-            <span id="subtitle">photography</span></h1>
-        </div>
-        <nav id="right">
-            <ul>
                 <li><a href="https://www.karenplimmer.com/prints">Prints</a></li>
                 <li><a href="./web-design/design.html">Web design</a></li>
+                <!--<ul>
+                    <li class="submenu"><a href="./web-design/design.html">Style guide</a></li>
+                </ul>-->
                 <li><a href="https://www.karenplimmer.com/contact">Contact</a></li>
             </ul>
         </nav>
+        <div id="split-nav">
+            <nav id="left">
+                <ul>
+                    <li><a href="#top">Home</a></li>
+                    <li><a href="./about-me.html">About Me</a></li>
+                    <li><a href="https://www.karenplimmer.com/galleries">Galleries</a></li>
+                </ul>
+            </nav>
+            <div id="logo">
+                <h1 id="title">Karen Plimmer</h1>
+                <h2 id="subtitle">photography</h2>
+            </div>
+            <nav id="right">
+                <ul>
+                    <li><a href="https://www.karenplimmer.com/prints">Prints</a></li>
+                    <li><a href="./web-design/design.html">Web design</a></li>
+                    <!--<ul>
+                    <li class="submenu"><a href="./web-design/design.html">Style guide</a></li>
+                </ul>-->
+                    <li><a href="https://www.karenplimmer.com/contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
     <img id="hero-image"
         src="https://karenplimmercom.stage.site/wp-content/uploads/2021/01/For-the-non-believers-Lake-Tekapo.jpg">
     <main>
         <section id="welcome">
-            <h2 class="h3">Landscape and nature photography</h2>
-            <h3 class="h4 florence purple">welcome</h3>
+            <h2>Landscape and nature photography</h2>
+            <h3 class=" h2 florence purple">welcome</h3>
             <p>I'm delighted that you are here to share my love of all things nature!</p>
         </section>
 
@@ -64,7 +82,7 @@
         <nav>
             <ul>
                 <li><a href="#top">Home</a></li>
-                <li><a href="./about-me/about-me.html">About Me</a></li>
+                <li><a href="./about-me.html">About Me</a></li>
                 <li><a href="https://www.karenplimmer.com/galleries">Galleries</a></li>
                 <li><a href="https://www.karenplimmer.com/prints">Prints</a></li>
                 <li><a href="./web-design/design.html">Web design</a></li>

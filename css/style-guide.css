@@ -101,7 +101,7 @@ ul {
     padding: 1rem 2rem;
 }
 
-#font-family h3.h4 {
+#font-family h3 {
     color: #fff;
 }
 
@@ -220,12 +220,11 @@ ul {
 }
 
 #buttons {
-    margin-left: 4rem;
     display: grid;
     grid-template-columns: repeat(8, 1fr);
     justify-content: space-between;
     justify-items: center;
-    margin: 3rem 0;
+    margin: 0 0 3.5rem 0;
     gap: 1rem;
 }
 
@@ -314,17 +313,6 @@ ul {
 
 #h2-sample {
     text-align: center;
-    font-style: normal;
-    font-size: 42px;
-    font-weight: 200;
-    text-transform: uppercase;
-    line-height: 1.2;
-    letter-spacing: 0.14rem;
-    padding: 1rem;
-}
-
-#h3-sample {
-    text-align: center;
     font-size: 35px;
     font-weight: 200;
     text-transform: uppercase;
@@ -332,17 +320,17 @@ ul {
     letter-spacing: 0.14rem;
 }
 
-#h4-sample {
+#h3-sample {
     text-align: center;
-    font-size: 28px;
-    font-weight: 200;
+    font-size: 26px;
     font-style: normal;
+    font-weight: 200;
     text-transform: uppercase;
     line-height: 1.4;
     letter-spacing: 0.14rem;
 }
 
-#h5-sample {
+#h4-sample {
     text-align: center;
     font-size: 21px;
     font-weight: 200;
@@ -351,13 +339,24 @@ ul {
     letter-spacing: 0.14rem;
 }
 
-#h6-sample {
+#h5-sample {
     text-align: center;
     font-size: 17.5px;
     font-weight: 200;
     text-transform: uppercase;
     line-height: 1.4;
     letter-spacing: 0.14rem;
+}
+
+#h6-sample {
+    text-align: center;
+    font-size: 15.75px;
+    font-style: italic;
+    font-weight: bold;
+    text-transform: none;
+    line-height: 1.4;
+    letter-spacing: 0.08rem;
+    padding: 1rem;
 }
 
 #p-bold-sample {
@@ -410,27 +409,28 @@ ul {
     background-image: url("https://www.karenplimmer.com/wp-content/uploads/2021/01/Colour-gradient-block.jpg");
     background-position: top center;
     background-repeat: repeat-y;
-    padding: 2rem;
+    padding: 2rem 4rem;
     border-radius: 0.5rem;
     margin-top: 3rem;
     margin-bottom: 0;
 }
 
-#links-and-lists article h3,
-#links-and-lists article h4 {
+#links-and-lists h3,
+#links-and-lists  h4 {
     color: #fff;
+    font-style: normal;
 }
 
-#links-and-lists article i {
+#links-and-lists i {
     color: inherit;
 }
 
-#links-and-lists .h6.blue {
+#links-and-lists h4.blue {
     color: #62a9fd;
     font-style: normal;
 }
 
-#links-and-lists .h6.orange {
+#links-and-lists h4.orange {
     color: #f98562;                       
     font-style: normal;
 }
@@ -446,8 +446,8 @@ ul {
 }
 
 #links-and-lists .selector.pale-purple {
-    margin-left: 2rem;
-    padding: 0.35rem 1rem;
+    width: 13rem;
+    padding: 0 1rem 0.3rem 1rem;
 }
 
 /*buttons*/
@@ -458,7 +458,7 @@ ul {
     gap: 2rem 1rem;
     justify-content: space-between;
     justify-items: center;
-    padding: 2rem 1rem 4rem 1rem;
+    padding: 2rem 1rem;
     background-color: rgb(248, 248, 248);
     border-radius: 0.5rem;
 }
@@ -518,6 +518,11 @@ ul {
     color: white;
 }
 
+#header-article li {
+    list-style-position: outside;
+    margin-left: 1rem;
+}
+
 /*header nav*/
 #header-nav .selector {
     text-transform: uppercase;
@@ -550,10 +555,46 @@ ul {
     background-color: #240975;
 }
 
+#nav-layout h4 {
+    color: #fff;
+}
+
 /*mobile nav*/
 #mobile-nav {
     background-color: #f98562;
     color: #fff;
     padding: 2rem;
     border-radius: 0.5rem;
+}
+
+#mobile-nav h4 {
+    color: #fff;
+}
+
+/*expand*/
+#expand {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    justify-content: space-between;
+}
+
+/*reset*/
+#reset-content {
+    display: none;
+}
+
+#show-reset, #show-media-queries, #show-shortcuts {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+/*media*/
+#media-content {
+    display: none;
+}
+
+/*shortcuts*/
+#shortcuts-content {
+    display: none;
 }

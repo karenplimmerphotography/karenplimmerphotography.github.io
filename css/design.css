@@ -1,4 +1,13 @@
-html {
+
+@font-face {
+    font-family: "FlorenceScript";
+    font-weight: 400;
+    font-display: swap;
+    src: url("https://karenplimmercom.stage.site/wp-content/uploads/oxygen/custom_fonts/FlorenceScript.woff2") format("woff2"),
+        url("https://karenplimmercom.stage.site/wp-content/uploads/oxygen/custom_fonts/FlorenceScript.woff") format("woff"),
+        url("../resources/fonts/FlorenceScript.woff") format("woff")
+
+}html {
     font-size: 16px;
 }
 
@@ -41,12 +50,14 @@ h6,
 
 /*headings*/
 
-h2,
-.h2 {
+h1,
+.h1 {
     font-size: 3rem;
     font-style: oblique;
 }
 
+h3,
+.h3,
 h4,
 .h4,
 h5,
@@ -56,24 +67,33 @@ h6,
     padding-bottom: 0.5rem;
 }
 
+h2,
+.h2 {
+    font-size: 2.5rem;
+    font-style: normal;
+}
+
 h3,
 .h3 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-style: normal;
 }
 
 h4,
 .h4 {
-    font-size: 2rem;
-    font-style: normal;
+    font-size: 1.4rem;
+    font-weight: 300;
+    font-style: oblique;
+    text-transform: none;
+    letter-spacing: 0.06rem;
 }
 
 h5,
 .h5 {
-    font-size: 1.5em;
-    font-weight: 300;
-    font-style: oblique;
+    font-size: 1.125rem;
     text-transform: none;
+    font-weight: bold;
+    font-style: oblique;
     letter-spacing: 0.06rem;
 }
 
@@ -86,13 +106,9 @@ h6,
     letter-spacing: 0.06rem;
 }
 
-header nav li { /*adjust for increase in html font-size to 16px*/
-    font-size: 0.8rem;
-}
+/*header and footer navigation*/
 
-/* header navigation*/
-
-header nav li {
+header nav li a, footer nav li a { /*adjust for increase in html font-size to 16px*/
     font-size: 0.8rem;
 }
 
@@ -141,7 +157,7 @@ article ul a:focus {
     text-align: center;
 }
 
-#hero-image-design h3 {
+#hero-image-design p {
     color: #fff;
     text-align: center;
 }
@@ -237,28 +253,27 @@ article ul a:focus {
     background-color: #240975;
     background-image: url("https://www.karenplimmer.com/wp-content/uploads/2021/01/Colour-gradient-block.jpg");
     background-size: contain;
-    background-position: center center;
     background-repeat: repeat-y;
     margin-bottom: 2rem;
 }
 
 .default h3 {
     color: #fff;
+    text-align: center;
     font-family: Raleway, sans-serif;
     font-size: 2rem;
+    font-style: normal;
     font-weight: 100;
     text-transform: uppercase;
     letter-spacing: 0.14rem;
-    font-style: normal;
-    text-align: center;
 }
 
 .default h4 {
     color: #f98562;
-    font-family: FlorenceScript, Raleway, sans-serif;
-    font-weight: 100;
-    font-size: 2rem;
     text-align: center;
+    font-family: FlorenceScript, Raleway, sans-serif;
+    font-size: 2rem;
+    font-style: normal;
 }
 
 /* personal portfolio*/
@@ -394,7 +409,7 @@ div#dasmoto-header h3 {
     letter-spacing: 0;
     text-transform: none;
     text-align: center;
-    background-image: url("./codecademy-projects/dasmoto/images/pattern.jpeg");
+    background-image: url("../web-design/codecademy-projects/dasmoto/images/pattern.jpeg");
     background-size: cover;
     background-repeat: no-repeat;
     margin-bottom: 25px;
@@ -403,14 +418,13 @@ div#dasmoto-header h3 {
 
 /*skills*/
 
-#skills-container {
+#skills-icons {
     width: 60%;
-    margin: 20px auto 60px auto;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 4rem;
+    margin: 3rem auto 6rem auto;
 }
 
-#skills-container i.fab {
+#skills-icons i.fab {
     font-size: 2rem;
 }
