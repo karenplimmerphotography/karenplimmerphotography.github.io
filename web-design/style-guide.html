@@ -163,14 +163,14 @@
                 <h3>Headings</h3>
                 <section id="font-heading-levels">
                     <div id="buttons">
-                        <button id="florence-button" class="text-example-button">font</button>
-                        <button id="purple-button" class="text-example-button">purple</button>
-                        <button id="orange-button" class="text-example-button">orange</button>
-                        <button id="pale-orange-button" class="text-example-button">pale orange</button>
-                        <button id="blue-button" class="text-example-button">blue</button>
-                        <button id="pale-blue-button" class="text-example-button">pale blue</button>
-                        <button id="white-button" class="text-example-button">white</button>
-                        <button id="reset-button" class="text-example-button">reset</button>
+                        <button id="florence-button" class="small-button text-example-button">font</button>
+                        <button id="purple-button" class="small-button text-example-button">purple</button>
+                        <button id="orange-button" class="small-button text-example-button">orange</button>
+                        <button id="pale-orange-button" class="small-button text-example-button">pale orange</button>
+                        <button id="blue-button" class="small-button text-example-button">blue</button>
+                        <button id="pale-blue-button" class="small-button text-example-button">pale blue</button>
+                        <button id="white-button" class="small-button text-example-button">white</button>
+                        <button id="reset-button" class="small-button text-example-button">reset</button>
                     </div>
                     <div class="font-sample" id="h1-font-sample">
                         <div class="font-example">Heading 1 <span class="small">(Logo)</span></div>
@@ -188,10 +188,11 @@
                                 <li>padding: 1rem o</li>
                             </ul>
                         </div>
-                        <div class="text logo-font-container"><p id="h1-sample">The quick brown fox</p>
+                        <div id="logo-font-container">
+                            <p id="h1-sample">The quick brown fox</p>
                             <p id="h1-sample2"> jumped
                                 over the lazy dog</p>
-                            </div>
+                        </div>
                     </div>
                     <hr>
                     <div class="font-sample">
@@ -261,6 +262,7 @@
                         <div class="font-description">
                             <ul>
                                 <li>color: purple</li>
+                                <li>text-align: center</li>
                                 <li>font-family: Raleway</li>
                                 <li>font-size: 1.25rem</li>
                                 <li>font-weight: 200</li>
@@ -417,15 +419,50 @@
                     <button class="bg-orange">orange</button>
                     <button class=bg-pale-orange>pale-orange</button>
                 </section>
+                <h4 class="h6">All buttons</h4>
                 <ul>
                     <li>color: white</li>
+                    <li>background-color: purple</li>
                     <li>font-family: Raleway, sans-serif</li>
-                    <li>width: 10rem</li>
-                    <li>padding: 1.2rem</li>
                     <li>border: 1px solid white</li>
                     <li>border-radius: 2rem</li>
+                    <li>margin: 1rem 0</li>
+                    <li>transition: all 400ms ease-in-out</li>
+                </ul>
+                <h4 class="h6">Large button</h4>
+                <ul>
+                    <li>width: 10rem</li>
+                    <li>padding: 1.2rem</li>
                     <li>:active padding: 1.35rem</li>
                 </ul>
+                <h4 class="h6">Small button</h4>
+                <ul>
+                    </li>
+                    <li>width: 7rem</li>
+                    <li>padding: 0.8rem</li>
+                    <li>:active padding: 1rem</li>
+                </ul>
+            </article>
+            <!--tabs-->
+            <article>
+                <h3>Tabs</h3>
+                <div>
+                    <h4 class="h6">Layout</h4>
+                    <ul>
+                        <li>display: grid</li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="h6">Appearance</h4>
+                    <ul>
+                        <li>background-color: white</li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+
             </article>
             <!--layout-->
             <article>
@@ -437,11 +474,12 @@
                     <li>max-width: 100%</li>
                     <li>margin: 2rem auto</li>
                     <li>padding: 0 2rem</li>
-                    <li>@media (max-width: 469px) padding: 0 1rem</li>
+                    <li>@media (max-width: 479px) padding: 0 1rem</li>
                 </ul>
                 <h4 class="h6 selector">section and article</h4>
                 <ul>
                     <li>margin-bottom: 3rem</li>
+                    <li>@media (max-width: 479px) margin-bottom: 2rem</li>
                 </ul>
                 <h4 class=" h6 selector">paragraph</h4>
                 <ul>
@@ -676,34 +714,36 @@
                             font-size: 16px;
                             }
                             }
-                            <br>
+                            <br></br>
                             @media only screen and (min-width: 1400px) and (max-width: 1799px) {
                             header #split-nav {
                             grid-template-columns: 1fr 200px 1fr;
                             }
                             }
-                            <br>
+                            <br></br>
                             @media only screen and (max-width: 1399px) {
                             nav#left, nav#right {
                             display: none;
                             }
+                            <br>
                             header #split-nav {
                             grid-template-columns: 1fr;
                             }
                             }
-                            <br>
+                            <br></br>
                             @media only screen and (min-width: 1400px) {
                             nav#narrow-nav {
                             display: none;
                             }
                             }
+                            <br></br>
                             @media only screen and (max-width: 1699px) {
                             header nav li {
                             padding-left: 2.5rem;
                             padding-right: 2.5rem;
                             }
                             }
-                            <br>
+                            <br><br>
                             @media only screen and (max-width: 1499px) {
                             header nav li {
                             padding-left: 2rem;
@@ -711,19 +751,19 @@
                             line-height: 1.4;
                             }
                             }
-                            <br>
+                            <br><br>
                             @media only screen and (max-width: 767px) {
                             header nav {
                             display: none;
                             }
                             }
-                            <br>
+                            <br><br>
                             @media only screen and (min-width: 950px) {
                             #mobile-menu-open {
                             display: none;
                             }
                             }
-                            <br>
+                            <br><br>
                             @media only screen and (max-width: 949px) {
                             header {
                             grid-template-columns: 1fr;
@@ -811,11 +851,15 @@
                             }
                             <br>
                             .italic {
-                                font-style: italic;
+                            font-style: italic;
                             }
                             <br>
                             .oblique {
-                                font-style: oblique;
+                            font-style: oblique;
+                            }
+                            <br>
+                            .uppercase {
+                            text-transform: uppercase;
                             }
                             <br>
                             .center {

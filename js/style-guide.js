@@ -1,3 +1,5 @@
+
+// HEADINGS
 const text = document.getElementsByClassName('text-to-change-font');
 const textToColor = document.getElementsByClassName('text');
 const florenceButton = document.getElementById("florence-button");
@@ -8,6 +10,7 @@ const paleBlueButton = document.getElementById("pale-blue-button");
 const purpleButton = document.getElementById("purple-button");
 const whiteButton = document.getElementById("white-button");
 const resetButton = document.getElementById("reset-button");
+const allButtons = document.getElementsByClassName('text-example-button')
 const logoText = document.getElementById('h1-sample');
 
 
@@ -17,6 +20,16 @@ const changeFont = (list, newFont) => {
             item.style.fontFamily = newFont;
         } else {
             item.style.fontFamily = '';
+        }
+    }
+}
+
+const changeAllButtons = (list, newButtonBackgroundColor) => {
+    for (const item of list) {
+        if (item.style.backgroundColor !== newButtonBackgroundColor) {
+            item.style.backgroundColor = newButtonBackgroundColor;
+        } else {
+            item.style.backgroundColor = '';
         }
     }
 }
@@ -76,7 +89,7 @@ whiteButton.addEventListener('click', function () {
 })
 resetButton.addEventListener('click', function () {
     changeBgImage(textToColor);
-    changeButtonColor(resetButton, '#f9b19b');
+    changeAllButtons(allButtons, '#f9b19b');
 })
 
 const bgButton = document.getElementById('change-button-bg');

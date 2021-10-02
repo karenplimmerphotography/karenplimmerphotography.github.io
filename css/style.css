@@ -47,18 +47,26 @@ main {
     padding: 0 2rem;
 }
 
-@media only screen and (max-width: 479px) {
-    main {
-        padding: 0 1rem;
-    }
-}
-
 section {
     margin-bottom: 3rem;
 }
 
 article {
     margin-bottom: 3rem;
+}
+
+@media only screen and (max-width: 479px) {
+    main {
+        padding: 0 1rem;
+    }
+
+    section {
+        margin-bottom: 2rem;
+    }
+
+    article {
+        margin-bottom: 2rem;
+    }
 }
 
 /*headings*/
@@ -225,11 +233,21 @@ button {
     padding: 1.2rem;
     border: 1px solid #fff;
     border-radius: 2rem;
-    margin: 2rem 0;
+    margin: 1rem 0;
+    transition: all 400ms ease-in-out;
 }
 
 button:active {
     padding: 1.35rem;
+}
+
+button.small-button {
+    width: 7rem;
+    padding: 0.8rem;
+}
+
+button.small-button:active {
+    padding: 1rem;
 }
 
 /*icons*/
@@ -514,6 +532,10 @@ span#hamburger:hover {
 
 .oblique {
     font-style: oblique;
+}
+
+.uppercase {
+    text-transform: uppercase;
 }
 
 .center {

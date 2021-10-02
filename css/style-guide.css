@@ -1,4 +1,3 @@
-
 /*lists*/
 ul {
     /* changed from 1.25rem top and bottom*/
@@ -45,6 +44,7 @@ nav a {
     #colours {
         gap: 1rem;
     }
+
     #colours div.colour-sample {
         width: 120px;
         height: 120px;
@@ -58,13 +58,14 @@ nav a {
 }
 
 @media only screen and (max-width: 425px) {
-     #colours {
-         grid-template-columns: repeat(2, 1fr);
-     }
-     #colours p {
-         margin-bottom: 0;
-     }
+    #colours {
+        grid-template-columns: repeat(2, 1fr);
     }
+
+    #colours p {
+        margin-bottom: 0;
+    }
+}
 
 #grey-sample {
     position: relative;
@@ -109,57 +110,31 @@ nav a {
     margin-bottom: 4rem;
 }
 
-#font-family h3 {
+#font-family h3,
+.family-example p {
     color: #fff;
 }
 
 .family-example {
     display: grid;
     grid-template-columns: 1fr 1fr 3fr;
-    gap: 2rem;
+    column-gap: 2rem;
     justify-content: space-between;
     align-items: center;
 }
 
 .family-example p:first-child {
-    color: #fff;
     font-weight: bold;
+    font-size: 1rem;
 }
 
 .family-example p:nth-child(2) {
-    color: #fff;
     font-size: 0.9rem;
 }
 
 .family-example p:last-child {
-    color: #fff;
     font-size: 1.25rem;
     padding: 1rem;
-}
-
-@media only screen and (max-width:1199px) {
-    .family-example {
-        grid-template: 1fr 1fr / 1fr 1fr;
-        gap: 1rem;
-        margin-bottom: 3rem;
-    }
-
-    .family-example p:first-child {
-        grid-area: 1 / 1 / span 1 / span 1;
-        padding-bottom: 0;
-    }
-
-    .family-example p:nth-child(2) {
-        grid-area: 1 / 2 / span 1 / span 1;
-        padding-bottom: 0;
-        font-size: 1rem;
-    }
-
-    .family-example p:last-child {
-        margin-left: 0rem;
-        padding-bottom: 0;
-        grid-area: 2 /1 /span 2 / span 2;
-    }
 }
 
 .weight-100 {
@@ -178,16 +153,25 @@ nav a {
     font-weight: 400;
 }
 
-.oblique {
-    font-style: oblique;
-}
+@media only screen and (max-width: 599px) {
+    #font-family {
+        margin-bottom: 2rem;
+    }
+    .family-example {
+        grid-template-columns: 1fr 3fr;
+    }
 
-.italic {
-    font-style: italic;
-}
+    .family-example p:first-child {
+        font-size: 0.8rem;
+    }
 
-.uppercase {
-    text-transform: uppercase;
+    .family-example p:nth-child(2) {
+        display: none;
+    }
+
+    .family-example p:last-child {
+        font-size: 1rem;
+    }
 }
 
 /*font-headings*/
@@ -198,63 +182,19 @@ nav a {
     }
 }
 
-.font-sample {
-    display: grid;
-    grid-template-columns: 0.6fr 1.2fr 3.2fr;
-    gap: 2rem;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 1rem;
-    margin-bottom: 2rem;
-}
-
-@media only screen and (max-width: 999px) {
-    .font-sample {
-        grid-template: 1fr 1fr / 1fr 1fr;
-        justify-content: start;
-        gap: 1rem 2rem;
-    }
-
-    .font-example {
-        grid-area: 1 / 1 / span 1 / span 1;
-    }
-
-    .font-description { /*margin right for scroll bar use*/
-        grid-area: 1 / 2 / span 1 / span 1;
-        margin-right: 2rem
-    }
-
-    .text {
-        grid-area: 2 /1 /span 2 / span 2;
-    }
-}
-
-.font-example {
-    font-weight: bold;
-}
-
 #buttons {
     display: grid;
-    grid-template-columns: repeat(8, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 0;
     justify-content: space-between;
-    justify-items: center;
     align-items: center;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     gap: 1rem;
-}
-
-@media only screen and (max-width: 899px) {
-    #buttons {
-        grid-template-columns: repeat(4, 1fr);
-        row-gap: 0;
-        margin-left: 0;
-    }
 }
 
 @media only screen and (max-width: 499px) {
     #buttons {
         grid-template-columns: repeat(2, 1fr);
-        justify-content: center;
     }
 }
 
@@ -262,70 +202,110 @@ nav a {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 7rem;
-    height: 3.5rem;
     color: #240975;
     background-color: #f9b19b;
-    border: 3px solid #fff;
-    border-radius: 2rem;
     overflow: hidden;
-    padding: 1rem 2rem;
     cursor: pointer;
-    transition: all 400ms ease-in-out;
-    margin-right: 0.5rem;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    width: 7rem;
+    padding: 0.8rem;
 }
 
-.text-example-button:hover {
-    border: 1px solid #fff;
+.font-sample {
+    display: grid;
+    grid-template-columns: 0.6fr 1.2fr 3.2fr;
+    column-gap: 3rem;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2rem 0;
+}
+
+.font-example {
+    font-weight: bold;
 }
 
 .text {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    text-align: center;
     color: #fff;
     background-color: #240975;
     background-image: url("https://www.karenplimmer.com/wp-content/uploads/2021/01/Colour-gradient-block.jpg");
-    background-position: center center;
     background-size: contain;
-    font-family: Raleway;
-    font-style: normal;
-    margin-left: 4rem;
     padding: 2rem;
     border-radius: 0.5rem;
     height: 180px;
-    overflow: scroll;
-    margin-top: 1rem;
-    margin-bottom: 0;
+    overflow: hidden;
+    margin: 2rem 0 0 0;
 }
 
-.logo-font-container {
+#logo-font-container {
+    text-align: center;
+    background-color: #240975;
     background-image: none;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    height: auto;
+}
+
+#h2-sample.text.text-to-change-font {
+    height: auto;
 }
 
 @media only screen and (max-width: 999px) {
-    .text {
-        margin-left: 0;
-        margin-top: 1rem;
+    .font-sample {
+        grid-template: 1fr 1fr / 0.9fr 1.1fr;
+        justify-content: start;
+        gap: 1rem 3rem;
+    }
+
+    .font-sample:last-of-type {
+        margin-bottom: 3rem;
+    }
+
+    .font-example {
+        grid-area: 1 / 1 / span 1 / span 1;
+    }
+
+    .font-description {
+        /*margin right for scroll bar use*/
+        max-width: 80%;
+        grid-area: 1 / 2 / span 1 / span 1;
+        padding-right: 2rem
+    }
+
+    .text,
+    #logo-font-container {
+        grid-area: 2 /1 /span 2 / span 2;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 599px) {
+    .font-sample {
+        column-gap: 2rem;
+    }
+}
+
+@media only screen and (max-width: 479px) {
+    .font-sample {
+      display: block;
+    }
+    .font-sample:last-of-type {
+        margin-bottom: 2rem;
     }
 }
 
 #h1-sample {
     display: block;
     color: #fff;
-    font-family: Raleway;
     background-color: #240975;
     background-image: none;
-    text-align: center;
     font-size: 2rem;
     font-weight: 100;
     text-transform: uppercase;
     letter-spacing: 0.14rem;
     line-height: 1.8;
-    padding: 0rem 1rem;
 }
 
 #h1-sample2 {
@@ -333,25 +313,24 @@ nav a {
     color: #f98562;
     background-color: #240975;
     background-image: none;
-    text-align: center;
     font-family: FlorenceScript;
     font-size: 2rem;
     font-weight: 100;
     line-height: 1.2;
     letter-spacing: 0;
     text-transform: none;
-    margin-left: 0;
-    padding: 0 0.5rem;
-    margin-bottom: 0;
 }
-
-.text.logo-font-container,
-#h2-sample.text.text-to-change-font {
-    height: auto;
+@media only screen and (max-width: 479px) {
+    #h1-sample,
+    #h1-sample2 {
+        font-size: 1.5rem;
+    }
+    #logo-font-container {
+        margin: 2rem 0 0 0;
+    }
 }
 
 #h2-sample {
-    text-align: center;
     font-size: 35px;
     font-weight: 200;
     text-transform: uppercase;
@@ -360,7 +339,6 @@ nav a {
 }
 
 #h3-sample {
-    text-align: center;
     font-size: 26px;
     font-style: normal;
     font-weight: 200;
@@ -370,7 +348,6 @@ nav a {
 }
 
 #h4-sample {
-    text-align: center;
     font-size: 21px;
     font-weight: 200;
     text-transform: uppercase;
@@ -379,7 +356,6 @@ nav a {
 }
 
 #h5-sample {
-    text-align: center;
     font-size: 17.5px;
     font-weight: 200;
     text-transform: uppercase;
@@ -388,7 +364,6 @@ nav a {
 }
 
 #h6-sample {
-    text-align: center;
     font-size: 15.75px;
     font-style: italic;
     font-weight: bold;
@@ -399,15 +374,12 @@ nav a {
 }
 
 #p-bold-sample {
-    color: #fff;
     font-weight: bold;
     font-size: 14px;
     letter-spacing: 0.08rem;
 }
 
 #paragraph-sample {
-    color: #fff;
-    font-family: 'Raleway';
     font-weight: normal;
     font-size: 14px;
     letter-spacing: 0.08rem;
@@ -416,7 +388,6 @@ nav a {
 #quote-sample {
     font-family: FlorenceScript;
     font-size: 26px;
-    text-align: center;
     letter-spacing: 0.08rem;
 }
 
@@ -437,8 +408,7 @@ nav a {
 
 @media only screen and (max-width: 999px) {
     #links-and-lists {
-        grid-template-columns: 1fr;
-        gap: 0;
+      display: block;
     }
 }
 
@@ -457,6 +427,12 @@ nav a {
 @media only screen and (max-width: 1199px) {
     #links-and-lists article {
         padding: 2rem;
+    }
+}
+
+@media only screen and (max-width: 1199px) {
+    #links-and-lists article:first-of-type {
+        margin-top: 1rem;
     }
 }
 
@@ -551,7 +527,7 @@ nav a {
 
 @media only screen and (max-width: 767px) {
     #header-article-content {
-        grid-template-columns: 1fr;
+        display: block;
     }
 }
 
@@ -595,7 +571,7 @@ nav a {
 
 @media only screen and (max-width: 767px) {
     #header-nav-content {
-        grid-template-columns: 1fr;
+        display: block;
     }
 }
 
@@ -619,7 +595,7 @@ nav a {
 
 @media only screen and (max-width: 767px) {
     #nav-layout-content {
-        grid-template-columns: 1fr;
+        display: block;
     }
 }
 
@@ -650,8 +626,9 @@ nav a {
 
 @media only screen and (max-width: 999px) {
     #mobile-nav-content {
-        grid-template-columns: 1fr;
+        display: block;
     }
+
     #more-mobile-content {
         grid-template-columns: 1fr;
     }
@@ -672,13 +649,13 @@ nav a {
 
 @media only screen and (max-width: 999px) {
     #footer-content {
-        grid-template-columns: 1fr;
+        display: block;
     }
 }
 
 #footer-article h3,
 #footer-article h4 {
-    color:#fff;
+    color: #fff;
 }
 
 
@@ -691,7 +668,7 @@ nav a {
     justify-content: space-between;
     background-color: rgb(248, 248, 248);
     border-radius: 0.5rem;
-    padding: 2rem 2rem 0 2rem;
+    padding-top: 2rem;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
     border-bottom: 0.5rem solid#fff;
