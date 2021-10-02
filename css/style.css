@@ -182,7 +182,7 @@ a:active {
 }
 
 a:visited {
-    color: #453575;
+    color: #9a88cf;
 }
 
 a.light:visited {
@@ -395,7 +395,7 @@ span#line3 {
 }
 
 span#hamburger:hover {
-    color: #453575;
+    color: #9a88cf;
 }
 
 /*large screens hide mobile menu*/
@@ -435,11 +435,11 @@ span#hamburger:hover {
 }
 
 .pale-purple {
-    color: #7756db;
+    color: #9a88cf;
 }
 
 .bg-pale-purple {
-    background-color: #7756db;
+    background-color: #9a88cf;
 }
 
 .orange {
@@ -488,6 +488,14 @@ span#hamburger:hover {
 
 .bold {
     font-weight: bold;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.oblique {
+    font-style: oblique;
 }
 
 .center {

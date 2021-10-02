@@ -45,6 +45,7 @@ h6,
     font-family: Raleway, sans-serif;
     font-weight: 100;
     text-transform: uppercase;
+    line-height: 1.2rem;
     letter-spacing: 0.14rem;
     padding: 1rem 0;
 }
@@ -55,17 +56,6 @@ h1,
 .h1 {
     font-size: 3rem;
     font-style: oblique;
-}
-
-h3,
-.h3,
-h4,
-.h4,
-h5,
-.h5,
-h6,
-.h6 {
-    padding-bottom: 0.5rem;
 }
 
 h2,

@@ -11,7 +11,6 @@ nav a {
 }
 
 /*icons*/
-
 .la {
     color: inherit;
     font-size: 1.5rem;
@@ -30,7 +29,8 @@ nav a {
     gap: 4rem 2rem;
     justify-content: space-between;
     justify-items: center;
-    margin: 3rem 1rem 1rem 1rem;
+    align-items: center;
+    margin: 2rem 1rem 1rem 1rem;
 }
 
 @media only screen and (max-width: 1199px) {
@@ -62,34 +62,7 @@ nav a {
 }
 
 #grey-sample {
-    position: relative;
-}
-
-#pure-grey-sample {
     background-color: rgb(225, 225, 225);
-    width: 75px;
-    height: 75px;
-    border: 1px solid rgb(50, 50, 50);
-    border-radius: 50%;
-    position: absolute;
-    top: 37.5px;
-    left: 37.5px;
-    z-index: 1;
-}
-
-#pure-grey-sample span {
-    color: rgb(100, 100, 100);
-    background-color: rgb(225, 225, 225);
-    position: absolute;
-    border-radius: 50%;
-    top: 7px;
-    left: 18px;
-}
-
-@media only screen and (max-width: 549px) {
-    #pure-grey-sample {
-        display: none;
-    }
 }
 
 #colours p {
@@ -180,14 +153,6 @@ nav a {
     font-weight: 400;
 }
 
-.oblique {
-    font-style: oblique;
-}
-
-.italic {
-    font-style: italic;
-}
-
 .uppercase {
     text-transform: uppercase;
 }
@@ -196,7 +161,7 @@ nav a {
 
 .font-sample {
     display: grid;
-    grid-template-columns: 0.6fr 1.2fr 3.2fr;
+    grid-template-columns: 0.6fr 1.4fr 3fr;
     gap: 2rem;
     justify-content: space-between;
     align-items: center;
@@ -264,24 +229,18 @@ nav a {
 
 .text {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
     align-items: center;
-    color: #fff;
-    background-color: #240975;
-    background-image: url("https://www.karenplimmer.com/wp-content/uploads/2021/01/Colour-gradient-block.jpg");
-    background-position: center center;
-    background-size: contain;
+    color: #222;
     font-family: Raleway;
     font-style: normal;
-    margin-left: 4rem;
-    padding: 2rem;
     border-radius: 0.5rem;
-    height: 170px;
+    height: 140px;
     overflow: scroll;
+    padding-bottom: 0;
 }
 
-#h1-sample {
+#logo-sample {
+    display: block;
     color: #fff;
     font-family: Raleway;
     background-color: #240975;
@@ -292,11 +251,18 @@ nav a {
     text-transform: uppercase;
     letter-spacing: 0.14rem;
     line-height: 1.2;
-    padding-bottom: 0;
+    padding: 2rem;
 }
 
-#h1-sample2 {
+#logo-sample.text,
+#h1-sample.text,
+#h2-sample.text {
+    height: auto;
+}
+
+#logo-sample2 {
     display: block;
+    height: 2.5rem;
     color: #f98562;
     background-color: #240975;
     background-image: none;
@@ -307,86 +273,77 @@ nav a {
     line-height: 1.2;
     letter-spacing: 0;
     text-transform: none;
-    margin-left: 0;
 }
 
-#h1-font-sample .text,
-#h2-font-sample .text {
-    height: auto;
-}
-
-#h1-font-sample .text {
+#logo-font-sample .text {
     padding: 1.5rem 1rem 1rem 1rem;
 }
 
+#h1-sample {
+    font-size: 3rem;
+    font-style: oblique;
+    font-weight: 100;
+    text-transform: uppercase;
+    line-height: 1.2;
+    letter-spacing: 0.14rem;
+}
+
 #h2-sample {
-    text-align: center;
-    font-size: 35px;
-    font-weight: 200;
+    font-size: 2.5rem;
+    font-style: normal;
+    font-weight: 100;
     text-transform: uppercase;
     line-height: 1.2;
     letter-spacing: 0.14rem;
 }
 
 #h3-sample {
-    text-align: center;
-    font-size: 26px;
+    font-size: 2rem;
     font-style: normal;
-    font-weight: 200;
+    font-weight: 100;
     text-transform: uppercase;
-    line-height: 1.4;
+    line-height: 1.2;
     letter-spacing: 0.14rem;
 }
 
 #h4-sample {
-    text-align: center;
-    font-size: 21px;
-    font-weight: 200;
-    text-transform: uppercase;
+    font-size: 1.4rem;
+    font-style: oblique;
+    font-weight: 300;
+    text-transform: none;
     line-height: 1.4;
-    letter-spacing: 0.14rem;
+    letter-spacing: 0.06rem;
 }
 
 #h5-sample {
-    text-align: center;
-    font-size: 17.5px;
-    font-weight: 200;
-    text-transform: uppercase;
-    line-height: 1.4;
-    letter-spacing: 0.14rem;
-}
-
-#h6-sample {
-    text-align: center;
-    font-size: 15.75px;
-    font-style: italic;
+    font-size: 1.125rem;
+    font-style: oblique;
     font-weight: bold;
     text-transform: none;
     line-height: 1.4;
-    letter-spacing: 0.08rem;
-    padding: 1rem;
+    letter-spacing: 0.06rem;
+}
+
+#h6-sample {
+    font-size: 1rem;
+    font-style: oblique;
+    font-weight: bold;
+    text-transform: none;
+    line-height: 1.4;
+    letter-spacing: 0.06rem;
 }
 
 #p-bold-sample {
-    color: #fff;
     font-weight: bold;
-    font-size: 14px;
-    letter-spacing: 0.08rem;
+    font-size: 1rem;
+    letter-spacing: 0.06rem;
 }
 
 #paragraph-sample {
-    color: #fff;
     font-family: 'Raleway';
     font-weight: normal;
-    font-size: 14px;
-    letter-spacing: 0.08rem;
-}
-
-#quote-sample {
-    font-family: FlorenceScript;
-    font-size: 26px;
-    text-align: center;
-    letter-spacing: 0.08rem;
+    font-size: 1rem;
+    letter-spacing: 0.06rem;
 }
 
 .font-description {
@@ -627,7 +584,6 @@ nav a {
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
     border-bottom: 0.5rem solid#fff;
-    margin-bottom: 4rem;
 }
 
 #tabs button {
@@ -643,6 +599,7 @@ nav a {
     border-top-right-radius: 0;
     border-bottom-left-radius: 0.5rem;
     border-bottom-right-radius: 0.5rem;
+    margin-bottom: 4rem;
 }
 
 #expand ul,
