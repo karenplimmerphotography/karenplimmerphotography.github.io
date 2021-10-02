@@ -36,7 +36,9 @@ nav a {
 @media only screen and (max-width: 1199px) {
     #colours {
         grid-template-columns: repeat(3, 1fr);
+        gap: 2rem 1rem;
         justify-content: center;
+        margin: 2rem 0 1rem 0;
     }
 }
 
@@ -58,6 +60,13 @@ nav a {
     #colours div.colour-sample {
         width: 100px;
         height: 100px;
+    }
+}
+
+@media only screen and (max-width: 399px) {
+    #colours div.colour-sample {
+        width: 80px;
+        height: 80px;
     }
 }
 
@@ -95,6 +104,12 @@ nav a {
 #colours p {
     text-align: center;
     margin: 2rem;
+}
+
+@media only screen and (max-width: 485px) {
+    #colours p {
+        margin: 2rem 1rem;
+    }
 }
 
 /*font-family*/
@@ -141,7 +156,6 @@ nav a {
 @media only screen and (max-width:1199px) {
     .family-example {
         grid-template: 1fr 1fr / 1fr 1fr;
-        justify-content: start;
         gap: 1rem;
         margin-bottom: 3rem;
     }
@@ -194,12 +208,19 @@ nav a {
 
 /*font-headings*/
 
+@media only screen and (min-width: 999px) {
+    hr {
+        display: none;
+    }
+}
+
 .font-sample {
     display: grid;
     grid-template-columns: 0.6fr 1.2fr 3.2fr;
     gap: 2rem;
     justify-content: space-between;
     align-items: center;
+    margin-top: 1rem;
     margin-bottom: 2rem;
 }
 
@@ -207,15 +228,16 @@ nav a {
     .font-sample {
         grid-template: 1fr 1fr / 1fr 1fr;
         justify-content: start;
-        gap: 1rem;
+        gap: 1rem 2rem;
     }
 
     .font-example {
         grid-area: 1 / 1 / span 1 / span 1;
     }
 
-    .font-description {
+    .font-description { /*margin right for scroll bar use*/
         grid-area: 1 / 2 / span 1 / span 1;
+        margin-right: 2rem
     }
 
     .text {
@@ -232,14 +254,23 @@ nav a {
     grid-template-columns: repeat(8, 1fr);
     justify-content: space-between;
     justify-items: center;
-    margin: 0 0 3.5rem 0;
+    align-items: center;
+    margin-bottom: 1rem;
     gap: 1rem;
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 899px) {
     #buttons {
         grid-template-columns: repeat(4, 1fr);
+        row-gap: 0;
         margin-left: 0;
+    }
+}
+
+@media only screen and (max-width: 499px) {
+    #buttons {
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
     }
 }
 
@@ -255,10 +286,11 @@ nav a {
     cursor: pointer;
     transition: all 400ms ease-in-out;
     margin-right: 0.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 .text-example-button:hover {
-    /*background-color: #f19b9b;*/
     border: 1px solid #fff;
 }
 
@@ -277,11 +309,25 @@ nav a {
     margin-left: 4rem;
     padding: 2rem;
     border-radius: 0.5rem;
-    height: 170px;
+    height: 180px;
     overflow: scroll;
+    margin-top: 1rem;
+    margin-bottom: 0;
+}
+
+.logo-font-container {
+    background-image: none;
+}
+
+@media only screen and (max-width: 999px) {
+    .text {
+        margin-left: 0;
+        margin-top: 1rem;
+    }
 }
 
 #h1-sample {
+    display: block;
     color: #fff;
     font-family: Raleway;
     background-color: #240975;
@@ -291,8 +337,8 @@ nav a {
     font-weight: 100;
     text-transform: uppercase;
     letter-spacing: 0.14rem;
-    line-height: 1.2;
-    padding-bottom: 0;
+    line-height: 1.8;
+    padding: 0rem 1rem;
 }
 
 #h1-sample2 {
@@ -308,15 +354,13 @@ nav a {
     letter-spacing: 0;
     text-transform: none;
     margin-left: 0;
+    padding: 0 0.5rem;
+    margin-bottom: 0;
 }
 
-#h1-font-sample .text,
-#h2-font-sample .text {
+.text.logo-font-container,
+#h2-sample.text.text-to-change-font {
     height: auto;
-}
-
-#h1-font-sample .text {
-    padding: 1.5rem 1rem 1rem 1rem;
 }
 
 #h2-sample {
@@ -404,7 +448,7 @@ nav a {
     gap: 4rem;
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 999px) {
     #links-and-lists {
         grid-template-columns: 1fr;
         gap: 0;
@@ -421,6 +465,12 @@ nav a {
     border-radius: 0.5rem;
     margin-top: 3rem;
     margin-bottom: 0;
+}
+
+@media only screen and (max-width: 1199px) {
+    #links-and-lists article {
+        padding: 2rem;
+    }
 }
 
 #links-and-lists h3,
@@ -518,6 +568,10 @@ nav a {
     }
 }
 
+#header-article-content ul {
+    width: 90%;
+}
+
 #header-article h3,
 #header-article h4,
 #header-nav h3,
@@ -576,6 +630,12 @@ nav a {
     color: #fff;
 }
 
+@media only screen and (max-width: 767px) {
+    #nav-layout-content {
+        grid-template-columns: 1fr;
+    }
+}
+
 /*mobile nav*/
 #mobile-nav {
     background-color: #f98562;
@@ -601,11 +661,32 @@ nav a {
     column-gap: 2rem;
 }
 
+@media only screen and (max-width: 999px) {
+    #mobile-nav-content {
+        grid-template-columns: 1fr;
+    }
+    #more-mobile-content {
+        grid-template-columns: 1fr;
+    }
+}
+
 /*footer*/
 #footer-content {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     column-gap: 2rem;
+}
+
+@media only screen and (max-width:1199px) {
+    #footer-content {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media only screen and (max-width: 999px) {
+    #footer-content {
+        grid-template-columns: 1fr;
+    }
 }
 
 #footer-article h3,
@@ -627,7 +708,38 @@ nav a {
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
     border-bottom: 0.5rem solid#fff;
-    margin-bottom: 4rem;
+}
+
+@media only screen and (max-width: 599px) {
+    #tabs {
+        gap: 0;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+@media only screen and (max-width: 549px) {
+    #tabs button {
+        width: 9rem;
+    }
+}
+
+@media only screen and (max-width: 479px) {
+    #tabs button {
+        width: 8rem;
+    }
+}
+
+@media only screen and (max-width: 429px) {
+    #tabs button {
+        width: 7rem;
+    }
+}
+
+@media only screen and (max-width: 369px) {
+    #tabs button {
+        width: 6rem;
+    }
 }
 
 #tabs button {
@@ -643,6 +755,7 @@ nav a {
     border-top-right-radius: 0;
     border-bottom-left-radius: 0.5rem;
     border-bottom-right-radius: 0.5rem;
+    margin-bottom: 4rem;
 }
 
 #expand ul,

@@ -140,11 +140,11 @@ h5,
 h6, .h6 {
     color: #240975;
     text-align: left;
-    font-size: 1,125rem;
+    font-size: 1.125rem;
     font-weight: bold;
     font-style: italic;
     text-transform: none;
-    line-height: 1.4;
+    line-height: 1.8;
     letter-spacing: 0.08rem;
 }
 
@@ -545,6 +545,7 @@ footer nav li {
     list-style-type: none;
     line-height: 2;
     text-align: center;
+    margin-left: 0;
 }
 
 footer nav a {
