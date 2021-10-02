@@ -43,12 +43,11 @@ body {
 main {
     background-color: #fff;
     width: 1200px;
-    max-width: 100%;
     margin: 2rem auto;
     padding: 0 2rem;
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 479px) {
     main {
         padding: 0 1rem;
     }
@@ -75,10 +74,15 @@ article {
 }
 
 h2,
+.h2,
 h3,
+.h3,
 h4,
+.h4,
 h5,
-h6 {
+.h5,
+h6,
+.h6 {
     color: #f98562;
     text-align: center;
     font-weight: 200;
@@ -107,7 +111,6 @@ h2,
 .h2 {
     font-size: 2.5rem;
     line-height: 1.2;
-    font-weight: 200;
 }
 
 h3,
@@ -137,7 +140,8 @@ h5,
     font-weight: normal;
 }
 
-h6, .h6 {
+h6,
+.h6 {
     color: #240975;
     text-align: left;
     font-size: 1.125rem;
@@ -228,6 +232,17 @@ button:active {
     padding: 1.35rem;
 }
 
+/*icons*/
+
+.la {
+    color: inherit;
+    font-size: 1.5rem;
+    vertical-align: baseline;
+    position: relative;
+    top: 0.1rem;
+    padding-right: 0.5rem;
+}
+
 /*header*/
 
 header {
@@ -255,9 +270,12 @@ header #narrow-nav {
 }
 
 @media only screen and (max-width: 1399px) {
-    nav#left, nav#right {
+
+    nav#left,
+    nav#right {
         display: none;
     }
+
     header #split-nav {
         grid-template-columns: 1fr;
     }
@@ -593,7 +611,7 @@ footer p>span {
 }
 
 #welcome h2 {
-   padding-bottom: 2rem;
+    padding-bottom: 2rem;
 }
 
 #welcome p {

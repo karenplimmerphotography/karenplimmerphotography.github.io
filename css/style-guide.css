@@ -3,23 +3,11 @@
 ul {
     /* changed from 1.25rem top and bottom*/
     padding-top: 0.5rem;
-    padding-bottom: 2rem;
 }
 
 /*nav*/
 nav a {
     letter-spacing: 0.08rem;
-}
-
-/*icons*/
-
-.la {
-    color: inherit;
-    font-size: 1.5rem;
-    vertical-align: baseline;
-    position: relative;
-    top: 0.1rem;
-    padding-right: 0.5rem;
 }
 
 /*UNIQUE CONTENT*/
@@ -28,19 +16,14 @@ nav a {
 #colours {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    gap: 4rem 2rem;
-    justify-content: space-between;
+    gap: 2rem;
     justify-items: center;
-    margin: 3rem 1rem 1rem 1rem;
+    margin: 3rem 0;
 }
 
-@media only screen and (max-width: 1199px) {
-    #colours {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 2rem 1rem;
-        justify-content: center;
-        margin: 2rem 0 1rem 0;
-    }
+#colours p {
+    text-align: center;
+    padding-top: 2rem;
 }
 
 #colours div.colour-sample {
@@ -50,26 +33,38 @@ nav a {
     border-radius: 50%;
 }
 
-@media only screen and (max-width: 549px) {
+@media only screen and (max-width: 1199px) {
+    #colours {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem 1rem;
+        margin: 2rem 0 1rem 0;
+    }
+}
+
+@media only screen and (max-width: 599px) {
+    #colours {
+        gap: 1rem;
+    }
     #colours div.colour-sample {
-        width: 125px;
-        height: 125px;
+        width: 120px;
+        height: 120px;
     }
 }
 
 @media only screen and (max-width: 485px) {
-    #colours div.colour-sample {
-        width: 100px;
-        height: 100px;
+    #colours p {
+        margin: 1rem;
     }
 }
 
-@media only screen and (max-width: 399px) {
-    #colours div.colour-sample {
-        width: 80px;
-        height: 80px;
+@media only screen and (max-width: 425px) {
+     #colours {
+         grid-template-columns: repeat(2, 1fr);
+     }
+     #colours p {
+         margin-bottom: 0;
+     }
     }
-}
 
 #grey-sample {
     position: relative;
@@ -96,20 +91,9 @@ nav a {
     left: 18px;
 }
 
-@media only screen and (max-width: 549px) {
+@media only screen and (max-width: 599px) {
     #pure-grey-sample {
         display: none;
-    }
-}
-
-#colours p {
-    text-align: center;
-    margin: 2rem;
-}
-
-@media only screen and (max-width: 485px) {
-    #colours p {
-        margin: 2rem 1rem;
     }
 }
 
@@ -131,7 +115,7 @@ nav a {
 
 .family-example {
     display: grid;
-    grid-template-columns: 0.8fr 1fr 3.2fr;
+    grid-template-columns: 1fr 1fr 3fr;
     gap: 2rem;
     justify-content: space-between;
     align-items: center;
@@ -150,8 +134,7 @@ nav a {
 .family-example p:last-child {
     color: #fff;
     font-size: 1.25rem;
-    margin-left: 4rem;
-    padding: 1 2rem;
+    padding: 1rem;
 }
 
 @media only screen and (max-width:1199px) {
