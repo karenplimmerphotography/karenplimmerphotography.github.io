@@ -419,73 +419,108 @@
                     <button class="bg-orange">orange</button>
                     <button class=bg-pale-orange>pale-orange</button>
                 </section>
-                <h4 class="h6">All buttons</h4>
-                <ul>
-                    <li>color: white</li>
-                    <li>background-color: purple</li>
-                    <li>font-family: Raleway, sans-serif</li>
-                    <li>border: 1px solid white</li>
-                    <li>border-radius: 2rem</li>
-                    <li>margin: 1rem 0</li>
-                    <li>transition: all 400ms ease-in-out</li>
-                </ul>
-                <h4 class="h6">Large button</h4>
-                <ul>
-                    <li>width: 10rem</li>
-                    <li>padding: 1.2rem</li>
-                    <li>:active padding: 1.35rem</li>
-                </ul>
-                <h4 class="h6">Small button</h4>
-                <ul>
-                    </li>
-                    <li>width: 7rem</li>
-                    <li>padding: 0.8rem</li>
-                    <li>:active padding: 1rem</li>
-                </ul>
+                <section id="buttons-info">
+                    <div>
+                        <h4 class="h6">All buttons</h4>
+                        <ul>
+                            <li>color: white</li>
+                            <li>background-color: purple</li>
+                            <li>font-family: Raleway, sans-serif</li>
+                            <li>border: 1px solid white</li>
+                            <li>border-radius: 2rem</li>
+                            <li>margin: 1rem 0</li>
+                            <li>transition: all 400ms ease-in-out</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="h6">Large button</h4>
+                        <ul>
+                            <li>width: 10rem</li>
+                            <li>padding: 1.2rem</li>
+                            <li>:active padding: 1.35rem</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="h6">Small button</h4>
+                        <ul>
+                            </li>
+                            <li>width: 7rem</li>
+                            <li>padding: 0.8rem</li>
+                            <li>:active padding: 1rem</li>
+                        </ul>
+                    </div>
+                </section>
             </article>
             <!--tabs-->
-            <article>
+            <article id="tabs-article">
                 <h3>Tabs</h3>
-                <div>
-                    <h4 class="h6">Layout</h4>
-                    <ul>
-                        <li>display: grid</li>
-                        <li></li>
-                        <li></li>
-                    </ul>
+                <div id="tabs-container">
+                    <div>
+                        <h4 class="h6">Container</h4>
+                        <ul>
+                            <li>contains buttons</li>
+                            <li>display: grid</li>
+                            <li>grid-template-columns: repeat(number, 1fr)</li>
+                            <li>column-gap: 1rem</li>
+                            <li>background-color: rgb(248, 248, 248)</li>
+                            <li>border-radius: 0.5rem</li>
+                            <li>padding-top: 2rem</li>
+                            <li>border-bottom-left-radius: 0</li>
+                            <li>border-bottom-right-radius: 0</li>
+                            <li>border-bottom: 0.5rem solid white</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="h6">Inherited from button</h4>
+                        <ul>
+                            <li>color: white</li>
+                            <li>background-color: purple</li>
+                            <li>font-family: Raleway, sans-serif</li>
+                            <li>width: 10rem</li>
+                            <li>border 1px solid white</li>
+                            <li>border-radius: 2rem</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="h6">Modified from button</h4>
+                        <ul>
+                            <li>margin: 0</li>
+                            <li>padding-top: 1rem</li>
+                            <li>padding-bottom: 1rem</li>
+                        </ul>
+                    </div>
                 </div>
-                <div>
-                    <h4 class="h6">Appearance</h4>
-                    <ul>
-                        <li>background-color: white</li>
-                        <li></li>
-                        <li></li>
-                    </ul>
-                </div>
-
             </article>
             <!--layout-->
             <article>
                 <h3>Layout</h3>
-                <h4 class="h6 selector">main</h4>
-                <ul>
-                    <li>background-color: white (#fff)</li>
-                    <li>width: 1200px (home page), 1600px (about page)</li>
-                    <li>max-width: 100%</li>
-                    <li>margin: 2rem auto</li>
-                    <li>padding: 0 2rem</li>
-                    <li>@media (max-width: 479px) padding: 0 1rem</li>
-                </ul>
-                <h4 class="h6 selector">section and article</h4>
-                <ul>
-                    <li>margin-bottom: 3rem</li>
-                    <li>@media (max-width: 479px) margin-bottom: 2rem</li>
-                </ul>
-                <h4 class=" h6 selector">paragraph</h4>
-                <ul>
-                    <li>margin-bottom: 1rem</li>
-                    <li>last-child: padding-bottom: 1rem</li>
-                </ul>
+                <div id="layout-container">
+                    <div>
+                        <h4 class="h6 selector">main</h4>
+                        <ul>
+                            <li>background-color: white (#fff)</li>
+                            <li>width: 1200px (home page), 1600px (about page)</li>
+                            <li>max-width: 100%</li>
+                            <li>margin: 2rem auto</li>
+                            <li>padding: 0 2rem</li>
+                            <li>@media (max-width: 479px) padding: 0 1rem</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="h6 selector">section and article</h4>
+                        <ul>
+                            <li>margin-bottom: 3rem</li>
+                            <li>@media (max-width: 479px) margin-bottom: 2rem</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class=" h6 selector">paragraph</h4>
+                        <ul>
+                            <li>margin-bottom: 1rem</li>
+                            <li>last-child: padding-bottom: 1rem</li>
+                        </ul>
+                    </div>
+                </div>
             </article>
             <!--header-->
             <article id="header-article">
