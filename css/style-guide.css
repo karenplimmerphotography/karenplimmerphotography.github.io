@@ -188,7 +188,7 @@ nav a {
     row-gap: 0;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
     gap: 1rem;
 }
 
@@ -296,7 +296,7 @@ nav a {
     }
 }
 
-#h1-sample {
+#logo-sample {
     display: block;
     color: #fff;
     background-color: #240975;
@@ -308,7 +308,7 @@ nav a {
     line-height: 1.8;
 }
 
-#h1-sample2 {
+#logo-sample2 {
     display: block;
     color: #f98562;
     background-color: #240975;
@@ -321,8 +321,8 @@ nav a {
     text-transform: none;
 }
 @media only screen and (max-width: 479px) {
-    #h1-sample,
-    #h1-sample2 {
+    #logo-sample,
+    #logo-sample2 {
         font-size: 1.5rem;
     }
     #logo-font-container {
@@ -334,7 +334,7 @@ nav a {
     font-size: 35px;
     font-weight: 200;
     text-transform: uppercase;
-    line-height: 1.2;
+    line-height: 1.4;
     letter-spacing: 0.14rem;
 }
 
@@ -388,7 +388,8 @@ nav a {
 #quote-sample {
     font-family: FlorenceScript;
     font-size: 26px;
-    letter-spacing: 0.08rem;
+    letter-spacing: 0rem;
+    line-height: 1.4;
 }
 
 .font-description {
@@ -687,7 +688,7 @@ nav a {
 #footer-content {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    column-gap: 2rem;
+    column-gap: 3rem;
 }
 
 @media only screen and (max-width:1199px) {
