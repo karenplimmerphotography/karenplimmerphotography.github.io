@@ -35,7 +35,7 @@ body {
 main {
     background-color: #fff;
     width: 1200px;
-    margin: 0 auto 2rem auto;
+    margin: 0 auto;
     padding: 2rem;
     border-radius: 0.5rem;
 }
@@ -295,33 +295,33 @@ button.small-button:active {
 
 /*logo*/
 
-div#tamsam-logo {
+#tamsam-logo {
     padding: 4rem 0;
     width: 100%;
     background-color: white;
     margin-top: 110px;
 }
 
-div#tamsam-logo-1200-width,
-div#tamsam-logo-1000-width {
+#tamsam-logo-1200-width,
+#tamsam-logo-1000-width {
     margin: 0 auto;
     padding: 1rem 0 2rem 0;
     margin-top: 110px;
 }
 
-div#tamsam-logo-1200-width {
+#tamsam-logo-1200-width {
     max-width: 1200px;
 }
 
-div#tamsam-logo-1000-width {
+#tamsam-logo-1000-width {
     max-width: 1000px;
 }
 
 @media only screen and (max-width:767px) {
 
-    div#tamsam-logo,
-    div#tamsam-logo-1200-width,
-    div#tamsam-logo-1000-width {
+    #tamsam-logo,
+    #tamsam-logo-1200-width,
+    #tamsam-logo-1000-width {
         margin-top: 4rem;
     }
 }
@@ -334,7 +334,7 @@ div#tamsam-logo-1000-width {
     border-top: 1px solid rgb(200, 200, 200);
 }
 
-footer p {
+footer p.copyright {
     padding: 2rem 0 1rem 0;
     text-align: center;
     font-size: 0.8rem;
@@ -355,29 +355,20 @@ main#home-page-content {
     padding-top: 0;
 }
 
-#home-page footer>p {
+#home-page footer p.copyright {
     color: rgb(225, 225, 225);
 }
 
-
 /*Hero Image*/
 
-div#tamsam-hero-image-block {
+#tamsam-hero-image {
     background-color: rgb(19, 12, 0);
     text-align: center;
     width: 100%;
-    padding: 0 0 4rem 0;
+    margin-bottom: 4rem;
 }
 
-div#tamsam-hero-image-block>p {
-    color: white;
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    letter-spacing: 0.1rem;
-    line-height: 4;
-}
-
-div#tamsam-hero-image-block img {
+#tamsam-hero-image img {
     width: 1200px;
     max-width: 100%;
     height: auto;
@@ -385,23 +376,25 @@ div#tamsam-hero-image-block img {
     border: 1px solid rgb(225, 225, 225);
 }
 
-@media only screen and (max-width: 1199px) {
-    #tamsam-hero-image-block img {
-        width: 100vw;
-    }
+#tamsam-hero-image p {
+    color: white;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    line-height: 4;
 }
 
 /*grid nav info*/
 
-#tamsam-nav-info-block {
+#tamsam-nav-info-article {
     background-color: rgb(248, 248, 248);
     border-radius: 0.5rem;
-    padding: 6rem 0;
+    padding: 6rem 1rem;
 }
 
 @media only screen and (max-width:767px) {
-    #tamsam-nav-info-block {
-        padding: 1rem;
+    #tamsam-nav-info-article {
+        padding: 2rem 1rem;
     }
 }
 
@@ -410,13 +403,13 @@ div#tamsam-hero-image-block img {
     height: auto;
 }
 
+#tamsam-nav-info h4 {
+    color: rgb(4, 122, 140);
+}
+
 #tamsam-nav-info ul {
     padding-top: 0;
     padding-bottom: 2rem;
-}
-
-#tamsam-nav-info h4 {
-    color: rgb(4, 122, 140);
 }
 
 #tamsam-nav-info {
@@ -427,7 +420,7 @@ div#tamsam-hero-image-block img {
     padding: 1rem;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 10px 40px;
+    grid-gap: 0.5rem 3rem;
     grid-template-areas: "p1 b1 o1"
         "p2 b2 o2"
         "p3 b3 o3";
@@ -471,23 +464,17 @@ div#tamsam-hero-image-block img {
 
 @media only screen and (max-width: 767px) {
     #tamsam-nav-info {
-        grid-template-columns: 100%;
-        grid-template-areas: "p1"
-            "p2"
-            "p3"
-            "b1"
-            "b2"
-            "b3"
-            "o1"
-            "o2"
-            "o3";
+        display: block;
+    }
+
+    #tamsam-nav-info img {
+        padding: 1rem 0;
     }
 }
 
 /*Tamsam Logo on Teal/Dash*/
-#coco-dash-footer {
+#feature-footer {
     background-color: rgb(9, 58, 76);
-    margin-top: 6rem;
 }
 
 #feature-tamsam-logo {
@@ -503,7 +490,8 @@ div#tamsam-hero-image-block img {
     justify-items: center;
     align-items: center;
     background-color: rgb(9, 58, 76);
-    padding: 0 6rem;
+    padding: 0 2rem;
+    margin-bottom: 0;
 }
 
 #dash-and-coco-grid figure {
@@ -514,49 +502,8 @@ div#tamsam-hero-image-block img {
     position: relative;
 }
 
-@media only screen and (max-width: 1399px) {
-    #tamsam-footer-home {
-        width: 1200px;
-        max-width: 100%;
-        margin: 0 auto;
-        padding: 2rem;
-        border-radius: 0.5rem;
-    }
-
-    #coco-dash-footer {
-        border-top-left-radius: 0.5rem;
-        border-top-right-radius: 0.5rem;
-        margin-top: 1rem;
-    }
-
-    #dash-and-coco-grid figure {
-        grid-template-columns: 1fr;
-        column-gap: o;
-    }
-
-    #dash-and-coco-grid {
-        padding: 0;
-    }
-}
-
-@media only screen and (max-width: 1199px) {
-    #dash-and-coco-grid {
-        border-bottom-left-radius: 0.5rem;
-        border-bottom-right-radius: 0.5rem;
-    }
-
-    #dash-and-coco-grid figure {
-        grid-template-columns: 1fr;
-        column-gap: o;
-    }
-
-    #dash-and-coco-grid {
-        padding: 0;
-    }
-}
-
 #dash-and-coco-grid figure:first-of-type {
-    top: -7rem;
+    top: -9rem;
 }
 
 #dash-and-coco-grid figure:last-of-type {
@@ -569,21 +516,82 @@ div#tamsam-hero-image-block img {
     height: auto;
 }
 
-#dash-and-coco-grid figure img:last-of-type {
-    margin-top: 3rem;
+#dash-and-coco-grid figure:first-of-type img:last-of-type {
+    position: relative;
+    left: 5%;
+    margin-top: 2rem;
+}
+
+#dash-and-coco-grid figure:last-of-type img:first-of-type {
+    position: relative;
+    left: 5%;
+}
+
+#dash-and-coco-grid figure:last-of-type img:last-of-type {
+    margin-top: 4rem;
 }
 
 #dash-and-coco-grid figcaption {
     text-align: center;
+    color: rgb(199, 140, 28);
     padding: 2rem 1rem;
 }
 
-#dash-and-coco-grid figure:first-of-type figcaption {
-    color:rgb(219, 112, 17); 
+@media only screen and (max-width: 1399px) {
+    #tamsam-footer-home {
+        width: 1200px;
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 2rem;
+    }
+
+    #feature-tamsam-logo {
+        border-top-left-radius: 0.5rem;
+        border-top-right-radius: 0.5rem;
+    }
+
+    #dash-and-coco-grid {
+        padding: 0;
+        border-bottom-left-radius: 0.5rem;
+        border-bottom-right-radius: 0.5rem;
+    }
+
+    #dash-and-coco-grid figure {
+        grid-template-columns: 1fr;
+    }
+
+    #dash-and-coco-grid figure:first-of-type {
+        top: -7rem;
+    }
+
+    #dash-and-coco-grid figure:first-of-type img:last-of-type,
+    #dash-and-coco-grid figure:last-of-type img:first-of-type {
+        left: 0;
+    }
+
+    #dash-and-coco-grid figure:first-of-type img:last-of-type {
+        margin-top: 4rem;
+    }
 }
 
-#dash-and-coco-grid figure:last-of-type figcaption {
-    color: rgb(199, 140, 28);
+@media only screen and (max-width: 1199px) {
+    #dash-and-coco-grid figure {
+        grid-template-columns: 1fr;
+    }
+
+    #dash-and-coco-grid figure:first-of-type {
+        top: -8rem;
+    }
+}
+
+@media only screen and (max-width: 699px) {
+    #dash-and-coco-grid {
+        grid-template-columns: 1fr;
+    }
+
+    #dash-and-coco-grid figure:first-of-type {
+        top: -4rem;
+    }
 }
 
 /*shortcuts*/
