@@ -1,8 +1,8 @@
-/* universal styles*/
+/* Universal styles*/
 
-*,
-figure.wp-block-image {
+* {
     box-sizing: border-box;
+    max-width: 100%;
     margin: 0;
     padding: 0;
     margin-block-start: 0;
@@ -13,7 +13,6 @@ figure.wp-block-image {
 
 html {
     font-size: 15px;
-    background-color: white;
 }
 
 @media only screen and (min-resolution: 200dpi) {
@@ -23,7 +22,8 @@ html {
 }
 
 body {
-    color: #000;
+    color: #222;
+    background-color: #fff;
     font-family: Antic, sans-serif;
     font-size: 15px;
     font-weight: 400;
@@ -32,229 +32,357 @@ body {
     line-height: 1.7;
 }
 
+main {
+    background-color: #fff;
+    width: 1200px;
+    margin: 0 auto 2rem auto;
+    padding: 2rem;
+    border-radius: 0.5rem;
+}
+
+section,
+article {
+    margin-bottom: 3rem;
+}
+
+@media only screen and (max-width: 479px) {
+    main {
+        padding: 0 1rem;
+    }
+
+    section,
+    article {
+        margin-bottom: 2rem;
+    }
+}
+
+/*logo headings*/
+
+#title,
+.title,
+#footer-title {
+    text-align: center;
+    color: #222;
+    font-family: "Rozha One", serif;
+    font-size: 3rem;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 0.6rem;
+    line-height: 1.3;
+}
+
+#footer-title {
+    color: #fff;
+}
+
+#subtitle,
+.subtitle,
+#footer-subtitle {
+    text-align: center;
+    color: rgb(219, 112, 17);
+    font-family: "Nothing You Could Do", cursive;
+    font-size: 3.5rem;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 0.6rem;
+    word-spacing: -1.4rem;
+    line-height: 1.3;
+}
+
+#footer-subtitle {
+    color: rgb(199, 140, 28);
+}
+
+@media only screen and (max-width: 480px) {
+    #subtitle {
+        font-size: 3.125rem;
+    }
+}
+
 /*headings*/
 
 h1,
 h2,
 h3,
-.h1,
-.h2,
-.h3 {
-    font-family: "Nothing You Could Do", cursive;
-    color: #ef5406;
-    font-weight: normal;
-}
-
 h4,
 h5,
 h6,
+.h1,
+.h2,
+.h3,
 .h4,
 .h5,
 .h6 {
-    font-family: "Rozha One", serif;
-    text-transform: uppercase;
-    letter-spacing: 0.2em;
-    color: black;
+    padding-bottom: 0.5rem;
 }
 
 h1,
 .h1 {
-    font-size: 55px;
-    line-height: 130%;
-    text-align: center;
-    text-transform: uppercase;
-    word-spacing: -0.4em;
-    letter-spacing: 0.2em;
-}
-
-/*used in logo only*/
-
-@media only screen and (max-width: 480px) {
-    h1,
-    .h1 {
-        font-size: 50px;
-    }
+    font-size: 3rem;
+    font-weight: normal;
 }
 
 h2,
 .h2 {
-    font-size: 48px;
-    line-height: 170%;
-    letter-spacing: 0.08em;
+    font-size: 2.5rem;
+    font-weight: normal;
 }
 
 h3,
 .h3 {
-    font-size: 32px;
-    letter-spacing: 0.08em;
-    line-height: 100%;
+    font-size: 2rem;
+    font-weight: normal;
 }
 
 h4,
 .h4 {
-    font-size: 48px;
-    line-height: 90%;
-    text-align: center;
+    font-size: 1.5rem;
     font-weight: normal;
 }
 
 h5,
-h6,
-.h5,
-.h6 {
-    font-weight: bold;
-    line-height: 120%;
-}
-
-h5,
 .h5 {
-    font-size: 32px;
+    font-size: 1.25rem;
+    font-style: oblique;
+    font-weight: bold;
 }
 
 h6,
 .h6 {
-    font-size: 24px;
+    font-size: 1.125rem;
+    font-style: oblique;
+    font-weight: bold;
+}
+
+.rozha {
+    color: #222;
+    font-family: "Rozha One", serif;
+    text-transform: uppercase;
+    letter-spacing: 0.6rem;
+    line-height: 1.2;
+}
+
+.nothing {
+    color: rgb(199, 140, 28);
+    font-family: "Nothing You Could Do", cursive;
+    text-transform: none;
+    letter-spacing: 0.08rem;
+    line-height: 1.4;
+}
+
+p {
+    padding-bottom: 1rem;
+}
+
+p:last-child {
+    margin-bottom: 1rem;
 }
 
 /*links*/
 
 a {
-    color: #ef5406;
+    color: rgb(9, 58, 76);
     text-decoration: none;
+}
+
+/* should be grey rgb (200, 200, 200) if on black*/
+
+a:visited {
+    color: rgb(4, 122, 140);
+}
+
+a.light:visited {
+    color: #80ceda;
 }
 
 a:hover,
 a:active {
+    color: rgb(219, 112, 17);
+}
+
+/*lists*/
+
+ul {
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+}
+
+li {
+    line-height: 2;
+    list-style-position: outside;
+    list-style-type: square;
+    margin-left: 1rem;
+}
+
+ul li ul {
+    margin-left: 2rem;
+}
+
+ul li ul li {
+    list-style-type: circle;
+}
+
+/*buttons*/
+
+button {
     color: #fff;
-    /* this is dark teal #02444e but should be white if on black*/
+    background-color: rgb(4, 122, 140);
+    font-family: Antic, sans-serif;
+    width: 10rem;
+    padding: 1.2rem;
+    border: 1px solid #fff;
+    border-radius: 2rem;
+    margin: 1rem 0;
+    transition: all 400ms ease-in-out;
 }
 
-a:visited {
-    color: #80ceda;
+button:active {
+    padding: 1.35rem;
 }
 
-/*Nav-OXY-Pro*/
-#-pro-menu-1-79.oxy-pro-menu {
-    background-color: #040200;
+button:hover {
+    color: #222;
+    background-color: #80ceda;
 }
 
-.oxy-pro-menu-off-canvas-container {
-    align-items: start;
-    justify-content: start;
-    padding-top: 80px;
+button.small-button {
+    width: 7rem;
+    padding: 0.8rem;
 }
 
-.oxy-pro-menu-container>div:first-child {
-    margin-top: 60px;
+button.small-button:active {
+    padding: 1rem;
 }
 
-#-pro-menu-1-79 .oxy-pro-menu-mobile-close-icon {
-    position: fixed;
-    top: 60px;
-    left: 10px;
+/*tabs*/
+
+.tabs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 1rem;
+    justify-content: space-between;
+    background-color: rgb(248, 248, 248);
+    border-radius: 0.5rem;
+    padding-top: 2rem;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom: 0.5rem solid#fff;
 }
 
-#-pro-menu-1-79 .oxy-pro-menu-mobile-open-icon {
-    position: fixed;
-    top: 60px;
-    left: 10px;
+.tabs button {
+    margin: 0;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 
-#-pro-menu-1-79 ul li a,
-#-pro-menu-1-79 ul.sub-menu li a {
-    color: #ef5406;
-}
-
-#-pro-menu-1-79 ul li a:visited,
-#-pro-menu-1-79 ul.sub-menu li a:visited {
-    color: #80ceda;
-}
-
-
-@media only screen and (max-width: 767px) {
-    #-pro-menu-1-79.oxy-pro-menu {
-        background-color: transparent;
-        display: flex;
-        justify-content: flex-start;
-        padding-left: 10px;
-        margin-top: 0px;
-    }
-
-    div#div_block-3-98.ct-div-block {
-        display: none;
-    }
-
-    .oxy-pro-menu-container {
-        display: none;
-    }
-
-    #-pro-menu-1-79 .oxy-pro-menu-list .menu-item a {
-        padding-right: 5px;
+@media only screen and (max-width: 599px) {
+    .tabs {
+        gap: 0;
+        padding-left: 0;
+        padding-right: 0;
     }
 }
 
-/*Logo*/
+/*icons*/
+.la {
+    color: inherit;
+    font-size: 1.5rem;
+    vertical-align: baseline;
+    position: relative;
+    top: 0.1rem;
+    padding-right: 0.5rem;
+}
+
+/*logo*/
 
 div#tamsam-logo {
-    padding: 80px 0 50px 0;
+    padding: 4rem 0;
     width: 100%;
     background-color: white;
     margin-top: 110px;
 }
 
-@media only screen and (max-width:767px) {
-    div#tamsam-logo {
-        margin-top: 60px;
-    }
+div#tamsam-logo-1200-width,
+div#tamsam-logo-1000-width {
+    margin: 0 auto;
+    padding: 1rem 0 2rem 0;
+    margin-top: 110px;
 }
 
 div#tamsam-logo-1200-width {
     max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px 0 40px 0;
-    margin-top: 110px;
-}
-
-@media only screen and (max-width:767px) {
-    div#tamsam-logo-1200-width {
-        margin-top: 60px;
-    }
 }
 
 div#tamsam-logo-1000-width {
     max-width: 1000px;
-    margin: 0 auto;
-    padding: 20px 0 40px 0;
-    margin-top: 110px;
 }
 
 @media only screen and (max-width:767px) {
+
+    div#tamsam-logo,
+    div#tamsam-logo-1200-width,
     div#tamsam-logo-1000-width {
-        margin-top: 60px;
+        margin-top: 4rem;
     }
 }
+
+/*footer*/
+
+#tamsam-footer-logo-on-dark {
+    background-color: rgb(19, 12, 0);
+    padding: 4rem 0;
+    border-top: 1px solid rgb(200, 200, 200);
+}
+
+footer p {
+    padding: 2rem 0 1rem 0;
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+/*UNIQUE CONTENT*/
+
+#menu-filler {
+    position: fixed;
+    z-index: 5;
+    height: 110px;
+    background-color: rgb(19, 12, 0);
+}
+
+body#home-page,
+main#home-page-content {
+    background-color: rgb(19, 12, 0);
+    padding-top: 0;
+}
+
+#home-page footer>p {
+    color: rgb(225, 225, 225);
+}
+
 
 /*Hero Image*/
 
 div#tamsam-hero-image-block {
-    padding: 0 0 80px 0;
-    background-color: #040200;
+    background-color: rgb(19, 12, 0);
     text-align: center;
+    width: 100%;
+    padding: 0 0 4rem 0;
 }
 
 div#tamsam-hero-image-block>p {
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-    line-height: 400%;
     color: white;
-    font-size: 12px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    line-height: 4;
 }
 
 div#tamsam-hero-image-block img {
-    max-width: 1200px;
+    width: 1200px;
+    max-width: 100%;
     height: auto;
-    margin: 0 auto 40px auto;
-    border: 1px solid #bbb;
+    margin: 0 auto 4rem auto;
+    border: 1px solid rgb(225, 225, 225);
 }
 
 @media only screen and (max-width: 1199px) {
@@ -266,19 +394,14 @@ div#tamsam-hero-image-block img {
 /*grid nav info*/
 
 #tamsam-nav-info-block {
-    background-color: #f8f8f8;
-    padding: 80px 0;
+    background-color: rgb(248, 248, 248);
+    border-radius: 0.5rem;
+    padding: 6rem 0;
 }
 
 @media only screen and (max-width:767px) {
     #tamsam-nav-info-block {
-        padding: 20px;
-    }
-}
-
-@media only screen and (min-width:768px) and (max-width: 991px) {
-    #tamsam-nav-info-block ul {
-        padding-inline-start: 20px;
+        padding: 1rem;
     }
 }
 
@@ -288,25 +411,20 @@ div#tamsam-hero-image-block img {
 }
 
 #tamsam-nav-info ul {
-    padding-bottom: 20px;
+    padding-top: 0;
+    padding-bottom: 2rem;
 }
 
 #tamsam-nav-info h4 {
-    font-family: "Nothing You Could Do", cursive;
-    font-size: 24px;
-    color: #047a8c;
-    text-align: left;
-    line-height: 120%;
-    letter-spacing: 0.08em;
-    text-transform: none;
+    color: rgb(4, 122, 140);
 }
 
 #tamsam-nav-info {
     max-width: 1200px;
     margin: 0 auto;
     background-color: #fff;
-    box-shadow: 1px 1px 5px #bbb;
-    padding: 20px;
+    box-shadow: 1px 1px 5px rgb(200, 200, 200);
+    padding: 1rem;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 10px 40px;
@@ -367,216 +485,105 @@ div#tamsam-hero-image-block img {
 }
 
 /*Tamsam Logo on Teal/Dash*/
-
-#teal-dash-footer {
-    max-height: 700px;
+#coco-dash-footer {
+    background-color: rgb(9, 58, 76);
+    margin-top: 6rem;
 }
 
-@media only screen and (max-width: 1199px) {
-    #teal-dash-footer {
-        max-height: 1300px;
-    }
-}
-
-
-#tamsam-logo-on-teal {
-    background-color: rgba(4, 122, 140, 0.9);
-    padding: 120px 0;
-}
-
-#tamsam-logo-on-teal h4 {
-    color: white;
-}
-
-#tamsam-logo-on-teal h1 {
-    color: #040200;
-}
-
-#tamsam-dark-empty-block {
-    background-color: #040200;
-    padding: 200px 0;
-}
-
-#dash-and-coco-grid img {
-    max-width: 100%;
-    height: auto;
-    box-shadow: 2px 2px 3px #bbb;
-    z-index: 2;
+#feature-tamsam-logo {
+    background-color: rgb(4, 122, 140);
+    padding: 4rem 1rem 10rem 1rem;
 }
 
 #dash-and-coco-grid {
-    box-sizing: border-box;
-    background-color: transparent;
+    position: relative;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 50px 20px;
-    justify-items: start;
-    justify-content: space-around;
-    align-items: end;
-    grid-template-areas: "dash-1 dash-2 coco-1 coco-2"
-        "dash-text dash-text coco-text coco-text";
-    padding-left: 10%;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem 4rem;
+    justify-items: center;
+    align-items: center;
+    background-color: rgb(9, 58, 76);
+    padding: 0 6rem;
+}
+
+#dash-and-coco-grid figure {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 6rem;
+    justify-items: center;
     position: relative;
-    bottom: 620px;
-    z-index: 5;
 }
 
-@media only screen and (max-width: 1199px) {
-    #dash-and-coco-grid {
-        grid-template-columns: 1fr 1fr;
-        grid-template-areas: "dash-1 dash-2"
-            "dash-text dash-text"
-            "coco-1 coco-2"
-            "coco-text coco-text";
-        justify-content: center;
-        justify-items: center;
-        padding-bottom: 100px;
-        bottom: 450px;
+@media only screen and (max-width: 1399px) {
+    #tamsam-footer-home {
+        width: 1200px;
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 2rem;
+        border-radius: 0.5rem;
     }
-}
 
-@media only screen and (max-width: 767px) {
-    #dash-and-coco-grid {
+    #coco-dash-footer {
+        border-top-left-radius: 0.5rem;
+        border-top-right-radius: 0.5rem;
+        margin-top: 1rem;
+    }
+
+    #dash-and-coco-grid figure {
         grid-template-columns: 1fr;
-        grid-template-areas: "dash-text"
-            "dash-1"
-            "dash-2"
-            "coco-text"
-            "coco-1"
-            "coco-2";
-        bottom: 350px;
+        column-gap: o;
     }
-}
 
-.dash-photo-1 {
-    grid-area: dash-1;
-}
-
-.dash-photo-2 {
-    grid-area: dash-2;
-}
-
-.dash-text {
-    grid-area: dash-text;
-    justify-self: center;
-    align-self: center;
-}
-
-.coco-photo-1 {
-    grid-area: coco-1;
-}
-
-.coco-photo-2 {
-    grid-area: coco-2;
-}
-
-.coco-text {
-    grid-area: coco-text;
-    justify-self: center;
-    align-self: center;
-}
-
-.dash-text h4,
-.coco-text h4 {
-    font-family: "Nothing You Could Do", cursive;
-    font-size: 24px;
-    color: #047a8c;
-    letter-spacing: 0.08em;
-    text-transform: none;
-}
-
-@media only screen and (max-width: 1999px) {
     #dash-and-coco-grid {
-        padding-left: 8%;
+        padding: 0;
     }
-}
-
-@media only screen and (max-width: 1899px) {
-    #dash-and-coco-grid {
-        padding-left: 6%;
-    }
-}
-
-@media only screen and (max-width: 1799px) {
-    #dash-and-coco-grid {
-        padding-left: 4%;
-    }
-}
-
-@media only screen and (max-width: 1699px) {
-    #dash-and-coco-grid {
-        padding-left: 0;
-    }
-}
-
-#tamsam-dark-empty-block-2 {
-    background-color: #040200;
-    height: 620px;
-    position: relative;
-    bottom: 1080px;
-    z-index: 0;
-}
-
-@media only screen and (min-width: 1200px) {
-    #tamsam-dark-empty-block-2 {
-        display: none;
-    }
-}
-
-@media only screen and (max-width: 767px) {
-    #tamsam-dark-empty-block-2 {
-        height: 1450px;
-        bottom: 1800px;
-    }
-}
-
-#tamsam-footer-copyright-only {
-    text-align: center;
-    font-size: 13px;
-    padding: 20px 0;
-    position: relative;
-    top: 40px;
-}
-
-#tamsam-footer-copyright-only p {
-    text-align: center;
-    font-size: 13px;
-    padding: 20px 0 10px 0;
 }
 
 @media only screen and (max-width: 1199px) {
-    #tamsam-footer-copyright-only {
-        top: 0px;
+    #dash-and-coco-grid {
+        border-bottom-left-radius: 0.5rem;
+        border-bottom-right-radius: 0.5rem;
+    }
+
+    #dash-and-coco-grid figure {
+        grid-template-columns: 1fr;
+        column-gap: o;
+    }
+
+    #dash-and-coco-grid {
+        padding: 0;
     }
 }
 
-@media only screen and (max-width: 767px) {
-    #tamsam-footer-copyright-only {
-        top: 770px;
-    }
+#dash-and-coco-grid figure:first-of-type {
+    top: -7rem;
 }
 
-@media only screen and (max-width: 499px) {
-    #tamsam-footer-copyright-only {
-        top: 850px;
-    }
+#dash-and-coco-grid figure:last-of-type {
+    top: -6rem;
 }
 
-/*footer*/
-
-#tamsam-footer-logo-on-dark {
-    background-color: #040200;
-    padding: 80px 0;
-    border-top: 1px solid #bbb;
+#dash-and-coco-grid figure img {
+    box-shadow: 1px 1px 5px rgb(200, 200, 200);
+    width: auto;
+    height: auto;
 }
 
-#tamsam-footer-logo-on-dark>h4 {
-    color: white;
+#dash-and-coco-grid figure img:last-of-type {
+    margin-top: 3rem;
 }
 
-footer#tamsam-footer p {
+#dash-and-coco-grid figcaption {
     text-align: center;
-    font-size: 13px;
+    padding: 2rem 1rem;
+}
+
+#dash-and-coco-grid figure:first-of-type figcaption {
+    color:rgb(219, 112, 17); 
+}
+
+#dash-and-coco-grid figure:last-of-type figcaption {
+    color: rgb(199, 140, 28);
 }
 
 /*shortcuts*/
@@ -588,6 +595,77 @@ footer#tamsam-footer p {
     background-color: #fff;
 }
 
+.light-grey {
+    color: rgb(225, 225, 225);
+}
+
+.bg-light-grey {
+    background-color: rgb(225, 225, 225);
+}
+
+.brown {
+    color: rgb(69, 22, 3);
+}
+
+.bg-brown {
+    background-color: rgb(69, 22, 3);
+}
+
+.chocolate {
+    color: rgb(19, 12, 0);
+}
+
+.bg-chocolate {
+    background-color: rgb(19, 12, 0);
+}
+
+.teal-green {
+    color: rgb(9, 58, 76);
+}
+
+.bg-teal-green {
+    background-color: rgb(9, 58, 76);
+}
+
+.dark-teal {
+    color: rgb(4, 122, 140);
+}
+
+.bg-dark-teal {
+    background-color: rgb(4, 122, 140)
+}
+
+.teal {
+    color: rgba(4, 122, 140, 0.7);
+}
+
+.bg-teal {
+    background-color: rgba(4, 122, 140, 0.7);
+}
+
+.light-teal {
+    color: #80ceda;
+}
+
+.bg-light-teal {
+    background-color: #80ceda;
+}
+
+.orange {
+    color: rgb(219, 112, 17);
+}
+
+.bg-orange {
+    background-color: rgb(219, 112, 17);
+}
+
+.gold {
+    color: rgb(199, 140, 28);
+}
+
+.bg-gold {
+    background-color: rgb(199, 140, 28);
+}
 
 .small-quote {
     line-height: 2;
@@ -640,4 +718,63 @@ footer#tamsam-footer p {
 .hidden,
 .hide {
     display: none;
+}
+
+/*Nav-OXY-Pro*/
+#-pro-menu-1-79.oxy-pro-menu {
+    background-color: rgb(89, 12, 3);
+}
+
+.oxy-pro-menu-off-canvas-container {
+    align-items: start;
+    justify-content: start;
+    padding-top: 5rem;
+}
+
+.oxy-pro-menu-container>div:first-child {
+    margin-top: 4rem;
+}
+
+#-pro-menu-1-79 .oxy-pro-menu-mobile-close-icon {
+    position: fixed;
+    top: 60px;
+    left: 10px;
+}
+
+#-pro-menu-1-79 .oxy-pro-menu-mobile-open-icon {
+    position: fixed;
+    top: 60px;
+    left: 10px;
+}
+
+#-pro-menu-1-79 ul li a,
+#-pro-menu-1-79 ul.sub-menu li a {
+    color: rgb(199, 140, 28);
+}
+
+#-pro-menu-1-79 ul li a:visited,
+#-pro-menu-1-79 ul.sub-menu li a:visited {
+    color: #fff;
+}
+
+@media only screen and (max-width: 767px) {
+    #-pro-menu-1-79.oxy-pro-menu {
+        background-color: transparent;
+        display: flex;
+        justify-content: flex-start;
+        padding-left: 10px;
+        margin-top: 0px;
+    }
+
+    div#div_block-3-98.ct-div-block {
+        display: none;
+    }
+
+    .oxy-pro-menu-container {
+        display: none;
+    }
+
+    #-pro-menu-1-79 .oxy-pro-menu-list .menu-item a {
+        padding-right: 5px;
+    }
 }
