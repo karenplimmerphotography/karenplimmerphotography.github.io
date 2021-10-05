@@ -1,0 +1,1170 @@
+nav,
+#mobile-menu-open {
+    display: none;
+}
+
+figure.wp-block-image {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+}
+
+
+/* Universal Styles*/
+* {
+    box-sizing: border-box;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+}
+
+html {
+    font-size: 15px;
+}
+
+@media only screen and (min-resolution: 200dpi) {
+    html {
+        font-size: 16px;
+    }
+}
+
+body {
+    color: #222;
+    background-color: #fff;
+    font-family: Antic, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: 0.06em;
+    word-spacing: -0.1em;
+    line-height: 1.7;
+}
+
+main {
+    background-color: #fff;
+    width: 1200px;
+    margin: 0 auto 2rem auto;
+    padding: 2rem;
+    border-radius: 0.5rem;
+}
+
+section {
+    margin-bottom: 3rem;
+}
+
+article {
+    margin-bottom: 3rem;
+}
+
+@media only screen and (max-width: 479px) {
+    main {
+        padding: 0 1rem;
+    }
+
+    section {
+        margin-bottom: 2rem;
+    }
+
+    article {
+        margin-bottom: 2rem;
+    }
+}
+
+/*logo headings*/
+
+#title,
+#footer-title {
+    text-align: center;
+    color: #222;
+    font-family: "Rozha One", serif;
+    font-size: 3rem;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 0.6rem;
+    line-height: 1.3;
+}
+
+#footer-title {
+    color: #fff;
+}
+
+#subtitle,
+#footer-subtitle {
+    text-align: center;
+    color: rgb(219, 112, 17);
+    font-family: "Nothing You Could Do", cursive;
+    font-size: 3.5rem;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 0.6rem;
+    word-spacing: -1.4rem;
+    line-height: 1.3;
+}
+
+@media only screen and (max-width: 480px) {
+    #subtitle {
+        font-size: 3.125rem;
+    }
+}
+
+/*headings*/
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    padding-bottom: 0.5rem;
+}
+
+h1,
+.h1 {
+    font-size: 3rem;
+    font-weight: normal;
+}
+
+h2,
+.h2 {
+    font-size: 2.5rem;
+    font-weight: normal;
+}
+
+h3,
+.h3 {
+    font-size: 2rem;
+    font-weight: normal;
+}
+
+h4,
+.h4 {
+    font-size: 1.5rem;
+    font-weight: normal;
+}
+
+h5,
+.h5 {
+    font-size: 1.25rem;
+    font-style: oblique;
+    font-weight: bold;
+}
+
+h6,
+.h6 {
+    font-size: 1.125rem;
+    font-style: oblique;
+    font-weight: bold;
+}
+
+.rozha {
+    color: #222;
+    font-family: "Rozha One", serif;
+    text-transform: uppercase;
+    letter-spacing: 0.6rem;
+    line-height: 1.2;
+}
+
+.nothing {
+    color: rgb(199, 140, 28);
+    font-family: "Nothing You Could Do", cursive;
+    text-transform: none;
+    letter-spacing: 0.08rem;
+    line-height: 1.4;
+}
+
+p {
+    padding-bottom: 1rem;
+}
+
+p:last-child {
+    margin-bottom: 1rem;
+}
+
+/*links*/
+
+a {
+    color: rgb(9, 58, 76);
+    text-decoration: none;
+}  /* should be grey rgb (200, 200, 200) if on black*/
+
+a:hover,
+a:active {
+    color: rgb(219, 112, 17);
+}
+
+a:visited {
+    color: rgb(4, 122, 140);
+}
+
+a.light:visited {
+    color: #80ceda;
+}
+
+/*lists*/
+
+ul {
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+}
+
+li {
+    line-height: 2;
+    list-style-position: outside;
+    list-style-type: square;
+    margin-left: 1rem;
+}
+
+ul li ul {
+    margin-left: 2rem;
+}
+
+ul li ul li {
+    list-style-type: circle;
+}
+
+/*buttons*/
+
+button {
+    color: #fff;
+    background-color: rgb(4, 122, 140);
+    font-family: Antic, sans-serif;
+    width: 10rem;
+    padding: 1.2rem;
+    border: 1px solid #fff;
+    border-radius: 2rem;
+    margin: 1rem 0;
+    transition: all 400ms ease-in-out;
+}
+
+button:active {
+    padding: 1.35rem;
+}
+
+button:hover {
+    color: #222;
+    background-color: #80ceda;
+}
+
+button.small-button {
+    width: 7rem;
+    padding: 0.8rem;
+}
+
+button.small-button:active {
+    padding: 1rem;
+}
+
+/*tabs*/
+
+.tabs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 1rem;
+    justify-content: space-between;
+    background-color: rgb(248, 248, 248);
+    border-radius: 0.5rem;
+    padding-top: 2rem;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom: 0.5rem solid#fff;
+}
+
+.tabs button {
+    margin: 0;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+@media only screen and (max-width: 599px) {
+    .tabs {
+        gap: 0;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+.la {
+    color: inherit;
+    font-size: 1.5rem;
+    vertical-align: baseline;
+    position: relative;
+    top: 0.1rem;
+    padding-right: 0.5rem;
+}
+
+/*logo*/
+
+#tamsam-logo {
+    padding: 4rem 0;
+    width: 100%;
+    background-color: white;
+    /*margin-top: 110px for fixed menu*/
+}
+
+/*footer*/
+
+#tamsam-footer-logo-on-dark {
+    background-color: rgb(47, 19, 33);
+    padding: 4rem 0;
+    border-top: 1px solid #bbb;
+}
+
+footer p {
+    padding: 2rem 0 1rem 0;
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+/*UNIQUE CONTENT*/
+
+ul {
+    padding-top: 0.5rem;
+    padding-bottom: 2rem;
+}
+
+/*colors*/
+#colours {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    justify-items: center;
+    margin: 3rem 0;
+}
+
+#colours p {
+    text-align: center;
+    font-size: 0.8rem;
+    padding-top: 2rem;
+}
+
+#colours div.colour-sample {
+    width: 150px;
+    height: 150px;
+    border: 1px solid #222;
+    border-radius: 50%;
+}
+
+@media only screen and (max-width: 1199px) {
+    #colours {
+        gap: 1rem 0;
+        justify-items: start;
+        padding-left: 2rem;
+    }
+
+    #colours div.colour-sample {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+@media only screen and (max-width: 699px) {
+
+    #colours div.colour-sample {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media only screen and (max-width: 599px) {
+    #colours p {
+        margin-bottom: 0;
+    }
+
+    #colours {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #colours div.colour-sample {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+/*font-family*/
+
+#font-family {
+    background-color: #80ceda;
+    border-radius: 0.5rem;
+    padding: 2rem 2rem 1rem 2rem;
+    margin-bottom: 4rem;
+}
+
+/*
+#font-family h3,
+.family-example p {
+    color: #fff;
+}*/
+
+.family-example {
+    display: grid;
+    grid-template-columns: 1fr 1fr 3fr;
+    column-gap: 2rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.family-example p:first-child {
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.family-example p:nth-child(2) {
+    font-size: 1rem;
+}
+
+.family-example p:last-child {
+    font-size: 1.25rem;
+    padding: 1rem;
+}
+
+@media only screen and (max-width: 599px) {
+    #font-family {
+        margin-bottom: 2rem;
+    }
+
+    .family-example {
+        grid-template-columns: 1fr 3fr;
+    }
+
+    .family-example p:first-child {
+        font-size: 0.8rem;
+    }
+
+    .family-example p:nth-child(2) {
+        display: none;
+    }
+
+    .family-example p:last-child {
+        font-size: 1rem;
+    }
+}
+
+/*font-headings*/
+
+@media only screen and (min-width: 999px) {
+    hr {
+        display: none;
+    }
+}
+
+#buttons {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    row-gap: 0;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+    gap: 1rem;
+}
+
+@media only screen and (max-width: 699px) {
+    #buttons {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media only screen and (max-width: 499px) {
+    #buttons {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.text-example-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #222;
+    background-color: #80ceda;
+    overflow: hidden;
+    cursor: pointer;
+    width: 7rem;
+    padding: 0.8rem;
+}
+
+
+.font-sample {
+    display: grid;
+    grid-template-columns: 0.6fr 1.2fr 3.2fr;
+    column-gap: 3rem;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2rem 0;
+}
+
+.font-example {
+    font-weight: bold;
+}
+
+.font-description ul {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.font-description {
+    font-size: 0.8rem;
+    height: 180px;
+    overflow: scroll;
+}
+
+.text {
+    display: flex;
+    align-items: center;
+    border-radius: 0.5rem;
+    height: 160px;
+    padding: 2rem;
+    margin: 2rem 0 0 0;
+}
+
+@media only screen and (max-width: 699px) {
+    .font-sample {
+        display: block;
+    }
+
+    .font-description {
+        height: auto;
+        padding: 0.5rem 0 2rem 0;
+    }
+
+    .text,
+    #logo-font-container {
+        height: auto;
+        padding: 0 0 1rem 0;
+        margin: 0;
+    }
+
+    .font-sample:last-of-type {
+        margin-bottom: 2rem;
+    }
+}
+
+#logo-font-container {
+    text-align: center;
+    height: auto;
+}
+
+#logo-sample {
+    display: block;
+    text-align: center;
+    color: #222;
+    font-family: "Rozha One", serif;
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+}
+
+#logo-sample2 {
+    display: block;
+    text-align: center;
+    color: rgb(219, 112, 17);
+    font-family: "Nothing You Could Do", cursive;
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    line-height: 1.3;
+    letter-spacing: 0.2em;
+    word-spacing: -0.4em;
+}
+
+@media only screen and (max-width: 479px) {
+
+    #logo-sample {
+        font-size: 1.5rem;
+    }
+
+    #logo-sample2 {
+        font-size: 1.75rem;
+    }
+}
+
+#h1-sample {
+    font-size: 3rem;
+    height: auto;
+}
+
+#h2-sample {
+    font-size: 2.5rem;
+    height: auto;
+}
+
+#h3-sample {
+    font-size: 2rem;
+}
+
+#h4-sample {
+    font-size: 1.5rem;
+}
+
+#h5-sample {
+    font-size: 1.25rem;
+    font-style: oblique;
+    font-weight: bold;
+}
+
+#h6-sample {
+    font-size: 1.125rem;
+    font-style: oblique;
+    font-weight: bold;
+}
+
+#p-bold-sample {
+    font-weight: bold;
+}
+
+/*links and lists*/
+
+#links-and-lists {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+    gap: 4rem;
+}
+
+@media only screen and (max-width: 999px) {
+    #links-and-lists {
+        display: block;
+    }
+}
+
+#links-and-lists article {
+    color: #fff;
+    background-color: rgb(89, 12, 3);
+    padding: 2rem 4rem;
+    border-radius: 0.5rem;
+    margin-top: 3rem;
+    margin-bottom: 0;
+}
+
+@media only screen and (max-width: 1199px) {
+    #links-and-lists article {
+        padding: 2rem;
+    }
+}
+
+@media only screen and (max-width: 1199px) {
+    #links-and-lists article:first-of-type {
+        margin-top: 1rem;
+    }
+}
+
+#links-and-lists h3{
+    color: #fff;
+}
+
+#links-and-lists h4 {
+    color: rgb(199, 140, 28);
+}
+
+#links-and-lists article:first-of-type h4:first-of-type {
+    color: rgb(200, 200, 200);
+}
+
+#links-and-lists ul {
+    padding-top: 0.5rem;
+    padding-bottom: 2rem;
+}
+
+#links-and-lists i {
+    color: inherit;
+}
+
+#links-and-lists h4.light-teal {
+    color: #80ceda;
+    font-style: normal;
+}
+
+#links-and-lists h4.dark-teal {
+    color: rgb(4, 122, 140);
+    font-style: normal;
+}
+
+#links-and-lists h4.orange {
+    color: rgb(219, 112, 17);
+    font-style: normal;
+}
+
+#links-and-lists .selector-light,
+#links-and-lists .selector-dark {
+    font-size: 1rem;
+    font-weight: bold;
+    font-style: normal;
+    text-transform: none;
+    letter-spacing: 0.08rem;
+    border-radius: 0.2rem;
+}
+
+#links-and-lists .selector-dark {
+    width: 13rem;
+    padding: 0.2rem 1rem 0.3rem 1rem;
+}
+
+/*buttons*/
+
+#buttons-buttons {
+    max-width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem 1rem;
+    justify-content: space-between;
+    justify-items: center;
+    padding: 2rem 1rem;
+    background-color: rgb(47, 19, 33);
+    border-radius: 0.5rem;
+}
+
+@media only screen and (max-width: 1199px) {
+    #buttons-buttons {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media only screen and (max-width: 599px) {
+    #buttons-buttons {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media only screen and (max-width: 399px) {
+    #buttons-buttons {
+        grid-template-columns: 1fr
+    }
+}
+
+#buttons-info h4 {
+    color: rgb(199, 140, 28);
+}
+
+#change-button-bg button {
+    margin: 1rem 0 2rem 0;
+    padding-top: 0.5rem;
+    padding-bottom: 0.8rem;
+}
+
+#buttons-info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 3rem;
+    padding: 1rem;
+}
+
+@media only screen and (max-width: 767px) {
+    #buttons-info {
+        display: block;
+    }
+}
+
+/*tabs*/
+
+#tabs-article {
+    background-color: rgb(248, 248, 248);
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+
+#tabs-article h3, 
+#tabs-article h4 {
+    color: rgb(199, 140, 28);
+}
+
+#tabs-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 3rem;
+}
+
+@media only screen and (max-width: 767px) {
+    #tabs-container {
+        display: block;
+    }
+}
+
+/*layout*/
+
+#layout-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 3rem;
+    padding: 1rem;
+}
+
+@media only screen and (max-width: 767px) {
+    #layout-container {
+        display: block;
+    }
+}
+
+#layout-container h4 {
+    color: rgb(199, 140, 28);
+}
+
+/*header*/
+
+#header-article {
+    background-color: rgb(248, 248, 248);
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+
+#header-article-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem;
+}
+
+@media only screen and (max-width: 767px) {
+    #header-article-content {
+        display: block;
+    }
+}
+
+#header-article-content ul {
+    width: 90%;
+}
+
+#header-article h3,
+#header-nav h3, 
+#header-article h4,
+#header-nav h4  {
+    color: rgb(199, 140, 28);
+}
+
+#header-nav h3 {
+    padding-bottom: 1.75rem;
+}
+
+#header-article li {
+    list-style-position: outside;
+    margin-left: 1rem;
+}
+
+/*header nav*/
+#header-nav .selector {
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+#header-nav-content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 2rem;
+}
+
+@media only screen and (max-width: 1199px) {
+    #header-nav-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    #header-nav-content {
+        display: block;
+    }
+}
+
+#nav-layout-content {
+    display: none;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem;
+    margin-top: 1rem;
+}
+
+#nav-layout-content h4 {
+    color: rgb(199, 140, 28);
+}
+
+@media only screen and (max-width: 767px) {
+    #nav-layout-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+/*mobile nav*/
+#mobile-nav {
+    background-color: rgb(89, 12, 3);
+    color: #fff;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    margin-bottom: 4rem;
+}
+
+#mobile-nav h3 {
+    color: #fff;
+}
+
+#mobile-nav h4 {
+    color: rgb(199, 140, 28);
+}
+
+#mobile-nav-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem;
+}
+
+#more-mobile-content {
+    display: none;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 2rem;
+    margin-top: 1rem;
+}
+
+@media only screen and (max-width: 999px) {
+    #mobile-nav-content {
+        display: block;
+    }
+
+    #more-mobile-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+/*footer*/
+#footer-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 3rem;
+}
+
+@media only screen and (max-width:1199px) {
+    #footer-content {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media only screen and (max-width: 999px) {
+    #footer-content {
+        display: block;
+    }
+}
+
+#footer-article h3,
+#footer-article h4 {
+    color: rgb(199, 140, 28);
+}
+
+
+/*expand*/
+
+#tabs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    justify-content: space-between;
+    background-color: rgb(248, 248, 248);
+    border-radius: 0.5rem;
+    padding-top: 2rem;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom: 0.5rem solid#fff;
+}
+
+@media only screen and (max-width: 599px) {
+    #tabs {
+        gap: 0;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+@media only screen and (max-width: 549px) {
+    #tabs button {
+        width: 9rem;
+    }
+}
+
+@media only screen and (max-width: 479px) {
+    #tabs button {
+        width: 8rem;
+    }
+}
+
+@media only screen and (max-width: 429px) {
+    #tabs button {
+        width: 7rem;
+    }
+}
+
+@media only screen and (max-width: 369px) {
+    #tabs button {
+        width: 6rem;
+    }
+}
+
+#tabs button {
+    margin: 0;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+#expand {
+    background-color: #80ceda;
+    padding: 2rem 2rem 1rem 2rem;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    margin-bottom: 4rem;
+}
+
+#expand ul,
+#expand p {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+/*reset*/
+#reset-content {
+    display: block;
+}
+
+#show-reset,
+#show-media-queries,
+#show-shortcuts {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+/*media*/
+#media-content {
+    display: none;
+}
+
+/*shortcuts*/
+#shortcuts-content {
+    display: none;
+}
+
+/*shortcuts*/
+.white {
+    color: #fff;
+}
+
+.bg-white {
+    background-color: #fff;
+}
+
+.light-grey {
+    color: rgb(225, 225, 225);
+}
+
+.bg-light-grey {
+    background-color: rgb(225, 225, 225);
+}
+
+.brown {
+    color: rgb(89, 12, 3);
+}
+
+.bg-brown {
+    background-color: rgb(89, 12, 3);
+}
+
+.chocolate {
+    color: rgb(47, 19, 33)
+}
+
+.bg-chocolate {
+    background-color: rgb(47, 19, 33)
+}
+
+.teal-green {
+    color: rgb(9, 58, 76);
+}
+
+.bg-teal-green {
+    background-color: rgb(9, 58, 76);
+}
+
+.dark-teal {
+    color: rgb(4, 122, 140);
+}
+
+.bg-dark-teal {
+    background-color: rgb(4, 122, 140)
+}
+
+.teal {
+    color: rgba(4, 122, 140, 0.7);
+}
+
+.bg-teal {
+    background-color: rgba(4, 122, 140, 0.7);
+}
+
+.light-teal {
+    color: #80ceda;
+}
+
+.bg-light-teal {
+    background-color: #80ceda;
+}
+
+.orange {
+    color: rgb(219, 112, 17);
+}
+
+.bg-orange {
+    background-color: rgb(219, 112, 17);
+}
+
+.gold {
+    color: rgb(199, 140, 28);
+}
+
+.bg-gold {
+    background-color: rgb(199, 140, 28);
+}
+
+.small-quote {
+    line-height: 2;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.oblique {
+    font-style: oblique;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.center {
+    text-align: center;
+}
+
+.small {
+    font-size: 0.8rem;
+}
+
+.remove-padding-bottom {
+    padding-bottom: 0;
+}
+
+.remove-margin-bottom {
+    margin-bottom: 0;
+}
+
+.margin-top-1 {
+    margin-top: 1rem;
+}
+
+.margin-top-2 {
+    margin-top: 2rem;
+}
+
+.indent-2 {
+    margin-left: 2rem;
+}
+
+.hidden,
+.hide {
+    display: none;
+}
