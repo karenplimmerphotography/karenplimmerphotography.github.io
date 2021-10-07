@@ -523,26 +523,59 @@ footer p>span {
     margin: 3rem 0 3rem 0;
 }
 
+#colour-squares {
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem 1rem 0 1rem;
+}
+
+.square {
+    width: 1rem;
+    height: 1rem;
+    border: 1px solid #222;
+}
+
+#square-1, #square-7, #square-13, #square-19, #square-25, #square-31 {
+    background-color: hsl(30, 100%, 30%);
+}
+#square-2, #square-8, #square-14, #square-20 , #square-26, #square-32 {
+    background-color: hsl(120, 100%, 30%);
+}
+#square-3, #square-9, #square-15, #square-21, #square-27, #square-33 {
+    background-color: hsl(180, 100%, 30%);
+}
+#square-4, #square-10, #square-16, #square-22, #square-28, #square-34 {
+    background-color: hsl(240, 100%, 30%);
+}
+#square-5, #square-11, #square-17, #square-23, #square-29, #square-35 {
+    background-color: hsl(270, 100%, 30%) ;
+}
+#square-6, #square-12, #square-18, #square-24, #square-30, #square-36 {
+    background-color: hsl(300, 100%, 30%) ;
+}
+
 #colour-controls {
     position: relative;
     top: 0;
 }
 
-article p:first-of-type {
-    padding-top: 1rem;
-}
-
+#colour-info-button,
 #fix-colour-samples-button,
 #colour-codes-button {
     color: #222;
     background-color: #bbb;
 }
 
-#fix-colour-samples-button {
+#colour-codes-button {
     margin-left: 4rem;
+    margin-right: 4rem;
 }
 
-#colours-section h3 {
+#colours-info {
+    display: none;
+}
+
+#colours-info h3 {
     margin-top: 3rem;
 }
 
@@ -1141,6 +1174,10 @@ article p:first-of-type {
 }
 
 /*footer*/
+#footer-article {
+    background-color: #999;
+}
+
 #footer-content {
     display: grid;
     grid-template-columns: repeat(3, 1fr);

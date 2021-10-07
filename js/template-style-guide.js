@@ -99,6 +99,205 @@ f.addEventListener('click', function () {
     changeColour(f, lightTones1, newColourF, 70)
 });
 
+const square1= document.getElementById('square-1');
+const square2= document.getElementById('square-2');
+const square3= document.getElementById('square-3');
+const square4= document.getElementById('square-4');
+const square5= document.getElementById('square-5');
+const square6= document.getElementById('square-6');
+const square7= document.getElementById('square-7');
+const square8= document.getElementById('square-8');
+const square9= document.getElementById('square-9');
+const square10= document.getElementById('square-10');
+const square11= document.getElementById('square-11');
+const square12= document.getElementById('square-12');
+const square13= document.getElementById('square-13');
+const square14= document.getElementById('square-14');
+const square15= document.getElementById('square-15');
+const square16= document.getElementById('square-16');
+const square17= document.getElementById('square-17');
+const square18= document.getElementById('square-18');
+const square19= document.getElementById('square-19');
+const square20= document.getElementById('square-20');
+const square21= document.getElementById('square-21');
+const square22= document.getElementById('square-22');
+const square23= document.getElementById('square-23');
+const square24= document.getElementById('square-24');
+const square25= document.getElementById('square-25');
+const square26= document.getElementById('square-26');
+const square27= document.getElementById('square-27');
+const square28= document.getElementById('square-28');
+const square29= document.getElementById('square-29');
+const square30= document.getElementById('square-30');
+const square31= document.getElementById('square-31');
+const square32= document.getElementById('square-32');
+const square33= document.getElementById('square-33');
+const square34= document.getElementById('square-34');
+const square35= document.getElementById('square-35');
+const square36= document.getElementById('square-36');
+
+
+const createHSLRange = (num, rangeStart, rangeEnd) => {
+    num1 = random(361);
+    while (num1 < rangeStart || num1 > rangeEnd) {
+        num1 = random(361);
+    }
+    num2 = random(101);
+    num3 = random(25) + num;
+}
+
+const changeColourRange = (element, list, variable, num, rangeStart, rangeEnd) => {
+    createHSLRange(num, rangeStart, rangeEnd);
+    variable = `hsl(${num1}, ${num2}%, ${num3}%)`;
+    element.style.backgroundColor = variable;
+    element.nextSibling.nextSibling.textContent = variable;
+    for (const item of list) {
+        item.style.backgroundColor = variable;
+    }
+}
+
+square1.addEventListener('click', function () {
+    changeColourRange(a, darkTones1, newColourA, 0, 0, 90)
+});
+
+square2.addEventListener('click', function () {
+    changeColourRange(a, darkTones1, newColourA, 0, 90, 150)
+});
+
+square3.addEventListener('click', function () {
+    changeColourRange(a, darkTones1, newColourA, 0, 150, 210)
+});
+
+square4.addEventListener('click', function () {
+    changeColourRange(a, darkTones1, newColourA, 0, 210, 255)
+});
+
+square5.addEventListener('click', function () {
+    changeColourRange(a, darkTones1, newColourA, 0, 255, 300)
+});
+
+square6.addEventListener('click', function () {
+    changeColourRange(a, darkTones1, newColourB, 0, 300, 360)
+});
+
+square7.addEventListener('click', function () {
+    changeColourRange(b, darkTones2, newColourB, 10, 0, 90)
+});
+
+square8.addEventListener('click', function () {
+    changeColourRange(b, darkTones2, newColourB, 10, 90, 150)
+});
+
+square9.addEventListener('click', function () {
+    changeColourRange(b, darkTones2, newColourB, 10, 150, 210)
+});
+
+square10.addEventListener('click', function () {
+    changeColourRange(b, darkTones2, newColourB, 10, 210, 255)
+});
+
+square11.addEventListener('click', function () {
+    changeColourRange(b, darkTones2, newColourB, 10, 255, 300)
+});
+
+square12.addEventListener('click', function () {
+    changeColourRange(b, darkTones2, newColourB, 10, 300, 360)
+});
+
+square13.addEventListener('click', function () {
+    changeColourRange(c, midTones1, newColourC, 25, 0, 90)
+});
+
+square14.addEventListener('click', function () {
+    changeColourRange(c, midTones1, newColourC, 25, 90, 150)
+});
+
+square15.addEventListener('click', function () {
+    changeColourRange(c, midTones1, newColourC, 25, 150, 210)
+});
+
+square16.addEventListener('click', function () {
+    changeColourRange(c, midTones1, newColourC, 25, 210, 255)
+});
+
+square17.addEventListener('click', function () {
+    changeColourRange(c, midTones1,  newColourC, 25, 255, 300)
+});
+
+square18.addEventListener('click', function () {
+    changeColourRange(c, midTones1, newColourC, 25, 300, 360)
+});
+
+square19.addEventListener('click', function () {
+    changeColourRange(d, midTones2, newColourD, 40, 0, 90)
+});
+
+square20.addEventListener('click', function () {
+    changeColourRange(d, midTones2, newColourD, 40, 90, 150)
+});
+
+square21.addEventListener('click', function () {
+    changeColourRange(d, midTones2, newColourD, 40, 150, 210)
+});
+
+square22.addEventListener('click', function () {
+    changeColourRange(d, midTones2, newColourD, 40, 210, 255)
+});
+
+square23.addEventListener('click', function () {
+    changeColourRange(d, midTones2,  newColourD, 40, 255, 300)
+});
+
+square24.addEventListener('click', function () {
+    changeColourRange(d, midTones2, newColourD, 40, 300, 360)
+});
+square25.addEventListener('click', function () {
+    changeColourRange(e, midTones3, newColourE, 55, 0, 90)
+});
+
+square26.addEventListener('click', function () {
+    changeColourRange(e, midTones3, newColourE, 55, 90, 150)
+});
+
+square27.addEventListener('click', function () {
+    changeColourRange(e, midTones3, newColourE, 55, 150, 210)
+});
+
+square28.addEventListener('click', function () {
+    changeColourRange(e, midTones3, newColourE, 55, 210, 255)
+});
+
+square29.addEventListener('click', function () {
+    changeColourRange(e, midTones3,  newColourE, 55, 255, 300)
+});
+
+square30.addEventListener('click', function () {
+    changeColourRange(e, midTones3, newColourE, 55, 300, 360)
+});
+square31.addEventListener('click', function () {
+    changeColourRange(f, lightTones1, newColourF, 70, 0, 90)
+});
+
+square32.addEventListener('click', function () {
+    changeColourRange(f, lightTones1, newColourF, 70 ,90, 150)
+});
+
+square33.addEventListener('click', function () {
+    changeColourRange(f, lightTones1, newColourF, 70, 150, 210)
+});
+
+square34.addEventListener('click', function () {
+    changeColourRange(f, lightTones1, newColourF, 70, 210, 255)
+});
+
+square35.addEventListener('click', function () {
+    changeColourRange(f, lightTones1, newColourF, 70, 255, 300)
+});
+
+square36.addEventListener('click', function () {
+    changeColourRange(f, lightTones1, newColourF, 70, 300, 360)
+});
+
 const colourCodes = document.getElementsByClassName('colour-code');
 const colourCodesButton = document.getElementById('colour-codes-button');
 
