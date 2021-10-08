@@ -116,10 +116,10 @@ resetButton.addEventListener('click', function () {
 
 const tamsamA = ['hsl(17, 65%, 13%)', 'hsl(17, 64%, 12%)', 'hsl(18, 55%, 10%)', 'rgb(19, 12, 0)', 'hsl(21, 65%, 18%)', 'hsl(24, 79%, 15%)', 'hsl(64, 60%, 3%)', 'hsl(65, 32%, 3%)', 'hsl(189, 16%, 12%)', 'hsl(193, 69%, 23%)', 'rgb(9, 58, 76)', 'hsl(194, 98%, 11%)', 'hsl(206, 62%, 18%', 'hsl(210, 21%, 13%)', 'hsl(245, 3%, 5%)', 'hsl(253, 13%, 4%)'];
 const tamsamB =['hsl(17, 65%, 13%)', 'hsl(17, 64%, 12%)', 'hsl(18, 50%, 26%)', 'hsl(18, 79%, 26%)', 'hsl(20, 73%, 28%)', 'hsl(21, 65%, 18%)', 'hsl(23, 60%, 33%)', 'hsl(24, 79%, 15%)', 'hsl(26, 86%, 30%)', 'rgb(69, 22, 3)', 'hsl(30, 83%, 14%)', 'hsl(189, 16%, 12%)', 'hsl(192, 48%, 19%)',  'hsl(193, 69%, 23%)', 'hsl(200, 45%, 34%)', 'rgb(9, 58, 76)', '#02444e'];
-const tamsamC =['hsl(20, 76%, 49%)', 'hsl(20, 57%, 45%)', 'hsl(21, 45%, 44%)', 'hsl(22, 48%, 47%)',  'hsl(23, 60%, 33%)', 'hsl(28, 58%, 46%)', 'hsl(31, 90%, 40%)', 'hsl(32, 76%, 47%)', 'hsl(32, 68%, 36%)', 'hsl(33, 73%, 46%)', 'hsl(34, 80%, 33%)', 'hsl(36, 89%, 40%)', 'hsl(187, 74%, 34%)', 'hsl(191, 75%, 31%)',  'rgb(4, 122, 140)', 'hsl(190, 68%, 40%)', 'hsl(191, 33%, 52%)', 'hsl(196, 39%, 40%)', 'hsl(204, 35%, 45%)', 'hsl(227, 18%, 36%)', 'hsl(263, 7%, 45%)', 'rgb(69, 22, 3)'];
-const tamsamD =['hsl(21, 71%, 51%)', 'hsl(21, 31%, 41%)', 'hsl(27, 69%, 57%)', 'hsl(27, 71%, 56%)', 'hsl(33, 74%, 50%)', 'hsl(35, 76%, 50%)', 'hsl(36, 83%, 63%)', 'hsl(40, 75%, 51%)', 'hsl(186, 41%, 60%)', 'hsl(190, 54%, 62%)', 'hsl(190, 68%, 40%)', 'hsl(191, 33%, 52%)', 'hsl(203, 25%, 54%)', 'hsl(206, 22%, 50%)', 'hsl(220, 12%, 55%)', 'hsl(238, 5%, 52%)', '#ef5406', 'rgb(219, 112, 17)', 'rgb(199, 140, 28)', '#80ceda'];
-const tamsamE =['hsl(17, 78%, 65%)', 'hsl(22, 73, 58)', 'hsl(24, 50%, 75%)', 'hsl(26, 36%, 88%)', 'hsl(26, 58%, 57%)', 'hsl(26, 64%, 56%)', 'hsl(27, 60%, 60%)', 'hsl(28, 69%, 58%)', 'hsl(29, 54%, 60%)', 'hsl(32, 83%, 78%)', 'hsl(32, 59%, 55%)', 'hsl(33, 72%, 59%)', 'hsl(33, 62%, 55%)', 'hsl(34, 71%, 72%)', 'hsl(34, 64%, 55%)', 'hsl(36, 83%, 63%)', 'hsl(38. 90%, 65%)', 'hsl(190, 54%, 62%)',  'hsl(190, 30%, 60%)', 'hsl(194, 29%, 64%)', 'hsl(199, 17%, 72%)', 'hsl(201, 27%, 61%)', 'hsl(210, 23%, 76%)', 'hsl(214, 14%, 72%)', 'hsl(217, 16%, 59%)', 'hsl(220, 12%, 55%)', 'rgb(199, 140, 28)', '#80ceda'];
-const tamsamF =['hsl(20, 29%, 94%)', 'hsl(28, 65%, 94%)', 'hsl(32, 83%, 78%)', 'hsl(34, 21%, 94%)', 'hsl(41, 76%, 74%)', 'hsl(43, 57%, 93%)', 'hsl(49, 47%, 94%)', 'hsl(52, 69%, 87%)', 'hsl(182, 10%, 84%)', 'hsl(183, 10%, 90%)', 'hsl(187, 16%, 86%)', 'hsl(191, 4%, 86%)', 'hsl(194, 12%, 76%)', 'hsl(198, 10%, 73%)', 'hsl(210, 23%, 76%)', 'hsl(216, 6%, 80%)', 'hsl(245, 4%, 78%)', 'hsl(241, 7%, 81%)', 'hsl(259, 5%, 85%)'];
+const tamsamC =['hsl(20, 76%, 49%)', 'hsl(20, 57%, 45%)', 'hsl(21, 45%, 44%)', 'hsl(22, 48%, 47%)',  'hsl(23, 60%, 33%)', 'hsl(28, 58%, 46%)', 'hsl(31, 90%, 40%)', 'hsl(32, 76%, 47%)', 'hsl(32, 68%, 36%)', 'hsl(33, 73%, 46%)', 'hsl(34, 80%, 33%)', 'hsl(36, 89%, 40%)', 'hsl(187, 74%, 34%)', 'hsl(191, 75%, 31%)',  'rgb(4, 122, 140)', 'hsl(190, 68%, 40%)', 'hsl(191, 33%, 52%)', 'hsl(196, 39%, 40%)', 'hsl(204, 35%, 45%)', 'hsl(227, 18%, 36%)', 'rgb(69, 22, 3)'];
+const tamsamD =['rgb(199, 140, 28)', 'rgb(219, 112, 17)', 'hsl(21, 71%, 51%)',  'hsl(33, 74%, 50%)', 'hsl(35, 76%, 50%)', 'hsl(40, 75%, 51%)', 'hsl(186, 41%, 60%)', 'hsl(190, 54%, 62%)', 'hsl(190, 68%, 40%)', 'hsl(191, 33%, 52%)', 'hsl(203, 25%, 54%)', 'hsl(206, 22%, 50%)', 'hsl(220, 12%, 55%)', 'hsl(238, 5%, 52%)'];
+const tamsamE =['rgb(199, 140, 28)', 'rgb(219, 112, 17)', 'hsl(26, 64%, 56%)', 'hsl(27, 60%, 60%)', 'hsl(27, 69%, 57%)', 'hsl(27, 71%, 56%)', 'hsl(28, 69%, 58%)', 'hsl(29, 54%, 60%)', 'hsl(32, 59%, 55%)', 'hsl(33, 72%, 59%)', 'hsl(33, 62%, 55%)', 'hsl(34, 71%, 72%)', 'hsl(34, 64%, 55%)', 'hsl(36, 83%, 63%)', 'hsl(190, 54%, 62%)',  'hsl(190, 30%, 60%)', 'hsl(194, 29%, 64%)', 'hsl(199, 17%, 72%)', 'hsl(201, 27%, 61%)', 'hsl(210, 23%, 76%)', 'hsl(214, 14%, 72%)', 'hsl(217, 16%, 59%)', 'hsl(220, 12%, 55%)','#80ceda'];
+const tamsamF =['hsl(26, 36%, 88%)', 'hsl(32, 83%, 78%)', 'hsl(34, 71%, 72%)', 'hsl(41, 76%, 74%)', 'hsl(43, 57%, 93%)', 'hsl(182, 10%, 84%)', 'hsl(183, 10%, 90%)', 'hsl(187, 16%, 86%)', 'hsl(191, 4%, 86%)', 'hsl(194, 12%, 76%)', 'hsl(198, 10%, 73%)', 'hsl(210, 23%, 76%)', 'hsl(216, 6%, 80%)', 'hsl(245, 4%, 78%)', 'hsl(241, 7%, 81%)', 'hsl(259, 5%, 85%)', '#80ceda'];
 
 const a = document.getElementById('a');
 const b = document.getElementById('b');
@@ -127,6 +127,12 @@ const c = document.getElementById('c');
 const d = document.getElementById('d');
 const e = document.getElementById('e');
 const f = document.getElementById('f');
+const aCode = document.getElementById('a-code');
+const bCode = document.getElementById('b-code');
+const cCode = document.getElementById('c-code');
+const dCode = document.getElementById('d-code');
+const eCode = document.getElementById('e-code');
+const fCode = document.getElementById('f-code');
 const darkTones1 = document.getElementsByClassName('dark-1');
 const darkTones2 = document.getElementsByClassName('dark-2');
 const midTones1 = document.getElementsByClassName('mid-1');
@@ -176,7 +182,7 @@ a.addEventListener('click', function () {
     changeColour(a, darkTones1, newColourA, 0)
 });
 
-a.addEventListener('dblclick', function () {
+aCode.addEventListener('click', function () {
     changePreSelectedColour(a, darkTones1, tamsamA, newColourA)
 });
 
@@ -184,7 +190,7 @@ b.addEventListener('click', function () {
     changeColour(b, darkTones2, newColourB, 10)
 });
 
-b.addEventListener('dblclick', function () {
+bCode.addEventListener('click', function () {
     changePreSelectedColour(b, darkTones2, tamsamB, newColourB)
 });
 
@@ -192,7 +198,7 @@ c.addEventListener('click', function () {
     changeColour(c, midTones1, newColourC, 25)
 });
 
-c.addEventListener('dblclick', function () {
+cCode.addEventListener('click', function () {
     changePreSelectedColour(c, midTones1, tamsamC, newColourC)
 });
 
@@ -200,7 +206,7 @@ d.addEventListener('click', function () {
     changeColour(d, midTones2, newColourD, 40)
 });
 
-d.addEventListener('dblclick', function () {
+dCode.addEventListener('click', function () {
     changePreSelectedColour(d, midTones2, tamsamD, newColourD)
 });
 
@@ -208,7 +214,7 @@ e.addEventListener('click', function () {
     changeColour(e, midTones3, newColourE, 55)
 });
 
-e.addEventListener('dblclick', function () {
+eCode.addEventListener('click', function () {
     changePreSelectedColour(e, midTones3, tamsamE, newColourE)
 });
 
@@ -216,7 +222,7 @@ f.addEventListener('click', function () {
     changeColour(f, lightTones1, newColourF, 70)
 });
 
-f.addEventListener('dblclick', function () {
+fCode.addEventListener('click', function () {
     changePreSelectedColour(f, lightTones1, tamsamF, newColourF)
 });
 
