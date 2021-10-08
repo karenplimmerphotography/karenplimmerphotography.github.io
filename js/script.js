@@ -54,3 +54,14 @@ const toggleDisplayToGrid = name => {
       name.style.display = 'grid';
   }
 }
+
+const toggleDisplayToFlex = name => {
+  if (name.style.display == '') {
+      name.style.display = window.getComputedStyle(name).getPropertyValue('display');  
+  } 
+  if (name.style.display === 'flex') {
+      name.style.display = 'none';
+  } else {
+      name.style.display = 'flex';
+  }
+}

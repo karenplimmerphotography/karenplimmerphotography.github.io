@@ -8,31 +8,106 @@ const changeFont = (list, newFont) => {
         }
     }
 }
+
+const bodyFont = document.getElementById('body-font');
+const buttons = document.getElementsByTagName('button');
 const headings = document.getElementsByClassName('heading');
+const h5headings = document.getElementsByTagName('h5');
+const h6headings = document.getElementsByTagName('h6');
+const h5ClassHeadings = document.getElementsByClassName('h5');
+const h6ClassHeadings = document.getElementsByClassName('h6');
 const headingButton = document.getElementById('heading-button');
-const newHeadingFontsArray = ['"Roboto Slab"', 'Bitter', 'Lora', 'Prata', 'Noto Serif', 'Forum', '"Nixie One"', 'Merriweather', '"Cormorant Garamond"', 'Mulish', 'Raleway', 'Quicksand'];
+const smallHeadingButton = document.getElementById('small-heading-button');
+const bodyFontButton = document.getElementById("body-font-button");
+const serifBodyFontButton = document.getElementById("serif-body-font-button");
+const sansSerifBodyFontButton = document.getElementById("sans-serif-body-font-button");
+const resetButton = document.getElementById("reset-button");
+const headingFontsArray = ['"Roboto Slab"', 'Noto Serif', 'Bitter', '"Rozha One"', 'Lora', 'Prata', 'Forum', '"Nixie One"', 'Merriweather', '"Cormorant Garamond"', 'Mulish', '"Libre Franklin"', 'Noto Sans Display', 'Raleway', 'Quicksand', '"Nothing You Could Do"', '"Permanent Marker"'];
+const bodyFontsArray = ['Antic', 'Bitter', 'Cabin', 'Cairo', '"Cormorant Garamond"', 'Dosis', '"Fira Sans"', '"Hind Siliguri"', 'Inter', 'Lato', '"Libre Franklin"', 'Lora', 'Merriweather', 'Montserrat', 'Mulish', '"Nixie One"', 'Noto Sans', 'Noto Serif', 'Nunito', '"Nunito Sans"', '"Open Sans"', 'Oxygen', 'Poppins', 'Prata', 'PT Sans', 'Raleway', 'Roboto', '"Roboto Slab"', 'Rubik', 'Source Sans Pro', 'Quicksand', '"Work Sans"'];
+const serifFontsArray = ['Bitter', '"Cormorant Garamond"', 'Forum', 'Lora', 'Merriweather', '"Nixie One"', '"Noto Serif"', 'Prata', '"Roboto Slab"'];
+const sansSerifFontsArray = ['Antic', 'Cabin', 'Cairo', 'Dosis', '"Fira Sans"', '"Hind Siliguri"', 'Inter', 'Lato', '"Libre Franklin"', 'Montserrat', 'Mulish', '"Noto Sans"', 'Nunito', '"Nunito Sans"', '"Open Sans"', 'Oxygen', 'Poppins', 'PT Sans', 'Raleway', 'Roboto', 'Rubik', 'Source Sans Pro', 'Quicksand', '"Work Sans"'];
+
 const tryHeadingFonts = list => {
     for (const item of list) {
-        item.style.fontFamily = newHeadingFontsArray[0];
+        item.style.fontFamily = headingFontsArray[0];
     }
-    headingButton.textContent = newHeadingFontsArray[0];
-    newHeadingFontsArray.push(newHeadingFontsArray[0]);
-    newHeadingFontsArray.shift(newHeadingFontsArray[0]);
+    headingFontsArray.push(headingFontsArray[0]);
+    headingFontsArray.shift(headingFontsArray[0]);
 }
+
+const setSmallHeadings = list => {
+    const bodyFontFamily = window.getComputedStyle(bodyFont).getPropertyValue('font-family')
+    const headingFontFamily = window.getComputedStyle(headings[0]).getPropertyValue('font-family')
+    for (const item of list) {
+        let repl = /"/g;
+        if (item.style.fontFamily === bodyFontFamily) {
+            item.style.fontFamily = headingFontFamily;
+            smallHeadingButton.textContent = headingFontFamily.replace(repl, '');
+
+        } else {
+            item.style.fontFamily = bodyFontFamily;
+            smallHeadingButton.textContent = bodyFontFamily.replace(repl, '')
+        }
+    }
+}
+
+const tryFonts = array => {
+    document.body.style.fontFamily = array[0];
+    for (const item of buttons) {
+        item.style.fontFamily = array[0];
+    }
+    array.push(array[0]);
+    array.shift(array[0]);
+}
+
+const resetFont = (font, list) => {
+    for (const item of list) {
+        item.style.fontFamily = font;
+    }
+}
+const fullResetFonts = () => {
+    resetFont('Raleway', headings);
+    resetFont('Raleway', h5headings);
+    resetFont('Raleway', h6headings);
+    resetFont('Raleway', h5ClassHeadings);
+    resetFont('Raleway', h6ClassHeadings);
+    document.body.style.fontFamily = "Raleway"
+    headingButton.textContent = 'heading';
+    smallHeadingButton.textContent = 'small heading';
+    sansSerifBodyFontButton.textContent = 'sans-serif';
+    serifBodyFontButton.textContent = 'serif';
+}
+
 headingButton.addEventListener('click', function () {
+    let repl = /"/g;
+    headingButton.textContent = headingFontsArray[0].replace(repl, '');
+    smallHeadingButton.textContent = 'small heading';
     tryHeadingFonts(headings)
 });
+smallHeadingButton.addEventListener('click', function () {
+    setSmallHeadings(h5headings);
+    setSmallHeadings(h6headings);
+    setSmallHeadings(h5ClassHeadings);
+    setSmallHeadings(h6ClassHeadings);
+});
+serifBodyFontButton.addEventListener('click', function () {
+    let repl = /"/g;
+    serifBodyFontButton.textContent = serifFontsArray[0].replace(repl,'');
+    tryFonts(serifFontsArray);
+    sansSerifBodyFontButton.textContent = 'sans-serif';
+    smallHeadingButton.textContent = 'small heading'
+});
+sansSerifBodyFontButton.addEventListener('click', function () {
+    let repl = /"/g;
+    sansSerifBodyFontButton.textContent = sansSerifFontsArray[0].replace(repl, '');
+    tryFonts(sansSerifFontsArray);
+    serifBodyFontButton.textContent = 'serif';
+    smallHeadingButton.textContent = 'small heading'
+});
+resetButton.addEventListener('click', function () {
+    fullResetFonts()
+})
 
-
-const newFontButton = document.getElementById("new-font-button");
-const newFontsArray = ['Bitter', 'Cabin', 'Cairo', '"Cormorant Garamond"', 'Dosis', '"Fira Sans"', '"Hind Siliguri"', 'Inter', 'Lato', 'Lora', 'Merriweather', 'Montserrat', 'Mulish', '"Nixie One"', 'Noto Sans', 'Noto Serif', 'Nunito', '"Nunito Sans"', '"Open Sans"', 'Oxygen', 'Poppins', 'Prata', 'PT Sans', 'Raleway', 'Roboto', '"Roboto Slab"', 'Rubik', 'Source Sans Pro', 'Quicksand'];
-const tryFonts = () => {
-    document.body.style.fontFamily = newFontsArray[0];
-    newFontButton.textContent = newFontsArray[0];
-    newFontsArray.push(newFontsArray[0]);
-    newFontsArray.shift(newFontsArray[0]);
-}
-newFontButton.addEventListener('click', tryFonts);
 
 //COLOURS
 const a = document.getElementById('a');
@@ -99,42 +174,42 @@ f.addEventListener('click', function () {
     changeColour(f, lightTones1, newColourF, 70)
 });
 
-const square1= document.getElementById('square-1');
-const square2= document.getElementById('square-2');
-const square3= document.getElementById('square-3');
-const square4= document.getElementById('square-4');
-const square5= document.getElementById('square-5');
-const square6= document.getElementById('square-6');
-const square7= document.getElementById('square-7');
-const square8= document.getElementById('square-8');
-const square9= document.getElementById('square-9');
-const square10= document.getElementById('square-10');
-const square11= document.getElementById('square-11');
-const square12= document.getElementById('square-12');
-const square13= document.getElementById('square-13');
-const square14= document.getElementById('square-14');
-const square15= document.getElementById('square-15');
-const square16= document.getElementById('square-16');
-const square17= document.getElementById('square-17');
-const square18= document.getElementById('square-18');
-const square19= document.getElementById('square-19');
-const square20= document.getElementById('square-20');
-const square21= document.getElementById('square-21');
-const square22= document.getElementById('square-22');
-const square23= document.getElementById('square-23');
-const square24= document.getElementById('square-24');
-const square25= document.getElementById('square-25');
-const square26= document.getElementById('square-26');
-const square27= document.getElementById('square-27');
-const square28= document.getElementById('square-28');
-const square29= document.getElementById('square-29');
-const square30= document.getElementById('square-30');
-const square31= document.getElementById('square-31');
-const square32= document.getElementById('square-32');
-const square33= document.getElementById('square-33');
-const square34= document.getElementById('square-34');
-const square35= document.getElementById('square-35');
-const square36= document.getElementById('square-36');
+const square1 = document.getElementById('square-1');
+const square2 = document.getElementById('square-2');
+const square3 = document.getElementById('square-3');
+const square4 = document.getElementById('square-4');
+const square5 = document.getElementById('square-5');
+const square6 = document.getElementById('square-6');
+const square7 = document.getElementById('square-7');
+const square8 = document.getElementById('square-8');
+const square9 = document.getElementById('square-9');
+const square10 = document.getElementById('square-10');
+const square11 = document.getElementById('square-11');
+const square12 = document.getElementById('square-12');
+const square13 = document.getElementById('square-13');
+const square14 = document.getElementById('square-14');
+const square15 = document.getElementById('square-15');
+const square16 = document.getElementById('square-16');
+const square17 = document.getElementById('square-17');
+const square18 = document.getElementById('square-18');
+const square19 = document.getElementById('square-19');
+const square20 = document.getElementById('square-20');
+const square21 = document.getElementById('square-21');
+const square22 = document.getElementById('square-22');
+const square23 = document.getElementById('square-23');
+const square24 = document.getElementById('square-24');
+const square25 = document.getElementById('square-25');
+const square26 = document.getElementById('square-26');
+const square27 = document.getElementById('square-27');
+const square28 = document.getElementById('square-28');
+const square29 = document.getElementById('square-29');
+const square30 = document.getElementById('square-30');
+const square31 = document.getElementById('square-31');
+const square32 = document.getElementById('square-32');
+const square33 = document.getElementById('square-33');
+const square34 = document.getElementById('square-34');
+const square35 = document.getElementById('square-35');
+const square36 = document.getElementById('square-36');
 
 
 const createHSLRange = (num, rangeStart, rangeEnd) => {
@@ -221,7 +296,7 @@ square16.addEventListener('click', function () {
 });
 
 square17.addEventListener('click', function () {
-    changeColourRange(c, midTones1,  newColourC, 25, 255, 300)
+    changeColourRange(c, midTones1, newColourC, 25, 255, 300)
 });
 
 square18.addEventListener('click', function () {
@@ -245,7 +320,7 @@ square22.addEventListener('click', function () {
 });
 
 square23.addEventListener('click', function () {
-    changeColourRange(d, midTones2,  newColourD, 40, 255, 300)
+    changeColourRange(d, midTones2, newColourD, 40, 255, 300)
 });
 
 square24.addEventListener('click', function () {
@@ -268,7 +343,7 @@ square28.addEventListener('click', function () {
 });
 
 square29.addEventListener('click', function () {
-    changeColourRange(e, midTones3,  newColourE, 55, 255, 300)
+    changeColourRange(e, midTones3, newColourE, 55, 255, 300)
 });
 
 square30.addEventListener('click', function () {
@@ -279,7 +354,7 @@ square31.addEventListener('click', function () {
 });
 
 square32.addEventListener('click', function () {
-    changeColourRange(f, lightTones1, newColourF, 70 ,90, 150)
+    changeColourRange(f, lightTones1, newColourF, 70, 90, 150)
 });
 
 square33.addEventListener('click', function () {
@@ -316,130 +391,45 @@ colourCodesButton.addEventListener('click', function () {
     toggleColourNames(colourCodes)
 });
 
+const coloursInfo = document.getElementById('colours-info');
+const colourTips = document.getElementById('colour-info-button');
 const fix = document.getElementById('fix-colour-samples-button');
 const samples = document.getElementById('colours');
 const colourControls = document.getElementById('colour-controls');
-const coloursHeading = document.getElementById('colours-heading');
+const squaresButton = document.getElementById('tiny-squares-button');
+const allSquares = document.getElementsByClassName('colour-squares');
+const header = document.getElementsByTagName('header');
 
 const fixColourSamples = () => {
     if (window.getComputedStyle(samples).getPropertyValue('position') !== 'fixed') {
         samples.style.position = 'fixed';
-        colourControls.style.marginTop ='6rem';
-        colourControls.style.top = '-75px';
-        coloursHeading.style.display = 'none';
+        colourControls.style.top = '-40px';
+        toggleDisplay(header[0]);
         toggleColourNames(colourCodes);
     } else {
         samples.style.position = '';
+        samples.style.marginTop = '';
         colourControls.style.top = '';
-        colourControls.style.marginTop = '';
-        coloursHeading.style.display ="";
+        toggleDisplay(header[0]);
         toggleColourNames(colourCodes);
     }
 }
+
+const hideColouredSquares = () => {
+    for (const item of allSquares) {
+        toggleDisplayToFlex(item);
+    }
+
+}
+
+colourTips.addEventListener('click', function () {
+    toggleDisplay(coloursInfo)
+});
+
+squaresButton.addEventListener('click', hideColouredSquares);
 fix.addEventListener('click', fixColourSamples);
 
 
-
-
-
-
-/*
-const text = document.getElementsByClassName('text-to-change-font');
-const textToColor = document.getElementsByClassName('text');
-const fontButton = document.getElementById("font-button");
-const aButton = document.getElementById("a-button");
-const bButton = document.getElementById("b-button");
-const cButton = document.getElementById("c-button");
-const dButton = document.getElementById("d-button");
-const eButton = document.getElementById("e-button");
-const fButton = document.getElementById("f-button");
-const resetButton = document.getElementById("reset-button");
-const allButtons = document.getElementsByClassName('text-example-button');
-
-const changeAllButtons = (list, newButtonBackgroundColor) => {
-    for (const item of list) {
-        if (item.style.backgroundColor !== newButtonBackgroundColor) {
-            item.style.backgroundColor = newButtonBackgroundColor;
-        } else {
-            item.style.backgroundColor = '';
-        }
-    }
-}
-
-const changeButtonColor = (name, newBackgroundColor) => {
-    if (name.style.backgroundColor !== newBackgroundColor) {
-        name.style.backgroundColor = newBackgroundColor;
-    }
-}
-
-fontButton.addEventListener('click', function () {
-    changeFont(text, 'FlorenceScript');
-    changeButtonColor(fontButton, '#aad0fd');
-})
-
-const changeTextColor = (list, newColor, newBackgroundColor) => {
-    for (const item of list) {
-        if (item.style.color !== newColor) {
-            item.style.color = newColor;
-            item.style.backgroundColor = newBackgroundColor;
-            item.style.backgroundImage = 'none';
-        }
-    }
-}
-
-const changeBgImage = list => {
-    for (const item of list) {
-        item.style.color = '#fff';
-        item.style.backgroundColor = '#222';
-        item.style.backgroundImage = '';
-    }
-}
-
-
-paleOrangeButton.addEventListener('click', function () {
-    changeTextColor(textToColor, '#f9b19b', '#240975');
-    changeButtonColor(paleOrangeButton, '#aad0fd');
-})
-orangeButton.addEventListener('click', function () {
-    changeTextColor(textToColor, '#f98562', '#fff');
-    changeButtonColor(orangeButton, '#aad0fd');
-})
-blueButton.addEventListener('click', function () {
-    changeTextColor(textToColor, '#62a9fd', '#fff');
-    changeButtonColor(blueButton, '#aad0fd');
-})
-paleBlueButton.addEventListener('click', function () {
-    changeTextColor(textToColor, '#aad0fd', '#240975');
-    changeButtonColor(paleBlueButton, '#aad0fd');
-})
-purpleButton.addEventListener('click', function () {
-    changeTextColor(textToColor, '#240975', '#fff');
-    changeButtonColor(purpleButton, '#aad0fd');
-})
-whiteButton.addEventListener('click', function () {
-    changeTextColor(textToColor, '#fff', '#240975');
-    changeButtonColor(whiteButton, '#aad0fd');
-})
-
-resetButton.addEventListener('click', function () {
-    changeBgImage(textToColor);
-    changeAllButtons(allButtons, '#f9b19b');
-})
-
-const bgButton = document.getElementById('change-button-bg');
-const buttonBg = document.getElementById('buttons-buttons');
-const buttonBgColour = window.getComputedStyle(buttonBg).getPropertyValue('background-color');
-let backgroundColours = [ 'rgb(248, 248, 248)','#fff', '#240975', '#62a9fd', '#aad0fd', '#f98562', '#f9b19b'];
-
-buttonBg.style.backgroundColor = buttonBgColour;
-
-const changeBgColour = () => {
-    backgroundColours.push(backgroundColours[0]);
-    backgroundColours.shift(backgroundColours[0]);
-    buttonBg.style.backgroundColor = backgroundColours[0];
-}
-
-bgButton.addEventListener('click', changeBgColour);
 
 const navButton = document.getElementById('show-nav-layout');
 const navContent = document.getElementById('nav-layout-content');
@@ -488,5 +478,3 @@ const mobileContent = document.getElementById('more-mobile-content')
 mobileButton.addEventListener('click', function() {
     toggleDisplayToGrid(mobileContent)
 });
-
-*/

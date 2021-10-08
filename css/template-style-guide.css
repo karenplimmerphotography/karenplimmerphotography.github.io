@@ -26,6 +26,7 @@ body {
     color: #222;
     background-color: #fff;
     font-family: Raleway, sans-serif;
+    line-height: 1.5;
 }
 
 main {
@@ -183,6 +184,11 @@ button.small-button:active {
     padding: 1rem;
 }
 
+button.long-button {
+    width: auto;
+    padding: 1rem 2.2rem;
+}
+
 /*tabs*/
 
 .tabs {
@@ -220,14 +226,28 @@ button.small-button:active {
     vertical-align: baseline;
     position: relative;
     top: 0.1rem;
+    z-index: 0;
     padding-right: 0.5rem;
 }
 
 /*header*/
 
 header {
-    background-color: #555;
+    background-color: #bbb;
     padding: 4rem 0;
+    font-size: 2rem;
+    text-align: center;
+}
+
+header p:first-of-type {
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    font-size: 2rem;
+}
+
+header p:last-of-type {
+    font-style: italic;
+    font-size: 2.5rem;
 }
 
 header nav {
@@ -380,7 +400,6 @@ span#hamburger:hover {
 
 footer nav {
     background-color: #555;
-
     padding: 2rem 0;
 }
 
@@ -514,17 +533,34 @@ footer p>span {
 
 /*UNIQUE CONTENT*/
 
+/*main*/
+main {
+    margin-top: 3rem;
+}
+
 /*colors*/
 #colours {
+    z-index: 1;
+    background-color: hsla( 0, 0%, 75%, 0.2);
+    border: 0.5rem;
+    width: 1140px;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     gap: 2rem;
-    justify-items: center;
+    justify-content: space-between;
     margin: 3rem 0 3rem 0;
+    padding: 2rem;
 }
 
-#colour-squares {
+#colours > div {
     display: flex;
+    flex-direction: column;
+    justify-items: center;
+}
+
+.colour-squares {
+    display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     margin: 2rem 1rem 0 1rem;
 }
@@ -556,27 +592,34 @@ footer p>span {
 
 #colour-controls {
     position: relative;
-    top: 0;
 }
 
-#colour-info-button,
-#fix-colour-samples-button,
-#colour-codes-button {
+#colours-buttons-container button {
     color: #222;
     background-color: #bbb;
+    margin-left: 1rem;
+    margin-right: 1rem;
 }
 
-#colour-codes-button {
-    margin-left: 4rem;
-    margin-right: 4rem;
+#colours-buttons-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 #colours-info {
     display: none;
 }
 
-#colours-info h3 {
-    margin-top: 3rem;
+#colour-controls h3 {
+    margin-top: 2rem;
+}
+
+#colours div.colour-sample {
+    width: 150px;
+    height: 150px;
+    border: 1px solid #222;
+    border-radius: 50%;
 }
 
 #colours p {
@@ -585,56 +628,40 @@ footer p>span {
     margin-bottom: 0;
 }
 
-#colours div.colour-sample {
-    z-index:2;
-    width: 150px;
-    height: 150px;
-    border: 1px solid #222;
-    border-radius: 50%;
-}
-
 @media only screen and (max-width: 1199px) {
     #colours {
+        width: 100%;
         grid-template-columns: repeat(3, 1fr);
-        gap: 2rem 1rem;
-        margin: 2rem 0 1rem 0;
+        gap: 3rem 1rem;
+        justify-content: center;
+        justify-items: center;
+        margin: 2rem 0 3rem 0;
     }
 }
 
 @media only screen and (max-width: 599px) {
     #colours {
-        gap: 1rem;
+        gap: 3rem 2rem;
     }
 
     #colours div.colour-sample {
         width: 120px;
         height: 120px;
     }
-}
 
-@media only screen and (max-width: 485px) {
-    #colours p {
-        margin: 1rem;
+    .colour-squares {
+        margin: 0;
     }
 }
 
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 479px) {
     #colours {
         grid-template-columns: repeat(2, 1fr);
+        gap: 3rem 1rem;
     }
 
     #colours p {
-        margin-bottom: 0;
-    }
-}
-
-#grey-sample {
-    background-color: rgb(225, 225, 225);
-}
-
-@media only screen and (max-width: 599px) {
-    #pure-grey-sample {
-        display: none;
+        margin: 1rem;
     }
 }
 
@@ -721,12 +748,19 @@ footer p>span {
 
 #buttons {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     row-gap: 0;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 4rem;
     gap: 1rem;
+}
+
+@media only screen and (max-width: 999px) {
+    #buttons {
+        grid-template-columns: repeat(3, 1fr);
+        margin-bottom: 2rem;
+    }
 }
 
 @media only screen and (max-width: 499px) {
@@ -773,11 +807,14 @@ footer p>span {
 }
 
 #logo-font-container {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     background-color: #555;
     color: #fff;
     font-size: 2rem;
-    padding: 2rem 2rem 0.5rem 2rem;
+    padding: 2rem;
     border-radius: 0.5rem;
     height: 180px;
     overflow: hidden;
@@ -843,6 +880,8 @@ footer p>span {
 
 #logo-sample2 {
     display: block;
+    padding-bottom: 0;
+    margin-bottom: 0;
 }
 
 @media only screen and (max-width: 479px) {
@@ -890,8 +929,8 @@ footer p>span {
 }
 
 .font-description {
-    font-size: 0.8rem;
-    height: 160px;
+    font-size: 0.9rem;
+    height: 180px;
     overflow: scroll;
 }
 
@@ -999,7 +1038,7 @@ footer p>span {
 
 #buttons-info {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     column-gap: 3rem;
     padding: 1rem;
 }
@@ -1093,7 +1132,7 @@ footer p>span {
 /*header nav*/
 #header-nav .selector {
     text-transform: uppercase;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
 }
 
 #header-nav-content {
@@ -1302,7 +1341,10 @@ footer {
 #footer-display {
     color: #222;
     border: 1px solid #bbb;
-    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem 2rem;
 }
 
 #footer-display * {
@@ -1316,10 +1358,12 @@ footer {
 
 #footer-display p:first-of-type{
     font-size: 2rem;
-    font-style: italic;
     padding-bottom: 0;
 }
 
 #footer-display p:last-of-type {
     font-size: 2.5rem;
+    font-style: italic;
+    padding-bottom: 0;
+    margin-bottom: 0;
 }
