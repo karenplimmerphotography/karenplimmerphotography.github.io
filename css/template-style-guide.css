@@ -952,7 +952,7 @@ main {
 #links-and-lists article {
     color: #fff;
     background-color: #555;
-    padding: 2rem 4rem;
+    padding: 2rem;
     border-radius: 0.5rem;
     margin-top: 3rem;
     margin-bottom: 0;
@@ -1053,7 +1053,7 @@ main {
 
 #tabs-article {
     background-color: #ddd;
-    padding: 2rem 1rem 1rem 1rem;
+    padding: 2rem;
     border-radius: 0.5rem;
 }
 

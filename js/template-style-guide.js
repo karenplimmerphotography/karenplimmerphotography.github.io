@@ -110,6 +110,17 @@ resetButton.addEventListener('click', function () {
 
 
 //COLOURS
+
+//Preselected colour arrays
+//foxterrier.co.nz
+
+const tamsamA = ['hsl(12, 94% 12%)', 'hsl(21, 65%, 18%)', 'hsl(64, 60%, 3%)', 'hsl(96, 57%, 1%)' , 'hsl(130, 85%, 1%)', 'hsl(186, 88%, 16%)', 'hsl(194, 98%, 11%)', 'hsl(233, 7%, 0%)' , 'hsl(245, 3%, 5%)', 'hsl(246, 0%, 3%)', 'hsl(253, 13%, 4%)', 'hsl(357, 73%, 18%)', 'rgb(19, 12, 0)', 'rgb(9, 58, 76)'];
+const tamsamB =['hsl(4, 28%, 20%)', 'hsl(5, 69%, 22%)', 'hsl(15, 99%, 23%)', 'hsl(18, 50%, 26%)', 'hsl(18, 79%, 26%)', 'hsl(20, 73%, 28%)', 'hsl(23, 60%, 33%)', 'hsl(24, 79%, 15%)', 'hsl(26, 86%, 30%)', 'hsl(189, 16%, 12%)', 'hsl(192, 48%, 19%)', 'hsl(359, 29%, 23%)', 'rgb(69, 22, 3)', 'rgb(9, 58, 76)', '#02444e'];
+const tamsamC =['hsl(21, 45%, 44%)', 'hsl(22, 48%, 47%)', 'hsl(28, 58%, 46%)', 'hsl(31, 90%, 40%)', 'hsl(32, 76%, 47%)', 'hsl(32, 68%, 36%)', 'hsl(33, 73%, 46%)', 'hsl(34, 80%, 33%)', 'hsl(36, 89%, 40%)', 'hsl(44, 89%, 40%)', 'hsl(87, 74%, 34%)', 'hsl(191, 75%, 31%)', 'hsl(196, 39%, 40%)', 'hsl(204, 35%, 45%)', 'hsl(227, 18%, 36%)', 'hsl(263, 7%, 45%)', 'hsl(300, 26%, 33%)',  '#ef5406', 'rgb(69, 22, 3)', 'rgb(4, 122, 140)'];
+const tamsamD =['hsl(15, 69%, 40%)', 'hsl(15, 70%, 62%)', 'hsl(19, 46%, 57%)', 'hsl(21, 71%, 51%)', 'hsl(21, 31%, 41%)', 'hsl(33, 74%, 50%)', 'hsl(35, 76%, 50%)', 'hsl(36, 83%, 63%)', 'hsl(40, 75%, 51%)', 'hsl(42, 52%, 53%)', 'hsl(186, 41%, 60%)', 'hsl(187, 72%, 46%)', 'hsl(190, 54%, 62%)', 'hsl(190, 68%, 40%)', 'hsl(203, 25%, 54%)', 'hsl(206, 22%, 50%)', 'hsl(238,5%, 52%)', 'hsl(296, 21%, 56%', 'hsl(329, 28%, 40%)', '#ef5406', 'rgb(219, 112, 17)', 'rgb(199, 140, 28)', '#80ceda'];
+const tamsamE =['hsl(24, 50%, 75%)', 'hsl(26, 58%, 57%)', 'hsl(26, 64%, 56%)', 'hsl(28, 69%, 58%)', 'hsl(33, 62%, 55%)', 'hsl(34, 71%, 72%)', 'hsl(38. 90%, 65%)', 'hsl(42, 69%, 79%)', 'hsl(194, 29%, 64%)', 'hsl(199, 17%, 72%)', 'hsl(201, 27%, 61%)', 'hsl(210, 23%, 76%)', 'hsl(214, 14%, 72%)', 'hsl(217, 16%, 59%)', 'hsl(283, 1%, 66%)', 'hsl(3110, 4%, 66%)', 'hsl(318, 20%, 65%)', 'rgb(219, 112, 17)', 'rgb(199, 140, 28)', '#80ceda'];
+const tamsamF =['hsl(20, 29%, 94%)', 'hsl(21, 1%, 73%)', 'hsl(28, 65, 94%)', 'hsl(34, 21%, 94%)', 'hsl(41, 76%, 74%)', 'hsl(43, 57%, 93%)', 'hsl(49, 47%, 94%)', 'hsl(52, 69%, 87%)', 'hsl(80%, 3%, 94%)', 'hsl(182, 10%, 84%)', 'hsl(183, 10%, 90%)', 'hsl(187, 16%, 86%)',  'hsl(245, 4%, 78%)', 'hsl(259, 5%, 85%)', 'hsl(285, 1%, 93%)',  'hsl(293, 24%, 80%)', 'hsl(310%, 49%, 42%)', 'hsl(318, 48%, 86%)', 'hsl(332, 15%, 81%)', 'hsl(357, 7%, 72%)'];
+
 const a = document.getElementById('a');
 const b = document.getElementById('b');
 const c = document.getElementById('c');
@@ -150,28 +161,63 @@ const changeColour = (element, list, variable, num) => {
     }
 }
 
+const changePreSelectedColour = (element, list, array, variable) => {
+    variable = array[0];
+    array.push(array[0]);
+    array.shift(array[0]);
+    element.style.backgroundColor = variable;
+    element.nextSibling.nextSibling.textContent = variable;
+    for (const item of list) {
+        item.style.backgroundColor = variable;
+    }
+}
+
 a.addEventListener('click', function () {
     changeColour(a, darkTones1, newColourA, 0)
+});
+
+a.addEventListener('dblclick', function () {
+    changePreSelectedColour(a, darkTones1, tamsamA, newColourA)
 });
 
 b.addEventListener('click', function () {
     changeColour(b, darkTones2, newColourB, 10)
 });
 
+b.addEventListener('dblclick', function () {
+    changePreSelectedColour(b, darkTones2, tamsamB, newColourB)
+});
+
 c.addEventListener('click', function () {
     changeColour(c, midTones1, newColourC, 25)
+});
+
+c.addEventListener('dblclick', function () {
+    changePreSelectedColour(c, midTones1, tamsamC, newColourC)
 });
 
 d.addEventListener('click', function () {
     changeColour(d, midTones2, newColourD, 40)
 });
 
+d.addEventListener('dblclick', function () {
+    changePreSelectedColour(d, midTones2, tamsamD, newColourD)
+});
+
 e.addEventListener('click', function () {
     changeColour(e, midTones3, newColourE, 55)
 });
 
+e.addEventListener('dblclick', function () {
+    changePreSelectedColour(e, midTones3, tamsamE, newColourE)
+});
+
 f.addEventListener('click', function () {
     changeColour(f, lightTones1, newColourF, 70)
+});
+
+f.addEventListener('dblclick', function () {
+    changePreSelectedColour(f, lightTones1, tamsamF, newColourF)
 });
 
 const square1 = document.getElementById('square-1');
@@ -478,3 +524,4 @@ const mobileContent = document.getElementById('more-mobile-content')
 mobileButton.addEventListener('click', function() {
     toggleDisplayToGrid(mobileContent)
 });
+
