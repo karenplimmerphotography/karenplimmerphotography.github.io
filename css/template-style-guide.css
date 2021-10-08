@@ -541,7 +541,7 @@ main {
 /*colors*/
 #colours {
     z-index: 1;
-    background-color: hsla( 0, 0%, 75%, 0.2);
+    background-color: hsla( 0, 0%, 75%, 0.05);
     border: 0.5rem;
     width: 1140px;
     display: grid;
