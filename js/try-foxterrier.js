@@ -9,6 +9,84 @@ const changeFont = (list, newFont) => {
     }
 }
 
+const logoControlsButton = document.getElementById('logo-controls-button');
+const logoControls = document.getElementById('logo-controls');
+const logoButton = document.getElementById('logo-button');
+const logoTitleButton = document.getElementById('logo-title-button');
+const logoSubTitleButton = document.getElementById('logo-subtitle-button');
+const caseButton = document.getElementById('case-button');
+const title = document.getElementById('title');
+const subtitle = document.getElementById('subtitle');
+const titleClass = document.getElementsByClassName('title');
+const subtitleClass = document.getElementsByClassName('subtitle');
+const allFontsArray = ['"Roboto Slab"', 'Noto Serif', 'Bitter', '"Rozha One"', 'Lora', 'Prata', 'Forum', '"Nixie One"', 'Merriweather', '"Cormorant Garamond"', 'Mulish', '"Libre Franklin"', 'Noto Sans Display', 'Raleway', 'Quicksand', '"Nothing You Could Do"', '"Permanent Marker"', 'Antic', 'Bitter', 'Cabin', 'Cairo', '"Cormorant Garamond"', 'Dosis', '"Fira Sans"', '"Hind Siliguri"', 'Inter', 'Lato', '"Libre Franklin"', 'Lora', 'Merriweather', 'Montserrat', 'Mulish', '"Nixie One"', 'Noto Sans', 'Noto Serif', 'Nunito', '"Nunito Sans"', '"Open Sans"', 'Oxygen', 'Poppins', 'Prata', 'PT Sans', 'Raleway', 'Roboto', '"Roboto Slab"', 'Rubik', 'Source Sans Pro', 'Quicksand', '"Work Sans"'];
+const headingFontsArray = ['"Roboto Slab"', 'Noto Serif', 'Bitter', '"Rozha One"', 'Lora', 'Prata', 'Forum', '"Nixie One"', 'Merriweather', '"Cormorant Garamond"', 'Mulish', '"Libre Franklin"', 'Noto Sans Display', 'Raleway', 'Quicksand', '"Nothing You Could Do"', '"Permanent Marker"'];
+const bodyFontsArray = ['Antic', 'Bitter', 'Cabin', 'Cairo', '"Cormorant Garamond"', 'Dosis', '"Fira Sans"', '"Hind Siliguri"', 'Inter', 'Lato', '"Libre Franklin"', 'Lora', 'Merriweather', 'Montserrat', 'Mulish', '"Nixie One"', 'Noto Sans', 'Noto Serif', 'Nunito', '"Nunito Sans"', '"Open Sans"', 'Oxygen', 'Poppins', 'Prata', 'PT Sans', 'Raleway', 'Roboto', '"Roboto Slab"', 'Rubik', 'Source Sans Pro', 'Quicksand', '"Work Sans"'];
+const serifFontsArray = ['Bitter', '"Cormorant Garamond"', 'Forum', 'Lora', 'Merriweather', '"Nixie One"', '"Noto Serif"', 'Prata', '"Roboto Slab"'];
+const sansSerifFontsArray = ['Antic', 'Cabin', 'Cairo', 'Dosis', '"Fira Sans"', '"Hind Siliguri"', 'Inter', 'Lato', '"Libre Franklin"', 'Montserrat', 'Mulish', '"Noto Sans"', 'Nunito', '"Nunito Sans"', '"Open Sans"', 'Oxygen', 'Poppins', 'PT Sans', 'Raleway', 'Roboto', 'Rubik', 'Source Sans Pro', 'Quicksand', '"Work Sans"'];
+
+logoControlsButton.addEventListener('click', function() {
+    toggleDisplayToFlex(logoControls);
+    if (logoControls.style.display === 'flex') {
+        logoControlsButton.textContent = 'close';
+    } else {
+        logoControlsButton.textContent = 'edit logo fonts';
+    }
+})
+
+const toggleUppercase = element => {
+    if (element.classList.contains('uppercase')) {
+        element.classList.remove('uppercase')
+    } else {
+        element.classList.add('uppercase')
+    }
+}
+
+caseButton.addEventListener('click', function () {
+    toggleUppercase(title);
+    toggleUppercase(subtitle);
+})
+
+const createRandomLogo = (element, list, array) => {
+    let logoFontFamily = array[random(array.length)];
+    element.style.fontFamily = logoFontFamily;
+    if (list.length > 0) {
+        for (const item of list) {
+            item.style.fontFamily = logoFontFamily;
+        }
+    }
+}
+
+const tryAllFonts = (element, array) => {
+    element.style.fontFamily = array[0];
+    array.push(array[0]);
+    array.shift(array[0]);
+}
+
+logoTitleButton.addEventListener('click', function() {
+    tryAllFonts(title, allFontsArray);
+    let repl = /"/g;
+    logoTitleButton.textContent = allFontsArray[allFontsArray.length-1];
+    logoTitleButton.textContent = logoTitleButton.textContent.replace(repl, '');
+    logoButton.textContent ='random logo font';
+})
+
+logoSubTitleButton.addEventListener('click', function() {
+    tryAllFonts(subtitle, allFontsArray)
+    let repl = /"/g;
+    logoSubTitleButton.textContent = allFontsArray[allFontsArray.length-1];
+    logoSubTitleButton.textContent = logoSubTitleButton.textContent.replace(repl, '');
+    logoButton.textContent ='random logo font';
+})
+
+logoButton.addEventListener('click', function () {
+    createRandomLogo(title, titleClass, headingFontsArray);
+    createRandomLogo(subtitle, subtitleClass, sansSerifFontsArray);
+    logoButton.textContent = `${title.style.fontFamily} + ${subtitle.style.fontFamily}`
+    let repl = /"/g;
+    logoButton.textContent = logoButton.textContent.replace(repl, '')
+})
+
 const bodyFont = document.getElementById('body-font');
 const buttons = document.getElementsByTagName('button');
 const headings = document.getElementsByClassName('heading');
@@ -22,12 +100,8 @@ const bodyFontButton = document.getElementById("body-font-button");
 const serifBodyFontButton = document.getElementById("serif-body-font-button");
 const sansSerifBodyFontButton = document.getElementById("sans-serif-body-font-button");
 const resetButton = document.getElementById("reset-button");
-const headingFontsArray = ['"Roboto Slab"', 'Noto Serif', 'Bitter', '"Rozha One"', 'Lora', 'Prata', 'Forum', '"Nixie One"', 'Merriweather', '"Cormorant Garamond"', 'Mulish', '"Libre Franklin"', 'Noto Sans Display', 'Raleway', 'Quicksand', '"Nothing You Could Do"', '"Permanent Marker"'];
-const bodyFontsArray = ['Antic', 'Bitter', 'Cabin', 'Cairo', '"Cormorant Garamond"', 'Dosis', '"Fira Sans"', '"Hind Siliguri"', 'Inter', 'Lato', '"Libre Franklin"', 'Lora', 'Merriweather', 'Montserrat', 'Mulish', '"Nixie One"', 'Noto Sans', 'Noto Serif', 'Nunito', '"Nunito Sans"', '"Open Sans"', 'Oxygen', 'Poppins', 'Prata', 'PT Sans', 'Raleway', 'Roboto', '"Roboto Slab"', 'Rubik', 'Source Sans Pro', 'Quicksand', '"Work Sans"'];
-const serifFontsArray = ['Bitter', '"Cormorant Garamond"', 'Forum', 'Lora', 'Merriweather', '"Nixie One"', '"Noto Serif"', 'Prata', '"Roboto Slab"'];
-const sansSerifFontsArray = ['Antic', 'Cabin', 'Cairo', 'Dosis', '"Fira Sans"', '"Hind Siliguri"', 'Inter', 'Lato', '"Libre Franklin"', 'Montserrat', 'Mulish', '"Noto Sans"', 'Nunito', '"Nunito Sans"', '"Open Sans"', 'Oxygen', 'Poppins', 'PT Sans', 'Raleway', 'Roboto', 'Rubik', 'Source Sans Pro', 'Quicksand', '"Work Sans"'];
 
-const tryHeadingFonts = list => {
+const rotateHeadingFonts = list => {
     for (const item of list) {
         item.style.fontFamily = headingFontsArray[0];
     }
@@ -36,14 +110,13 @@ const tryHeadingFonts = list => {
 }
 
 const setSmallHeadings = list => {
-    const bodyFontFamily = window.getComputedStyle(bodyFont).getPropertyValue('font-family')
-    const headingFontFamily = window.getComputedStyle(headings[0]).getPropertyValue('font-family')
+    const bodyFontFamily = window.getComputedStyle(bodyFont).getPropertyValue('font-family');
+    const headingFontFamily = window.getComputedStyle(headings[0]).getPropertyValue('font-family');
     for (const item of list) {
         let repl = /"/g;
         if (item.style.fontFamily === bodyFontFamily) {
             item.style.fontFamily = headingFontFamily;
             smallHeadingButton.textContent = headingFontFamily.replace(repl, '');
-
         } else {
             item.style.fontFamily = bodyFontFamily;
             smallHeadingButton.textContent = bodyFontFamily.replace(repl, '')
@@ -51,11 +124,8 @@ const setSmallHeadings = list => {
     }
 }
 
-const tryFonts = array => {
+const rotateDocumentBodyFont = array => {
     document.body.style.fontFamily = array[0];
-    for (const item of buttons) {
-        item.style.fontFamily = array[0];
-    }
     array.push(array[0]);
     array.shift(array[0]);
 }
@@ -76,13 +146,15 @@ const fullResetFonts = () => {
     smallHeadingButton.textContent = 'small heading';
     sansSerifBodyFontButton.textContent = 'sans-serif';
     serifBodyFontButton.textContent = 'serif';
+    logoButton.textContent = 'random logo font';
 }
 
 headingButton.addEventListener('click', function () {
     let repl = /"/g;
     headingButton.textContent = headingFontsArray[0].replace(repl, '');
     smallHeadingButton.textContent = 'small heading';
-    tryHeadingFonts(headings)
+    logoButton.textContent = headingFontsArray[0].replace(repl, '');
+    rotateHeadingFonts(headings)
 });
 smallHeadingButton.addEventListener('click', function () {
     setSmallHeadings(h5headings);
@@ -92,15 +164,15 @@ smallHeadingButton.addEventListener('click', function () {
 });
 serifBodyFontButton.addEventListener('click', function () {
     let repl = /"/g;
-    serifBodyFontButton.textContent = serifFontsArray[0].replace(repl,'');
-    tryFonts(serifFontsArray);
+    serifBodyFontButton.textContent = serifFontsArray[0].replace(repl, '');
+    rotateDocumentBodyFont (serifFontsArray);
     sansSerifBodyFontButton.textContent = 'sans-serif';
     smallHeadingButton.textContent = 'small heading'
 });
 sansSerifBodyFontButton.addEventListener('click', function () {
     let repl = /"/g;
     sansSerifBodyFontButton.textContent = sansSerifFontsArray[0].replace(repl, '');
-    tryFonts(sansSerifFontsArray);
+    rotateDocumentBodyFont (sansSerifFontsArray);
     serifBodyFontButton.textContent = 'serif';
     smallHeadingButton.textContent = 'small heading'
 });
@@ -114,12 +186,12 @@ resetButton.addEventListener('click', function () {
 //Preselected colour arrays
 //foxterrier.co.nz
 
-const tamsamA = ['rgb(19, 12, 0)','hsl(24, 79%, 15%)', 'hsl(17, 65%, 13%)', 'hsl(17, 64%, 12%)', 'hsl(18, 55%, 10%)', 'hsl(24, 70%, 8%)', 'hsl(65, 32%, 3%)', 'hsl(194, 98%, 11%)', 'rgb(9, 58, 76)', 'hsl(206, 62%, 18%'];
+const tamsamA = ['rgb(19, 12, 0)', 'hsl(24, 79%, 15%)', 'hsl(17, 65%, 13%)', 'hsl(17, 64%, 12%)', 'hsl(18, 55%, 10%)', 'hsl(24, 70%, 8%)', 'hsl(65, 32%, 3%)', 'hsl(194, 98%, 11%)', 'rgb(9, 58, 76)', 'hsl(206, 62%, 18%'];
 const tamsamB = ['rgb(69, 22, 3)', 'hsl(20, 73%, 28%)', 'hsl(26, 86%, 30%)', 'hsl(17, 64%, 12%)', 'hsl(189, 16%, 12%)', 'rgb(9, 58, 76)', 'hsl(193, 69%, 23%)', 'hsl(200, 45%, 34%)'];
-const tamsamC = ['hsl(31, 90%, 40%)', 'hsl(187, 74%, 34%)',  'rgb(4, 122, 140)', 'hsl(191, 75%, 31%)', 'hsl(190, 68%, 40%)', 'hsl(20, 57%, 45%)', 'hsl(21, 45%, 44%)', 'hsl(22, 48%, 47%)',  'hsl(23, 60%, 33%)', 'hsl(24, 76%, 49%)', 'hsl(28, 58%, 46%)', 'hsl(32, 76%, 47%)', 'hsl(32, 68%, 36%)', 'hsl(33, 73%, 46%)', 'hsl(34, 80%, 33%)', 'hsl(36, 89%, 40%)', 'hsl(191, 33%, 52%)', 'hsl(196, 39%, 40%)', 'hsl(204, 35%, 45%)', 'hsl(227, 18%, 36%)', 'rgb(69, 22, 3)'];
+const tamsamC = ['hsl(31, 90%, 40%)', 'hsl(187, 74%, 34%)', 'rgb(4, 122, 140)', 'hsl(191, 75%, 31%)', 'hsl(190, 68%, 40%)', 'hsl(20, 57%, 45%)', 'hsl(21, 45%, 44%)', 'hsl(22, 48%, 47%)', 'hsl(23, 60%, 33%)', 'hsl(24, 76%, 49%)', 'hsl(28, 58%, 46%)', 'hsl(32, 76%, 47%)', 'hsl(32, 68%, 36%)', 'hsl(33, 73%, 46%)', 'hsl(34, 80%, 33%)', 'hsl(36, 89%, 40%)', 'hsl(191, 33%, 52%)', 'hsl(196, 39%, 40%)', 'hsl(204, 35%, 45%)', 'hsl(227, 18%, 36%)', 'rgb(69, 22, 3)'];
 const tamsamD = ['hsl(220, 12%, 55%)', 'rgb(219, 112, 17)', 'hsl(33, 74%, 50%)', 'rgb(199, 140, 28)', 'rgb(219, 112, 17)', 'hsl(21, 71%, 51%)', 'hsl(35, 76%, 50%)', 'hsl(40, 75%, 51%)', 'hsl(186, 41%, 60%)', 'hsl(190, 54%, 62%)', 'hsl(190, 68%, 40%)', 'hsl(191, 33%, 52%)', 'hsl(203, 25%, 54%)', 'hsl(206, 22%, 50%)', 'hsl(238, 5%, 52%)'];
-const tamsamE = ['hsl(33, 72%, 59%)', 'hsl(33, 74%, 50%)', 'rgb(219, 112, 17)', 'rgb(199, 140, 28)', 'hsl(26, 64%, 56%)', 'hsl(27, 60%, 60%)', 'hsl(27, 69%, 57%)', 'hsl(27, 71%, 56%)', 'hsl(28, 69%, 58%)', 'hsl(29, 54%, 60%)', 'hsl(32, 59%, 55%)', 'hsl(33, 62%, 55%)', 'hsl(34, 71%, 72%)', 'hsl(34, 64%, 55%)', 'hsl(36, 83%, 63%)', 'hsl(190, 30%, 60%)', 'hsl(194, 29%, 64%)', 'hsl(199, 17%, 72%)', 'hsl(201, 27%, 61%)', 'hsl(210, 23%, 76%)', 'hsl(214, 14%, 72%)', 'hsl(217, 16%, 59%)', 'hsl(220, 12%, 55%)','#80ceda'];
-const tamsamF = [ 'hsl(210, 23%, 76%)', 'hsl(186, 41%, 75%)', 'hsl(186, 41%, 60%)', 'hsl(186, 41%, 65%)',  'hsl(186, 41%, 70%)', '#80ceda', 'hsl(26, 36%, 88%)', 'hsl(32, 83%, 78%)', 'hsl(34, 71%, 72%)', 'hsl(41, 76%, 74%)', 'hsl(43, 57%, 93%)', 'hsl(182, 10%, 84%)', 'hsl(183, 10%, 90%)', 'hsl(187, 16%, 86%)', 'hsl(191, 4%, 86%)', 'hsl(194, 12%, 76%)', 'hsl(198, 10%, 73%)', 'hsl(216, 6%, 80%)', 'hsl(245, 4%, 78%)', 'hsl(241, 7%, 81%)', 'hsl(259, 5%, 85%)'];
+const tamsamE = ['hsl(33, 72%, 59%)', 'hsl(33, 74%, 50%)', 'rgb(219, 112, 17)', 'rgb(199, 140, 28)', 'hsl(26, 64%, 56%)', 'hsl(27, 60%, 60%)', 'hsl(27, 69%, 57%)', 'hsl(27, 71%, 56%)', 'hsl(28, 69%, 58%)', 'hsl(29, 54%, 60%)', 'hsl(32, 59%, 55%)', 'hsl(33, 62%, 55%)', 'hsl(34, 71%, 72%)', 'hsl(34, 64%, 55%)', 'hsl(36, 83%, 63%)', 'hsl(190, 30%, 60%)', 'hsl(194, 29%, 64%)', 'hsl(199, 17%, 72%)', 'hsl(201, 27%, 61%)', 'hsl(210, 23%, 76%)', 'hsl(214, 14%, 72%)', 'hsl(217, 16%, 59%)', 'hsl(220, 12%, 55%)', '#80ceda'];
+const tamsamF = ['hsl(210, 23%, 76%)', 'hsl(186, 41%, 75%)', 'hsl(186, 41%, 60%)', 'hsl(186, 41%, 65%)', 'hsl(186, 41%, 70%)', '#80ceda', 'hsl(26, 36%, 88%)', 'hsl(32, 83%, 78%)', 'hsl(34, 71%, 72%)', 'hsl(41, 76%, 74%)', 'hsl(43, 57%, 93%)', 'hsl(182, 10%, 84%)', 'hsl(183, 10%, 90%)', 'hsl(187, 16%, 86%)', 'hsl(191, 4%, 86%)', 'hsl(194, 12%, 76%)', 'hsl(198, 10%, 73%)', 'hsl(216, 6%, 80%)', 'hsl(245, 4%, 78%)', 'hsl(241, 7%, 81%)', 'hsl(259, 5%, 85%)'];
 
 const a = document.getElementById('a');
 const b = document.getElementById('b');
@@ -139,8 +211,13 @@ const midTones1 = document.getElementsByClassName('mid-1');
 const midTones2 = document.getElementsByClassName('mid-2');
 const midTones3 = document.getElementsByClassName('mid-3');
 const lightTones1 = document.getElementsByClassName('light-1');
+const darkTones1Text = document.getElementsByClassName('text-dark-1');
+const darkTones2Text = document.getElementsByClassName('text-dark-2');
+const midTones1Text = document.getElementsByClassName('text-mid-1');
+const midTones2Text = document.getElementsByClassName('text-mid-2');
+const midTones3Text = document.getElementsByClassName('text-mid-3');
+const lightTones1Text = document.getElementsByClassName('text-light-1');
 
-const random = num => Math.floor(Math.random() * num);
 let newColourA;
 let newColourB;
 let newColourC;
@@ -179,7 +256,7 @@ const changePreSelectedColour = (element, list, array, variable) => {
 }
 
 a.addEventListener('click', function () {
-    changeColour(a, darkTones1, newColourA, 0)
+    changeColour(a, darkTones1, newColourA, 0);
 });
 
 aCode.addEventListener('click', function () {
@@ -187,7 +264,7 @@ aCode.addEventListener('click', function () {
 });
 
 b.addEventListener('click', function () {
-    changeColour(b, darkTones2, newColourB, 10)
+    changeColour(b, darkTones2, newColourB, 10);
 });
 
 bCode.addEventListener('click', function () {
@@ -225,6 +302,75 @@ f.addEventListener('click', function () {
 fCode.addEventListener('click', function () {
     changePreSelectedColour(f, lightTones1, tamsamF, newColourF)
 });
+
+
+const headerColourButton = document.getElementById('header-colour-button');
+const headerBackgroundButton = document.getElementById('header-background-button');
+const tamsamHeader = document.getElementById('tamsam-header');
+const tamsamInnerHeader = document.getElementById('header-display');
+
+const changeTextColour = element => {
+    if (element.classList.contains('text-dark-1')) {
+        element.classList.replace('text-dark-1', 'text-dark-2')
+        element.style.color = b.style.backgroundColor;
+    } else if (element.classList.contains('text-dark-2')) {
+        element.classList.replace('text-dark-2', 'text-mid-1')
+        element.style.color = c.style.backgroundColor;
+    } else if (element.classList.contains('text-mid-1')) {
+        element.classList.replace('text-mid-1', 'text-mid-2')
+        element.style.color = d.style.backgroundColor;
+    } else if (element.classList.contains('text-mid-2')) {
+        element.classList.replace('text-mid-2', 'text-mid-3')
+        element.style.color = e.style.backgroundColor;
+    } else if (element.classList.contains('text-mid-3')) {
+        element.classList.replace('text-mid-3', 'text-light-1')
+        element.style.color = f.style.backgroundColor;
+    } else if (element.classList.contains('text-light-1')) {
+        element.classList.replace('text-light-1', 'white')
+        element.style.color = '#fff';
+    } else {
+        element.classList.add('text-dark-1')
+        element.style.color = a.style.backgroundColor;
+    }
+
+}
+
+const changeBackgroundColour = element => {
+    if (element.classList.contains('dark-1')) {
+        element.classList.replace('dark-1', 'dark-2')
+        element.style.backgroundColor = b.style.backgroundColor;
+    } else if (element.classList.contains('dark-2')) {
+        element.classList.replace('dark-2', 'mid-1')
+        element.style.backgroundColor = c.style.backgroundColor;
+    } else if (element.classList.contains('mid-1')) {
+        element.classList.replace('mid-1', 'mid-2')
+        element.style.backgroundColor = d.style.backgroundColor;
+    } else if (element.classList.contains('mid-2')) {
+        element.classList.replace('mid-2', 'mid-3')
+        element.style.backgroundColor = e.style.backgroundColor;
+    } else if (element.classList.contains('mid-3')) {
+        element.classList.replace('mid-3', 'light-1')
+        element.style.backgroundColor = f.style.backgroundColor;
+    } else if (element.classList.contains('light-1')) {
+        element.classList.replace('light-1', 'bg-white')
+        element.style.backgroundColor = '#fff';
+    } else {
+        element.classList.add('dark-1')
+        element.style.backgroundColor = a.style.backgroundColor;
+    }
+}
+
+headerColourButton.addEventListener('click', function () {
+    changeTextColour(title);
+    changeTextColour(subtitle);
+});
+headerBackgroundButton.addEventListener('click', function () {
+    changeBackgroundColour(tamsamHeader);
+    changeBackgroundColour(tamsamInnerHeader);
+    changeBackgroundColour(title);
+    changeBackgroundColour(subtitle);
+});
+
 
 const square1 = document.getElementById('square-1');
 const square2 = document.getElementById('square-2');
@@ -487,25 +633,25 @@ const navButton = document.getElementById('show-nav-layout');
 const navContent = document.getElementById('nav-layout-content');
 
 
-navButton.addEventListener('click', function() {
+navButton.addEventListener('click', function () {
     toggleDisplayToGrid(navContent)
 });
 
 const resetSectionButton = document.getElementById('show-reset');
-const  resetContent = document.getElementById('reset-content');
+const resetContent = document.getElementById('reset-content');
 
- resetSectionButton.addEventListener('click', function() {
-     toggleDisplay(resetContent);
-     if (resetContent.style.display === 'block') {
+resetSectionButton.addEventListener('click', function () {
+    toggleDisplay(resetContent);
+    if (resetContent.style.display === 'block') {
         shortcutsContent.style.display = 'none';
         mediaContent.style.display = 'none';
     }
- });
+});
 
- const mediaButton = document.getElementById('show-media-queries');
- const mediaContent = document.getElementById('media-content')
+const mediaButton = document.getElementById('show-media-queries');
+const mediaContent = document.getElementById('media-content')
 
- mediaButton.addEventListener('click', function() {
+mediaButton.addEventListener('click', function () {
     toggleDisplay(mediaContent);
     if (mediaContent.style.display === 'block') {
         resetContent.style.display = 'none';
@@ -513,10 +659,10 @@ const  resetContent = document.getElementById('reset-content');
     }
 });
 
- const shortcutButton = document.getElementById('show-shortcuts');
- const shortcutsContent = document.getElementById('shortcuts-content')
+const shortcutButton = document.getElementById('show-shortcuts');
+const shortcutsContent = document.getElementById('shortcuts-content')
 
- shortcutButton.addEventListener('click', function() {
+shortcutButton.addEventListener('click', function () {
     toggleDisplay(shortcutsContent);
     if (shortcutsContent.style.display === 'block') {
         resetContent.style.display = 'none';
@@ -527,7 +673,6 @@ const  resetContent = document.getElementById('reset-content');
 const mobileButton = document.getElementById('show-mobile');
 const mobileContent = document.getElementById('more-mobile-content')
 
-mobileButton.addEventListener('click', function() {
+mobileButton.addEventListener('click', function () {
     toggleDisplayToGrid(mobileContent)
 });
-

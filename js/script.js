@@ -31,6 +31,8 @@ function openCloseNav() {
   }
 }
 
+const random = num => Math.floor(Math.random() * num);
+
 open.addEventListener('click', openCloseNav);
 
 const toggleDisplay = name => {

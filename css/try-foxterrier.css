@@ -239,15 +239,19 @@ header {
     text-align: center;
 }
 
+header * {
+    background-color: inherit;
+}
+
 header p:first-of-type {
-    text-transform: uppercase;
-    letter-spacing: 0.2rem;
-    font-size: 2rem;
+    font-size: 2.5rem;
+    padding-bottom: 0;
+    line-height: 1;
 }
 
 header p:last-of-type {
     font-style: italic;
-    font-size: 2.5rem;
+    font-size: 3rem;
 }
 
 header nav {
@@ -455,27 +459,57 @@ footer p>span {
     background-color: #fff;
 }
 
-.bg-f {
+.bg-f, .light-1 {
     background-color: #ddd;
 }
 
-.bg-e {
+.bg-e, .mid-3 {
     background-color: #bbb
 }
-.bg-d {
+.bg-d, .mid-2 {
     background-color: #999
 }
 
-.bg-c {
+.bg-c, .mid-1 {
     background-color: #777
 }
 
-.bg-b {
+.bg-b, .dark-2 {
     background-color: #555;
 }
 
-.bg-a {
+.bg-a, .dark-1 {
     background-color: #333
+}
+
+.text-white {
+    color: #fff;
+}
+
+.text-light-1 {
+    color: #ddd;
+}
+
+.text-mid-3 {
+    color: #bbb
+}
+.text-mid-2 {
+  color: #999
+}
+
+.text-mid-1 {
+    color: #777
+}
+
+.text-dark-2 {
+    color: #555;
+}
+
+.text-dark-1 {
+    color: #333
+}
+.text-black {
+    color: #000;
 }
 
 .small-quote {
@@ -496,6 +530,7 @@ footer p>span {
 
 .uppercase {
     text-transform: uppercase;
+    letter-spacing: 0.2rem;
 }
 
 .center {
@@ -532,11 +567,6 @@ footer p>span {
 }
 
 /*UNIQUE CONTENT*/
-
-/*main*/
-main {
-    margin-top: 3rem;
-}
 
 /*colors*/
 #colours {
@@ -1366,4 +1396,49 @@ footer {
     font-style: italic;
     padding-bottom: 0;
     margin-bottom: 0;
+}
+
+/* Added for fox terrier*/
+
+header {
+    padding-bottom: 0.5rem;
+}
+
+#header-controls {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 2rem 0 2rem;
+}
+
+header p:last-of-type {
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+#logo-controls-container {
+    padding: 1rem 2rem;
+}
+
+#logo-controls {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#logo-controls-button {
+    width: 15rem;
+    overflow: hidden;
+    padding: 0.9rem 2rem;
+    margin-bottom: 0;
+}
+
+#logo-controls button {
+    width: 15rem;
+    overflow: hidden;
+    margin-bottom: 0;
+}
+
+/*main*/
+main {
+    margin-top: 0;
 }
