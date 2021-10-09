@@ -1,53 +1,32 @@
-//FONTS
-const changeFont = (list, newFont) => {
-    for (const item of list) {
-        if (item.style.fontFamily !== newFont) {
-            item.style.fontFamily = newFont;
-        } else {
-            item.style.fontFamily = '';
-        }
-    }
-}
-
-const logoControlsButton = document.getElementById('logo-controls-button');
-const logoControls = document.getElementById('logo-controls');
-const logoButton = document.getElementById('logo-button');
-const logoTitleButton = document.getElementById('logo-title-button');
-const logoSubTitleButton = document.getElementById('logo-subtitle-button');
-const caseButton = document.getElementById('case-button');
+/*Logo Header*/
+const logoControlsButton = document.getElementById('logo-controls-button'); //show hide logo font  options immediately below header
+const logoControls = document.getElementById('logo-controls'); //2 buttons showing on header
+const logoButton = document.getElementById('logo-button'); //initially hidden group, generates random font
+const logoTitleButton = document.getElementById('logo-title-button'); //initially hidden group, cycles through title fonts
+const logoSubTitleButton = document.getElementById('logo-subtitle-button'); //initially hidden group, cycles through subtitle fonts
+const caseButton = document.getElementById('case-button'); // initially hidden group, toggles upper to lowercase
 const title = document.getElementById('title');
 const subtitle = document.getElementById('subtitle');
-const titleClass = document.getElementsByClassName('title');
+const titleClass = document.getElementsByClassName('title'); // for footer and feature logos
 const subtitleClass = document.getElementsByClassName('subtitle');
-const allFontsArray = ['"Roboto Slab"', 'Noto Serif', 'Bitter', '"Rozha One"', 'Lora', 'Prata', 'Forum', '"Nixie One"', 'Merriweather', '"Cormorant Garamond"', 'Mulish', '"Libre Franklin"', 'Noto Sans Display', 'Raleway', 'Quicksand', '"Nothing You Could Do"', '"Permanent Marker"', 'Antic', 'Bitter', 'Cabin', 'Cairo', '"Cormorant Garamond"', 'Dosis', '"Fira Sans"', '"Hind Siliguri"', 'Inter', 'Lato', '"Libre Franklin"', 'Lora', 'Merriweather', 'Montserrat', 'Mulish', '"Nixie One"', 'Noto Sans', 'Noto Serif', 'Nunito', '"Nunito Sans"', '"Open Sans"', 'Oxygen', 'Poppins', 'Prata', 'PT Sans', 'Raleway', 'Roboto', '"Roboto Slab"', 'Rubik', 'Source Sans Pro', 'Quicksand', '"Work Sans"'];
-const headingFontsArray = ['"Roboto Slab"', 'Noto Serif', 'Bitter', '"Rozha One"', 'Lora', 'Prata', 'Forum', '"Nixie One"', 'Merriweather', '"Cormorant Garamond"', 'Mulish', '"Libre Franklin"', 'Noto Sans Display', 'Raleway', 'Quicksand', '"Nothing You Could Do"', '"Permanent Marker"'];
-const bodyFontsArray = ['Antic', 'Bitter', 'Cabin', 'Cairo', '"Cormorant Garamond"', 'Dosis', '"Fira Sans"', '"Hind Siliguri"', 'Inter', 'Lato', '"Libre Franklin"', 'Lora', 'Merriweather', 'Montserrat', 'Mulish', '"Nixie One"', 'Noto Sans', 'Noto Serif', 'Nunito', '"Nunito Sans"', '"Open Sans"', 'Oxygen', 'Poppins', 'Prata', 'PT Sans', 'Raleway', 'Roboto', '"Roboto Slab"', 'Rubik', 'Source Sans Pro', 'Quicksand', '"Work Sans"'];
-const serifFontsArray = ['Bitter', '"Cormorant Garamond"', 'Forum', 'Lora', 'Merriweather', '"Nixie One"', '"Noto Serif"', 'Prata', '"Roboto Slab"'];
-const sansSerifFontsArray = ['Antic', 'Cabin', 'Cairo', 'Dosis', '"Fira Sans"', '"Hind Siliguri"', 'Inter', 'Lato', '"Libre Franklin"', 'Montserrat', 'Mulish', '"Noto Sans"', 'Nunito', '"Nunito Sans"', '"Open Sans"', 'Oxygen', 'Poppins', 'PT Sans', 'Raleway', 'Roboto', 'Rubik', 'Source Sans Pro', 'Quicksand', '"Work Sans"'];
 
-logoControlsButton.addEventListener('click', function() {
+logoControlsButton.addEventListener('click', function () { //toggles show/hide buttons group
     toggleDisplayToFlex(logoControls);
-    if (logoControls.style.display === 'flex') {
-        logoControlsButton.textContent = 'close';
-    } else {
-        logoControlsButton.textContent = 'edit logo fonts';
-    }
+    logoControls.style.display === 'flex' ? logoControlsButton.textContent = 'close' : logoControlsButton.textContent = 'edit logo fonts';
 })
 
-const toggleUppercase = element => {
-    if (element.classList.contains('uppercase')) {
-        element.classList.remove('uppercase')
-    } else {
-        element.classList.add('uppercase')
-    }
-}
-
-caseButton.addEventListener('click', function () {
-    toggleUppercase(title);
-    toggleUppercase(subtitle);
+caseButton.addEventListener('click', function () { // toggles logo text transform using class name
+    title.classList.toggle('uppercase');
+    subtitle.classList.toggle('uppercase');
 })
 
-const createRandomLogo = (element, list, array) => {
+const allFontsArray = ['Antic', 'Bitter', 'Cabin', 'Cairo', '"Cormorant Garamond"', 'Dosis', '"Fira Sans"', 'Forum', '"Hind Siliguri"', 'Inter', 'Lato', '"Libre Franklin"', 'Lora', 'Merriweather', 'Montserrat', 'Mulish', '"Nixie One"', '"Nothing You Could Do"', 'Noto Sans Display', 'Noto Serif', 'Nunito', '"Nunito Sans"', '"Open Sans"', 'Oxygen', '"Permanent Marker"', 'Prata', 'Poppins', 'Prata', 'PT Sans', 'Quicksand', 'Raleway', 'Roboto', '"Roboto Slab"', '"Rozha One"', 'Rubik', 'Source Sans Pro', '"Work Sans"'];
+const headingFontsArray = ['"Roboto Slab"', 'Noto Serif', 'Bitter', '"Rozha One"', 'Lora', 'Prata', 'Forum', '"Nixie One"', 'Merriweather', '"Cormorant Garamond"', 'Mulish', '"Libre Franklin"', 'Noto Sans Display', 'Raleway', 'Quicksand', '"Nothing You Could Do"', '"Permanent Marker"'];
+const bodyFontsArray = ['Antic', 'Bitter', 'Cabin', 'Cairo', '"Cormorant Garamond"', 'Dosis', '"Fira Sans"', '"Hind Siliguri"', 'Inter', 'Lato', '"Libre Franklin"', 'Lora', 'Merriweather', 'Montserrat', 'Mulish', '"Nixie One"', 'Noto Sans', 'Noto Serif', 'Nunito', '"Nunito Sans"', '"Open Sans"', 'Oxygen', 'Poppins', 'Prata', 'PT Sans', 'Quicksand', 'Raleway', 'Roboto', '"Roboto Slab"', 'Rubik', 'Source Sans Pro', '"Work Sans"'];
+const serifFontsArray = ['Bitter', '"Cormorant Garamond"', 'Forum', 'Lora', 'Merriweather', '"Nixie One"', '"Noto Serif"', 'Prata', '"Roboto Slab"'];
+const sansSerifFontsArray = ['Antic', 'Cabin', 'Cairo', 'Dosis', '"Fira Sans"', '"Hind Siliguri"', 'Inter', 'Lato', '"Libre Franklin"', 'Montserrat', 'Mulish', '"Noto Sans"', 'Nunito', '"Nunito Sans"', '"Open Sans"', 'Oxygen', 'Poppins', 'PT Sans', 'Quicksand', 'Raleway', 'Roboto', 'Rubik', 'Source Sans Pro', '"Work Sans"'];
+
+const createRandomLogo = (element, list, array) => { // gathers both id (element) and class (list)
     let logoFontFamily = array[random(array.length)];
     element.style.fontFamily = logoFontFamily;
     if (list.length > 0) {
@@ -57,29 +36,7 @@ const createRandomLogo = (element, list, array) => {
     }
 }
 
-const tryAllFonts = (element, array) => {
-    element.style.fontFamily = array[0];
-    array.push(array[0]);
-    array.shift(array[0]);
-}
-
-logoTitleButton.addEventListener('click', function() {
-    tryAllFonts(title, allFontsArray);
-    let repl = /"/g;
-    logoTitleButton.textContent = allFontsArray[allFontsArray.length-1];
-    logoTitleButton.textContent = logoTitleButton.textContent.replace(repl, '');
-    logoButton.textContent ='random logo font';
-})
-
-logoSubTitleButton.addEventListener('click', function() {
-    tryAllFonts(subtitle, allFontsArray)
-    let repl = /"/g;
-    logoSubTitleButton.textContent = allFontsArray[allFontsArray.length-1];
-    logoSubTitleButton.textContent = logoSubTitleButton.textContent.replace(repl, '');
-    logoButton.textContent ='random logo font';
-})
-
-logoButton.addEventListener('click', function () {
+logoButton.addEventListener('click', function () { //random logo, update button text
     createRandomLogo(title, titleClass, headingFontsArray);
     createRandomLogo(subtitle, subtitleClass, sansSerifFontsArray);
     logoButton.textContent = `${title.style.fontFamily} + ${subtitle.style.fontFamily}`
@@ -87,30 +44,64 @@ logoButton.addEventListener('click', function () {
     logoButton.textContent = logoButton.textContent.replace(repl, '')
 })
 
-const bodyFont = document.getElementById('body-font');
+const cycleFonts = (element, array) => { //cycles through a selected font array
+    element.style.fontFamily = array[0];
+    array.push(array[0]);
+    array.shift(array[0]);
+}
+
+logoTitleButton.addEventListener('click', function () { // selects title font, updates buttons group text to match
+    cycleFonts(title, allFontsArray);
+    let repl = /"/g;
+    logoTitleButton.textContent = allFontsArray[allFontsArray.length - 1];
+    logoTitleButton.textContent = logoTitleButton.textContent.replace(repl, '');
+    logoButton.textContent = 'random logo font';
+})
+
+logoSubTitleButton.addEventListener('click', function () { // selects subtitle font, updates buttons group text to match
+    cycleFonts(subtitle, allFontsArray)
+    let repl = /"/g;
+    logoSubTitleButton.textContent = allFontsArray[allFontsArray.length - 1];
+    logoSubTitleButton.textContent = logoSubTitleButton.textContent.replace(repl, '');
+    logoButton.textContent = 'random logo font';
+})
+
+/*Headings*/
+const body = document.getElementsByTagName('body');
 const buttons = document.getElementsByTagName('button');
-const headings = document.getElementsByClassName('heading');
-const h5headings = document.getElementsByTagName('h5');
+const headings = document.getElementsByClassName('heading'); // to enable matching headings to slected font
+const h5headings = document.getElementsByTagName('h5'); // also have class name headings but need to be able to set back to body font
 const h6headings = document.getElementsByTagName('h6');
 const h5ClassHeadings = document.getElementsByClassName('h5');
 const h6ClassHeadings = document.getElementsByClassName('h6');
-const headingButton = document.getElementById('heading-button');
-const smallHeadingButton = document.getElementById('small-heading-button');
-const bodyFontButton = document.getElementById("body-font-button");
-const serifBodyFontButton = document.getElementById("serif-body-font-button");
-const sansSerifBodyFontButton = document.getElementById("sans-serif-body-font-button");
-const resetButton = document.getElementById("reset-button");
+const headingButton = document.getElementById('heading-button'); //sets heading font
+const smallHeadingButton = document.getElementById('small-heading-button'); // sets h5 and h6 heading font
+const serifBodyFontButton = document.getElementById("serif-body-font-button"); // sets body font by cycling serif fonts alphabeticaly
+const sansSerifBodyFontButton = document.getElementById("sans-serif-body-font-button"); // sets body font by cycling sans-serif fonts alphabetically
+const resetFontButton = document.getElementById("reset-font-button"); //resets to default fonts
 
-const rotateHeadingFonts = list => {
-    for (const item of list) {
-        item.style.fontFamily = headingFontsArray[0];
+//Fonts
+
+const cycleFontsList = (list, array) => { //selects font and updates array ready for next click
+    if (list.length > 0) {
+        for (const item of list) {
+            item.style.fontFamily = array[0];
+        }
+        array.push(array[0]);
+        array.shift(array[0]);
     }
-    headingFontsArray.push(headingFontsArray[0]);
-    headingFontsArray.shift(headingFontsArray[0]);
 }
 
-const setSmallHeadings = list => {
-    const bodyFontFamily = window.getComputedStyle(bodyFont).getPropertyValue('font-family');
+headingButton.addEventListener('click', function () {//cycles through heading fonts and updates button text, will update logo font also
+    let repl = /"/g;
+    headingButton.textContent = headingFontsArray[0].replace(repl, '');
+    smallHeadingButton.textContent = 'small heading';
+    logoButton.textContent = headingFontsArray[0].replace(repl, '');
+    cycleFontsList(headings, headingFontsArray)
+});
+
+const setSmallHeadings = list => { //toggles between heading and body font and updates text of small headung button
+    const bodyFontFamily = window.getComputedStyle(body[0]).getPropertyValue('font-family');
     const headingFontFamily = window.getComputedStyle(headings[0]).getPropertyValue('font-family');
     for (const item of list) {
         let repl = /"/g;
@@ -124,18 +115,42 @@ const setSmallHeadings = list => {
     }
 }
 
-const rotateDocumentBodyFont = array => {
-    document.body.style.fontFamily = array[0];
-    array.push(array[0]);
-    array.shift(array[0]);
-}
+smallHeadingButton.addEventListener('click', function () {//updates content and buttons text to reflect small heading setting
+    setSmallHeadings(h5headings);
+    setSmallHeadings(h6headings);
+    setSmallHeadings(h5ClassHeadings);
+    setSmallHeadings(h6ClassHeadings);
+});
 
-const resetFont = (font, list) => {
+serifBodyFontButton.addEventListener('click', function () { //updates content and button text content to chosen serif font
+    let repl = /"/g;
+    serifBodyFontButton.textContent = serifFontsArray[0].replace(repl, '');
+    cycleFontsList(body, serifFontsArray);
+    sansSerifBodyFontButton.textContent = 'sans-serif';
+    smallHeadingButton.textContent = 'small heading'
+});
+
+sansSerifBodyFontButton.addEventListener('click', function () {// updates content and button text content to chosen sans-serif font
+    let repl = /"/g;
+    sansSerifBodyFontButton.textContent = sansSerifFontsArray[0].replace(repl, '');
+    cycleFontsList(body, sansSerifFontsArray);
+    serifBodyFontButton.textContent = 'serif';
+    smallHeadingButton.textContent = 'small heading'
+});
+
+const changeFontsList = (list, newFont) => { //toggle a preselected new font
+    for (const item of list) {
+        item.style.fontFamily !== newFont ? item.style.fontFamily = newFont : item.style.fontFamily = '';
+        }
+    }
+
+const resetFont = (font, list) => { // set to a preselected font (no toggle)
     for (const item of list) {
         item.style.fontFamily = font;
     }
 }
-const fullResetFonts = () => {
+
+const fullResetFonts = () => {// sets fonts all back to Raleway and sets buttons back to initial text
     resetFont('Raleway', headings);
     resetFont('Raleway', h5headings);
     resetFont('Raleway', h6headings);
@@ -149,37 +164,9 @@ const fullResetFonts = () => {
     logoButton.textContent = 'random logo font';
 }
 
-headingButton.addEventListener('click', function () {
-    let repl = /"/g;
-    headingButton.textContent = headingFontsArray[0].replace(repl, '');
-    smallHeadingButton.textContent = 'small heading';
-    logoButton.textContent = headingFontsArray[0].replace(repl, '');
-    rotateHeadingFonts(headings)
-});
-smallHeadingButton.addEventListener('click', function () {
-    setSmallHeadings(h5headings);
-    setSmallHeadings(h6headings);
-    setSmallHeadings(h5ClassHeadings);
-    setSmallHeadings(h6ClassHeadings);
-});
-serifBodyFontButton.addEventListener('click', function () {
-    let repl = /"/g;
-    serifBodyFontButton.textContent = serifFontsArray[0].replace(repl, '');
-    rotateDocumentBodyFont (serifFontsArray);
-    sansSerifBodyFontButton.textContent = 'sans-serif';
-    smallHeadingButton.textContent = 'small heading'
-});
-sansSerifBodyFontButton.addEventListener('click', function () {
-    let repl = /"/g;
-    sansSerifBodyFontButton.textContent = sansSerifFontsArray[0].replace(repl, '');
-    rotateDocumentBodyFont (sansSerifFontsArray);
-    serifBodyFontButton.textContent = 'serif';
-    smallHeadingButton.textContent = 'small heading'
-});
-resetButton.addEventListener('click', function () {
+resetFontButton.addEventListener('click', function () {
     fullResetFonts()
 })
-
 
 //COLOURS
 
@@ -332,7 +319,6 @@ const changeTextColour = element => {
         element.classList.add('text-dark-1')
         element.style.color = a.style.backgroundColor;
     }
-
 }
 
 const changeBackgroundColour = element => {

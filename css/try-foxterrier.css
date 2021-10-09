@@ -1438,7 +1438,246 @@ header p:last-of-type {
     margin-bottom: 0;
 }
 
-/*main*/
-main {
-    margin-top: 0;
+body#home-page,
+main#home-page-content {
+    background-color: rgb(19, 12, 0);
+    padding-top: 0;
 }
+
+#home-page footer p.copyright {
+    color: rgb(225, 225, 225);
+}
+
+/*Hero Image*/
+
+#tamsam-hero-image {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 4rem;
+}
+
+#tamsam-hero-image img {
+    width: 1200px;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto 4rem auto;
+    border: 1px solid rgb(225, 225, 225);
+}
+
+#tamsam-hero-image p {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    line-height: 4;
+}
+
+/*grid nav info*/
+
+#tamsam-nav-info-article {
+    background-color: rgb(248, 248, 248);
+    border-radius: 0.5rem;
+    padding: 6rem 1rem;
+}
+
+@media only screen and (max-width:767px) {
+    #tamsam-nav-info-article {
+        padding: 2rem 1rem;
+    }
+}
+
+#tamsam-nav-info img {
+    max-width: 100%;
+    height: auto;
+}
+
+#tamsam-nav-info h4 {
+    color: #222;
+}
+
+#tamsam-nav-info ul {
+    padding-top: 0;
+    padding-bottom: 2rem;
+}
+
+#tamsam-nav-info {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: 1px 1px 5px rgb(200, 200, 200);
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 0.5rem 3rem;
+    grid-template-areas: "p1 b1 o1"
+        "p2 b2 o2"
+        "p3 b3 o3";
+}
+
+.tamsam-nav-info-puppy.tamsam-grid-p1 {
+    grid-area: p1;
+}
+
+.tamsam-nav-info-puppy.tamsam-grid-p2 {
+    grid-area: p2;
+}
+
+.tamsam-nav-info-puppy.tamsam-grid-p3 {
+    grid-area: p3;
+}
+
+.tamsam-nav-info-breeder.tamsam-grid-b1 {
+    grid-area: b1;
+}
+
+.tamsam-nav-info-breeder.tamsam-grid-b2 {
+    grid-area: b2;
+}
+
+.tamsam-nav-info-breeder.tamsam-grid-b3 {
+    grid-area: b3;
+}
+
+.tamsam-nav-info-other.tamsam-grid-o1 {
+    grid-area: o1;
+}
+
+.tamsam-nav-info-other.tamsam-grid-o2 {
+    grid-area: o2;
+}
+
+.tamsam-nav-info-other.tamsam-grid-o3 {
+    grid-area: o3;
+}
+
+@media only screen and (max-width: 767px) {
+    #tamsam-nav-info {
+        display: block;
+    }
+
+    #tamsam-nav-info img {
+        padding: 1rem 0;
+    }
+}
+
+/*Tamsam Logo on Teal/Dash*/
+#feature-footer {
+    background-color: #333;
+}
+
+#feature-tamsam-logo {
+    background-color: #555;
+    padding: 4rem 1rem 10rem 1rem;
+}
+
+#dash-and-coco-grid {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem 4rem;
+    justify-items: center;
+    align-items: center;
+    background-color: #333;
+    padding: 0 2rem;
+    margin-bottom: 0;
+}
+
+#dash-and-coco-grid figure {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 6rem;
+    justify-items: center;
+    position: relative;
+}
+
+#dash-and-coco-grid figure:first-of-type {
+    top: -9rem;
+}
+
+#dash-and-coco-grid figure:last-of-type {
+    top: -6rem;
+}
+
+#dash-and-coco-grid figure img {
+    box-shadow: 1px 1px 5px rgb(200, 200, 200);
+    width: auto;
+    height: auto;
+}
+
+#dash-and-coco-grid figure:first-of-type img:last-of-type {
+    position: relative;
+    left: 5%;
+    margin-top: 2rem;
+}
+
+#dash-and-coco-grid figure:last-of-type img:first-of-type {
+    position: relative;
+    left: 5%;
+}
+
+#dash-and-coco-grid figure:last-of-type img:last-of-type {
+    margin-top: 4rem;
+}
+
+#dash-and-coco-grid figcaption {
+    text-align: center;
+    color: #bbb;
+    padding: 2rem 1rem;
+}
+
+@media only screen and (max-width: 1399px) {
+    #tamsam-footer-home {
+        width: 1200px;
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 2rem;
+    }
+
+    #feature-tamsam-logo {
+        border-top-left-radius: 0.5rem;
+        border-top-right-radius: 0.5rem;
+    }
+
+    #dash-and-coco-grid {
+        padding: 0;
+        border-bottom-left-radius: 0.5rem;
+        border-bottom-right-radius: 0.5rem;
+    }
+
+    #dash-and-coco-grid figure {
+        grid-template-columns: 1fr;
+    }
+
+    #dash-and-coco-grid figure:first-of-type {
+        top: -7rem;
+    }
+
+    #dash-and-coco-grid figure:first-of-type img:last-of-type,
+    #dash-and-coco-grid figure:last-of-type img:first-of-type {
+        left: 0;
+    }
+
+    #dash-and-coco-grid figure:first-of-type img:last-of-type {
+        margin-top: 4rem;
+    }
+}
+
+@media only screen and (max-width: 1199px) {
+    #dash-and-coco-grid figure {
+        grid-template-columns: 1fr;
+    }
+
+    #dash-and-coco-grid figure:first-of-type {
+        top: -8rem;
+    }
+}
+
+@media only screen and (max-width: 699px) {
+    #dash-and-coco-grid {
+        grid-template-columns: 1fr;
+    }
+
+    #dash-and-coco-grid figure:first-of-type {
+        top: -4rem;
+    }
+}
+
