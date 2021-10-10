@@ -35,35 +35,33 @@ const random = num => Math.floor(Math.random() * num);
 
 open.addEventListener('click', openCloseNav);
 
-const toggleDisplay = name => {
-  if (name.style.display == '') {
-      name.style.display = window.getComputedStyle(name).getPropertyValue('display');  
-  } 
-  if (name.style.display === 'block') {
-      name.style.display = 'none';
-  } else {
-      name.style.display = 'block';
+const toggleDisplay = (element)=> {
+  if (element.style.display == '') {
+    element.style.display = window.getComputedStyle(element).getPropertyValue('display');
   }
+  element.style.display === 'block' ?  element.style.display = 'none' : element.style.display = 'block';
+  }
+
+const toggleDisplayToGrid = element => {
+  if (element.style.display == '') {
+    element.style.display = window.getComputedStyle(element).getPropertyValue('display');
+  }
+  element.style.display === 'grid' ? element.style.display = 'none' : element.style.display = 'grid';
 }
 
-const toggleDisplayToGrid = name => {
-  if (name.style.display == '') {
-      name.style.display = window.getComputedStyle(name).getPropertyValue('display');  
-  } 
-  if (name.style.display === 'grid') {
-      name.style.display = 'none';
-  } else {
-      name.style.display = 'grid';
+const toggleDisplayToFlex = element => {
+  if (element.style.display == '') {
+    element.style.display = window.getComputedStyle(element).getPropertyValue('display');
   }
+  element.style.display === 'flex' ? element.style.display = 'none' : element.style.display = 'flex';
 }
 
-const toggleDisplayToFlex = name => {
-  if (name.style.display == '') {
-      name.style.display = window.getComputedStyle(name).getPropertyValue('display');  
-  } 
-  if (name.style.display === 'flex') {
-      name.style.display = 'none';
-  } else {
-      name.style.display = 'flex';
+const cyclePropertyOnList = (list, array, property) => { //sets property to first  item from array and updates array ready for next click
+  if (list.length > 0) {
+    for (const item of list) {
+      item.style[property] = array[0];
+    }
+    array.push(array[0]);
+    array.shift(array[0]);
   }
 }
