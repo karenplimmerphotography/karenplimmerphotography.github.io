@@ -1426,14 +1426,14 @@ header p:last-of-type {
 }
 
 #logo-controls-button {
-    width: 15rem;
+    width: 13rem;
     overflow: hidden;
     padding: 0.9rem 2rem;
     margin-bottom: 0;
 }
 
 #logo-controls button {
-    width: 15rem;
+    width: 13rem;
     overflow: hidden;
     margin-bottom: 0;
 }
@@ -1460,17 +1460,13 @@ main#home-page-content {
     margin-bottom: 0;
 }
 
-#tamsam-home-page-controls {
-    margin-left: 2rem;
-}
-
 /*Hero Image*/
 
 #tamsam-hero-image {
     text-align: center;
     width: 100%;
-    padding-bottom: 2rem;
-    margin-bottom: 1rem;
+    padding-bottom: 3rem;
+    margin-bottom: 0;
 }
 
 #tamsam-hero-image img {

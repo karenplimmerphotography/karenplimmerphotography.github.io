@@ -42,6 +42,13 @@ const toggleDisplay = (element)=> {
   element.style.display === 'block' ?  element.style.display = 'none' : element.style.display = 'block';
   }
 
+  const toggleDisplayToInlineBlock = (element)=> {
+    if (element.style.display == '') {
+      element.style.display = window.getComputedStyle(element).getPropertyValue('display');
+    }
+    element.style.display === 'inline-block' ?  element.style.display = 'none' : element.style.display = 'inline-block';
+    }
+
 const toggleDisplayToGrid = element => {
   if (element.style.display == '') {
     element.style.display = window.getComputedStyle(element).getPropertyValue('display');

@@ -1,10 +1,10 @@
 /*Logo Header*/
-const logoControlsButton = document.getElementById('logo-controls-button'); //show hide logo font  options immediately below header
-const logoControls = document.getElementById('logo-controls'); //2 buttons showing on header
-const logoButton = document.getElementById('logo-button'); //initially hidden group, generates random font
-const logoTitleButton = document.getElementById('logo-title-button'); //initially hidden group, cycles through title fonts
-const logoSubTitleButton = document.getElementById('logo-subtitle-button'); //initially hidden group, cycles through subtitle fonts
-const caseButton = document.getElementById('case-button'); // initially hidden group, toggles upper to lowercase
+const logoControlsButton = document.getElementById('logo-controls-button'); //show hide logo font options immediately below header
+const logoControls = document.getElementById('logo-controls'); //2 buttons showing on header (change text and background)
+const logoButton = document.getElementById('logo-button'); //initially one of hidden group, generates random font
+const logoTitleButton = document.getElementById('logo-title-button'); //initially one of hidden group, cycles through title fonts
+const logoSubTitleButton = document.getElementById('logo-subtitle-button'); //initially one of hidden group, cycles through subtitle fonts
+const caseButton = document.getElementById('case-button'); // initially one of hidden group, toggles upper to lowercase
 const title = document.getElementById('title');
 const subtitle = document.getElementById('subtitle');
 const titleClass = document.getElementsByClassName('title'); // for footer and feature logos
@@ -15,7 +15,7 @@ logoControlsButton.addEventListener('click', function () { //toggles show/hide b
     logoControls.style.display === 'flex' ? logoControlsButton.textContent = 'close' : logoControlsButton.textContent = 'edit logo fonts';
 })
 
-caseButton.addEventListener('click', function () { // toggles logo text transform using class name
+caseButton.addEventListener('click', function () { // toggles logo text to upper or lowercase using class name vs id to get footer logo etc
     title.classList.toggle('uppercase');
     subtitle.classList.toggle('uppercase');
 })
@@ -37,7 +37,7 @@ const createRandomLogo = (element, list, array) => { // gathers both id (element
     }
 }
 
-logoButton.addEventListener('click', function () { //random logo, update button text
+logoButton.addEventListener('click', function () { //creates random logo and updates button text with font names
     createRandomLogo(title, titleClass, headingFontsArray);
     createRandomLogo(subtitle, subtitleClass, sansSerifFontsArray);
     logoButton.textContent = `${title.style.fontFamily} + ${subtitle.style.fontFamily}`;
@@ -45,7 +45,7 @@ logoButton.addEventListener('click', function () { //random logo, update button 
     logoButton.textContent = logoButton.textContent.replace(repl, '')
 })
 
-const cycleFonts = (element, array) => { //cycles through a selected font array
+const cycleFonts = (element, array) => { //cycles through a selected font array, sets a font and resets the array for the next click
     element.style.fontFamily = array[0];
     array.push(array[0]);
     array.shift(array[0]);
@@ -193,14 +193,14 @@ resetFontButton.addEventListener('click', function () {
 //COLOURS
 
 //Preselected colour arrays
-//foxterrier.co.nz
+//foxterrier.co.nz 'hsl(, %, %)', 'hsl(, %, %)', 'hsl(, %, %)', 'hsl(, %, %)', 'hsl(, %, %)',
 
-const tamsamA = ['hsl(18, 65%, 8%)', 'hsl(17, 64%, 12%)', 'rgb(19, 12, 0)', 'hsl(24, 79%, 15%)', 'hsl(17, 65%, 13%)', 'hsl(24, 70%, 8%)', 'hsl(65, 32%, 3%)', 'hsl(194, 98%, 11%)', 'rgb(9, 58, 76)', 'hsl(206, 62%, 18%'];
-const tamsamB = ['hsl(20, 73%, 28%)', 'hsl(26, 86%, 30%)', 'rgb(69, 22, 3)', 'rgb(9, 58, 76)', 'hsl(193, 69%, 23%)', 'hsl(198, 23%, 25%)', 'hsl(200, 45%, 34%)', 'hsl(204, 35%, 45%)', 'hsl(206, 62%, 18%', 'hsl(227, 18%, 36%)'];
-const tamsamC = ['hsl(20, 57%, 45%)', 'hsl(26, 82%, 42%)', 'hsl(31, 90%, 40%)', 'hsl(187, 74%, 34%)', 'hsl(191, 49%, 47%)', 'hsl(195, 42%, 49%)', 'hsl(198, 53%, 45%)'];
-const tamsamD = ['hsl(220, 12%, 55%)', 'rgb(219, 112, 17)', 'hsl(33, 74%, 50%)', 'rgb(199, 140, 28)', 'rgb(219, 112, 17)', 'hsl(21, 71%, 51%)', 'hsl(35, 76%, 50%)', 'hsl(40, 75%, 51%)', 'hsl(186, 41%, 60%)', 'hsl(190, 54%, 62%)', 'hsl(190, 68%, 40%)', 'hsl(191, 33%, 52%)', 'hsl(203, 25%, 54%)', 'hsl(206, 22%, 50%)', 'hsl(217, 16%, 59%)', 'hsl(238, 5%, 52%)'];
-const tamsamE = ['hsl(33, 72%, 59%)', 'hsl(32, 79%, 55%)', 'hsl(34, 71%, 72%)', 'hsl(190, 30%, 60%)', 'hsl(210, 23%, 76%)'];
-const tamsamF = ['hsl(210, 23%, 76%)', 'hsl(186, 41%, 75%)', 'hsl(186, 41%, 60%)', 'hsl(186, 41%, 65%)', 'hsl(186, 41%, 70%)', '#80ceda', 'hsl(26, 36%, 88%)', 'hsl(32, 83%, 78%)', 'hsl(34, 71%, 72%)', 'hsl(41, 76%, 74%)', 'hsl(43, 57%, 93%)', 'hsl(182, 10%, 84%)', 'hsl(183, 10%, 90%)', 'hsl(187, 16%, 86%)', 'hsl(191, 4%, 86%)', 'hsl(194, 12%, 76%)', 'hsl(198, 10%, 73%)', 'hsl(216, 6%, 80%)', 'hsl(245, 4%, 78%)', 'hsl(241, 7%, 81%)', 'hsl(259, 5%, 85%)'];
+const tamsamA = ['hsl(18, 65%, 8%)', 'hsl(17, 64%, 12%)', 'rgb(19, 12, 0)', 'hsl(24, 79%, 8%)', 'hsl(17, 65%, 8%)', 'hsl(24, 70%, 8%)', 'hsl(65, 32%, 3%)', 'hsl(194, 98%, 11%)', 'rgb(9, 58, 76)', 'hsl(206, 62%, 18%'];
+const tamsamB = ['hsl(20, 73%, 28%)', 'hsl(26, 86%, 30%)', 'rgb(69, 22, 3)', 'rgb(9, 58, 76)', 'hsl(193, 69%, 23%)', 'hsl(200, 45%, 34%)', 'hsl(206, 62%, 18%)', 'hsl(227, 18%, 36%)'];
+const tamsamC = ['hsl(20, 57%, 45%)', 'hsl(26, 82%, 42%)', 'hsl(31, 90%, 40%)', 'hsl(187, 74%, 34%)', 'hsl(191, 49%, 47%)', 'hsl(195, 42%, 49%)', 'hsl(198, 53%, 45%)', 'hsl(204, 35%, 45%)'];
+const tamsamD = ['hsl(33, 74%, 50%)', 'hsl(35, 76%, 50%)',  'hsl(37, 75%, 50%)', 'hsl(31, 75%, 50%)', 'hsl(29, 75%, 50%)'];
+const tamsamE = ['hsl(187, 35%, 50%)', 'hsl(187, 37%, 58%)', 'hsl(35, 68%, 56%)', 'hsl(37, 70%, 60%)',  'hsl(33, 72%, 59%)', 'hsl(38, 72%, 70%)',  'hsl(179, 28%, 60%)', 'hsl(206, 22%, 60%)', 'hsl(220, 12%, 60%)', 'hsl(191, 33%, 55%)'];
+const tamsamF = ['hsl(184, 35%, 80%)', 'hsl(34, 63%, 85%)', 'hsl(31, 62%, 82%)', 'hsl(34, 71%, 85%)', 'hsl(183, 10%, 95%)', 'hsl(187, 16%, 92%)', 'hsl(210, 23%, 80%)', '#80ceda'];
 
 const a = document.getElementById('a'); //circles
 const b = document.getElementById('b');
@@ -245,73 +245,79 @@ const createHSLNumbers = num => { //creates a HSl code with num to control light
     num3 = random(25) + num;
 }
 
-const changeColour = (element, list, variable, num) => { //sets the circle colours
+const changeColour = (element, list1, list2, variable, num) => { //sets the circle colours
     createHSLNumbers(num);
     variable = `hsl(${num1}, ${num2}%, ${num3}%)`;
     element.style.backgroundColor = variable;
     element.nextSibling.nextSibling.textContent = variable;
-    for (const item of list) {
+    for (const item of list1) {
         item.style.backgroundColor = variable;
+    }
+    for (const item of list2) {
+        item.style.color = variable;
     }
 }
 
-const changePreSelectedColour = (element, list, array, variable) => { //sets circle colours from preconfigured arrays
+const changePreSelectedColour = (element, list1, list2, array, variable) => { //sets circle colours from preconfigured arrays
     variable = array[0];
     array.push(array[0]);
     array.shift(array[0]);
     element.style.backgroundColor = variable;
     element.nextSibling.nextSibling.textContent = variable; //white space
-    for (const item of list) {
+    for (const item of list1) {
         item.style.backgroundColor = variable;
+    }
+    for (const item of list2) {
+        item.style.color = variable;
     }
 }
 
 a.addEventListener('click', function () { //change the colours of the circles
-    changeColour(a, darkTones1, newColourA, 0);
+    changeColour(a, darkTones1, darkTones1Text, newColourA, 0);
 });
 
 aCode.addEventListener('click', function () { //change the colours of the circles to preselected
-    changePreSelectedColour(a, darkTones1, tamsamA, newColourA)
+    changePreSelectedColour(a, darkTones1, darkTones1Text, tamsamA, newColourA)
 });
 
 b.addEventListener('click', function () {
-    changeColour(b, darkTones2, newColourB, 10);
+    changeColour(b, darkTones2, darkTones2Text, newColourB, 10);
 });
 
 bCode.addEventListener('click', function () {
-    changePreSelectedColour(b, darkTones2, tamsamB, newColourB)
+    changePreSelectedColour(b, darkTones2, darkTones2Text, tamsamB, newColourB)
 });
 
 c.addEventListener('click', function () {
-    changeColour(c, midTones1, newColourC, 25)
+    changeColour(c, midTones1, midTones1Text, newColourC, 25)
 });
 
 cCode.addEventListener('click', function () {
-    changePreSelectedColour(c, midTones1, tamsamC, newColourC)
+    changePreSelectedColour(c, midTones1, midTones1Text, tamsamC, newColourC)
 });
 
 d.addEventListener('click', function () {
-    changeColour(d, midTones2, newColourD, 40)
+    changeColour(d, midTones2, midTones2Text, newColourD, 40)
 });
 
 dCode.addEventListener('click', function () {
-    changePreSelectedColour(d, midTones2, tamsamD, newColourD)
+    changePreSelectedColour(d, midTones2, midTones2Text, tamsamD, newColourD)
 });
 
 e.addEventListener('click', function () {
-    changeColour(e, midTones3, newColourE, 55)
+    changeColour(e, midTones3, midTones3Text, newColourE, 55)
 });
 
 eCode.addEventListener('click', function () {
-    changePreSelectedColour(e, midTones3, tamsamE, newColourE)
+    changePreSelectedColour(e, midTones3, midTones3Text, tamsamE, newColourE)
 });
 
 f.addEventListener('click', function () {
-    changeColour(f, lightTones1, newColourF, 70)
+    changeColour(f, lightTones1, lightTones1Text, newColourF, 70)
 });
 
 fCode.addEventListener('click', function () {
-    changePreSelectedColour(f, lightTones1, tamsamF, newColourF)
+    changePreSelectedColour(f, lightTones1, lightTones1Text, tamsamF, newColourF)
 });
 
 
@@ -345,36 +351,11 @@ const changeTextColour = element => { //cycles text colour through current circl
     }
 }
 
-const tamsamHomePage = document.getElementById('tamsam-home-page');
-const tamsamHomePageControls = document.getElementById('tamsam-home-page-controls');
-
-const changeHeadingsColour = list => {
-    for (const item of list) {
-        if (item.classList.contains('text-dark-1')) {
-            item.style.color = a.style.backgroundColor;
-        } else if (item.classList.contains('text-dark-2')) {
-            item.style.color = b.style.backgroundColor;
-        } else if (item.classList.contains('text-mid-1')) {
-            item.style.color = c.style.backgroundColor;
-        } else if (item.classList.contains('text-mid-2')) {
-            item.style.color = d.style.backgroundColor;
-        } else if (item.classList.contains('text-mid-3')) {
-            item.style.color = e.style.backgroundColor;
-        } else if (item.classList.contains('text-light-1')) {
-            item.style.color = a.style.backgroundColor;
-        }
-    }
-}
-
 const changeAllHeadingsColours = array => {
     for (const item of array) {
         changeHeadingsColour(item);
     }
 }
-
-tamsamHomePageControls.addEventListener('click', function () {//doesn't update when new colour is selected
-    changeAllHeadingsColours(tonesTextArray);
-});
 
 const changeBackgroundColour = element => {//cycles through header background colours
     if (element.classList.contains('dark-1')) {
@@ -412,7 +393,6 @@ headerBackgroundButton.addEventListener('click', function () {
     changeBackgroundColour(title);
     changeBackgroundColour(subtitle);
 });
-
 
 const square1 = document.getElementById('square-1');
 const square2 = document.getElementById('square-2');
@@ -461,156 +441,159 @@ const createHSLRange = (num, rangeStart, rangeEnd) => {//creates (only) numbers 
     num3 = random(25) + num; //lightness
 }
 
-const changeColourRange = (element, list, variable, num, rangeStart, rangeEnd) => {// changes circle colour and names colour code
+const changeColourRange = (element, list1, list2, variable, num, rangeStart, rangeEnd) => {// changes circle colour and names colour code
     createHSLRange(num, rangeStart, rangeEnd);
     variable = `hsl(${num1}, ${num2}%, ${num3}%)`;
     element.style.backgroundColor = variable;
     element.nextSibling.nextSibling.textContent = variable; //white space node
-    for (const item of list) {
+    for (const item of list1) {
         item.style.backgroundColor = variable;
+    }
+    for (const item of list2) {
+        item.style.color = variable;
     }
 }
 
 square1.addEventListener('click', function () {
-    changeColourRange(a, darkTones1, newColourA, 0, 0, 90)
+    changeColourRange(a, darkTones1, darkTones1Text, newColourA, 0, 0, 90)
 });
 
 square2.addEventListener('click', function () {
-    changeColourRange(a, darkTones1, newColourA, 0, 90, 150)
+    changeColourRange(a, darkTones1, darkTones1Text, newColourA, 0, 90, 150)
 });
 
 square3.addEventListener('click', function () {
-    changeColourRange(a, darkTones1, newColourA, 0, 150, 210)
+    changeColourRange(a, darkTones1, darkTones1Text, newColourA, 0, 150, 210)
 });
 
 square4.addEventListener('click', function () {
-    changeColourRange(a, darkTones1, newColourA, 0, 210, 255)
+    changeColourRange(a, darkTones1, darkTones1Text, newColourA, 0, 210, 255)
 });
 
 square5.addEventListener('click', function () {
-    changeColourRange(a, darkTones1, newColourA, 0, 255, 300)
+    changeColourRange(a, darkTones1, darkTones1Text, newColourA, 0, 255, 300)
 });
 
 square6.addEventListener('click', function () {
-    changeColourRange(a, darkTones1, newColourB, 0, 300, 360)
+    changeColourRange(a, darkTones1, darkTones1Text, newColourB, 0, 300, 360)
 });
 
 square7.addEventListener('click', function () {
-    changeColourRange(b, darkTones2, newColourB, 10, 0, 90)
+    changeColourRange(b, darkTones2, darkTones2Text, newColourB, 10, 0, 90)
 });
 
 square8.addEventListener('click', function () {
-    changeColourRange(b, darkTones2, newColourB, 10, 90, 150)
+    changeColourRange(b, darkTones2, darkTones2Text, newColourB, 10, 90, 150)
 });
 
 square9.addEventListener('click', function () {
-    changeColourRange(b, darkTones2, newColourB, 10, 150, 210)
+    changeColourRange(b, darkTones2, darkTones2Text, newColourB, 10, 150, 210)
 });
 
 square10.addEventListener('click', function () {
-    changeColourRange(b, darkTones2, newColourB, 10, 210, 255)
+    changeColourRange(b, darkTones2, darkTones2Text, newColourB, 10, 210, 255)
 });
 
 square11.addEventListener('click', function () {
-    changeColourRange(b, darkTones2, newColourB, 10, 255, 300)
+    changeColourRange(b, darkTones2, darkTones2Text, newColourB, 10, 255, 300)
 });
 
 square12.addEventListener('click', function () {
-    changeColourRange(b, darkTones2, newColourB, 10, 300, 360)
+    changeColourRange(b, darkTones2, darkTones2Text, newColourB, 10, 300, 360)
 });
 
 square13.addEventListener('click', function () {
-    changeColourRange(c, midTones1, newColourC, 25, 0, 90)
+    changeColourRange(c, midTones1, midTones1Text, newColourC, 25, 0, 90)
 });
 
 square14.addEventListener('click', function () {
-    changeColourRange(c, midTones1, newColourC, 25, 90, 150)
+    changeColourRange(c, midTones1, midTones1Text, newColourC, 25, 90, 150)
 });
 
 square15.addEventListener('click', function () {
-    changeColourRange(c, midTones1, newColourC, 25, 150, 210)
+    changeColourRange(c, midTones1, midTones1Text, newColourC, 25, 150, 210)
 });
 
 square16.addEventListener('click', function () {
-    changeColourRange(c, midTones1, newColourC, 25, 210, 255)
+    changeColourRange(c, midTones1, midTones1Text, newColourC, 25, 210, 255)
 });
 
 square17.addEventListener('click', function () {
-    changeColourRange(c, midTones1, newColourC, 25, 255, 300)
+    changeColourRange(c, midTones1, midTones1Text, newColourC, 25, 255, 300)
 });
 
 square18.addEventListener('click', function () {
-    changeColourRange(c, midTones1, newColourC, 25, 300, 360)
+    changeColourRange(c, midTones1, midTones1Text, newColourC, 25, 300, 360)
 });
 
 square19.addEventListener('click', function () {
-    changeColourRange(d, midTones2, newColourD, 40, 0, 90)
+    changeColourRange(d, midTones2, midTones2Text, newColourD, 40, 0, 90)
 });
 
 square20.addEventListener('click', function () {
-    changeColourRange(d, midTones2, newColourD, 40, 90, 150)
+    changeColourRange(d, midTones2, midTones2Text, newColourD, 40, 90, 150)
 });
 
 square21.addEventListener('click', function () {
-    changeColourRange(d, midTones2, newColourD, 40, 150, 210)
+    changeColourRange(d, midTones2, midTones2Text, newColourD, 40, 150, 210)
 });
 
 square22.addEventListener('click', function () {
-    changeColourRange(d, midTones2, newColourD, 40, 210, 255)
+    changeColourRange(d, midTones2, midTones2Text, newColourD, 40, 210, 255)
 });
 
 square23.addEventListener('click', function () {
-    changeColourRange(d, midTones2, newColourD, 40, 255, 300)
+    changeColourRange(d, midTones2, midTones2Text, newColourD, 40, 255, 300)
 });
 
 square24.addEventListener('click', function () {
-    changeColourRange(d, midTones2, newColourD, 40, 300, 360)
+    changeColourRange(d, midTones2, midTones2Text, newColourD, 40, 300, 360)
 });
 square25.addEventListener('click', function () {
-    changeColourRange(e, midTones3, newColourE, 55, 0, 90)
+    changeColourRange(e, midTones3, midTones3Text, newColourE, 55, 0, 90)
 });
 
 square26.addEventListener('click', function () {
-    changeColourRange(e, midTones3, newColourE, 55, 90, 150)
+    changeColourRange(e, midTones3, midTones3Text, newColourE, 55, 90, 150)
 });
 
 square27.addEventListener('click', function () {
-    changeColourRange(e, midTones3, newColourE, 55, 150, 210)
+    changeColourRange(e, midTones3, midTones3Text, newColourE, 55, 150, 210)
 });
 
 square28.addEventListener('click', function () {
-    changeColourRange(e, midTones3, newColourE, 55, 210, 255)
+    changeColourRange(e, midTones3, midTones3Text, newColourE, 55, 210, 255)
 });
 
 square29.addEventListener('click', function () {
-    changeColourRange(e, midTones3, newColourE, 55, 255, 300)
+    changeColourRange(e, midTones3, midTones3Text, newColourE, 55, 255, 300)
 });
 
 square30.addEventListener('click', function () {
-    changeColourRange(e, midTones3, newColourE, 55, 300, 360)
+    changeColourRange(e, midTones3, midTones3Text, newColourE, 55, 300, 360)
 });
 square31.addEventListener('click', function () {
-    changeColourRange(f, lightTones1, newColourF, 70, 0, 90)
+    changeColourRange(f, lightTones1, lightTones1Text, newColourF, 70, 0, 90)
 });
 
 square32.addEventListener('click', function () {
-    changeColourRange(f, lightTones1, newColourF, 70, 90, 150)
+    changeColourRange(f, lightTones1, lightTones1Text, newColourF, 70, 90, 150)
 });
 
 square33.addEventListener('click', function () {
-    changeColourRange(f, lightTones1, newColourF, 70, 150, 210)
+    changeColourRange(f, lightTones1, lightTones1Text, newColourF, 70, 150, 210)
 });
 
 square34.addEventListener('click', function () {
-    changeColourRange(f, lightTones1, newColourF, 70, 210, 255)
+    changeColourRange(f, lightTones1, lightTones1Text,newColourF, 70, 210, 255)
 });
 
 square35.addEventListener('click', function () {
-    changeColourRange(f, lightTones1, newColourF, 70, 255, 300)
+    changeColourRange(f, lightTones1, lightTones1Text,newColourF, 70, 255, 300)
 });
 
 square36.addEventListener('click', function () {
-    changeColourRange(f, lightTones1, newColourF, 70, 300, 360)
+    changeColourRange(f, lightTones1, lightTones1Text,newColourF, 70, 300, 360)
 });
 
 const colourCodes = document.getElementsByClassName('colour-code'); //colour code below each circle
@@ -646,12 +629,14 @@ const fixColourSamples = () => {
         samples.style.position = 'fixed';
         colourControls.style.top = '-40px';
         toggleDisplay(header[0]);
+        toggleDisplayToInlineBlock(logoControlsButton);
         toggleColourNames(colourCodes);
     } else {
         samples.style.position = '';
         samples.style.marginTop = '';
         colourControls.style.top = '';
         toggleDisplay(header[0]);
+        toggleDisplayToInlineBlock(logoControlsButton);
         toggleColourNames(colourCodes);
     }
 }
@@ -666,51 +651,51 @@ colourTips.addEventListener('click', function () {//shows hide colour explanatio
     toggleDisplay(coloursInfo)
 });
 
-squaresButton.addEventListener('click', hideColouredSquares); //show hides tiny squares
+squaresButton.addEventListener('click', hideColouredSquares); //show hides tiny coloured squares
 fix.addEventListener('click', fixColourSamples); // fixes circles in place
 
-const navButton = document.getElementById('show-nav-layout');
-const navContent = document.getElementById('nav-layout-content');
+const navButton = document.getElementById('show-nav-layout');//assesses additional block
+const navContent = document.getElementById('nav-layout-content');//additional block
 
-navButton.addEventListener('click', function () {
+navButton.addEventListener('click', function () {//initially display none
     toggleDisplayToGrid(navContent)
 });
 
-const resetSectionButton = document.getElementById('show-reset');
-const resetContent = document.getElementById('reset-content');
+const resetSectionButton = document.getElementById('show-reset'); //button to show hide reset content block
+const resetContent = document.getElementById('reset-content'); //reset content block initially display block
 
 resetSectionButton.addEventListener('click', function () {
     toggleDisplay(resetContent);
-    if (resetContent.style.display === 'block') {
+    if (resetContent.style.display === 'block') { // hides the other tab content when shown
         shortcutsContent.style.display = 'none';
         mediaContent.style.display = 'none';
     }
 });
 
-const mediaButton = document.getElementById('show-media-queries');
-const mediaContent = document.getElementById('media-content')
+const mediaButton = document.getElementById('show-media-queries'); //button to show hide media content block
+const mediaContent = document.getElementById('media-content')//media content block, initially display none
 
 mediaButton.addEventListener('click', function () {
     toggleDisplay(mediaContent);
-    if (mediaContent.style.display === 'block') {
+    if (mediaContent.style.display === 'block') { // hides the other tab content when shown
         resetContent.style.display = 'none';
         shortcutsContent.style.display = 'none';
     }
 });
 
-const shortcutButton = document.getElementById('show-shortcuts');
-const shortcutsContent = document.getElementById('shortcuts-content')
+const shortcutButton = document.getElementById('show-shortcuts');//button to show hide shortcutscontent block
+const shortcutsContent = document.getElementById('shortcuts-content')//shortcuts content block, initially display none
 
 shortcutButton.addEventListener('click', function () {
     toggleDisplay(shortcutsContent);
-    if (shortcutsContent.style.display === 'block') {
+    if (shortcutsContent.style.display === 'block') { // hides the other tab content when shown
         resetContent.style.display = 'none';
         mediaContent.style.display = 'none';
     }
 });
 
-const mobileButton = document.getElementById('show-mobile');
-const mobileContent = document.getElementById('more-mobile-content')
+const mobileButton = document.getElementById('show-mobile'); // button to show additional mobile nav content
+const mobileContent = document.getElementById('more-mobile-content') //additional mobile nav content
 
 mobileButton.addEventListener('click', function () {
     toggleDisplayToGrid(mobileContent)
