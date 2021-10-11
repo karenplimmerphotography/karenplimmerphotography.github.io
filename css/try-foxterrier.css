@@ -111,22 +111,18 @@ p:last-child {
 /*links*/
 
 a {
-    color: #777;
+    color: #929292;
     text-decoration: none;
     transition: all 400ms ease-in-out;
 }
 
 a:hover,
 a:active {
-    color: #999;
+    color: #bbb;
 }
 
 a:visited {
-    color: #555
-}
-
-a.light:visited {
-    color: #ddd;
+    color: #6c6c6c
 }
 
 /*lists*/
@@ -155,7 +151,7 @@ ul li ul li {
 
 button {
     color: #fff;
-    background-color: #555;
+    background-color: #6c6c6c;
     font-family: Raleway, sans-serif;
     font-size: 0.9rem;
     width: 10rem;
@@ -233,7 +229,7 @@ button.long-button:active {
 /*header*/
 
 header {
-    background-color: #bbb;
+    background-color: #fff;
     padding: 4rem 0;
     font-size: 2rem;
     text-align: center;
@@ -268,7 +264,7 @@ header nav li {
 }
 
 header nav a {
-    color: #fff;
+    color: #929292;
     font-size: 0.9rem;
     text-transform: uppercase;
     line-height: 2;
@@ -276,12 +272,12 @@ header nav a {
 }
 
 header nav a:visited {
-    color: #fff;
+    color: #6c6c6c;
 }
 
 header nav a:hover,
 header nav a:focus {
-    color: #fff;
+    color: #bbb;
     font-weight: bold;
 }
 
@@ -316,7 +312,7 @@ header nav a:focus {
     height: 100vh;
     width: 0;
     opacity: 0;
-    background-color: #555;
+    background-color: #929292;
     border-right: 1px solid#fff;
     overflow-x: hidden;
     transition: all 1000ms ease-in-out;
@@ -326,16 +322,20 @@ header nav a:focus {
     position: relative;
     top: 100px;
     padding: 1rem 3rem;
-    color: white;
+    color: #444;
     text-transform: uppercase;
     display: block;
     width: 100%;
     font-size: 0.8rem;
 }
 
+.sidenav a:visited {
+    color: #bbb;
+}
+
 .sidenav a:hover {
-    color: #fff;
-    background-color: #777;
+    color: #ddd;
+    background-color: #6c6c6c;
 }
 
 #mobile-menu-open {
@@ -362,7 +362,7 @@ span#line1,
 span#line2,
 span#line3 {
     position: relative;
-    color: #333;
+    color: #444;
     background-color: transparent;
     display: inline-block;
     font-size: 50px;
@@ -380,7 +380,7 @@ span#line3 {
 }
 
 span#hamburger:hover {
-    color: #fff;
+    color: #6c6c6c;
 }
 
 /*large screens hide mobile menu*/
@@ -403,7 +403,7 @@ span#hamburger:hover {
 /*footer*/
 
 footer nav {
-    background-color: #555;
+    background-color: #929292;
     padding: 2rem 0;
 }
 
@@ -415,7 +415,7 @@ footer nav li {
 }
 
 footer nav a {
-    color: #fff;
+    color: #444;
     font-size: 0.9rem;
     text-transform: uppercase;
     letter-spacing: 0.08rem;
@@ -424,17 +424,17 @@ footer nav a {
 
 footer nav li:hover,
 footer nav li:focus {
-    background-color: #fff;
+    background-color: #bbb;
 }
 
 footer nav li a:visited {
-    color: #fff;
+    color: #ddd;
     font-weight: 700;
 }
 
 footer nav li a:hover,
 footer nav li a:focus {
-    color: #777;
+    color: #bbb;
     font-weight: 700;
 }
 
@@ -466,20 +466,25 @@ footer p>span {
 .bg-e, .mid-3 {
     background-color: #bbb
 }
+
 .bg-d, .mid-2 {
-    background-color: #999
+    background-color: #929292;
 }
 
 .bg-c, .mid-1 {
-    background-color: #777
+    background-color: #6c6c6c;
 }
 
 .bg-b, .dark-2 {
-    background-color: #333;
+    background-color: #444;
 }
 
 .bg-a, .dark-1 {
-    background-color: #111;
+    background-color: #222;
+}
+
+.bg-black {
+    background-color: #000;
 }
 
 .text-white {
@@ -494,20 +499,21 @@ footer p>span {
     color: #bbb
 }
 .text-mid-2 {
-  color: #999
+  color: #929292
 }
 
 .text-mid-1 {
-    color: #777
+    color: #6c6c6c
 }
 
 .text-dark-2 {
-    color: #555;
+    color: #444;
 }
 
 .text-dark-1 {
-    color: #333
+    color: #222;
 }
+
 .text-black {
     color: #000;
 }
@@ -566,7 +572,63 @@ footer p>span {
     display: none;
 }
 
-/*UNIQUE CONTENT*/
+
+
+
+
+
+/*template style guide*/
+
+/* header*/
+
+header {
+    padding-bottom: 0.5rem; /*default padding: 4rem 0;*/
+}
+
+#header-controls {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 2rem 0 2rem;
+}
+
+header #subtitle { /*tightens spacing due to buttons added*/
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+#logo-controls-container {
+    padding: 1rem 2rem;
+}
+
+#sub-header-buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#logo-controls {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#logo-controls-button, 
+.favourites-button { /*controller button*/
+    width: 13rem;
+    overflow: hidden;
+    padding: 1rem 2rem;
+    margin-bottom: 0;
+}
+
+#logo-controls button {/*all buttons in this set*/
+    width: 13rem;
+    overflow: hidden;
+    margin-bottom: 0;
+}
+
+#font-tips {
+    display: none;
+}
 
 /*colors*/
 #colours {
@@ -698,7 +760,7 @@ footer p>span {
 /*font-family*/
 
 #font-family {
-    background-color: #333;
+    background-color: #444;
     border-radius: 0.5rem;
     padding: 2rem 2rem 1rem 2rem;
     margin-bottom: 4rem;
@@ -841,7 +903,7 @@ footer p>span {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #555;
+    background-color: #222;
     color: #fff;
     font-size: 2rem;
     padding: 2rem;
@@ -981,7 +1043,7 @@ footer p>span {
 
 #links-and-lists article {
     color: #fff;
-    background-color: #555;
+    background-color: #222;
     padding: 2rem;
     border-radius: 0.5rem;
     margin-top: 3rem;
@@ -1059,13 +1121,6 @@ footer p>span {
     }
 }
 
-#change-button-bg button {
-    background-color: #777;
-    margin: 1rem 0 2rem 0;
-    padding-top: 0.5rem;
-    padding-bottom: 0.8rem;
-}
-
 #buttons-info {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -1082,7 +1137,7 @@ footer p>span {
 /*tabs*/
 
 #tabs-article {
-    background-color: #ddd;
+    background-color: #bbb;
     padding: 2rem;
     border-radius: 0.5rem;
 }
@@ -1120,7 +1175,7 @@ footer p>span {
 #header-nav,
 #header-nav-layout,
 #footer-article {
-    background-color: #555;
+    background-color: #444;
     color: #fff;
     padding: 2rem;
     border-radius: 0.5rem;
@@ -1183,14 +1238,6 @@ footer p>span {
     }
 }
 
-#header-nav .white {
-    background-color: #555;
-}
-
-#header-nav .orange {
-    background-color: #555;
-}
-
 #nav-layout-content {
     display: none;
     grid-template-columns: repeat(2, 1fr);
@@ -1209,7 +1256,7 @@ footer p>span {
 
 /*mobile nav*/
 #mobile-nav {
-    background-color: #333;
+    background-color: #929292;
     color: #fff;
     padding: 2rem;
     border-radius: 0.5rem;
@@ -1244,7 +1291,7 @@ footer p>span {
 
 /*footer*/
 #footer-article {
-    background-color: #999;
+    background-color: #bbb;
 }
 
 #footer-content {
@@ -1269,7 +1316,6 @@ footer p>span {
 #footer-article h4 {
     color: #fff;
 }
-
 
 /*expand*/
 
@@ -1362,107 +1408,99 @@ footer p>span {
     display: none;
 }
 
-/*footer*/
 
-footer {
-    background-color: #ddd;
-}
 
-#footer-display {
-    color: #222;
-    border: 1px solid #bbb;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 4rem 2rem;
-}
 
-#footer-display * {
-    background-color: #ddd;
-}
 
-#footer-display p {
-    text-align: center;
-    line-height: 1
-}
 
-#footer-display p:first-of-type{
-    font-size: 2rem;
-    padding-bottom: 0;
-}
 
-#footer-display p:last-of-type {
-    font-size: 2.5rem;
-    font-style: italic;
-    padding-bottom: 0;
-    margin-bottom: 0;
-}
-
-/* Added for fox terrier*/
-
-header {
-    padding-bottom: 0.5rem;
-}
-
-#header-controls {
-    display: flex;
-    justify-content: space-between;
-    margin: 1rem 2rem 0 2rem;
-}
-
-header p:last-of-type {
-    padding-bottom: 0;
-    margin-bottom: 0;
-}
-
-#logo-controls-container {
-    padding: 1rem 2rem;
-}
-
-#logo-controls {
-    display: none;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-#logo-controls-button {
-    width: 13rem;
-    overflow: hidden;
-    padding: 0.9rem 2rem;
-    margin-bottom: 0;
-}
-
-#logo-controls button {
-    width: 13rem;
-    overflow: hidden;
-    margin-bottom: 0;
-}
-
-body#home-page,
-main#home-page-content {
-    background-color: rgb(19, 12, 0);
-    padding-top: 0;
-}
-
-#home-page footer p.copyright {
-    color: rgb(225, 225, 225);
-}
-
-#font-tips {
-    display: none;
-}
 
 
 /*Tamsam Home Page*/
 
 #tamsam-home-page {
-    background-color: #111;
+    background-color: rgb(19, 12, 0);
     margin-bottom: 0;
+    padding-top: 1rem;
+}
+
+#tamsam-home-page p, #tamsam-home-page li {
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: 300;
+}
+
+#tamsam-page-header {
+    background-color: rgb(19, 12, 0);
+    text-align: center;
+    padding: 4rem 0;
+    margin-bottom: 0;
+}
+
+#tamsam-page-header * {
+    background-color: rgb(19, 12, 0);
+}
+
+#page-header h2:first-of-type {
+    color: #fff;
+}
+
+.nothing {
+    font-family: "Nothing You Could Do";
+}
+
+#page-controls {
+    background-color: rgb(19, 12, 0);
+    margin: 2rem 4rem 0 4rem;
+}
+
+#page-controls button {/*all buttons*/
+    width: 13rem;
+    overflow: hidden;
+    font-size: 0.9rem;
+    padding: 0.8rem 2rem;
+    margin-bottom: 0;
+}
+
+#page-subheader-buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4rem;
+}
+
+#page-control-button {
+    margin-bottom: 2rem;
+}
+
+#all-page-buttons { /*group of buttons to show or hide*/
+    display: none;
+    background-color: rgb(19, 12, 0);
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1rem 3rem;
+    margin-bottom: 1rem;
+}
+
+.title {
+    color: #222;
+    font-size: 2.5rem;
+    letter-spacing: 0.2rem;
+    line-height: 1;
+    padding-bottom: 0;
+}
+
+.subtitle {
+    color: hsl(33, 74%, 50%);
+    font-family: "Nothing You Could Do";
+    font-style: oblique;
+    font-size: 3rem;
+    padding-bottom: 0;
 }
 
 /*Hero Image*/
 
 #tamsam-hero-image {
+    background-color: rgb(19, 12, 0);
     text-align: center;
     width: 100%;
     padding-bottom: 3rem;
@@ -1477,6 +1515,10 @@ main#home-page-content {
     border: 1px solid rgb(225, 225, 225);
 }
 
+#tamsam-hero-image h3 {
+    color: hsl(33, 74%, 50%); /*decreased saturation 10%*/
+}
+
 #tamsam-hero-image p {
     font-size: 0.8rem;
     text-transform: uppercase;
@@ -1486,8 +1528,9 @@ main#home-page-content {
 
 /*grid nav info*/
 #tamsam-nav-info-article-container {
-    background-color: #111;
-    padding-bottom: 4rem;
+    background-color: rgb(19, 12, 0);
+    padding-bottom: 8rem;
+    margin-bottom: 0;
 }
 
 #tamsam-nav-info-article {
@@ -1509,8 +1552,8 @@ main#home-page-content {
     height: auto;
 }
 
-#tamsam-nav-info h4 {
-    color: #222;
+#tamsam-nav-info h4 { /*decreased saturation 20% on white*/
+    color: hsl(33, 54%, 50%);
 }
 
 #tamsam-nav-info ul {
@@ -1578,15 +1621,20 @@ main#home-page-content {
     }
 }
 
-/*Tamsam Logo on Teal/Dash*/
-#feature-footer {
-    background-color: #111;
+/*Tamsam Logo - Coco AndDash*/
+#tamsam-footer-home-page {
+    background-color: rgb(19, 12, 0);
+    margin-bottom: 0;
 }
 
 #feature-tamsam-logo {
     text-align: center;
-    background-color: #555;
+    background-color: hsl(187, 35%, 50%);
     padding: 4rem 1rem 10rem 1rem;
+}
+
+#feature-tamsam-logo .subtitle{
+  color: #fff;
 }
 
 #dash-and-coco-grid {
@@ -1596,7 +1644,7 @@ main#home-page-content {
     gap: 2rem 4rem;
     justify-items: center;
     align-items: center;
-    background-color: #111;
+    background-color: rgb(19, 12, 0);
     padding: 0 2rem;
     margin-bottom: 0;
 }
@@ -1640,7 +1688,7 @@ main#home-page-content {
 
 #dash-and-coco-grid figcaption {
     text-align: center;
-    color: #bbb;
+    color: hsl(33, 74%, 50%);
     padding: 2rem 1rem;
 }
 
@@ -1700,4 +1748,31 @@ main#home-page-content {
         top: -4rem;
     }
 }
+
+#footer-display {
+    background-color: rgb(19, 12, 0);
+    color: #ddd;
+    border-top: 1px solid #bbb;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem 2rem;
+}
+
+#footer-display * {
+    background-color: rgb(19, 12, 0);
+}
+
+#footer-display p {
+    text-align: center;
+    line-height: 1;
+}
+
+#footer-display .title {
+    color: #fff;
+}
+
+
+
+
 

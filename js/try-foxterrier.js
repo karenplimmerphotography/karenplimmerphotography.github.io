@@ -1,10 +1,11 @@
 /*Logo Header*/
 const logoControlsButton = document.getElementById('logo-controls-button'); //show hide logo font options immediately below header
 const logoControls = document.getElementById('logo-controls'); //2 buttons showing on header (change text and background)
-const logoButton = document.getElementById('logo-button'); //initially one of hidden group, generates random font
-const logoTitleButton = document.getElementById('logo-title-button'); //initially one of hidden group, cycles through title fonts
-const logoSubTitleButton = document.getElementById('logo-subtitle-button'); //initially one of hidden group, cycles through subtitle fonts
-const caseButton = document.getElementById('case-button'); // initially one of hidden group, toggles upper to lowercase
+const logoButton = document.getElementsByClassName('logo-button'); //initially one of hidden group, generates random font
+const logoTitleButton = document.getElementsByClassName('logo-title-button'); //initially one of hidden group, cycles through title fonts
+const logoSubTitleButton = document.getElementsByClassName('logo-subtitle-button'); //initially one of hidden group, cycles through subtitle fonts
+const caseButton = document.getElementsByClassName('case-button'); // initially one of hidden group, toggles upper to lowercase
+
 const title = document.getElementById('title');
 const subtitle = document.getElementById('subtitle');
 const titleClass = document.getElementsByClassName('title'); // for footer and feature logos
@@ -15,10 +16,22 @@ logoControlsButton.addEventListener('click', function () { //toggles show/hide b
     logoControls.style.display === 'flex' ? logoControlsButton.textContent = 'close' : logoControlsButton.textContent = 'edit logo fonts';
 })
 
-caseButton.addEventListener('click', function () { // toggles logo text to upper or lowercase using class name vs id to get footer logo etc
+const toggleLogoCase = () => {
     title.classList.toggle('uppercase');
     subtitle.classList.toggle('uppercase');
-})
+    for (const item of titleClass) {
+        item.classList.toggle('uppercase');
+    }
+    for (const item of subtitleClass) {
+        item.classList.toggle('uppercase');
+    }
+}
+
+// toggles logo text to upper or lowercase using class name vs id to get footer logo etc
+for (const item of caseButton) {
+    item.addEventListener('click', toggleLogoCase)
+} // toggles logo text to upper or lowercase using class name vs id to get footer logo etc
+
 
 //make sure all fonts are linked in the html file
 const allFontsArray = ['Antic', 'Bitter', 'Cabin', 'Cairo', '"Cormorant Garamond"', 'Dosis', '"Fira Sans"', 'Forum', '"Hind Siliguri"', 'Inter', 'Lato', '"Libre Franklin"', 'Lora', 'Merriweather', 'Montserrat', 'Mulish', '"Nixie One"', '"Nothing You Could Do"', 'Noto Sans Display', 'Noto Serif', 'Nunito', '"Nunito Sans"', '"Open Sans"', 'Oxygen', '"Permanent Marker"', 'Prata', 'Poppins', 'Prata', 'PT Sans', 'Quicksand', 'Raleway', 'Roboto', '"Roboto Slab"', '"Rozha One"', 'Rubik', 'Source Sans Pro', '"Work Sans"'];
@@ -27,6 +40,7 @@ const bodyFontsArray = ['Antic', 'Bitter', 'Cabin', 'Cairo', '"Cormorant Garamon
 const serifFontsArray = ['Bitter', '"Cormorant Garamond"', 'Forum', 'Lora', 'Merriweather', '"Nixie One"', '"Noto Serif"', 'Prata', '"Roboto Slab"'];
 const sansSerifFontsArray = ['Antic', 'Cabin', 'Cairo', 'Dosis', '"Fira Sans"', '"Hind Siliguri"', 'Inter', 'Lato', '"Libre Franklin"', 'Montserrat', 'Mulish', '"Noto Sans"', 'Nunito', '"Nunito Sans"', '"Open Sans"', 'Oxygen', 'Poppins', 'PT Sans', 'Quicksand', 'Raleway', 'Roboto', 'Rubik', 'Source Sans Pro', '"Work Sans"'];
 
+//selects randomly a font in the array and sets it to title and subtitles
 const createRandomLogo = (element, list, array) => { // gathers both id (element) and class (list)
     let logoFontFamily = array[random(array.length)];
     element.style.fontFamily = logoFontFamily;
@@ -37,35 +51,65 @@ const createRandomLogo = (element, list, array) => { // gathers both id (element
     }
 }
 
-logoButton.addEventListener('click', function () { //creates random logo and updates button text with font names
+//creates random logo fonts and updates random logo button text with both font names
+const activateLogoButton = () => {
     createRandomLogo(title, titleClass, headingFontsArray);
     createRandomLogo(subtitle, subtitleClass, sansSerifFontsArray);
-    logoButton.textContent = `${title.style.fontFamily} + ${subtitle.style.fontFamily}`;
+    buttonLabel = `${title.style.fontFamily} + ${subtitle.style.fontFamily}`;
     let repl = /"/g;
-    logoButton.textContent = logoButton.textContent.replace(repl, '')
-})
+    buttonLabel = buttonLabel.replace(repl, '');
+    for (const item of logoButton) {
+        item.textContent = buttonLabel;
+    }
+}
 
-const cycleFonts = (element, array) => { //cycles through a selected font array, sets a font and resets the array for the next click
+for (const item of logoButton) {
+    item.addEventListener('click', activateLogoButton);
+}
+
+//cycles through a selected font array, sets a font and resets the array for the next click
+const cycleFonts = (element, array) => {
     element.style.fontFamily = array[0];
     array.push(array[0]);
     array.shift(array[0]);
 }
 
-logoTitleButton.addEventListener('click', function () { // selects title font, updates buttons group text to match
-    cycleFonts(title, allFontsArray);
+//sets button text to the name of the font displayed removing quotation marks
+const setText = element => {
     let repl = /"/g;
-    logoTitleButton.textContent = allFontsArray[allFontsArray.length - 1];
-    logoTitleButton.textContent = logoTitleButton.textContent.replace(repl, '');
-    logoButton.textContent = 'random logo font';
-})
+    buttonLabel = allFontsArray[allFontsArray.length - 1];
+    buttonlabel = buttonLabel.replace(repl, '');
+    element.textContent = buttonLabel;
+    for (const item of logoButton) {
+    item.textContent = 'random logo font';
+}
+for (const item of logoTitleButton) {
+    item.textContent = title.style.fontFamily.replace(repl, '');
+}
+for (const item of logoSubTitleButton) {
+    item.textContent = subtitle.style.fontFamily.replace(repl, '');
+}
+}
 
-logoSubTitleButton.addEventListener('click', function () { // selects subtitle font, updates buttons group text to match
-    cycleFonts(subtitle, allFontsArray);
-    let repl = /"/g;
-    logoSubTitleButton.textContent = allFontsArray[allFontsArray.length - 1];
-    logoSubTitleButton.textContent = logoSubTitleButton.textContent.replace(repl, '');
-    logoButton.textContent = 'random logo font';
-})
+const activateCycleFonts = element => {
+    cycleFonts(element, allFontsArray);
+}
+
+// selects title font, updates buttons group text to match
+for (const item of logoTitleButton) {
+    item.addEventListener('click', (event) => {
+        activateCycleFonts(title);
+        setText(event.target);
+    });
+}
+
+// selects subtitle font, updates buttons group text to match
+for (const item of logoSubTitleButton) {
+    item.addEventListener('click', (event) => {
+        activateCycleFonts(subtitle);
+        setText(event.target);
+    })
+};
 
 /*Headings*/
 const body = document.getElementsByTagName('body');
@@ -195,12 +239,22 @@ resetFontButton.addEventListener('click', function () {
 //Preselected colour arrays
 //foxterrier.co.nz 'hsl(, %, %)', 'hsl(, %, %)', 'hsl(, %, %)', 'hsl(, %, %)', 'hsl(, %, %)',
 
-const tamsamA = ['hsl(18, 65%, 8%)', 'hsl(17, 64%, 12%)', 'rgb(19, 12, 0)', 'hsl(24, 79%, 8%)', 'hsl(17, 65%, 8%)', 'hsl(24, 70%, 8%)', 'hsl(65, 32%, 3%)', 'hsl(194, 98%, 11%)', 'rgb(9, 58, 76)', 'hsl(206, 62%, 18%'];
+const tamsamA = ['hsl(18, 65%, 8%)', 'hsl(17, 64%, 12%)', 'rgb(19, 12, 0)', 'hsl(24, 79%, 8%)', 'hsl(17, 65%, 8%)', 'hsl(24, 70%, 8%)', 'hsl(65, 32%, 3%)', 'hsl(194, 98%, 11%)', 'rgb(9, 58, 76)', 'hsl(206, 62%, 18%', 'hsl(210, 62%, 10%'];
 const tamsamB = ['hsl(20, 73%, 28%)', 'hsl(26, 86%, 30%)', 'rgb(69, 22, 3)', 'rgb(9, 58, 76)', 'hsl(193, 69%, 23%)', 'hsl(200, 45%, 34%)', 'hsl(206, 62%, 18%)', 'hsl(227, 18%, 36%)'];
 const tamsamC = ['hsl(20, 57%, 45%)', 'hsl(26, 82%, 42%)', 'hsl(31, 90%, 40%)', 'hsl(187, 74%, 34%)', 'hsl(191, 49%, 47%)', 'hsl(195, 42%, 49%)', 'hsl(198, 53%, 45%)', 'hsl(204, 35%, 45%)'];
-const tamsamD = ['hsl(33, 74%, 50%)', 'hsl(35, 76%, 50%)',  'hsl(37, 75%, 50%)', 'hsl(31, 75%, 50%)', 'hsl(29, 75%, 50%)'];
-const tamsamE = ['hsl(187, 35%, 50%)', 'hsl(187, 37%, 58%)', 'hsl(35, 68%, 56%)', 'hsl(37, 70%, 60%)',  'hsl(33, 72%, 59%)', 'hsl(38, 72%, 70%)',  'hsl(179, 28%, 60%)', 'hsl(206, 22%, 60%)', 'hsl(220, 12%, 60%)', 'hsl(191, 33%, 55%)'];
-const tamsamF = ['hsl(184, 35%, 80%)', 'hsl(34, 63%, 85%)', 'hsl(31, 62%, 82%)', 'hsl(34, 71%, 85%)', 'hsl(183, 10%, 95%)', 'hsl(187, 16%, 92%)', 'hsl(210, 23%, 80%)', '#80ceda'];
+const tamsamD = ['hsl(33, 74%, 50%)', 'hsl(35, 76%, 50%)', 'hsl(37, 75%, 50%)', 'hsl(39, 75%, 50%)', 'hsl(31, 75%, 50%)', 'hsl(29, 75%, 50%)'];
+const tamsamE = ['hsl(187, 35%, 50%)', 'hsl(187, 37%, 58%)', 'hsl(35, 68%, 56%)', 'hsl(37, 70%, 60%)', 'hsl(33, 72%, 59%)', 'hsl(38, 72%, 70%)', 'hsl(179, 28%, 60%)', 'hsl(195, 42%, 49%)', 'hsl(206, 37%, 60%)', 'hsl(220, 12%, 60%)', 'hsl(191, 33%, 55%)'];
+const tamsamF = ['hsl(184, 35%, 80%)', 'hsl(31, 62%, 82%)', 'hsl(34, 63%, 85%)', 'hsl(34, 71%, 85%)', 'hsl(183, 10%, 95%)', 'hsl(187, 16%, 92%)', 'hsl(210, 23%, 80%)', 'hsl(210, 33%, 80%)', '#80ceda'];
+
+//const colourScheme = ['hsl(, %, %)', 'hsl(, %, %)', 'hsl(, %, %)', 'hsl(, %, %)', 'hsl(, %, %)', 'hsl(, %, %)'];
+const colourScheme1 = ['hsl(18, 65%, 8%)', 'hsl(20, 73%, 28%)', 'hsl(20, 57%, 45%)', 'hsl(33, 74%, 50%)', 'hsl(187, 35%, 50%)', 'hsl(184, 35%, 80%)'];
+const colourScheme2 = ['hsl(206, 62%, 18%)', 'hsl(20, 73%, 28%)', 'hsl(20, 57%, 45%)', 'hsl(35, 76%, 50%)', 'hsl(37, 70%, 60%)', 'hsl(34, 63%, 85%)'];
+const colourScheme3 = ['hsl(194, 98%, 11%)', 'hsl(200, 45%, 34%)', 'hsl(20, 57%, 45%)', 'hsl(35, 76%, 50%)', 'hsl(195, 42%, 49%)', 'hsl(210, 23%, 80%)'];
+const colourScheme4 = ['rgb(19, 12, 0)', 'hsl(193, 69%, 23%)', 'hsl(20, 57%, 45%)', 'hsl(37, 75%, 50%)', 'hsl(187, 35%, 50%)', 'hsl(184, 35%, 80%)'];
+const colourScheme5 = ['hsl(210, 62%, 10%)', 'hsl(20, 73%, 28)', 'hsl(20, 57%, 45%)', 'hsl(39, 75%, 50%)', 'hsl(206, 37%, 60%)', 'hsl(210, 33%, 90%)'];
+const colourScheme6 = ['hsl(210, 62%, 10%)', 'hsl(193, 69%, 23%)', 'hsl(20, 57%, 45%)', 'hsl(39, 75%, 50%)', 'hsl(187, 35%, 50%)', 'hsl(184, 35%, 80%)'];
+const colourSchemesArray = [colourScheme1, colourScheme2, colourScheme3, colourScheme4, colourScheme5, colourScheme6];
+const favouritesButton = document.getElementsByClassName('favourites-button');
 
 const a = document.getElementById('a'); //circles
 const b = document.getElementById('b');
@@ -270,6 +324,34 @@ const changePreSelectedColour = (element, list1, list2, array, variable) => { //
     for (const item of list2) {
         item.style.color = variable;
     }
+}
+
+const changeToneInColourScheme = (array, element, list1, list2, arrayPosition) => {
+    element.style.backgroundColor = array[arrayPosition];
+    element.nextSibling.nextSibling.textContent = array[arrayPosition]; // white space
+    for (const item of list1) {
+        item.style.backgroundColor = array[arrayPosition];
+    }
+    for (const item of list2) {
+        item.style.color = array[arrayPosition];
+    }
+}
+
+const changeColourScheme = array => {
+    changeToneInColourScheme(array[0], a, darkTones1, darkTones1Text, 0);
+    changeToneInColourScheme(array[0], b, darkTones2, darkTones2Text, 1);
+    changeToneInColourScheme(array[0], c, midTones1, midTones1Text, 2);
+    changeToneInColourScheme(array[0], d, midTones2, midTones2Text, 3);
+    changeToneInColourScheme(array[0], e, midTones3, midTones3Text, 4);
+    changeToneInColourScheme(array[0], f, lightTones1, lightTones1Text, 5);
+    array.push(array[0]);
+    array.shift(array[0]);
+}
+
+for (const item of favouritesButton) {
+    item.addEventListener('click', function () {
+        changeColourScheme(colourSchemesArray);
+    });
 }
 
 a.addEventListener('click', function () { //change the colours of the circles
@@ -357,7 +439,7 @@ const changeAllHeadingsColours = array => {
     }
 }
 
-const changeBackgroundColour = element => {//cycles through header background colours
+const changeBackgroundColour = element => { //cycles through background colours
     if (element.classList.contains('dark-1')) {
         element.classList.replace('dark-1', 'dark-2')
         element.style.backgroundColor = b.style.backgroundColor;
@@ -432,16 +514,16 @@ const square35 = document.getElementById('square-35');
 const square36 = document.getElementById('square-36');
 
 
-const createHSLRange = (num, rangeStart, rangeEnd) => {//creates (only) numbers for HSL within hue range and lightness range
+const createHSLRange = (num, rangeStart, rangeEnd) => { //creates (only) numbers for HSL within hue range and lightness range
     num1 = random(361); //hue
-    while (num1 < rangeStart || num1 > rangeEnd) {// select just blues etc
+    while (num1 < rangeStart || num1 > rangeEnd) { // select just blues etc
         num1 = random(361);
     }
-    num2 = random(101);//saturation
+    num2 = random(101); //saturation
     num3 = random(25) + num; //lightness
 }
 
-const changeColourRange = (element, list1, list2, variable, num, rangeStart, rangeEnd) => {// changes circle colour and names colour code
+const changeColourRange = (element, list1, list2, variable, num, rangeStart, rangeEnd) => { // changes circle colour and names colour code
     createHSLRange(num, rangeStart, rangeEnd);
     variable = `hsl(${num1}, ${num2}%, ${num3}%)`;
     element.style.backgroundColor = variable;
@@ -585,21 +667,21 @@ square33.addEventListener('click', function () {
 });
 
 square34.addEventListener('click', function () {
-    changeColourRange(f, lightTones1, lightTones1Text,newColourF, 70, 210, 255)
+    changeColourRange(f, lightTones1, lightTones1Text, newColourF, 70, 210, 255)
 });
 
 square35.addEventListener('click', function () {
-    changeColourRange(f, lightTones1, lightTones1Text,newColourF, 70, 255, 300)
+    changeColourRange(f, lightTones1, lightTones1Text, newColourF, 70, 255, 300)
 });
 
 square36.addEventListener('click', function () {
-    changeColourRange(f, lightTones1, lightTones1Text,newColourF, 70, 300, 360)
+    changeColourRange(f, lightTones1, lightTones1Text, newColourF, 70, 300, 360)
 });
 
 const colourCodes = document.getElementsByClassName('colour-code'); //colour code below each circle
 const colourCodesButton = document.getElementById('colour-codes-button'); //hides or shows colour codes
 
-const toggleColourNames = list => {//toggles show or hide codes for each item in colour codes node list
+const toggleColourNames = list => { //toggles show or hide codes for each item in colour codes node list
     if (list.length > 0) {
         for (const item of list) {
             if (item.style.display !== 'none') {
@@ -617,11 +699,11 @@ colourCodesButton.addEventListener('click', function () { //toggles show or hide
 
 const coloursInfo = document.getElementById('colours-info'); //explanation of colours, initially display none
 const colourTips = document.getElementById('colour-info-button'); //button to shows hide explanation of colours
-const fix = document.getElementById('fix-colour-samples-button');//button to set fixed position on colour circles
-const samples = document.getElementById('colours');//the entire circles and codes section which will be fixed
-const colourControls = document.getElementById('colour-controls');//set of 4 buttons, moves down page when fixed
-const squaresButton = document.getElementById('tiny-squares-button');// to show or hide
-const allSquares = document.getElementsByClassName('colour-squares');// all sets of 6 tiny squares
+const fix = document.getElementById('fix-colour-samples-button'); //button to set fixed position on colour circles
+const samples = document.getElementById('colours'); //the entire circles and codes section which will be fixed
+const colourControls = document.getElementById('colour-controls'); //set of 4 buttons, moves down page when fixed
+const squaresButton = document.getElementById('tiny-squares-button'); // to show or hide
+const allSquares = document.getElementsByClassName('colour-squares'); // all sets of 6 tiny squares
 const header = document.getElementsByTagName('header'); // hide the header when fix colours
 
 const fixColourSamples = () => {
@@ -647,17 +729,17 @@ const hideColouredSquares = () => {
     }
 }
 
-colourTips.addEventListener('click', function () {//shows hide colour explanation block
+colourTips.addEventListener('click', function () { //shows hide colour explanation block
     toggleDisplay(coloursInfo)
 });
 
 squaresButton.addEventListener('click', hideColouredSquares); //show hides tiny coloured squares
 fix.addEventListener('click', fixColourSamples); // fixes circles in place
 
-const navButton = document.getElementById('show-nav-layout');//assesses additional block
-const navContent = document.getElementById('nav-layout-content');//additional block
+const navButton = document.getElementById('show-nav-layout'); //assesses additional block
+const navContent = document.getElementById('nav-layout-content'); //additional block
 
-navButton.addEventListener('click', function () {//initially display none
+navButton.addEventListener('click', function () { //initially display none
     toggleDisplayToGrid(navContent)
 });
 
@@ -673,7 +755,7 @@ resetSectionButton.addEventListener('click', function () {
 });
 
 const mediaButton = document.getElementById('show-media-queries'); //button to show hide media content block
-const mediaContent = document.getElementById('media-content')//media content block, initially display none
+const mediaContent = document.getElementById('media-content') //media content block, initially display none
 
 mediaButton.addEventListener('click', function () {
     toggleDisplay(mediaContent);
@@ -683,8 +765,8 @@ mediaButton.addEventListener('click', function () {
     }
 });
 
-const shortcutButton = document.getElementById('show-shortcuts');//button to show hide shortcutscontent block
-const shortcutsContent = document.getElementById('shortcuts-content')//shortcuts content block, initially display none
+const shortcutButton = document.getElementById('show-shortcuts'); //button to show hide shortcutscontent block
+const shortcutsContent = document.getElementById('shortcuts-content') //shortcuts content block, initially display none
 
 shortcutButton.addEventListener('click', function () {
     toggleDisplay(shortcutsContent);
@@ -700,3 +782,12 @@ const mobileContent = document.getElementById('more-mobile-content') //additiona
 mobileButton.addEventListener('click', function () {
     toggleDisplayToGrid(mobileContent)
 });
+
+const pageControlButton = document.getElementById('page-control-button');
+const allPageButtons = document.getElementById('all-page-buttons');
+
+pageControlButton.addEventListener('click', function () {
+    toggleDisplayToFlex(allPageButtons);
+    allPageButtons.style.marginBottom = '4rem';
+    pageControlButton.textContent === 'close' ? pageControlButton.textContent = 'edit page' : pageControlButton.textContent = 'close';
+})
