@@ -35,19 +35,28 @@ const random = num => Math.floor(Math.random() * num);
 
 open.addEventListener('click', openCloseNav);
 
-const toggleDisplay = (element)=> {
+const toggleDisplay = (element) => {
   if (element.style.display == '') {
     element.style.display = window.getComputedStyle(element).getPropertyValue('display');
   }
-  element.style.display === 'block' ?  element.style.display = 'none' : element.style.display = 'block';
-  }
+  element.style.display === 'block' ? element.style.display = 'none' : element.style.display = 'block';
+}
 
-  const toggleDisplayToInlineBlock = (element)=> {
-    if (element.style.display == '') {
-      element.style.display = window.getComputedStyle(element).getPropertyValue('display');
+const toggleDisplayList = list => {
+  for (const item of list) {
+    if (item.style.display == '') {
+      item.style.display = window.getComputedStyle(element).getPropertyValue('display');
     }
-    element.style.display === 'inline-block' ?  element.style.display = 'none' : element.style.display = 'inline-block';
-    }
+    item.style.display === 'block' ? item.style.display = 'none' : item.style.display = 'block';
+  }
+}
+
+const toggleDisplayToInlineBlock = (element) => {
+  if (element.style.display == '') {
+    element.style.display = window.getComputedStyle(element).getPropertyValue('display');
+  }
+  element.style.display === 'inline-block' ? element.style.display = 'none' : element.style.display = 'inline-block';
+}
 
 const toggleDisplayToGrid = element => {
   if (element.style.display == '') {
@@ -70,5 +79,15 @@ const cyclePropertyOnList = (list, array, property) => { //sets property to firs
     }
     array.push(array[0]);
     array.shift(array[0]);
+  }
+}
+
+const toggleClassName = (element, theClassName) => {
+     element.classList.toggle(theClassName);
+  }
+
+const toggleClassNameList = (list, theClassName) => {
+  for (const item of list) {
+      item.classList.toggle(theClassName);
   }
 }

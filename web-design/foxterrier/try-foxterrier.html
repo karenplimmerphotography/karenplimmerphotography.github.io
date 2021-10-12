@@ -26,25 +26,27 @@
         </span>
     </div>
     <header id="tamsam-header" class="dark-1">
-        <div id=header-display class="dark-1">
-            <p id="title" class="heading dark-1 text-mid-2 uppercase">Tamsam</p>
-            <p id="subtitle" class="heading dark-1 text-mid-2">fox terriers</p>
+        <p id="logo-left" class="heading heading-to-colour dark-1 text-mid-2 uppercase"></p>
+        <div id="tamsam-header-logo" class="dark-1">
+            <p id="title" class="title heading dark-1 text-mid-2 uppercase">Tamsam</p>
+            <p id="subtitle" class="subtitle heading heading-to-colour dark-1 text-mid-2">fox terriers</p>
         </div>
-        <div id=header-controls>
-            <button id="header-colour-button" class="long-button mid-1">change text colour</button>
-            <button id="header-background-button" class="long-button mid-1">change background</button>
+        <p id="logo-right" class="heading heading-to-colour dark-1 text-mid-2 "></p>
+        <div id="header-buttons-container">
+            <button class="colour-headings-button long-button mid-1">heading colour</button>
+            <button class="colour-background-button long-button mid-1">background colour</button>
         </div>
     </header>
-    <div id="logo-controls-container">
-        <div id="sub-header-buttons">
-            <button id="logo-controls-button" class="long button mid-3">edit logo fonts</button>
-            <button class="favourites-button long button mid-3">favourite colours</button>
+    <div id="logo-buttons-container">
+        <div class="sub-header-buttons">
+            <button id="edit-button" class="long button mid-3">edit header font</button>
+            <button class="favourites-button long button mid-3">suggested colours</button>
         </div>
-        <div id="logo-controls">
-            <button class="logo-button long-button light-1 text-dark-1">random logo font</button>
-            <button class="logo-title-button long-button light-1 text-dark-1">title font</button>
-            <button class="logo-subtitle-button long-button light-1 text-dark-1">subtitle font</button>
-            <button class="case-button long-button light-1 text-dark-1">upper or lowercase</button>
+        <div id="edit-buttons-group">
+            <button class="random-logo-button long-button light-1 text-dark-1">random logo font</button>
+            <button class="logo-title-button long-button light-1 text-dark-1">Tamsam font</button>
+            <button class="logo-subtitle-button long-button light-1 text-dark-1">fox terriers font</button>
+            <button class="case-button long-button light-1 text-dark-1">flip logo</button>
         </div>
     </div>
     <main>
@@ -189,14 +191,12 @@
             <h3 class="heading">Headings</h3>
             <div id="buttons">
                 <button id="font-tips-button" class="small-button text-example-button light-1">tips</button>
-                <button id="heading-button" class="small-button text-example-button light-1">heading</button>
-                <button id="small-heading-button" class="small-button text-example-button light-1">small
-                    heading</button>
-                <button id="serif-body-font-button" class="small-button text-example-button light-1">serif body</button>
-                <button id="sans-serif-body-font-button" class="small-button text-example-button light-1">sans-serif
-                    body</button>
-                <button id="font-weight-button" class="small-button text-example-button light-1">lighter font</button>
-                <button id="reset-font-button" class="small-button text-example-button light-1">reset</button>
+                <button class="heading-button small-button text-example-button light-1">heading</button>
+                <button class="small-heading-button small-button text-example-button light-1">small heading</button>
+                <button class="serif-body-font-button small-button text-example-button light-1">serif body</button>
+                <button class="sans-serif-body-font-button small-button text-example-button light-1">sans-serif body</button>
+                <button class="font-weight-button small-button text-example-button light-1">lighter font</button>
+                <button class="reset-font-button small-button text-example-button light-1">reset</button>
             </div>
             <div id="font-tips">
                 <ul>
@@ -205,11 +205,9 @@
                     <li>Leave the tips open while choosing body font</li>
                     <li>Choose a lighter body font weight (toggles between 300 and 400) if desired</li>
                     <li>Not all fonts have lighter font weights available. This may influence your font choice.</li>
-                    <li>Set the small headings (h5 and h6) to match the body font instead of the heading font if desired
-                    </li>
+                    <li>Set the small headings (h5 and h6) to match the body font instead of the heading font if desired</li>
                     <li>Reset back to the original fonts (on page load) if desired</li>
-                    <li>Go back and adjust the logo fonts if you wish them to be different than the heading font you
-                        have chosen</li>
+                    <li>Go back and adjust the logo fonts if you wish them to be different than the heading font you have chosen</li>
                 </ul>
             </div>
             <section id="font-heading-levels">
@@ -333,7 +331,7 @@
                         </ul>
                     </div>
                     <h5 id="h5-sample" class="text heading">The quick brown fox jumped over the lazy dog
-                        </h6>
+                        </h5>
                 </div>
                 <hr>
                 <div class="font-sample">
@@ -370,8 +368,7 @@
                             <li>padding-bottom: </li>
                         </ul>
                     </div>
-                    <p id="p-bold-sample" class="text">The quick brown fox jumped over the lazy dog
-                    </p>
+                    <p id="p-bold-sample" class="text">The quick brown fox jumped over the lazy dog</p>
                 </div>
                 <hr>
                 <div class="font-sample">
@@ -400,20 +397,20 @@
             <!--links-->
             <article class="links-and-lists-article dark-1">
                 <h3 class="heading">Links</h3>
-                <h4 class="heading h6"><i class="la la-link"></i>anchor</h4>
+                <h4 class="heading h6 text-mid-2"><i class="la la-link"></i>anchor</h4>
                 <ul>
                     <li>color: </li>
                     <li>text-decoration: none</li>
                     <li>transition: color 400ms ease-in-out</li>
                 </ul>
-                <h4 class="heading h6"><i class="la la-link"></i>anchor (active or hover)</h4>
+                <h4 class="heading h6 text-mid-3"><i class="la la-link"></i>anchor (active or hover)</h4>
                 <ul>
                     <li>color: </li>
                     <li>text-decoration: none</li>
                 </ul>
-                <h4 class="heading h6">
-                    <p class="selector-light"><i class="la la-link"></i>anchor (visited)</p>
-                    <p class="selector-dark "><i class="la la-link"></i>anchor (visited)</p>
+                <h4 class="heading h6 text-mid-1">
+                    <p class="selector-light text-mid-1"><i class="la la-link"></i>anchor (visited)</p>
+                    <p class="selector-dark text-mid-1"><i class="la la-link"></i>anchor (visited)</p>
                 </h4>
                 <ul>
                     <li>color: </li>
@@ -492,8 +489,8 @@
                     <ul>
                         </li>
                         <li>width: auto</li>
-                        <li>padding: 0.8rem 2rem</li>
-                        <li>:active padding: 1rem 2.2rem</li>
+                        <li>padding: 1rem 2rem</li>
+                        <li>:active padding: 1.2rem 2.2rem</li>
                     </ul>
                 </div>
             </section>
@@ -616,7 +613,7 @@
                     </ul>
                 </div>
                 <div>
-                    <span class="selector text-mid-1 bg-white">visited</span>
+                    <span class="selector text-light-1">visited</span>
                     <ul>
                         <li>color: </li>
                         <li>font-weight: </li>
@@ -854,37 +851,31 @@
     </main>
     <article id="tamsam-home-page" class="dark-1">
         <section id="page-controls" class="dark-1">
-            <div id=page-subheader-buttons>
-                <button id="page-control-button" class="long-button mid-3">edit page</button>
-                <button class="favourites-button long-button mid-3">favourite colours</button>
+            <div id="page-subheader-buttons" class="dark-1">
+                <button id="page-edit-button" class="long-button mid-3">more options</button>
+                <button class="favourites-button long-button mid-3">suggested colours</button>
             </div>
             <div id="all-page-buttons" class="dark-1">
-                <button id="page-header-colour-button" class="long-button light-1 text-dark-1">change logo
-                    colour</button>
-                <button id="page-header-background-button" class="long-button light-1 text-dark-1">change
-                    background</button>
-                <button class="logo-button long-button light-1 text-dark-1">random logo font</button>
-                <button class="logo-title-button long-button light-1 text-dark-1">logo title font</button>
-                <button class="logo-subtitle-button long-button light-1 text-dark-1">logo subtitle
-                    font</button>
-                <button class="case-button long-button light-1 text-dark-1">upper or lowercase</button>
-                <button id="page-heading-button" class="long-button light-1 text-dark-1">heading</button>
-                <button id="page-small-heading-button" class="long-button light-1 text-dark-1">small
-                    heading</button>
-                <button id="page-serif-body-font-button" class="long-button light-1 text-dark-1">serif
-                    body</button>
-                <button id="page-sans-serif-body-font-button" class="long-button light-1 text-dark-1">sans-serif
-                    body</button>
-                <button id="page-font-weight-button" class="long-button light-1 text-dark-1">lighter font</button>
-                <button id="page-reset-font-button" class="long-button light-1 text-dark-1">reset</button>
+                <button class="colour-headings-button long-button light-1 text-dark-1">heading colour
+                </button>
+                <button class="colour-background-button long-button light-1 text-dark-1">
+                    background colour</button>
+                <button class="random-logo-button long-button light-1 text-dark-1">random logo font</button>
+                <button class="logo-title-button long-button light-1 text-dark-1">Tamsam font</button>
+                <button class="logo-subtitle-button long-button light-1 text-dark-1">fox terriers font</button>
+                <button class="case-button long-button light-1 text-dark-1">flip logo</button>
+                <button class="heading-button long-button light-1 text-dark-1">heading</button>
+                <button class="small-heading-button long-button light-1 text-dark-1">small heading</button>
+                <button class="serif-body-font-button long-button light-1 text-dark-1">serif body</button>
+                <button class="sans-serif-body-font-button long-button light-1 text-dark-1">sans-serif body</button>
+                <button class="font-weight-button long-button light-1 text-dark-1">lighter font</button>
+                <button class="reset-font-button long-button light-1 text-dark-1">reset</button>
             </div>
         </section>
-        <section id="tamsam-page-header" class="dark-1">
-            <div id=page-header class="dark-1">
-                <h2 class="title dark-1 uppercase">Tamsam</h2>
-                <h2 class="subtitle dark-1 text-mid-2">fox terriers</h2>
-            </div>
-        </section>
+        <header id=home-page-header class="dark-1">
+            <h2 id="home-title" class="title heading dark-1 uppercase">Tamsam</h2>
+            <h2 id="home-subtitle" class="subtitle heading heading-to-colour dark-1 text-mid-2">fox terriers</h2>
+        </header>
         <!--hero image-->
         <section id="tamsam-hero-image" class="dark-1">
             <figure>
@@ -892,7 +883,7 @@
                     src="https://www.foxterrier.co.nz/wp-content/uploads/2021/03/Mint-as-baby-1600x1066.jpg"
                     alt="Smooth fox terrier baby puppies tearing apart a leopard toy" width="1600" height="1066">
             </figure>
-            <h3 class="heading nothing text-mid-2">welcome to our new home</h3>
+            <h3 class="heading heading-to-colour text-mid-2">welcome to our new home</h3>
             <p class="text-white"><strong>Please be patient if we have any growing pains!</strong></p>
         </section>
         <!--info-->
@@ -905,7 +896,8 @@
                             height="1066">
                     </figure>
                     <div class="tamsam-nav-info-puppy tamsam-grid-p2">
-                        <h4 class="heading nothing text-mid-2">Are you interested in a fox terrier puppy?</h4>
+                        <h4 class="heading heading-to-colour text-mid-2">Are you interested in a fox terrier
+                            puppy?</h4>
                     </div>
                     <div class="tamsam-nav-info-puppy tamsam-grid-p3">
                         <ul>
@@ -923,7 +915,7 @@
                             alt="Tyler - tan and white smooth fox terrier in show ring" width="1000" height="667">
                     </figure>
                     <div class="tamsam-nav-info-breeder tamsam-grid-b2">
-                        <h4 class="heading nothing text-mid-2">Are you a breeder of show dogs?</h4>
+                        <h4 class="heading heading-to-colour text-mid-2">Are you a breeder of show dogs?</h4>
                     </div>
                     <div class="tamsam-nav-info-breeder tamsam-grid-b3">
                         <ul>
@@ -939,7 +931,7 @@
                             alt="Roxy, Jaffa and Boris - smooth fox terriers playing with orange rope toy" width="1600"
                             height="1066"></figure>
                     <div class="tamsam-nav-info-other tamsam-grid-o2">
-                        <h4 class="heading nothing text-mid-2">Do you just love fox terriers (of course)?</h4>
+                        <h4 class="heading heading-to-colour text-mid-2">Do you just love fox terriers (of course)?</h4>
                     </div>
                     <div class="tamsam-nav-info-other tamsam-grid-o3">
                         <ul>
@@ -951,12 +943,12 @@
             </article>
         </section>
         <!--feature footer-->
-        <footer id="tamsam-footer-home-page" class="dark-1">
-            <div id="feature-tamsam-logo" class="mid-3">
-                <h2 class='title uppercase'>Tamsam</h2>
-                <h2 class="subtitle">fox terriers</h2>
-            </div>
-            <article id="dash-and-coco-grid" class="dark-1">
+        <div id="tamsam-footer-home-page" class="dark-1">
+            <header id="feature-header" class="dark-1">
+                <h2 class='title heading dark-1 uppercase'>Tamsam</h2>
+                <h2 class="subtitle heading heading-to-colour dark-1 text-mid-2">fox terriers</h2>
+            </header>
+            <article id="dash-and-coco-grid" class="mid-3">
                 <figure>
                     <img class="alignnone size-full wp-image-42"
                         src="https://www.foxterrier.co.nz/wp-content/uploads/2021/03/Dash-standing-in-orange-poppies.jpg"
@@ -966,7 +958,8 @@
                         src="https://www.foxterrier.co.nz/wp-content/uploads/2021/03/Dash-sniffing-orange-poppies.jpg"
                         alt="Dash - Black and white smooth fox terrier sniffing orange poppies" width="420"
                         height="280">
-                    <figcaption class="heading nothing text-mid-3 h4">Hello, my name is "Dash"!</figcaption>
+                    <figcaption class="heading heading-to-colour nothing text-mid-2 h4">Hello, my name is "Dash"!
+                    </figcaption>
                 </figure>
                 <figure>
                     <img class="alignnone size-full wp-image-37"
@@ -975,17 +968,18 @@
                     <img class="alignnone size-full wp-image-38"
                         src="https://www.foxterrier.co.nz/wp-content/uploads/2021/03/Coco-very-small.jpg"
                         alt="Coco - tan and white smooth fox terrier puppy in show stance" width="420" height="280">
-                    <figcaption class="heading nothing text-mid-3 h4">And this is my little sister, "Coco"
+                    <figcaption class="heading heading-to-colour nothing text-mid-2 h4">And this is my little sister,
+                        "Coco"
                     </figcaption>
                 </figure>
             </article>
-        </footer>
+        </div>
     </article>
     <!--footer-->
     <footer class="dark-1">
-        <div id=footer-display class="dark-1">
-            <h2 class="dark-1 text-white title uppercase">Tamsam</h2>
-            <h2 class="dark-1 text-mid-2 subtitle">fox terriers</h2>
+        <div id="footer-display" class="footer dark-1">
+            <h2 class=" title heading dark-1 text-white uppercase">Tamsam</h2>
+            <h2 class="subtitle heading heading-to-colour dark-1 text-mid-2">fox terriers</h2>
         </div>
         <p class="copyright"> &copy: 2021 Tamsam Fox Terriers</p>
     </footer>

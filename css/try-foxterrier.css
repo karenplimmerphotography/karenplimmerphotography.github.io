@@ -68,6 +68,10 @@ h4, h5, h6, .h4, .h5, .h6 {
     padding-bottom: 0.5rem;
 }
 
+h1, h2, h3, h4, .h1, .h2, .h3, .h4 {
+    font-weight: normal;
+}
+
 h1,
 .h1 {
     font-size: 3rem;
@@ -239,13 +243,13 @@ header * {
     background-color: inherit;
 }
 
-header p:first-of-type {
+.title {
     font-size: 2.5rem;
     padding-bottom: 0;
     line-height: 1;
 }
 
-header p:last-of-type {
+.subtitle {
     font-style: italic;
     font-size: 3rem;
 }
@@ -581,38 +585,54 @@ footer p>span {
 
 /* header*/
 
-header {
+#tamsam-header {
+   background-color: #111;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
     padding-bottom: 0.5rem; /*default padding: 4rem 0;*/
 }
 
-#header-controls {
-    display: flex;
-    justify-content: space-between;
-    margin: 1rem 2rem 0 2rem;
+header .title {
+    background-color: #111;
+    color: #fff;
 }
 
 header #subtitle { /*tightens spacing due to buttons added*/
+    background-color: #111;
     padding-bottom: 0;
     margin-bottom: 0;
 }
 
-#logo-controls-container {
+#logo-right {
+    font-style: italic;
+}
+
+#header-buttons-container {
+    width: 100%;
+    grid-area: 2 / 1 / span 1 / span 3;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem 0 2rem;
+}
+
+#logo-buttons-container {
     padding: 1rem 2rem;
 }
 
-#sub-header-buttons {
+.sub-header-buttons {
     width: 100%;
     display: flex;
     justify-content: space-between;
 }
 
-#logo-controls {
+#edit-buttons-group {
     display: none;
     flex-direction: column;
-    justify-content: space-between;
 }
 
-#logo-controls-button, 
+#edit-button, 
 .favourites-button { /*controller button*/
     width: 13rem;
     overflow: hidden;
@@ -620,10 +640,12 @@ header #subtitle { /*tightens spacing due to buttons added*/
     margin-bottom: 0;
 }
 
-#logo-controls button {/*all buttons in this set*/
+#edit-buttons-group button { /*controller button*/
     width: 13rem;
     overflow: hidden;
-    margin-bottom: 0;
+    font-size: 0.9rem;
+    padding: 0.8rem 2rem;
+    margin-bottom: 1rem;
 }
 
 #font-tips {
@@ -1086,8 +1108,13 @@ header #subtitle { /*tightens spacing due to buttons added*/
     border-radius: 0.2rem;
 }
 
+#links-and-lists .selector-light {
+    color: #929292;
+}
+
 #links-and-lists .selector-dark {
     background-color: #fff;
+    color:#929292;
     width: 13rem;
     padding: 0 1rem 0.3rem 1rem;
 }
@@ -1424,30 +1451,6 @@ header #subtitle { /*tightens spacing due to buttons added*/
     padding-top: 1rem;
 }
 
-#tamsam-home-page p, #tamsam-home-page li {
-    font-family: "Source Sans Pro", sans-serif;
-    font-weight: 300;
-}
-
-#tamsam-page-header {
-    background-color: rgb(19, 12, 0);
-    text-align: center;
-    padding: 4rem 0;
-    margin-bottom: 0;
-}
-
-#tamsam-page-header * {
-    background-color: rgb(19, 12, 0);
-}
-
-#page-header h2:first-of-type {
-    color: #fff;
-}
-
-.nothing {
-    font-family: "Nothing You Could Do";
-}
-
 #page-controls {
     background-color: rgb(19, 12, 0);
     margin: 2rem 4rem 0 4rem;
@@ -1462,39 +1465,46 @@ header #subtitle { /*tightens spacing due to buttons added*/
 }
 
 #page-subheader-buttons {
+    background-color: rgb(19, 12, 0);
     width: 100%;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 4rem;
-}
-
-#page-control-button {
     margin-bottom: 2rem;
 }
 
 #all-page-buttons { /*group of buttons to show or hide*/
-    display: none;
     background-color: rgb(19, 12, 0);
+    display: none;
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 1rem 3rem;
-    margin-bottom: 1rem;
+    padding-bottom: 6rem;
 }
 
-.title {
-    color: #222;
+#home-page-header, #home-page-header * {
+    background-color: rgb(19, 12, 0);
+    margin-bottom: 0;
+}
+
+#home-page-header .title {
+    color: #fff;
     font-size: 2.5rem;
     letter-spacing: 0.2rem;
     line-height: 1;
     padding-bottom: 0;
 }
 
-.subtitle {
+ #home-page-header .subtitle {
     color: hsl(33, 74%, 50%);
     font-family: "Nothing You Could Do";
     font-style: oblique;
     font-size: 3rem;
     padding-bottom: 0;
+}
+
+#tamsam-home-page p, #tamsam-home-page li {
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: 300;
 }
 
 /*Hero Image*/
@@ -1622,19 +1632,25 @@ header #subtitle { /*tightens spacing due to buttons added*/
 }
 
 /*Tamsam Logo - Coco AndDash*/
+
+.nothing {
+    font-family: "Nothing You Could Do";
+}
+
 #tamsam-footer-home-page {
     background-color: rgb(19, 12, 0);
     margin-bottom: 0;
 }
 
-#feature-tamsam-logo {
+#feature-header {
     text-align: center;
     background-color: hsl(187, 35%, 50%);
     padding: 4rem 1rem 10rem 1rem;
 }
 
-#feature-tamsam-logo .subtitle{
+#feature-header .subtitle{
   color: #fff;
+  font-family: "Nothing You Could Do";
 }
 
 #dash-and-coco-grid {
@@ -1700,7 +1716,7 @@ header #subtitle { /*tightens spacing due to buttons added*/
         padding: 2rem 0;
     }
 
-    #feature-tamsam-logo {
+    #feature-header {
         border-top-left-radius: 0.5rem;
         border-top-right-radius: 0.5rem;
     }
@@ -1772,6 +1788,10 @@ header #subtitle { /*tightens spacing due to buttons added*/
     color: #fff;
 }
 
+#footer-display .subtitle {
+    color: hsl(33, 74%, 50%);
+    font-family: "Nothing You Could Do";
+}
 
 
 
