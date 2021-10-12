@@ -18,7 +18,6 @@ const logoRight = document.getElementById('logo-right');
 const headerButtonsContainer = document.getElementById('header-buttons-container'); //contains 2 buttons showing on header (colour headings and colour background)
 const colourHeadingsButton = document.getElementsByClassName('colour-headings-button'); //sets the text colour in the header
 const colourBackgroundButton = document.getElementsByClassName('colour-background-button'); //sets the header background colour
-
 const editButton = document.getElementById('edit-button'); //show hide logo font options immediately below header
 const pageEditButton = document.getElementById('page-edit-button'); //show hide edit options immediately below header on tamsam page
 const editButtonsGroup = document.getElementById('edit-buttons-group'); //the group of buttons to show hide 
@@ -28,9 +27,7 @@ const logoTitleButton = document.getElementsByClassName('logo-title-button'); //
 const logoSubTitleButton = document.getElementsByClassName('logo-subtitle-button'); //initially one of hidden group, cycles through subtitle fonts
 const caseButton = document.getElementsByClassName('case-button'); // initially one of hidden group, toggles upper to lowercase
 const favouritesButton = document.getElementsByClassName('favourites-button');
-
-const headingToColour = document.getElementsByClassName('heading-to-colour');
-
+const subHeaderButtons = document.getElementById('sub-header-buttons');
 
 //make sure all fonts are linked in the html file
 const allFontsArray = ['Antic', 'Bitter', 'Cabin', 'Cairo', '"Cormorant Garamond"', 'Dosis', '"Fira Sans"', 'Forum', '"Hind Siliguri"', 'Inter', 'Lato', '"Libre Franklin"', 'Lora', 'Merriweather', 'Montserrat', 'Mulish', '"Nixie One"', '"Nothing You Could Do"', 'Noto Sans Display', 'Noto Serif', 'Nunito', '"Nunito Sans"', '"Open Sans"', 'Oxygen', '"Permanent Marker"', 'Prata', 'Poppins', 'Prata', 'PT Sans', 'Quicksand', 'Raleway', 'Roboto', '"Roboto Slab"', '"Rozha One"', 'Rubik', 'Source Sans Pro', '"Work Sans"'];
@@ -38,8 +35,10 @@ const headingFontsArray = ['"Roboto Slab"', 'Noto Serif', 'Bitter', '"Rozha One"
 const bodyFontsArray = ['Antic', 'Bitter', 'Cabin', 'Cairo', '"Cormorant Garamond"', 'Dosis', '"Fira Sans"', '"Hind Siliguri"', 'Inter', 'Lato', '"Libre Franklin"', 'Lora', 'Merriweather', 'Montserrat', 'Mulish', '"Nixie One"', 'Noto Sans', 'Noto Serif', 'Nunito', '"Nunito Sans"', '"Open Sans"', 'Oxygen', 'Poppins', 'Prata', 'PT Sans', 'Quicksand', 'Raleway', 'Roboto', '"Roboto Slab"', 'Rubik', 'Source Sans Pro', '"Work Sans"'];
 const serifFontsArray = ['Bitter', '"Cormorant Garamond"', 'Forum', 'Lora', 'Merriweather', '"Nixie One"', '"Noto Serif"', 'Prata', '"Roboto Slab"'];
 const sansSerifFontsArray = ['Antic', 'Cabin', 'Cairo', 'Dosis', '"Fira Sans"', '"Hind Siliguri"', 'Inter', 'Lato', '"Libre Franklin"', 'Montserrat', 'Mulish', '"Noto Sans"', 'Nunito', '"Nunito Sans"', '"Open Sans"', 'Oxygen', 'Poppins', 'PT Sans', 'Quicksand', 'Raleway', 'Roboto', 'Rubik', 'Source Sans Pro', '"Work Sans"'];
+
 const buttons = document.getElementsByTagName('button');
 const headings = document.getElementsByClassName('heading'); // to enable matching headings to selected font
+const headingToColour = document.getElementsByClassName('heading-to-colour');
 const h5headings = document.getElementsByTagName('h5'); // also have class name headings but need to be able to set back to body font
 const h6headings = document.getElementsByTagName('h6');
 const h5ClassHeadings = document.getElementsByClassName('h5');
@@ -52,34 +51,41 @@ const serifBodyFontButton = document.getElementsByClassName("serif-body-font-but
 const sansSerifBodyFontButton = document.getElementsByClassName("sans-serif-body-font-button"); // sets body font by cycling sans-serif fonts alphabetically
 const fontWeightButton = document.getElementsByClassName('font-weight-button');
 const resetFontButton = document.getElementsByClassName("reset-font-button"); //resets to default fonts
+
 //Preselected colour arrays
 //foxterrier.co.nz 'hsl(, %, %)', 'hsl(, %, %)', 'hsl(, %, %)', 'hsl(, %, %)', 'hsl(, %, %)',
-const tamsamA = ['hsl(18, 65%, 6%)', 'hsl(17, 64%, 12%)', 'rgb(19, 12, 0)', 'hsl(24, 79%, 8%)', 'hsl(17, 65%, 8%)', 'hsl(24, 70%, 8%)', 'hsl(65, 32%, 3%)', 'hsl(194, 98%, 11%)', 'rgb(9, 58, 76)', 'hsl(206, 62%, 18%', 'hsl(210, 62%, 10%'];
+const tamsamA = ['hsl(18, 65%, 6%)', 'hsl(17, 64%, 12%)', 'rgb(19, 12, 0)', 'hsl(24, 79%, 8%)', 'hsl(17, 65%, 8%)', 'hsl(24, 70%, 8%)', 'hsl(65, 32%, 3%)', 'hsl(194, 98%, 11%)', 'rgb(9, 58, 76)', 'hsl(206, 62%, 18%', 'hsl(210, 62%, 10%', 'hsl(235, 97%, 7%)'];
 const tamsamB = ['hsl(20, 73%, 28%)', 'hsl(26, 86%, 30%)', 'rgb(69, 22, 3)', 'rgb(9, 58, 76)', 'hsl(193, 69%, 23%)', 'hsl(200, 45%, 34%)', 'hsl(206, 62%, 18%)', 'hsl(227, 18%, 36%)'];
 const tamsamC = ['hsl(20, 57%, 45%)', 'hsl(26, 82%, 42%)', 'hsl(31, 90%, 40%)', 'hsl(187, 74%, 34%)', 'hsl(191, 49%, 47%)', 'hsl(195, 42%, 49%)', 'hsl(198, 53%, 45%)', 'hsl(204, 35%, 45%)'];
 const tamsamD = ['hsl(33, 74%, 50%)', 'hsl(35, 76%, 50%)', 'hsl(37, 75%, 50%)', 'hsl(39, 75%, 50%)', 'hsl(31, 75%, 50%)', 'hsl(29, 75%, 50%)'];
-const tamsamE = ['hsl(187, 35%, 50%)', 'hsl(187, 37%, 58%)', 'hsl(35, 68%, 56%)', 'hsl(37, 70%, 60%)', 'hsl(33, 72%, 59%)', 'hsl(38, 72%, 70%)', 'hsl(179, 28%, 60%)', 'hsl(195, 42%, 49%)', 'hsl(206, 37%, 60%)', 'hsl(220, 12%, 60%)', 'hsl(191, 33%, 55%)'];
+const tamsamE = ['hsl(187, 35%, 50%)', 'hsl(187, 37%, 58%)', 'hsl(35, 68%, 56%)', 'hsl(37, 70%, 60%)', 'hsl(33, 72%, 59%)', 'hsl(38, 72%, 70%)', 'hsl(179, 28%, 60%)', 'hsl(195, 42%, 49%)', 'hsl(206, 37%, 60%)', 'hsl(212, 58%, 67%)', 'hsl(220, 12%, 60%)', 'hsl(191, 33%, 55%)'];
 const tamsamF = ['hsl(184, 35%, 80%)', 'hsl(31, 62%, 82%)', 'hsl(34, 63%, 85%)', 'hsl(34, 71%, 85%)', 'hsl(183, 10%, 95%)', 'hsl(187, 16%, 92%)', 'hsl(210, 23%, 80%)', 'hsl(210, 33%, 80%)', '#80ceda'];
+
 //const colourScheme = ['hsl(, %, %)', 'hsl(, %, %)', 'hsl(, %, %)', 'hsl(, %, %)', 'hsl(, %, %)', 'hsl(, %, %)'];
-const colourScheme1 = ['hsl(18, 65%, 6%)', 'hsl(20, 73%, 28%)', 'hsl(20, 57%, 45%)', 'hsl(33, 74%, 50%)', 'hsl(187, 35%, 50%)', 'hsl(184, 35%, 80%)'];
-const colourScheme2 = ['rgb(19, 12, 0)', 'hsl(193, 69%, 23%)', 'hsl(20, 57%, 45%)', 'hsl(37, 75%, 50%)', 'hsl(187, 35%, 50%)', 'hsl(184, 35%, 80%)'];
-const colourScheme3 = ['hsl(206, 62%, 18%)', 'hsl(20, 73%, 28%)', 'hsl(20, 57%, 45%)', 'hsl(35, 76%, 50%)', 'hsl(37, 70%, 60%)', 'hsl(34, 63%, 85%)'];
-const colourScheme4 = ['hsl(194, 98%, 11%)', 'hsl(200, 45%, 34%)', 'hsl(20, 57%, 45%)', 'hsl(35, 76%, 50%)', 'hsl(195, 42%, 49%)', 'hsl(210, 23%, 80%)'];
+const colourScheme1 = ['rgb(19, 12, 0)', 'hsl(20, 73%, 28%)', 'hsl(20, 57%, 45%)', 'hsl(33, 74%, 50%)', 'hsl(187, 35%, 50%)', 'hsl(184, 35%, 80%)'];
+const colourScheme2 = ['hsl(206, 62%, 18%)', 'hsl(20, 73%, 28%)', 'hsl(20, 57%, 45%)', 'hsl(35, 76%, 50%)', 'hsl(37, 70%, 60%)', 'hsl(34, 63%, 85%)'];
+const colourScheme3 = ['hsl(194, 98%, 11%)', 'hsl(200, 45%, 34%)', 'hsl(20, 57%, 45%)', 'hsl(35, 76%, 50%)', 'hsl(195, 42%, 49%)', 'hsl(210, 23%, 80%)'];
+const colourScheme4 = ['rgb(19, 12, 0)', 'hsl(193, 69%, 23%)', 'hsl(20, 57%, 45%)', 'hsl(37, 75%, 50%)', 'hsl(187, 35%, 50%)', 'hsl(184, 35%, 80%)'];
 const colourScheme5 = ['hsl(210, 62%, 10%)', 'hsl(20, 73%, 28)', 'hsl(20, 57%, 45%)', 'hsl(39, 75%, 50%)', 'hsl(206, 37%, 60%)', 'hsl(210, 33%, 90%)'];
 const colourScheme6 = ['hsl(210, 62%, 10%)', 'hsl(193, 69%, 23%)', 'hsl(20, 57%, 45%)', 'hsl(39, 75%, 50%)', 'hsl(187, 35%, 50%)', 'hsl(184, 35%, 80%)'];
-const colourSchemesArray = [colourScheme1, colourScheme2, colourScheme3, colourScheme4, colourScheme5, colourScheme6];
+const colourScheme7 = ['rgb(19, 12, 0)', 'hsl(20, 73%, 28%)', 'hsl(20, 57%, 45%)', 'hsl(31, 75%, 50%)', 'hsl(212, 58%, 67%)', 'hsl(210, 33%, 80%)'];
+const colourScheme8 = ['hsl(235, 97%, 7%)', 'hsl(20, 73%, 28%)', 'hsl(20, 57%, 45%)', 'hsl(31, 75%, 50%)', 'hsl(212, 58%, 67%)', 'hsl(210, 33%, 80%)'];
+const colourSchemesArray = [colourScheme1, colourScheme2, colourScheme3, colourScheme4, colourScheme5, colourScheme6, colourScheme7, colourScheme8];
+
 const a = document.getElementById('a'); //circles
 const b = document.getElementById('b');
 const c = document.getElementById('c');
 const d = document.getElementById('d');
 const e = document.getElementById('e');
 const f = document.getElementById('f');
+
 const aCode = document.getElementById('a-code'); //colour code below circle
 const bCode = document.getElementById('b-code');
 const cCode = document.getElementById('c-code');
 const dCode = document.getElementById('d-code');
 const eCode = document.getElementById('e-code');
 const fCode = document.getElementById('f-code');
+
 const darkTones1 = document.getElementsByClassName('dark-1'); //background colours from html
 const darkTones2 = document.getElementsByClassName('dark-2');
 const midTones1 = document.getElementsByClassName('mid-1');
@@ -87,6 +93,7 @@ const midTones2 = document.getElementsByClassName('mid-2');
 const midTones3 = document.getElementsByClassName('mid-3');
 const lightTones1 = document.getElementsByClassName('light-1');
 const tonesArray = [darkTones1, darkTones2, midTones1, midTones2, midTones3, lightTones1];
+
 const darkTones1Text = document.getElementsByClassName('text-dark-1'); //text colours from html
 const darkTones2Text = document.getElementsByClassName('text-dark-2');
 const midTones1Text = document.getElementsByClassName('text-mid-1');
@@ -94,15 +101,18 @@ const midTones2Text = document.getElementsByClassName('text-mid-2');
 const midTones3Text = document.getElementsByClassName('text-mid-3');
 const lightTones1Text = document.getElementsByClassName('text-light-1');
 const tonesTextArray = [darkTones1Text, darkTones2Text, midTones1Text, midTones2Text, midTones3Text, lightTones1Text]
+
 let newColourA; //to save the new colours created
 let newColourB;
 let newColourC;
 let newColourD;
 let newColourE;
 let newColourF;
+
 let num1; //for saving random numbers for HSl generation
 let num2;
 let num3;
+
 const square1 = document.getElementById('square-1');
 const square2 = document.getElementById('square-2');
 const square3 = document.getElementById('square-3');
@@ -139,8 +149,11 @@ const square33 = document.getElementById('square-33');
 const square34 = document.getElementById('square-34');
 const square35 = document.getElementById('square-35');
 const square36 = document.getElementById('square-36');
+
+const colourCodes = document.getElementsByClassName('colour-code'); //colour code below each circle
+const colourCodesButton = document.getElementById('colour-codes-button'); //hides or shows colour codes
 const coloursInfo = document.getElementById('colours-info'); //explanation of colours, initially display none
-const colourTips = document.getElementById('colour-info-button'); //button to shows hide explanation of colours
+const colourInfoButton = document.getElementById('colour-info-button'); //button to shows hide explanation of colours
 const fix = document.getElementById('fix-colour-samples-button'); //button to set fixed position on colour circles
 const samples = document.getElementById('colours'); //the entire circles and codes section which will be fixed
 const colourControls = document.getElementById('colour-controls'); //set of 4 buttons, moves down page when fixed
@@ -638,13 +651,9 @@ const changeBackgroundColourList = list => { //cycles through background colours
 
 for (const item of colourBackgroundButton) {
     item.addEventListener('click', function () {
-        changeBackgroundColour(homeHeader);
-        changeBackgroundColour(tamsamHeader);
-        changeBackgroundColour(title);
-        changeBackgroundColour(subtitle);
-        changeBackgroundColour(titleHome);
-        changeBackgroundColour(subtitleHome);
-        changeBackgroundColour(tamsamHeaderLogo);
+        myArray = [homeHeader, tamsamHeader, title, subtitle, subtitleHome, tamsamHeaderLogo,]
+        myArray.forEach(item => changeBackgroundColour(item));
+        headerButtonsContainer.style.backgroundColor = '#fff';
     });
 }
 
@@ -812,27 +821,25 @@ square36.addEventListener('click', function () {
     changeColourRange(f, lightTones1, lightTones1Text, newColourF, 70, 300, 360)
 });
 
-const colourCodes = document.getElementsByClassName('colour-code'); //colour code below each circle
-const colourCodesButton = document.getElementById('colour-codes-button'); //hides or shows colour codes
-
 colourCodesButton.addEventListener('click', function () { //toggles show or hide colour codes 
     toggleDisplayList(colourCodes);
 });
 
 const fixColourSamples = () => {
+    coloursInfo.style.display ='none';
     if (window.getComputedStyle(samples).getPropertyValue('position') !== 'fixed') {
         samples.style.position = 'fixed';
         colourControls.style.top = '-40px';
-        toggleDisplay(header[0]);
-        toggleDisplayToInlineBlock(logoControlsButton);
-        toggleColourNames(colourCodes);
+        toggleDisplayToGrid(tamsamHeader);
+        toggleDisplayToFlex(subHeaderButtons);
+        /*toggleDisplayToInlineBlock(logoControlsButton);*/
     } else {
         samples.style.position = '';
         samples.style.marginTop = '';
         colourControls.style.top = '';
-        toggleDisplay(tamsamHeader);
-        toggleDisplayToInlineBlock(logoControlsButton);
-        toggleColourNames(colourCodes);
+        toggleDisplayToGrid(tamsamHeader);
+        toggleDisplayToFlex(subHeaderButtons);
+        /*toggleDisplayToInlineBlock(logoControlsButton);*/
     }
 }
 
@@ -842,7 +849,7 @@ const hideColouredSquares = () => {
     }
 }
 
-colourTips.addEventListener('click', function () { //shows hide colour explanation block
+colourInfoButton.addEventListener('click', function () { //shows hide colour explanation block
     toggleDisplay(coloursInfo)
 });
 

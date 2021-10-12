@@ -45,7 +45,7 @@ const toggleDisplay = (element) => {
 const toggleDisplayList = list => {
   for (const item of list) {
     if (item.style.display == '') {
-      item.style.display = window.getComputedStyle(element).getPropertyValue('display');
+      item.style.display = window.getComputedStyle(item).getPropertyValue('display');
     }
     item.style.display === 'block' ? item.style.display = 'none' : item.style.display = 'block';
   }

@@ -32,13 +32,13 @@
             <p id="subtitle" class="subtitle heading heading-to-colour dark-1 text-mid-2">fox terriers</p>
         </div>
         <p id="logo-right" class="heading heading-to-colour dark-1 text-mid-2 "></p>
-        <div id="header-buttons-container">
+        <div id="header-buttons-container" class="dark-1">
             <button class="colour-headings-button long-button mid-1">heading colour</button>
             <button class="colour-background-button long-button mid-1">background colour</button>
         </div>
     </header>
     <div id="logo-buttons-container">
-        <div class="sub-header-buttons">
+        <div id="sub-header-buttons">
             <button id="edit-button" class="long button mid-3">edit header font</button>
             <button class="favourites-button long button mid-3">suggested colours</button>
         </div>
@@ -128,7 +128,7 @@
             </section>
             <div id="colour-controls">
                 <div id="colours-buttons-container">
-                    <button id="colour-info-button" class="long-button mid-3">Tips and tricks</button>
+                    <button id="colour-info-button" class="long-button mid-3"><strong>Colour tips</strong></button>
                     <button id="colour-codes-button" class="long-button mid-3">Show colour codes</button>
                     <button id="tiny-squares-button" class="long-button mid-3">Show coloured squares</button>
                     <button id="fix-colour-samples-button" class="long-button mid-3">Make colour samples mobile</button>
@@ -136,11 +136,25 @@
                 <div id="colours-info">
                     <h3>Colours</h3>
                     <ul>
-                        <li>Click each circle to choose a new colour</li>
-                        <li>Alternatively click the colour code below each circle for a preselected colour</li>
-                        <li>To limit the colour range click a tiny square instead of the large circle</li>
-                        <li>Stick the circles in place and move them up and down the page</li>
-                        <li>Only hide the tiny squares if they are not needed for adjustments</li>
+                        <li>There are four options for selecting a colour
+                            <ul>
+                                <li>Click each circle to choose a new colour from the full colour spectrum
+                                </li>
+                                <li>To limit the colour range (i.e, only blues or only greens) click a tiny square
+                                    instead of the large circle</li>
+                                <li>Alternatively click the colour code below each circle to view colours preselected by
+                                    your designer</li>
+                                <li>Finally, you can instead, just check out the colour schemes suggested by your
+                                    designer</li>
+                            </ul>
+                        </li>
+                        <li>Try making the colour circles mobile to help with your choices
+                            <ul>
+                                <li>Decide whether you wish to see the colour codes as you do this</li>
+                                <li>Hide the tiny squares only if they are not needed for refining your colours</li>
+                            </ul>
+                        </li>
+                        <li>Take a screen shot of your favourite choices (ensure the colour codes are displayed)</li>
                     </ul>
                 </div>
             </div>
@@ -190,11 +204,12 @@
         <article>
             <h3 class="heading">Headings</h3>
             <div id="buttons">
-                <button id="font-tips-button" class="small-button text-example-button light-1">tips</button>
+                <button id="font-tips-button" class="small-button text-example-button light-1"><strong>Font tips</strong></button>
                 <button class="heading-button small-button text-example-button light-1">heading</button>
                 <button class="small-heading-button small-button text-example-button light-1">small heading</button>
                 <button class="serif-body-font-button small-button text-example-button light-1">serif body</button>
-                <button class="sans-serif-body-font-button small-button text-example-button light-1">sans-serif body</button>
+                <button class="sans-serif-body-font-button small-button text-example-button light-1">sans-serif
+                    body</button>
                 <button class="font-weight-button small-button text-example-button light-1">lighter font</button>
                 <button class="reset-font-button small-button text-example-button light-1">reset</button>
             </div>
@@ -204,10 +219,13 @@
                     <li>Choose either a serif or sans-serif body font to match</li>
                     <li>Leave the tips open while choosing body font</li>
                     <li>Choose a lighter body font weight (toggles between 300 and 400) if desired</li>
-                    <li>Not all fonts have lighter font weights available. This may influence your font choice.</li>
-                    <li>Set the small headings (h5 and h6) to match the body font instead of the heading font if desired</li>
+                    <li>Not all fonts have lighter font weights available. This may influence your final font choice.
+                    </li>
+                    <li>Set the small headings (h5 and h6) to match the body font instead of the heading font if desired
+                    </li>
                     <li>Reset back to the original fonts (on page load) if desired</li>
-                    <li>Go back and adjust the logo fonts if you wish them to be different than the heading font you have chosen</li>
+                    <li>Go back and adjust the logo fonts if you wish them to be different than the heading font you
+                        have chosen</li>
                 </ul>
             </div>
             <section id="font-heading-levels">
@@ -331,7 +349,7 @@
                         </ul>
                     </div>
                     <h5 id="h5-sample" class="text heading">The quick brown fox jumped over the lazy dog
-                        </h5>
+                    </h5>
                 </div>
                 <hr>
                 <div class="font-sample">
@@ -397,20 +415,20 @@
             <!--links-->
             <article class="links-and-lists-article dark-1">
                 <h3 class="heading">Links</h3>
-                <h4 class="heading h6 text-mid-2"><i class="la la-link"></i>anchor</h4>
+                <h4 class="heading h6 text-mid-3"><i class="la la-link"></i>anchor</h4>
                 <ul>
                     <li>color: </li>
                     <li>text-decoration: none</li>
                     <li>transition: color 400ms ease-in-out</li>
                 </ul>
-                <h4 class="heading h6 text-mid-3"><i class="la la-link"></i>anchor (active or hover)</h4>
+                <h4 class="heading h6 text-light-1"><i class="la la-link"></i>anchor (active or hover)</h4>
                 <ul>
                     <li>color: </li>
                     <li>text-decoration: none</li>
                 </ul>
                 <h4 class="heading h6 text-mid-1">
-                    <p class="selector-light text-mid-1"><i class="la la-link"></i>anchor (visited)</p>
-                    <p class="selector-dark text-mid-1"><i class="la la-link"></i>anchor (visited)</p>
+                    <p class="selector-light text-mid-2"><i class="la la-link"></i>anchor (visited)</p>
+                    <p class="selector-dark text-mid-2"><i class="la la-link"></i>anchor (visited)</p>
                 </h4>
                 <ul>
                     <li>color: </li>
@@ -568,7 +586,7 @@
             </div>
         </article>
         <!--header-->
-        <article id="header-article" class="dark-1">
+        <article id="header-article" class="mid-1">
             <h3 class="heading">Header</h3>
             <div id="header-article-content">
                 <div>
@@ -589,7 +607,7 @@
         <article id="header-nav" class="dark-1">
             <h3 class="heading">Header Navigation</h3>
             <div id="header-nav-content">
-                <div><span class="selector text-mid-2">all states</span>
+                <div><span class="selector text-mid-3">all states</span>
                     <ul>
                         <li>font-size: </li>
                         <li>text-transform:</li>
@@ -599,21 +617,21 @@
                         <li>transition: all 600ms ease-in-out </li>
                     </ul>
                 </div>
-                <div><span class="selector text-mid-2">navigation anchor</span>
+                <div><span class="selector text-mid-3">navigation anchor</span>
                     <ul>
                         <li>color: </li>
                         <li>font-weight: </li>
                     </ul>
                 </div>
                 <div>
-                    <span class="selector text-mid-3">active or hover</span>
+                    <span class="selector text-light-1">active or hover</span>
                     <ul>
                         <li>color: </li>
                         <li>font-weight: </li>
                     </ul>
                 </div>
                 <div>
-                    <span class="selector text-light-1">visited</span>
+                    <span class="selector text-mid-2">visited</span>
                     <ul>
                         <li>color: </li>
                         <li>font-weight: </li>
@@ -944,11 +962,11 @@
         </section>
         <!--feature footer-->
         <div id="tamsam-footer-home-page" class="dark-1">
-            <header id="feature-header" class="dark-1">
-                <h2 class='title heading dark-1 uppercase'>Tamsam</h2>
-                <h2 class="subtitle heading heading-to-colour dark-1 text-mid-2">fox terriers</h2>
+            <header id="feature-header" class="mid-3">
+                <h2 class='title heading  uppercase'>Tamsam</h2>
+                <h2 class="subtitle heading heading-to-colour  text-mid-2">fox terriers</h2>
             </header>
-            <article id="dash-and-coco-grid" class="mid-3">
+            <article id="dash-and-coco-grid" class="dark-1">
                 <figure>
                     <img class="alignnone size-full wp-image-42"
                         src="https://www.foxterrier.co.nz/wp-content/uploads/2021/03/Dash-standing-in-orange-poppies.jpg"

@@ -92,16 +92,20 @@ h4,
     font-size: 1.5rem;
 }
 
+h5, h6,
+.h6, .h6 {
+    font-style: oblique;
+    font-weight: bold;
+}
+
 h5,
 .h5 {
     font-size: 1.25rem;
-    font-style: oblique;
 }
 
 h6,
 .h6 {
     font-size: 1.125rem;
-    font-style: oblique;
 }
 
 p {
@@ -543,6 +547,11 @@ footer p>span {
     letter-spacing: 0.2rem;
 }
 
+.lowercase {
+    text-transform: none;
+    letter-spacing: normal;
+}
+
 .center {
     text-align: center;
 }
@@ -585,22 +594,29 @@ footer p>span {
 
 /* header*/
 
+a {
+    font-weight: bold;
+}
+
 #tamsam-header {
-   background-color: #111;
+   background-color: #222;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    gap: 3rem 2rem;
     justify-items: center;
     align-items: center;
-    padding-bottom: 0.5rem; /*default padding: 4rem 0;*/
+    padding-bottom: 0; /*default padding: 4rem 0;*/
+}
+
+#tamsam-header * {
+background-color: #222;
 }
 
 header .title {
-    background-color: #111;
     color: #fff;
 }
 
 header #subtitle { /*tightens spacing due to buttons added*/
-    background-color: #111;
     padding-bottom: 0;
     margin-bottom: 0;
 }
@@ -614,17 +630,19 @@ header #subtitle { /*tightens spacing due to buttons added*/
     grid-area: 2 / 1 / span 1 / span 3;
     display: flex;
     justify-content: space-between;
-    padding: 1rem 2rem 0 2rem;
+    padding: 1rem 2rem 0.5rem 2rem;
 }
 
 #logo-buttons-container {
+    background-color: #fff;
     padding: 1rem 2rem;
 }
 
-.sub-header-buttons {
+#sub-header-buttons {
     width: 100%;
     display: flex;
     justify-content: space-between;
+    padding-bottom: 1rem;
 }
 
 #edit-buttons-group {
@@ -1209,6 +1227,10 @@ header #subtitle { /*tightens spacing due to buttons added*/
     margin-bottom: 4rem;
 }
 
+#header-article {
+    background-color: #6c6c6c;
+}
+
 #header-article-content {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -1243,8 +1265,9 @@ header #subtitle { /*tightens spacing due to buttons added*/
 
 /*header nav*/
 #header-nav .selector {
-    text-transform: uppercase;
     font-size: 0.9rem;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
 #header-nav-content {
