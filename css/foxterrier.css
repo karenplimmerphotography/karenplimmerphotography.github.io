@@ -1,429 +1,370 @@
-/* Universal styles*/
+/*
+<link rel="preconnect" href="https://fonts.gstatic.com"> 
+<link href="https://fonts.googleapis.com/css2?family=Antic&family=Nothing+You+Could+Do&family=Rozha+One&display=swap" rel="stylesheet">
+*/
+
+/* latin */
+@font-face {
+    font-family: 'Antic';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/antic/v12/TuGfUVB8XY5DRZZMq9kRystl.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+
+  /*latin */
+@font-face {
+    font-family: 'Nothing You Could Do';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/nothingyoucoulddo/v10/oY1B8fbBpaP5OX3DtrRYf_Q2BPB1SnfZb3OOnVsH2pmp.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+
+    /*latin */
+    @font-face {
+        font-family: 'Rozha One';
+        font-style: normal;
+        font-weight: 400;
+        src: url(https://fonts.gstatic.com/s/rozhaone/v8/AlZy_zVFtYP12Zncg2kRcn35fh4Dog.woff2) format('woff2');
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      } */
+
+
+  
+/*gallery titles
+font-family:"Nothing You Could Do", cursive;
+font-size: 20px;
+color: white;
+letter-spacing: 0.08em;
+
+Menu on white 13px bold dark charcoal rgba (0, 0, 0, 0.97)
+Menu on black 12px bold white
+letter spacing 0.06em
+*/
+
+ /* Universal Syles------------------------------------------------------------------------------------------------------------------------------------------*/
 
 * {
-    box-sizing: border-box;
-    max-width: 100%;
-    margin: 0;
-    padding: 0;
-    margin-block-start: 0;
-    margin-block-end: 0;
-    margin-inline-start: 0;
-    margin-inline-end: 0;
-}
+     margin: 0;
+     margin-block-start: 0;
+     margin-block-end: 0;
+     padding: 0;
+     box-sizing: border-box;
+     background-color: white;
+    }
+
+  figure, figure.wp-block-image {
+       margin-block-start: 0;
+       margin-block-end: 0;
+       margin-inline-start: 0;
+       margin-inline-end: 0;
+   } 
 
 html {
-    font-size: 15px;
+  background-color: white;
+  margin:0 important!;
+   margin-block-start: 0;
+   margin-block-end: 0;
+   margin-inline-start: 0;
+  margin-inline-end: 0;
 }
 
-@media only screen and (min-resolution: 200dpi) {
-    html {
-        font-size: 16px;
-    }
-}
-
-body {
-    color: #222;
-    background-color: #fff;
+ body {
+    color: #000000;
+    background-color: white;
     font-family: Antic, sans-serif;
     font-size: 15px;
+    color: #000000;
     font-weight: 400;
     letter-spacing: 0.06em;
     word-spacing: -0.1em;
-    line-height: 1.7;
+    line-height: 170%;
+    margin: 0;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-main {
-    background-color: #fff;
-    width: 1200px;
-    margin: 0 auto;
-    padding: 2rem;
-    border-radius: 0.5rem;
-}
-
-section,
-article {
-    margin-bottom: 3rem;
-}
-
-@media only screen and (max-width: 479px) {
-    main {
-        padding: 0 1rem;
-    }
-
-    section,
-    article {
-        margin-bottom: 2rem;
-    }
-}
-
-/*logo headings*/
-
-#title,
-.title,
-#footer-title {
-    text-align: center;
-    color: #222;
-    font-family: "Rozha One", serif;
-    font-size: 3rem;
-    font-weight: normal;
-    text-transform: uppercase;
-    letter-spacing: 0.6rem;
-    line-height: 1.3;
-}
-
-#footer-title {
-    color: #fff;
-}
-
-#subtitle,
-.subtitle,
-#footer-subtitle {
-    text-align: center;
-    color: rgb(219, 112, 17);
-    font-family: "Nothing You Could Do", cursive;
-    font-size: 3.5rem;
-    font-weight: normal;
-    text-transform: uppercase;
-    letter-spacing: 0.6rem;
-    word-spacing: -1.4rem;
-    line-height: 1.3;
-}
-
-#footer-subtitle {
-    color: rgb(199, 140, 28);
-}
-
-@media only screen and (max-width: 480px) {
-    #subtitle {
-        font-size: 3.125rem;
-    }
-}
-
-/*headings*/
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-.h1,
-.h2,
-.h3,
-.h4,
-.h5,
-.h6 {
-    padding-bottom: 0.5rem;
-}
-
-h1,
-.h1 {
-    font-size: 3rem;
-    font-weight: normal;
-}
-
-h2,
-.h2 {
-    font-size: 2.5rem;
-    font-weight: normal;
-}
-
-h3,
-.h3 {
-    font-size: 2rem;
-    font-weight: normal;
-}
-
-h4,
-.h4 {
-    font-size: 1.5rem;
-    font-weight: normal;
-}
-
-h5,
-.h5 {
-    font-size: 1.25rem;
-    font-style: oblique;
+.bold {
     font-weight: bold;
 }
 
-h6,
-.h6 {
-    font-size: 1.125rem;
-    font-style: oblique;
-    font-weight: bold;
+.center {
+    text-align: center;
 }
 
-.rozha {
-    color: #222;
+.white-text {
+    color: white;
+}
+
+/*Headings------------------------------------------------------------------------------------------------------------*/
+
+h1, h2, h3, .h1, .h2, .h3 {
+    font-family:"Nothing You Could Do", cursive;
+    color: #ef5406;
+    font-weight: normal;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+h4, h5, h6, .h4, .h5, .h6 {
     font-family: "Rozha One", serif;
     text-transform: uppercase;
-    letter-spacing: 0.6rem;
-    line-height: 1.2;
+    letter-spacing: 0.2em;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    color: black;
 }
 
-.nothing {
-    color: rgb(199, 140, 28);
-    font-family: "Nothing You Could Do", cursive;
-    text-transform: none;
-    letter-spacing: 0.08rem;
-    line-height: 1.4;
+h1, .h1 {
+    font-size: 55px;
+    line-height: 130%;
+    text-align: center;
+    text-transform: uppercase;
+    word-spacing: -0.4em;
+    letter-spacing: 0.2em;
+} /*used in logo only*/
+
+    @media only screen and (max-width: 480px) {
+        h1, .h1 {
+            font-size: 50px;
+        }
+    }
+
+h2, .h2 {
+    font-size: 48px;
+    line-height: 170%;
+    letter-spacing: 0.08em;
 }
 
-p {
-    padding-bottom: 1rem;
+h3, .h3 {
+    font-size: 32px;
+    letter-spacing: 0.08em;
+    line-height: 100%;
 }
 
-p:last-child {
-    margin-bottom: 1rem;
+h4, .h4 {
+    font-size: 48px;
+    line-height: 90%;
+    text-align: center;
+    font-weight: normal;
 }
 
-/*links*/
+h5, h6, .h5, .h6 {
+    font-weight: bold;
+    line-height: 120%;
+}
+
+h5, .h5 {
+    font-size: 32px;
+}
+
+h6, .h6 {
+    font-size: 24px;
+}
+
+
+
+/*Links------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
 a {
-    color: rgb(9, 58, 76);
-    text-decoration: none;
+  color: #ef5406;
+  text-decoration: none;
 }
 
-/* should be grey rgb (200, 200, 200) if on black*/
+a:hover, a:active {
+  color: #fff; /* this is dark teal #02444e but should be white if on black*/
+}
 
 a:visited {
-    color: rgb(4, 122, 140);
+  color: #80ceda;
 }
 
-a.light:visited {
-    color: #80ceda;
+
+/*Nav-OXY-Pro-----------------------------------------------------------------------------------------------------------------------------------------------*/
+#-pro-menu-1-79.oxy-pro-menu {
+  background-color: #040200;
+} 
+
+
+.oxy-pro-menu-off-canvas-container {
+  align-items: start;
+  justify-content: start;
+  padding-top: 80px;
+  }
+    
+.oxy-pro-menu-container > div:first-child {
+  margin-top:60px;
+  }
+
+#-pro-menu-1-79 .oxy-pro-menu-mobile-close-icon {
+  position: fixed;
+  top: 60px;
+  left: 10px;
+}
+    
+#-pro-menu-1-79 .oxy-pro-menu-mobile-open-icon {
+   position: fixed;
+   top: 60px;
+   left:10px;
+  }
+
+#-pro-menu-1-79 ul li a, #-pro-menu-1-79 ul.sub-menu li a {
+  color: #ef5406;
 }
 
-a:hover,
-a:active {
-    color: rgb(219, 112, 17);
+#-pro-menu-1-79 ul li a:visited, #-pro-menu-1-79 ul.sub-menu li a:visited {
+  color: #80ceda;
 }
 
-/*lists*/
 
-ul {
-    padding-top: 1.25rem;
-    padding-bottom: 1.25rem;
+@media only screen and (max-width: 767px) {
+#-pro-menu-1-79.oxy-pro-menu {
+  background-color: transparent;
+  display: flex;
+  justify-content: flex-start;
+  padding-left:10px;
+  margin-top: 0px;
+  }
+div#div_block-3-98.ct-div-block {
+    display: none;
+}
+.oxy-pro-menu-container {
+    display: none;
+}
+  #-pro-menu-1-79 .oxy-pro-menu-list .menu-item a {
+    padding-right:5px;
+}
 }
 
-li {
-    line-height: 2;
-    list-style-position: outside;
-    list-style-type: square;
-    margin-left: 1rem;
-}
+/*Logo-------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
-ul li ul {
-    margin-left: 2rem;
-}
-
-ul li ul li {
-    list-style-type: circle;
-}
-
-/*buttons*/
-
-button {
-    color: #fff;
-    background-color: rgb(4, 122, 140);
-    font-family: Antic, sans-serif;
-    width: 10rem;
-    padding: 1.2rem;
-    border: 1px solid #fff;
-    border-radius: 2rem;
-    margin: 1rem 0;
-    transition: all 400ms ease-in-out;
-}
-
-button:active {
-    padding: 1.35rem;
-}
-
-button:hover {
-    color: #222;
-    background-color: #80ceda;
-}
-
-button.small-button {
-    width: 7rem;
-    padding: 0.8rem;
-}
-
-button.small-button:active {
-    padding: 1rem;
-}
-
-/*tabs*/
-
-.tabs {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    column-gap: 1rem;
-    justify-content: space-between;
-    background-color: rgb(248, 248, 248);
-    border-radius: 0.5rem;
-    padding-top: 2rem;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-    border-bottom: 0.5rem solid#fff;
-}
-
-.tabs button {
-    margin: 0;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-}
-
-@media only screen and (max-width: 599px) {
-    .tabs {
-        gap: 0;
-        padding-left: 0;
-        padding-right: 0;
-    }
-}
-
-/*icons*/
-.la {
-    color: inherit;
-    font-size: 1.5rem;
-    vertical-align: baseline;
-    position: relative;
-    top: 0.1rem;
-    padding-right: 0.5rem;
-}
-
-/*logo*/
-
-#tamsam-logo {
-    padding: 4rem 0;
+div#tamsam-logo {
+    padding: 50px 0 50px 0;
     width: 100%;
     background-color: white;
     margin-top: 110px;
 }
 
-#tamsam-logo-1200-width,
-#tamsam-logo-1000-width {
+@media only screen and (max-width:767px) {
+div#tamsam-logo {
+    margin-top: 60px;
+}
+}
+
+div#tamsam-logo-1200-width {
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 1rem 0 2rem 0;
+    padding: 20px 0 40px 0;
     margin-top: 110px;
 }
 
-#tamsam-logo-1200-width {
-    max-width: 1200px;
+@media only screen and (max-width:767px) {
+div#tamsam-logo-1200-width {
+    margin-top: 60px;
+}
 }
 
-#tamsam-logo-1000-width {
+div#tamsam-logo-1000-width {
     max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px 0 40px 0;
+    margin-top: 110px;
 }
 
 @media only screen and (max-width:767px) {
-
-    #tamsam-logo,
-    #tamsam-logo-1200-width,
-    #tamsam-logo-1000-width {
-        margin-top: 4rem;
-    }
+div#tamsam-logo-1000-width {
+    margin-top: 60px;
+}
 }
 
-/*footer*/
+/* END HEADER------------------------------------------------------------------------------------------------------------------------------------------------*/
 
-#tamsam-footer-logo-on-dark {
-    background-color: rgb(19, 12, 0);
-    padding: 4rem 0;
-    border-top: 1px solid rgb(200, 200, 200);
+/*Hero Image-------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+div#tamsam-hero-image-block {
+    padding: 0 0 80px 0;
+    background-color: #040200;
+    text-align: center; 
 }
 
-footer p.copyright {
-    padding: 2rem 0 1rem 0;
-    text-align: center;
-    font-size: 0.8rem;
-}
-
-/*UNIQUE CONTENT*/
-
-#menu-filler {
-    position: fixed;
-    z-index: 5;
-    height: 110px;
-    background-color: rgb(19, 12, 0);
-}
-
-body#home-page,
-main#home-page-content {
-    background-color: rgb(19, 12, 0);
-    padding-top: 0;
-}
-
-#home-page footer p.copyright {
-    color: rgb(225, 225, 225);
-}
-
-/*Hero Image*/
-
-#tamsam-hero-image {
-    background-color: rgb(19, 12, 0);
-    text-align: center;
-    width: 100%;
-    margin-bottom: 4rem;
-}
-
-#tamsam-hero-image img {
-    width: 1200px;
-    max-width: 100%;
-    height: auto;
-    margin: 0 auto 4rem auto;
-    border: 1px solid rgb(225, 225, 225);
-}
-
-#tamsam-hero-image p {
-    color: white;
-    font-size: 0.8rem;
+div#tamsam-hero-image-block > p {
     text-transform: uppercase;
-    letter-spacing: 0.1rem;
-    line-height: 4;
+    letter-spacing: 0.06em;
+    line-height: 400%;
+    color: white;
+    font-size: 12px;
 }
 
-/*grid nav info*/
-
-#tamsam-nav-info-article {
-    background-color: rgb(248, 248, 248);
-    border-radius: 0.5rem;
-    padding: 6rem 1rem;
+div#tamsam-hero-image-block img {
+    max-width: 1200px;
+    height:auto;
+    margin: 0 auto 40px auto;
+    border: 1px solid #bbb;
 }
 
-@media only screen and (max-width:767px) {
-    #tamsam-nav-info-article {
-        padding: 2rem 1rem;
+@media only screen and (max-width: 1199px) {
+    #tamsam-hero-image-block img {
+        width: 100vw;
     }
 }
 
-#tamsam-nav-info img {
-    max-width: 100%;
-    height: auto;
+/*GRID Nav Info----------------------------------------------------------------------------------------------------------------------------------------------*/
+
+ #tamsam-nav-info-block {
+     background-color: #f8f8f8;
+     padding: 80px 0;
+ }
+
+ @media only screen and (max-width:767px) {
+    #tamsam-nav-info-block {
+        padding: 20px;
+ }
 }
 
-#tamsam-nav-info h4 {
-    color: rgb(4, 122, 140);
+@media only screen and (min-width:768px) and (max-width: 991px) {
+    #tamsam-nav-info-block ul {
+       padding-inline-start: 20px;
+ }
 }
 
-#tamsam-nav-info ul {
-    padding-top: 0;
-    padding-bottom: 2rem;
-}
+ #tamsam-nav-info img {
+     max-width: 100%;
+     height:auto;
+ }
+
+ #tamsam-nav-info ul {
+     padding-bottom: 20px;
+ }
+
+#tamsam-nav-info a:hover, a:active {
+    color: #047a8c; /* this is dark teal #02444e but should be white if on black*/
+  }
+
+ #tamsam-nav-info h4 {
+     font-family: "Nothing You Could Do", cursive;
+     font-size: 24px;
+     color: #047a8c;
+     text-align: left;
+     line-height: 120%;
+     letter-spacing: 0.08em;
+     text-transform: none;
+ }
 
 #tamsam-nav-info {
     max-width: 1200px;
     margin: 0 auto;
     background-color: #fff;
-    box-shadow: 1px 1px 5px rgb(200, 200, 200);
-    padding: 1rem;
+    box-shadow: 1px 1px 5px #bbb;
+    padding: 20px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 0.5rem 3rem;
+    grid-template-columns:  1fr 1fr 1fr;
+    grid-gap: 10px 40px;
     grid-template-areas: "p1 b1 o1"
-        "p2 b2 o2"
-        "p3 b3 o3";
+    "p2 b2 o2"
+    "p3 b3 o3";
 }
 
 .tamsam-nav-info-puppy.tamsam-grid-p1 {
@@ -433,20 +374,17 @@ main#home-page-content {
 .tamsam-nav-info-puppy.tamsam-grid-p2 {
     grid-area: p2;
 }
-
 .tamsam-nav-info-puppy.tamsam-grid-p3 {
     grid-area: p3;
 }
-
 .tamsam-nav-info-breeder.tamsam-grid-b1 {
     grid-area: b1;
 }
-
-.tamsam-nav-info-breeder.tamsam-grid-b2 {
+.tamsam-nav-info-breeder.tamsam-grid-b2{
     grid-area: b2;
 }
 
-.tamsam-nav-info-breeder.tamsam-grid-b3 {
+.tamsam-nav-info-breeder.tamsam-grid-b3{
     grid-area: b3;
 }
 
@@ -464,325 +402,1533 @@ main#home-page-content {
 
 @media only screen and (max-width: 767px) {
     #tamsam-nav-info {
-        display: block;
+    grid-template-columns: 100%;  
+    grid-template-areas: "p1"
+                                          "p2"
+                                          "p3"
+                                          "b1"
+                                          "b2"
+                                          "b3"
+                                          "o1"
+                                          "o2"
+                                          "o3";
     }
-
-    #tamsam-nav-info img {
-        padding: 1rem 0;
-    }
 }
 
-/*Tamsam Logo on Teal/Dash*/
-#feature-footer {
-    background-color: rgb(9, 58, 76);
-}
+/*Tamsam Logo on Teal/Dash-----------------------------------------------------------------------------------------------------------------------------------*/
 
-#feature-tamsam-logo {
-    background-color: rgb(4, 122, 140);
-    padding: 4rem 1rem 10rem 1rem;
-}
 
-#dash-and-coco-grid {
-    position: relative;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem 4rem;
-    justify-items: center;
-    align-items: center;
-    background-color: rgb(9, 58, 76);
-    padding: 0 2rem;
-    margin-bottom: 0;
-}
-
-#dash-and-coco-grid figure {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 6rem;
-    justify-items: center;
-    position: relative;
-}
-
-#dash-and-coco-grid figure:first-of-type {
-    top: -9rem;
-}
-
-#dash-and-coco-grid figure:last-of-type {
-    top: -6rem;
-}
-
-#dash-and-coco-grid figure img {
-    box-shadow: 1px 1px 5px rgb(200, 200, 200);
-    width: auto;
-    height: auto;
-}
-
-#dash-and-coco-grid figure:first-of-type img:last-of-type {
-    position: relative;
-    left: 5%;
-    margin-top: 2rem;
-}
-
-#dash-and-coco-grid figure:last-of-type img:first-of-type {
-    position: relative;
-    left: 5%;
-}
-
-#dash-and-coco-grid figure:last-of-type img:last-of-type {
-    margin-top: 4rem;
-}
-
-#dash-and-coco-grid figcaption {
-    text-align: center;
-    color: rgb(199, 140, 28);
-    padding: 2rem 1rem;
-}
-
-@media only screen and (max-width: 1399px) {
-    #tamsam-footer-home {
-        width: 1200px;
-        max-width: 100%;
-        margin: 0 auto;
-        padding: 2rem;
-    }
-
-    #feature-tamsam-logo {
-        border-top-left-radius: 0.5rem;
-        border-top-right-radius: 0.5rem;
-    }
-
-    #dash-and-coco-grid {
-        padding: 0;
-        border-bottom-left-radius: 0.5rem;
-        border-bottom-right-radius: 0.5rem;
-    }
-
-    #dash-and-coco-grid figure {
-        grid-template-columns: 1fr;
-    }
-
-    #dash-and-coco-grid figure:first-of-type {
-        top: -7rem;
-    }
-
-    #dash-and-coco-grid figure:first-of-type img:last-of-type,
-    #dash-and-coco-grid figure:last-of-type img:first-of-type {
-        left: 0;
-    }
-
-    #dash-and-coco-grid figure:first-of-type img:last-of-type {
-        margin-top: 4rem;
-    }
+#teal-dash-footer {
+    max-height: 700px;
 }
 
 @media only screen and (max-width: 1199px) {
-    #dash-and-coco-grid figure {
-        grid-template-columns: 1fr;
-    }
-
-    #dash-and-coco-grid figure:first-of-type {
-        top: -8rem;
+    #teal-dash-footer {
+        max-height: 1300px;
     }
 }
 
-@media only screen and (max-width: 699px) {
+
+#tamsam-logo-on-teal {
+    background-color: rgba(4,122,140,0.9);
+    padding: 120px 0;
+}
+
+#tamsam-logo-on-teal h4 {
+    color: white;
+}
+
+#tamsam-logo-on-teal h1 {
+    color: #040200;
+}
+
+#tamsam-dark-empty-block {
+    background-color: #040200;
+    padding: 200px 0;
+}
+
+#dash-and-coco-grid img {
+    max-width: 100%;
+    height: auto;
+    box-shadow: 2px 2px 3px #bbb;
+    z-index: 2;
+}
+
+#dash-and-coco-grid {
+    box-sizing: border-box;
+    background-color: transparent;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 50px 20px;
+    justify-items: start;
+    justify-content: space-around;
+    align-items: end;
+    grid-template-areas: "dash-1 dash-2 coco-1 coco-2"
+    "dash-text dash-text coco-text coco-text";
+    padding-left: 10%;
+    position: relative;
+    bottom: 620px;
+    z-index: 5;
+}
+
+@media only screen and (max-width: 1199px) {
     #dash-and-coco-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "dash-1 dash-2"
+        "dash-text dash-text"
+        "coco-1 coco-2"
+        "coco-text coco-text";
+        justify-content: center;
+        justify-items: center;
+        padding-bottom: 100px;
+        bottom: 450px;
     }
-
-    #dash-and-coco-grid figure:first-of-type {
-        top: -4rem;
-    }
-}
-
-/*shortcuts*/
-.white {
-    color: #fff;
-}
-
-.bg-white {
-    background-color: #fff;
-}
-
-.light-grey {
-    color: rgb(225, 225, 225);
-}
-
-.bg-light-grey {
-    background-color: rgb(225, 225, 225);
-}
-
-.brown {
-    color: rgb(69, 22, 3);
-}
-
-.bg-brown {
-    background-color: rgb(69, 22, 3);
-}
-
-.chocolate {
-    color: rgb(19, 12, 0);
-}
-
-.bg-chocolate {
-    background-color: rgb(19, 12, 0);
-}
-
-.teal-green {
-    color: rgb(9, 58, 76);
-}
-
-.bg-teal-green {
-    background-color: rgb(9, 58, 76);
-}
-
-.dark-teal {
-    color: rgb(4, 122, 140);
-}
-
-.bg-dark-teal {
-    background-color: rgb(4, 122, 140)
-}
-
-.teal {
-    color: rgba(4, 122, 140, 0.7);
-}
-
-.bg-teal {
-    background-color: rgba(4, 122, 140, 0.7);
-}
-
-.light-teal {
-    color: #80ceda;
-}
-
-.bg-light-teal {
-    background-color: #80ceda;
-}
-
-.orange {
-    color: rgb(219, 112, 17);
-}
-
-.bg-orange {
-    background-color: rgb(219, 112, 17);
-}
-
-.gold {
-    color: rgb(199, 140, 28);
-}
-
-.bg-gold {
-    background-color: rgb(199, 140, 28);
-}
-
-.small-quote {
-    line-height: 2;
-}
-
-.bold {
-    font-weight: bold;
-}
-
-.italic {
-    font-style: italic;
-}
-
-.oblique {
-    font-style: oblique;
-}
-
-.uppercase {
-    text-transform: uppercase;
-}
-
-.center {
-    text-align: center;
-}
-
-.small {
-    font-size: 0.8rem;
-}
-
-.remove-padding-bottom {
-    padding-bottom: 0;
-}
-
-.remove-margin-bottom {
-    margin-bottom: 0;
-}
-
-.margin-top-1 {
-    margin-top: 1rem;
-}
-
-.margin-top-2 {
-    margin-top: 2rem;
-}
-
-.indent-2 {
-    margin-left: 2rem;
-}
-
-.hidden,
-.hide {
-    display: none;
-}
-
-/*Nav-OXY-Pro*/
-#-pro-menu-1-79.oxy-pro-menu {
-    background-color: rgb(89, 12, 3);
-}
-
-.oxy-pro-menu-off-canvas-container {
-    align-items: start;
-    justify-content: start;
-    padding-top: 5rem;
-}
-
-.oxy-pro-menu-container>div:first-child {
-    margin-top: 4rem;
-}
-
-#-pro-menu-1-79 .oxy-pro-menu-mobile-close-icon {
-    position: fixed;
-    top: 60px;
-    left: 10px;
-}
-
-#-pro-menu-1-79 .oxy-pro-menu-mobile-open-icon {
-    position: fixed;
-    top: 60px;
-    left: 10px;
-}
-
-#-pro-menu-1-79 ul li a,
-#-pro-menu-1-79 ul.sub-menu li a {
-    color: rgb(199, 140, 28);
-}
-
-#-pro-menu-1-79 ul li a:visited,
-#-pro-menu-1-79 ul.sub-menu li a:visited {
-    color: #fff;
 }
 
 @media only screen and (max-width: 767px) {
-    #-pro-menu-1-79.oxy-pro-menu {
-        background-color: transparent;
-        display: flex;
-        justify-content: flex-start;
-        padding-left: 10px;
-        margin-top: 0px;
-    }
-
-    div#div_block-3-98.ct-div-block {
-        display: none;
-    }
-
-    .oxy-pro-menu-container {
-        display: none;
-    }
-
-    #-pro-menu-1-79 .oxy-pro-menu-list .menu-item a {
-        padding-right: 5px;
+    #dash-and-coco-grid {
+        grid-template-columns: 1fr;
+        grid-template-areas: "dash-text"
+        "dash-1"
+        "dash-2"
+        "coco-text"
+        "coco-1"
+        "coco-2";
+        bottom: 350px;
     }
 }
+
+.dash-photo-1 {
+    grid-area: dash-1;
+}
+
+.dash-photo-2 {
+    grid-area: dash-2;
+}
+
+.dash-text {
+    grid-area: dash-text;
+    justify-self: center;
+    align-self: center;
+}
+
+.coco-photo-1 {
+    grid-area: coco-1;
+}
+
+.coco-photo-2 {
+    grid-area: coco-2;
+}
+
+.coco-text {
+    grid-area: coco-text;
+    justify-self: center;
+    align-self: center;
+}
+
+.dash-text h4, .coco-text h4{
+    font-family: "Nothing You Could Do", cursive;
+    font-size: 24px;
+    color: #047a8c;
+    letter-spacing: 0.08em;
+    text-transform: none;
+}
+
+@media only screen and (max-width: 1999px) {
+    #dash-and-coco-grid {
+        padding-left: 8%;
+    }
+}
+
+@media only screen and (max-width: 1899px) {
+    #dash-and-coco-grid {
+        padding-left: 6%;
+    }
+}
+
+@media only screen and (max-width: 1799px) {
+    #dash-and-coco-grid {
+        padding-left: 4%;
+    }
+}
+
+@media only screen and (max-width: 1699px) {
+    #dash-and-coco-grid {
+        padding-left: 0;
+    }
+}
+
+#tamsam-dark-empty-block-2 {
+    background-color: #040200;
+    height: 620px;
+    position: relative;
+    bottom: 1080px;
+    z-index: 0;
+}
+
+@media only screen and (min-width: 1200px) {
+    #tamsam-dark-empty-block-2 {
+        display: none;
+}
+}
+@media only screen and (max-width: 767px) {
+    #tamsam-dark-empty-block-2 {
+        height: 1450px;
+        bottom: 1800px;
+}
+}
+
+#tamsam-footer-copyright-only  {
+    text-align: center;
+    font-size: 13px;
+    padding: 20px 0;
+    position: relative;
+    top: 40px;
+    }
+
+#tamsam-footer-copyright-only p {
+    text-align: center;
+    font-size: 13px;
+    padding: 20px 0 10px 0;
+}
+
+@media only screen and (max-width: 1199px) {
+    #tamsam-footer-copyright-only  {
+        top: 0px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    #tamsam-footer-copyright-only  {
+        top: 770px;
+    }
+}
+
+@media only screen and (max-width: 499px) {
+    #tamsam-footer-copyright-only  {
+        top: 850px;
+    }
+}
+
+/*END HOME PAGE----------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*ABOUT PAGE-------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+#tamsam-about-page {
+    background-color:#f8f8f8;
+    padding: 80px 0 40px 0;
+}
+
+#tamsam-about-page a:hover, a:active {
+    color: #047a8c; /* this is dark teal #02444e but should be white if on black*/
+  }
+
+#tamsam-about-grid {
+    box-sizing: border-box;
+    max-width: 1600px;
+    margin: 0 auto;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(6,1fr);
+    grid-gap: 80px 30px;
+    grid-template-areas: " img1 img1 hello hello img2 img2 "
+    "puppies puppies puppies img3 img3 img3"
+    "img4 img4 olderdogs olderdogs img5 img5"
+    "pat pat img6 img6 sue sue"
+    "coffee1 coffee1 coffeeq coffeeq coffee2 coffee2";
+    position: relative;
+    z-index: 2;
+}
+
+
+#tamsam-about-grid img {
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    border: 20px solid white;
+    box-sizing: border-box;
+}
+
+#tamsam-about-grid p {
+    padding-bottom: 15px;
+}
+
+.tamsam-about-text {
+    padding: 20px;
+}
+
+.tamsam-about-image-1 {
+    grid-area: img1;
+}
+.tamsam-hello {
+    grid-area: hello;
+}
+
+.tamsam-hello h2, .tamsam-hello h6 { 
+    text-align: center;
+}
+.tamsam-about-image-2 {
+    grid-area: img2;
+}
+.tamsam-about-puppies {
+    grid-area: puppies;
+    padding-right: 50px;
+}
+.tamsam-about-image-3 {
+    grid-area: img3;
+}
+.tamsam-about-image-4 {
+    grid-area: img4;
+}
+ .tamsam-about-older-dogs { 
+    grid-area: olderdogs;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.tamsam-about-image-5 {
+    grid-area: img5;
+}
+.tamsam-about-pat {
+    grid-area: pat;
+    align-self: center;
+    color: white;
+    overflow: scroll;
+    height: 75%;
+}
+ .tamsam-about-image-6 {
+    grid-area: img6;
+}
+
+ .tamsam-about-image-6 h3 { 
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+
+.tamsam-about-sue {
+    grid-area: sue;
+    color: white;
+    overflow: scroll;
+    height: 75%;
+}
+
+.tamsam-coffee {
+    padding: 30px 20px;  
+}
+
+.tamsam-coffee h3 {
+    padding-top: 30px;
+}
+.tamsam-coffee-choice-1 {
+    grid-area: coffee1;
+}
+.tamsam-coffee-question {
+    grid-area: coffeeq;
+    width: 140%;
+    position: relative;
+    right: 120px;
+    text-align: center;
+}
+
+.tamsam-about-empty-teal-container {
+    background-color: rgba(4,122,140,0.9);
+    height: 950px;
+    z-index: 0;
+    width: 100%;
+    position: absolute;
+    top: 2730px;
+}
+
+.tamsam-coffee-choice-2 {
+    grid-area: coffee2;
+    text-align: center;
+    padding-left: 80px;
+}
+
+.coffee-question h6 {
+    padding-bottom: 20px;
+}
+
+.tamsam-sue-sign {
+    text-align: right;
+    padding-right: 20px;
+}
+
+
+@media only screen and (max-width:1599px) {
+    .tamsam-about-empty-teal-container {
+       display: none;
+    }
+    #tamsam-about-grid {
+        grid-gap: 60px 20px;
+    }
+    .tamsam-about-pat, .tamsam-about-sue {
+        color: black;
+    }
+    .tamsam-coffee {
+        padding-top: 0;
+    }
+    .tamsam-coffee-question {
+        width: 100%;
+        right: 0;
+}
+}
+
+@media only screen and (max-width:1499px) {
+    #tamsam-about-grid {
+        grid-gap: 20px 20px;
+    }
+   }
+
+@media only screen and (max-width:1399px) {
+    #tamsam-about-grid {
+    max-width: 1399px;
+    margin: 0 auto;
+    padding-left: 40px;
+    padding-right: 40px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 40px 40px;
+    grid-template-areas: "img1 hello"
+    "puppies img3"
+    "img2 olderdogs"
+    "img4 img5"
+    "pat sue"
+    "img6  img6";    
+     }
+     .tamsam-coffee-choice-1, .tamsam-coffee-choice-2, .tamsam-coffee-question  {
+         display:none;
+     } 
+.tamsam-about-pat, .tamsam-about-sue {
+    background-color: rgba(4,122,140,0.9);
+    color: white;
+    border: 20px solid white;
+    height: 100%; 
+    max-height: 700px;
+}
+.tamsam-about-image-6 {
+    max-width: 600px;
+    margin: 0 auto;
+}
+.tamsam-about-image-6 h3 {
+  display: none;
+}
+  .tamsam-about-older-dogs { 
+    grid-area: olderdogs;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+}
+
+@media only screen and (max-width: 1199px) {
+#tamsam-about-grid {
+    padding-left: 0;
+    padding-right: 0;
+    grid-gap: 30px 0;
+  }
+.tamsam-about-pat, .tamsam-about-sue {
+    max-height: 600px;
+}
+}
+
+@media only screen and (max-width:767px) {
+    #tamsam-about-grid {
+    padding-left: 30px;
+    padding-right: 30px;
+    grid-template-columns: 100%;
+    grid-gap: 40px 0px;
+    grid-template-areas: "img1"
+    "hello"
+    "img3"
+    "puppies"
+    "img2"
+    "olderdogs"
+    "img4"
+    "pat"
+    "img5"
+    "sue"
+    "img6"
+     }
+     .tamsam-about-image-6 {
+        max-width: 100%
+    }
+
+    .tamsam-about-pat, .tamsam-about-sue {
+        max-height: 800px;
+    }
+    }
+
+    @media only screen and (max-width:579px) {
+        #tamsam-about-grid {
+        padding-left: 10px;
+        padding-right: 10px;
+        grid-gap: 30px 0;
+        }
+    }
+
+    @media only screen and (max-width:479px) {
+        #tamsam-about-grid {
+        padding-left: 0px;
+        padding-right: 0px;
+        grid-gap: 20px 0;
+        }
+      .tamsam-about-puppies {
+        padding-right: 20px;
+}    
+    }
+
+/*END OF ABOUT PAGE------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*BREED STANDARDS AND EXPORTS PAGE---------------------------------------------------------------------------------------------------------------------*/
+
+#breed-standard-page, #exports-page {
+    background-color: rgba(4,122,140,0.7);
+    position: relative;
+    padding-bottom: 80px;
+}
+
+#breed-standard-page a:hover, a:active {
+    color: #047a8c; /* this is dark teal #02444e but should be white if on black*/
+  }
+
+
+
+#breed-standard-container, #exports-container {
+    box-sizing: border-box;
+    background-color: white;
+    width: 100vw;
+    max-width: 1000px;
+    margin: 0 auto;
+    box-shadow:  1px 1px 5px #bbb;
+    padding: 30px 40px 50px 40px;
+}
+
+#breed-standard-container h2, #exports-container h2 {
+    padding-bottom: 20px;
+    padding-top: 20px;
+    text-align: left;
+}
+
+#breed-standard-container h3 {
+    padding-bottom: 10px;
+}
+
+#breed-standard-container img {
+    position: relative;
+    float: right;
+    padding-top: 10px;
+}
+
+#breed-standard-container p {
+padding-bottom: 15px;
+}
+
+#exports-container a:hover {
+  color: #047a8c;
+}
+
+/*END OF BREED STANDARD and EXPORTS-------------------------------------------*/
+
+/*PUPPIES GALLERY PAGE--------------------------------------------------------------*/
+
+#_gallery-51-79.oxy-gallery-captions .oxy-gallery-item figure.oxy-gallery-item-contents figcaption:not(:empty) {
+  font-family: "Nothing You Could Do";
+  font-size: 20px;
+  top: 0px;
+  left: 0px;
+  text-align: left;
+}
+
+/*CONTACT PAGE-----------------------------------------------------------------------*/
+
+
+.tamsam-contact-form-container {
+    background-color: #f8f8f8;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 40px 0px 40px ;
+    border: 1px solid #bbb;
+    border-bottom: none;
+    box-shadow: 1px 1px 3px #bbb;
+}
+  
+.tamsam-contact-form-container h1{
+    font-family: "Nothing You Could Do", cursive;
+    font-size:  48px;
+    text-transform: capitalize;
+    color: #ef5406;
+}
+
+.tamsam-contact-form-container h6{
+    font-family: "Rozha One", sans-serif;
+    font-size: 28px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: black;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-bottom: 40px;
+  
+}
+
+div.tamsam-contact-form, #wpforms-142 div.wpforms-container div.wpforms-container-full div.tamsam-contact-form {
+    background-color: #f8f8f8;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px 80px 40px ;
+    border: 1px solid #bbb;
+    box-shadow: 1px 1px 3px #bbb;
+    margin-bottom: 80px;
+}
+
+@media only screen and (max-width: 767px) {
+    div#wpforms-142 div.wpforms-container div.wpforms-container-full div.tamsam-contact-form, div.tamsam-contact-form {
+        padding: 20px;
+        width: 100vw;
+    }
+}
+
+.tamsam-contact-form-label, label.wpforms-field-label {
+    font-family: "Rozha One", serif;
+    text-transform: uppercase !important;
+    font-size: 24px;
+    font-weight: 400;
+    color: black;
+    letter-spacing: 0.2em;
+    padding-top: 40px;
+    padding-right: 20px;
+}
+
+#wpforms-142-field_6-container label.wpforms-field-label,#wpforms-142-field_2-container label.wpforms-field-label, #wpforms-142-field_1-container label.wpforms-field-label,#wpforms-142-field_0-container label.wpforms-field-label {      
+    font-family: "Rozha One", serif;
+    text-transform: uppercase !important;
+    font-size: 24px;
+    font-weight: 400;
+    color: black;
+    letter-spacing: 0.2em;
+    padding-right: 20px;
+    padding-top: 40px;
+}
+
+
+button#wpforms-submit-142.wpforms-submit.tamsam-contact-form-submit-button {
+    font-family: Antic, sans-serif;
+    font-size: 15px;
+    text-transform: uppercase;
+    background-color:rgba(4, 122, 140, 0.7);
+    color: #fff;
+    padding: 10px 30px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top: 40px;
+}
+
+
+#wpforms-142-field_6 .wpforms-field-large .wpforms-valid {
+  font-family: Antic, sans-serif;
+  font-size: 15px;
+}
+
+
+.tamsam-contact-confirmation-message, div#wpforms-confirmation-142.wpforms-confirmation-container-full.wpforms-confirmation-scroll {
+  color: black;
+  background-color: #f8f8f8;
+  border: 1px solid #bbb;
+  padding: 10px;
+}
+
+  
+/*DOG DIRECTORY PAGES-----------------------------------------  --------------------*/
+
+#inner_content-4-208 {
+  background-color: #020400;
+  padding: 50px 30px;
+}
+
+.at_biz-dir_template-default #page #header #headerimg h1 a {
+  margin: 80px 0;
+  background-color: white;
+  text-transform: capitalize;
+}
+
+#inner_content-4-208 figure.directorist-listing-single__thumb a:hover {
+  background-color: white;
+}
+
+#inner_content-4-208 .directorist-thumbnail-card-front-wrap img, #inner_content-4-208 .directorist-thumbnail-card-front-img {
+  object-fit: contain;
+  width: 100%;
+  height: auto;
+}
+
+#inner_content-4-208 figure.directorist-listing-single__thumb {
+  margin-left:0;
+  margin-right:0;
+}
+
+
+#inner_content-4-208 .at_biz_dir_template-default #footer p {
+  display: none;
+}
+
+#inner_content-4-208 .directorist-col-3 .directorist-all-listing-col {
+  padding-left:0;
+  padding-right: 0;
+  margin: 15px;
+}
+
+
+@media only screen and (max-width: 2000px) {
+#inner_content-4-208 .directorist-col-3 {
+  width:33% !important;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+#inner_content-4-208 .directorist-col-3 {
+  width:50% !important;
+  }
+}
+  
+@media only screen and (max-width: 767px) {
+#inner_content-4-208 .directorist-col-3 {
+  width:100% !important;
+}
+  }
+
+/*404-------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+ #bad-puppy {
+   padding-top: 110px; 
+   margin-block-start: 0;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+}
+
+.bad-puppy-header {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.bad-puppy-subtitle  {
+    font-family: "Rozha One", serif;
+    letter-spacing: 0.2em;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    color: black;
+    line-height: 120%;
+    text-align: center;
+    font-size: 20px;
+    padding: 0 20px 20px 20px;
+}
+
+.bad-puppy-sub-subtitle {
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.bad-puppy-p {
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.bad-puppy-p a:hover {
+    color: #047a8c;
+}
+
+img.bad-puppy-image {
+    width: 2500px;
+    max-width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*Footer---------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+#tamsam-footer-logo-on-dark {
+    background-color: #040200;
+    padding: 80px 0;
+    border-top: 1px solid #bbb;
+}
+
+#tamsam-footer-logo-on-dark > h4  {
+    color: white;
+}
+
+footer#tamsam-footer p {
+  text-align: center;
+  font-size: 13px;
+}
+
+/*POST PAGES----------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*SINGLE DOG PAGES---------------------------------------------------------------------------------------------------------------------------------------*/
+
+#single-dog-page, .single-dog-page {
+    background-color: #040200;
+    padding: 50px 30px ;
+    box-sizing: border-box;
+    margin-block-end: 0;
+    margin-block-start:0;
+    margin-bottom:0;
+    margin-top: 60px;
+}
+
+@media only screen and (max-width: 1199px) {
+    #single-dog-page, .single-dog-page {
+        padding-left: 20px; 
+        padding-right: 20px;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    #single-dog-page, .single-dog-page {
+        padding-left: 15px; 
+        padding-right: 15px;
+        padding-bottom: 2px;
+    
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    #single-dog-page , .single-dog-page {
+        margin-top: 0;
+    }
+}
+
+
+@media only screen and (max-width: 479px) {
+    #single-dog-page , .single-dog-page {
+        padding-left: 3px; 
+        padding-right: 3px;
+    }
+  #single-dog-page span, #single-dog-page p, .single-dog-page span, .single-dog-page p {
+    font-size: 14px;
+}
+}
+
+
+#single-dog-container, .single-dog-container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.single-dog-photo-section, .single-dog-info-section, .single-dog-pedigree-section, .single-dog-full-pedigree-section,.single-dog-extra-photos {
+    border: 2px solid #fff;
+    border-radius: 5px;
+    background-color: white;
+    margin-bottom: 50px;  
+}
+
+.single-dog-photo-section {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+}
+
+.single-dog-section-header  {
+    background-color: #040200;
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.single-dog-section-header h6 {
+    color: white;
+    font-weight: normal;
+    padding-left: 20px;
+}
+
+div.single-dog-photo-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+}
+
+img.single-dog-photo-image {
+    box-sizing: border-box;
+    width: 1200px;
+    max-width: 100%;
+    height: auto;
+}
+
+div.single-dog-photo-text-container {
+    padding: 15px 0 25px 0;
+}
+
+div.single-dog-photo-names h2 {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+
+.single-dog-photo-section a:hover,  .single-dog-info-section a:hover,  .single-dog-pedigree-section a:hover  {
+    color: #047a8c;
+} 
+
+/*end photo section start main info section DOGS*/
+
+/*end photo section start main info section DOGS*/
+
+.single-dog-small-all-image-container {
+    box-sizing: border-box;
+    padding: 50px 10px 10px 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+}
+
+.single-dog-small-all-image-container .image-flex-container-centered {
+    box-sizing: border-box;
+    width: 33%;
+    padding: 0px 10px 30px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.single-dog-small-all-image-container .image-flex-container-centered img {
+    width: 100%;
+    height: auto;
+}
+
+.single-dog-info-section-contents-no-small-photos {
+    margin-top: 25px;
+}
+
+.single-dog-info-content {
+    padding: 0 20px 25px 20px;
+}
+
+.single-dog-info-row {
+    display: grid;
+    box-sizing: border-box;
+    grid-template-columns: 50px 1fr 3fr;
+}
+
+span.single-dog-info-icon-container {
+    box-sizing: border-box;
+    width: 28px;
+    height: 28px;
+    background-color: #eee;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 6px;
+    margin-bottom: 8px;
+}
+
+#single-dog-page span.single-dog-info-icon, .single-dog-page span.single-dog-info-icon {
+    font-size: 18px;
+    line-height: 40px;
+    color: #000;
+}
+
+span.single-dog-info-label {
+    color: #444;
+    line-height: 40px;
+}
+
+span.single-dog-info-value {
+    color:#444;
+    line-height: 40px;
+}
+
+@media only screen and (max-width: 767px) {
+  
+    .single-dog-small-all-image-container .image-flex-container-centered {
+        width: 100%;
+  }
+       .single-dog-info-row {
+        grid-template-columns: 40px 1fr 2fr;
+    }
+}
+
+
+@media only screen and (max-width: 479px) {
+  
+   .single-dog-info-row {
+     font-size: 13px;
+    }
+  
+  .single-dog-small-all-image-container {
+    padding: 5px 0 0 0;
+  }
+  
+  .single-dog-small-all-image-container .image-flex-container-centered {
+    padding: 0;
+  }
+  
+  .single-dog-info-content {
+    padding: 20px 10px 55px 10px;
+    background-color: #040200;
+    border-radius: 5px;
+}
+   span.single-dog-info-label, span.single-dog-info-value {
+     color: white;
+}
+}
+
+/*Pedigree section*/
+.single-dog-pedigree-contents {
+    margin-top: 20px;
+    margin-bottom: 25px;
+    padding-left: 20px;
+}
+
+@media only screen and (max-width: 479px) {
+  .single-dog-pedigree-contents {
+    padding: 20px 10px 25px 10px;
+    background-color: #040200;
+    margin-block-start:1px;
+    margin-block-end: 0;
+  }
+}
+  
+/*Full Pedigree section*/
+.single-dog-pedigree {
+    background-color: #040200;
+    border-top: 1px solid #f8f8f8;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    grid-template-areas: "s gs-p ggs-pp"
+    "s gs-p ggd-pp"
+    "s gd-p ggs-pm"
+    "s gd-p ggd-pm"
+    "d gs-m ggs-mp"
+    "d gs-m ggd-mp"
+    "d gd-m ggs-mm"
+    "d gd-m ggd-mm";
+}
+
+@media only screen and (max-width: 767px) {
+    .single-dog-pedigree {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "s gs-p"
+        "s gd-p"
+        "d gs-m"
+        "d gd-m";
+    }
+}
+
+.pedigree-entry-container {
+    padding: 20px;
+    border: 1px solid #222;
+    color: white;
+}
+
+.single-dog-sire {
+    grid-area: s;
+}
+
+.single-dog-p-grandsire {
+    grid-area: gs-p;
+}
+
+.single-dog-p-granddam {
+    grid-area: gd-p;
+}
+
+.single-dog-pp-great-grandsire {
+    grid-area: ggs-pp;
+}
+
+.single-dog-pp-great-granddam {
+    grid-area: ggd-pp;
+}
+
+.single-dog-pm-great-grandsire {
+    grid-area: ggs-pm;
+}
+
+.single-dog-pm-great-granddam {
+    grid-area: ggd-pm;
+}
+
+.single-dog-dam {
+    grid-area: d;
+}
+
+.single-dog-m-grandsire {
+    grid-area: gs-m;
+}
+
+.single-dog-m-granddam {
+    grid-area: gd-m;
+}
+
+.single-dog-mp-great-grandsire {
+    grid-area: ggs-mp;
+}
+
+.single-dog-mp-great-granddam {
+    grid-area: ggd-mp;
+}
+
+.single-dog-mm-great-grandsire {
+    grid-area: ggs-mm;
+}
+
+.single-dog-mm-great-granddam {
+    grid-area: ggd-mm;
+}
+
+@media only screen and (max-width: 767px) {
+.single-dog-pp-great-grandsire {
+    display: none;
+}
+.single-dog-pp-great-granddam {
+    display: none;
+}
+.single-dog-pm-great-grandsire {
+    display: none;
+}
+.single-dog-pm-great-granddam {
+    display: none;
+}
+.single-dog-mp-great-grandsire {
+    display: none;
+}
+.single-dog-mp-great-granddam {
+    display: none;
+}
+.single-dog-mm-great-grandsire {
+    display: none;
+}
+.single-dog-mm-great-granddam {
+    display: none;
+}
+}
+
+/*VIP and PET and VINTAGE and CHAMPION and BIS and BREEDING and SHOWING and FUTURE DOGS PAGE------------------------------------------------------------------------*/
+#vip-page, #champion-page, #vintage-page, #bis-page, #breeding-page, #showing-page, #future-page, #pet-page, #past-champion-page, #category-page {
+    background-color: #040200;
+    padding: 80px 40px 80px 40px;
+}
+
+#vip-container,  #pet-container, #champion-container, #vintage-container, #bis-container, #showing-container, #breeding-container, #future-container, #past-champion-container, #category-container {
+    max-width: 2000px;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+}
+
+#vip-page .single-dog-page, #pet-page .single-dog-page,  #champion-page .single-dog-page, #breeding-page .single-dog-page, #category-page .single-dog-page, 
+#vintage-page .single-dog-page, #bis-page .single-dog-page,  #showing-page .single-dog-page, #future-page .single-dog-page, #past-champion-page .single-dog-page {
+    padding: 0;
+    background-color: white;
+    border: 2px solid #f8f8f8;
+    border-radius: 5px;
+    width: 100%;
+}
+
+#vip-page .single-dog-container, #pet-page .single-dog-container, #champion-page .single-dog-container, #breeding-page .single-dog-container, #category-page .single-dog-container,
+#vintage-page .single-dog-container, #bis-page .single-dog-container,  #showing-page .single-dog-container, #future-page .single-dog-container, #past-champion-page .single-dog-container {
+    width: 100%;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+#vip-page .single-dog-photo-section,  #pet-page .single-dog-photo-section, #champion-page .single-dog-photo-section, #breeding-page .single-dog-photo-section, #category-page .single-dog-photo-section,
+#vintage-page .single-dog-photo-section, #bis-page .single-dog-photo-section,  #showing-page .single-dog-photo-section, #future-page .single-dog-photo-section, #past-champion-page .single-dog-photo-section {
+    margin-bottom: 0;
+
+}
+#vip-page .single-dog-info-section, #pet-page .single-dog-info-section, #champion-page .single-dog-info-section, #breeding-page .single-dog-info-section, 
+#vintage-page .single-dog-info-section, #bis-page .single-dog-info-section,  #showing-page .single-dog-info-section, #future-page .single-dog-info-section, #past-champion-page .single-dog-info-section {
+    margin-bottom: 0;
+}
+
+#vip-page .single-dog-info-section-contents-no-small-photos, #pet-page .single-dog-info-section-contents-no-small-photos, #champion-page .single-dog-info-section-contents-no-small-photos, #breeding-page .single-dog-info-section-contents-no-small-photos,
+    #vintage-page .single-dog-info-section-contents-no-small-photos, #bis-page .single-dog-info-section-contents-no-small-photos,  #showing-page .single-dog-info-section-contents-no-small-photos, #future-page .single-dog-info-section-contents-no-small-photos, #past-champion-page .single-dog-info-section-contents-no-small-photos {
+   margin-top: 0;
+}
+
+#vip-page .single-dog-pedigree-section, #pet-page .single-dog-pedigree-section, #champion-page .single-dog-pedigree-section, #future-page .single-dog-pedigree-section,
+#vintage-page .single-dog-pedigree-section, #bis-page .single-dog-pedigree-section, #breeding-page .single-dog-pedigree-section, #showing-page .single-dog-pedigree-section, #past-champion-page .single-dog-pedigree-section
+{
+    margin-bottom: 10px;
+}
+
+#vip-page .single-dog-container .single-dog-info-content, #pet-page .single-dog-container .single-dog-info-content, #champion-page .single-dog-container .single-dog-info-content , #future-page .single-dog-container .single-dog-info-content,
+#vintage-page .single-dog-container .single-dog-info-content, #bis-page .single-dog-container .single-dog-info-content, #breeding-page .single-dog-container .single-dog-info-content, #showing-page .single-dog-container .single-dog-info-content, #past-champion-page .single-dog-container .single-dog-info-content {
+    padding-bottom: 25px;
+}
+
+  #vip-page img,   #pet-page img, #champion-page img, #future-page img, #category-page img,
+  #vintage-page img,   #bis-page img, #showing-page img, #breeding-page img, #past-champion-page img {
+      border-radius: 3px;
+      box-shadow: 3px 3px 5px #bbb;
+      max-width: 100%;
+      height: auto;
+  }
+
+  #vip-page .single-dog-photo-image-container,   #pet-page .single-dog-photo-image-container, #champion-page  .single-dog-photo-image-container, #future-page  .single-dog-photo-image-container, #category-page .single-dog-photo-image-container,
+  #vintage-page .single-dog-photo-image-container,   #bis-page .single-dog-photo-image-container, #breeding-page  .single-dog-photo-image-container , #showing-page  .single-dog-photo-image-container, #past-champion-page  .single-dog-photo-image-container  {
+      padding-bottom: 15px;
+  }
+
+   #vip-page .single-dog-photo-names h3 a:visited,  #pet-page .single-dog-photo-names h3 a:visited,  #champion-page .single-dog-photo-names h3 a:visited, #breeding-page .single-dog-photo-names h3 a:visited, #category-page .single-dog-photo-names h2 a:visited,
+   #vintage-page .single-dog-photo-names h3 a:visited,  #bis-page .single-dog-photo-names h3 a:visited,  #showing-page .single-dog-photo-names h3 a:visited, #future-page .single-dog-photo-names h3 a:visited , #past-champion-page .single-dog-photo-names h3 a:visited {
+      color: #ef5406;
+  }
+
+  #vip-page .single-dog-photo-names h3 a:hover, #pet-page .single-dog-photo-names h3 a:hover, #champion-page .single-dog-photo-names h3 a:hover, #future-page .single-dog-photo-names h3 a:hover, #category-page .single-dog-photo-names h2 a:hover,
+  #vintage-page .single-dog-photo-names h3 a:hover, #bis-page .single-dog-photo-names h3 a:hover, #showing-page .single-dog-photo-names h3 a:hover, #breeding-page .single-dog-photo-names h3 a:hover, #champion-page .single-dog-photo-names h3 a:hover  {
+    color: #047a8c;
+}
+
+#category-page h2 {
+    text-align: center;
+    padding-bottom: 20px;
+    padding-top: 0;
+}
+
+#category-page h2 a, #category-page h2 a:visited {
+   color: black;
+}
+
+.single-dog-extra-photos {
+    background-color: #040200;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.single-dog-extra-photos-multiple, .single-dog-extra-photos-multiple-768px  {
+    background-color: #040200;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    padding: 80px 100px 0px 100px;
+}
+
+.single-dog-extra-photos-multiple img {
+    width: 1000px;
+    max-width: 100%;
+    height: auto;
+    padding-bottom: 80px;
+}
+
+.single-dog-extra-photos-multiple-768px img {
+    width: 800px;
+    max-width: 100%;
+    height: auto;
+    padding-bottom: 80px;
+}
+
+
+@media only screen and (max-width: 1750px) {
+    #vip-container, #pet-container, #champion-container, #vintage-container, #bis-container, #breeding-container, #showing-container, #future-container, #past-champion-container, #category-container {
+    grid-template-columns: 1fr 1fr;
+}
+}
+
+@media only screen and (max-width: 991px) {
+    #vip-container, #pet-container , #champion-container, #vintage-container, #bis-container, #breeding-container, #showing-container, #future-container, #past-champion-container, #category-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+}
+
+@media only screen and (max-width:767px) {
+    #vip-page, #pet-page, #champion-page, #vintage-page, #bis-page, #breeding-page, #showing-page, #future-page, #past-champion-page, #category-page {
+        padding: 40px 10px 40px 10px;
+    }
+    .single-dog-extra-photos-multiple, .single-dog-extra-photos, .single-dog-extra-photos-multiple-768px {
+        display: none;
+    }
+}
+
+@media only screen and (max-width:479px) {
+    #vip-page, #pet-page, #champion-page, #vintage-page, #bis-page, #breeding-page, #showing-page, #future-page, #past-champion-page, #category-page  {
+        padding: 40px 10px 40px 10px;
+    }
+  #vip-page .single-dog-info-section,   #pet-page .single-dog-info-section, #champion-page .single-dog-info-section, #vintage-page  .single-dog-info-section, #bis-page  .single-dog-info-section, #breeding-page  .single-dog-info-section, #showing-page  .single-dog-info-section, #future-page  .single-dog-info-section, #past-champion-page  .single-dog-info-section {
+    padding-bottom: 25px;
+    margin-bottom: 15px;
+}
+}  
+
+
+/*INDIVIDUAL DOG SINGLE PAGE EDITS*/
+
+img.wp-image-1076 {
+    width: 1000px;
+    max-width: 100%;
+    height: auto;
+} /*Coco*/
+.single-dog-small-all-image-container img.wp-image-38 {
+    padding-right: 50px;
+    width: 420px;
+    height: auto;
+} /*Coco*/
+
+.single-dog-extra-photos img.wp-image-493 {
+    width: 1000px;
+    max-width: 100%;
+    height: auto;
+    padding-top:80px;
+    padding-bottom: 80px;
+} /*Flame in blue coat*/
+img.wp-image-492 {
+    width: 440px;
+    height: auto;
+    max-width: 100%;
+  } /*Flame*/
+
+.single-dog-extra-photos img.wp-image-117 {
+    width: 768px;
+    max-width: 100%;
+    height: auto;
+    padding-top:80px;
+    padding-bottom: 80px;
+} /*Frosty with leaf in mouth*/
+img.wp-image-103 {
+width: 768px; 
+  height: auto;
+  max-width: 100%;
+} /*Frosty with pups*/
+#vintage-page img.wp-image-103 {
+    width: 300px; 
+    } /*Frosty with pups*/
+ 
+img.wp-image-854 {
+    width: 720px; 
+    height: auto;
+    max-width: 100%;
+  } /*Shiraz*/
+  #category-page img.wp-image-854 {
+    width: 400px; 
+    height: auto;
+    max-width: 100%;
+  } /*Shiraz*/
+ 
+  img.wp-image-495 {
+      width: 369px;
+         height: auto;
+    max-width: 100%;
+  } /*Jade*/
+  
+  img.wp-image-501 {
+      width: 338px;
+     height: auto;
+    max-width: 100%;
+  } /*Jazz*/
+
+  img.wp-image-533 {
+    width: 334px;
+     height: auto;
+    max-width: 100%;
+} /*Piper*/
+
+img.wp-image-192 {
+    width: 370px;
+   height: auto;
+    max-width: 100%;
+} /*Codie*/
+
+img.wp-image-497 {
+    width: 300px;
+   height: auto;
+    max-width: 100%;
+} /*Cosmo*/
+
+img.wp-image-771 {
+    width: 370px;
+   height: auto;
+    max-width: 100%;
+} /*Tussock*/
+
+img.wp-image-784 {
+  width: 640px; 
+  height: auto;
+  max-width: 100%;
+} /*Cruz*/
+  #bis-page  img.wp-image-784, #vip-page img.wp-image-784 {
+    width: 470px; 
+    height: auto;
+    max-width: 100%;
+} /*Cruz*/  
+
+img.wp-image-488 {
+    width: 768px; 
+  height: auto;
+  max-width: 100%;
+} /*memphis*/
+
+img.wp-image-796 {
+    width: 1000px; 
+    height: auto;
+    max-width: 100%;
+    padding-top: 80px;
+    padding-bottom: 80px;
+  } /*Havoc and Piper*/
+  img.wp-image-798 {
+    width: 243px; 
+    height: auto;
+    max-width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+  } /*Havoc*/
+  img.wp-image-799 {
+    width: 321px; 
+    height: auto;
+    max-width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+  } /*Havoc*/
+  #vintage-page img.wp-image-799,  #bis-page img.wp-image-799 {
+      padding: 0;
+  }/*Havoc*/
+
+  img.wp-image-809 {
+    width: 400px; 
+  height: auto;
+  max-width: 100%;
+} /*Texas*/
+img.wp-image-808 {
+    width: 250px; 
+  height: auto;
+  max-width: 100%;
+} /*Texas*/
+img.wp-image-807, img.wp-image-855{
+    width: 640px; 
+  height: auto;
+  max-width: 100%;
+} /*Texas and Shylo*/
+
+img.wp-image-892 {
+ width: 900px; 
+  height: auto;
+  max-width: 100%;
+  padding-bottom: 10px;
+} /*Misty*/
+#champion-page img.wp-image-892, #bis-page img.wp-image-892  {
+    padding-bottom: 0;
+}
+
+img.wp-image-897, img.wp-image-896 {
+ width: 768px; 
+  height: auto;
+  max-width: 100%;
+} /*Demi*/
+.single-dog-extra-photos-multiple img.wp-image-896, .single-dog-extra-photos-multiple img.wp-image-1031, .single-dog-extra-photos-multiple img.wp-image-1052 {
+width: 768px;    
+padding-top: 80px;
+padding-bottom: 80px;
+   } /*Demi*/
+
+
+figcaption.demi-caption {
+    text-align: center;
+    padding-top: 10px;
+    font-size: 14px;
+    font-style: italic;
+}
+
+img.wp-image-886, img.wp-image-119 {
+    width: 768px; 
+    height: auto;
+    max-width: 100%;
+       } /*Luca*/
+img.wp-image-883, img.wp-image-885, img.wp-image-119 {
+        width: 640px; 
+        height: auto;
+        max-width: 100%;
+           } /*Luca*/
+                  
+img.wp-image-932 {
+    width: 456px; 
+    height: auto;
+    max-width: 100%;
+} /*Benji*/    
+
+img.wp-image-923 {
+    width: 518px; 
+    height: auto;
+    max-width: 100%;
+} /*Mint*/    
+img.wp-image-922 {
+    width: 600px; 
+    height: auto;
+    max-width: 100%;
+} /*Mint*/    
+img.wp-image-925, img.wp-image-926 {
+    width: 600px; 
+    height: auto;
+    max-width: 100%;
+} /*Mint*/  
+
+img.wp-image-949 {
+    width: 889px; 
+    height: auto;
+    max-width: 100%;
+} /*Tyler*/    
+
+img.wp-image-967, img.wp-image-38 {
+    width: 420px; 
+    height: auto;
+    max-width: 100%;
+} /*Dash and Coco*/    
+
+img.wp-image-72 {
+    width: 600px; 
+    height: auto;
+    max-width: 100%;
+} /*Ace/Kona*/  
+#champion-page img.wp-image-72 {
+    width: 300px; 
+    height: auto;
+    max-width: 100%;
+} /*Ace/Kona*/  
+
+img.wp-image-997 {
+    width: 450px;
+    height: auto;
+    max-width: 100%
+}
+
+.single-dog-extra-photos .wp-image-1036 {
+    width: 768px;
+    height: auto;
+    max-width: 100%
+} /*Jaffa*/
+
+.single-dog-extra-photos .wp-image-1040 {
+    width: 768px;
+    height: auto;
+    max-width: 100%
+} /*Misty*/
+
+.single-dog-extra-photos-multiple img.wp-image-1038, .single-dog-extra-photos-multiple img.wp-image-1039, .single-dog-extra-photos-multiple img.wp-image-1041 {
+    width: 768px;    
+    padding-top: 80px;
+    padding-bottom: 80px;
+       } /*Kona*/
+
+  .wp-image-191 {
+    width: 470px; 
+    height: auto;
+    max-width: 100%;
+  } /*Boris*/     

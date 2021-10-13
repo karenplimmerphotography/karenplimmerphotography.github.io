@@ -46,6 +46,7 @@ const h6ClassHeadings = document.getElementsByClassName('h6');
 const fontTipsButton = document.getElementById('font-tips-button'); // shows hides tips on using font buttons
 const fontTips = document.getElementById('font-tips'); // to enable show/hide
 const headingButton = document.getElementsByClassName('heading-button'); //sets heading font
+//const headingCaseButton = document.getElementsByClassName('heading-case-button'); //sets heading font
 const smallHeadingButton = document.getElementsByClassName('small-heading-button'); // sets h5 and h6 heading font
 const serifBodyFontButton = document.getElementsByClassName("serif-body-font-button"); // sets body font by cycling serif fonts alphabeticaly
 const sansSerifBodyFontButton = document.getElementsByClassName("sans-serif-body-font-button"); // sets body font by cycling sans-serif fonts alphabetically
@@ -311,11 +312,31 @@ for (const item of headingButton) {
         setHeadings();
     });
 }
+/*
+const toggleUppercaseHeading = list => { // toggle body font 300/400
+    for (i = 0; i < list.length; i++) {
+        if (list[i].style.textTransform === '') {
+            list[i].style.textTransform = window.getComputedStyle(list[i]).getPropertyValue('text-transform');
+        }
+    list[i].style.textTransform === 'none' ? list[i].style.textTransform = 'uppercase' : list[i].style.textTransform = 'none';
+     if (list[i].style.textTransform === 'uppercase') {
+        list[i].style.letterSpacing = '0.2rem';
+}
+}
+}
 
+for (const item of headingCaseButton) {
+item.addEventListener('click', function(){
+    toggleUppercaseHeading(headings);
+});
+}
+*/
 const setSmallHeadingsOnList = list => { //toggles between heading and body font and updates text of small heading button
     const bodyFontFamily = window.getComputedStyle(body[0]).getPropertyValue('font-family');
     const headingFontFamily = window.getComputedStyle(headings[0]).getPropertyValue('font-family');
     for (const item of list) { //lists are h5/h6 headings tag and class lists
+        item.style.textTransform = 'none';
+        item.style.letterSpacing = '';
         item.style.fontFamily === bodyFontFamily ?  item.style.fontFamily = headingFontFamily : item.style.fontFamily = bodyFontFamily;
     }
 }
@@ -475,6 +496,25 @@ const changeColourScheme = array => {
     changeToneInColourScheme(array[0], d, midTones2, midTones2Text, 3);
     changeToneInColourScheme(array[0], e, midTones3, midTones3Text, 4);
     changeToneInColourScheme(array[0], f, lightTones1, lightTones1Text, 5);
+       for (const item of favouritesButton) {
+        if (array[0] === colourScheme1) {
+           item.textContent = 'colour scheme 1';
+       } else if (array[0] === colourScheme2) {
+            item.textContent = 'colour scheme 2';
+        } else if (array[0] === colourScheme3) {
+            item.textContent = 'colour scheme 3';
+        } else if (array[0] === colourScheme4) {
+            item.textContent = 'colour scheme 4';
+        } else if (array[0] === colourScheme5) {
+            item.textContent = 'colour scheme 5';
+        } else if (array[0] === colourScheme6) {
+            item.textContent = 'colour scheme 6';
+        } else if (array[0] === colourScheme7) {
+            item.textContent = 'colour scheme 7';
+        } else if (array[0] === colourScheme8) {
+            item.textContent = 'colour scheme 8';
+        }
+     }
     array.push(array[0]);
     array.shift(array[0]);
 }

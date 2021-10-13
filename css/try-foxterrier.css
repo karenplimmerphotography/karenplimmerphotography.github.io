@@ -594,10 +594,6 @@ footer p>span {
 
 /* header*/
 
-a {
-    font-weight: bold;
-}
-
 #tamsam-header {
    background-color: #222;
     display: grid;
@@ -888,14 +884,14 @@ header #subtitle { /*tightens spacing due to buttons added*/
     gap: 1rem;
 }
 
-@media only screen and (max-width: 999px) {
+@media only screen and (max-width:1199px) {
     #buttons {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
         margin-bottom: 2rem;
     }
 }
 
-@media only screen and (max-width: 499px) {
+@media only screen and (max-width: 549px) {
     #buttons {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -953,12 +949,12 @@ header #subtitle { /*tightens spacing due to buttons added*/
 }
 
 #h1-sample.text {
-    height: 170px;
+    height: 200px;
     padding: 0 2rem;
 }
 
 #h2-sample.text {
-    height: 130px;
+    height: 150px;
     padding: 0 2rem;
 }
 
