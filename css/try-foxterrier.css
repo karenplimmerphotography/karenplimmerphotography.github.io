@@ -30,9 +30,8 @@ body {
 
 main {
     background-color: #fff;
-    width: 1200px;
-    margin: 2rem auto;
-    padding: 0 2rem;
+    margin: 0 auto;
+    padding: 0;
 }
 
 section {
@@ -41,6 +40,16 @@ section {
 
 article {
     margin-bottom: 3rem;
+}
+
+.vw1600 {
+    width: 1600px;
+    padding: 2rem;
+}
+
+.vw1200 {
+    width: 1200px;
+    padding: 2rem;
 }
 
 @media only screen and (max-width: 479px) {
@@ -144,7 +153,7 @@ a {
 
 a:hover,
 a:active {
-    color: #bbb;
+    color: #bababa;
 }
 
 a:visited {
@@ -230,7 +239,10 @@ button.long-button:active {
     margin: 0;
     padding-top: 1rem;
     padding-bottom: 1rem;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
 }
+
 
 @media only screen and (max-width: 599px) {
     .tabs {
@@ -245,36 +257,12 @@ button.long-button:active {
 .la {
     color: inherit;
     font-size: 1.5rem;
-    vertical-align: baseline;
+    vertical-align: middle;
     position: relative;
-    top: 0.1rem;
     z-index: 0;
-    padding-right: 0.5rem;
 }
 
-/*header*/
-
-header {
-    background-color: #fff;
-    padding: 4rem 0;
-    font-size: 2rem;
-    text-align: center;
-}
-
-header * {
-    background-color: inherit;
-}
-
-.title {
-    font-size: 2.5rem;
-    padding-bottom: 0;
-    line-height: 1;
-}
-
-.subtitle {
-    font-style: italic;
-    font-size: 3rem;
-}
+/*header nav*/
 
 header nav {
     display: flex;
@@ -303,7 +291,7 @@ header nav a:visited {
 
 header nav a:hover,
 header nav a:focus {
-    color: #bbb;
+    color: #bababa;
     font-weight: bold;
 }
 
@@ -356,7 +344,7 @@ header nav a:focus {
 }
 
 .sidenav a:visited {
-    color: #bbb;
+    color: #bababa;
 }
 
 .sidenav a:hover {
@@ -460,7 +448,7 @@ footer nav li a:visited {
 
 footer nav li a:hover,
 footer nav li a:focus {
-    color: #bbb;
+    color: #bababa;
     font-weight: 700;
 }
 
@@ -492,7 +480,7 @@ footer p>span {
 
 .bg-e,
 .mid-3 {
-    background-color: #bbb
+    background-color: #bababa
 }
 
 .bg-d,
@@ -528,7 +516,7 @@ footer p>span {
 }
 
 .text-mid-3 {
-    color: #bbb
+    color: #bababa
 }
 
 .text-mid-2 {
@@ -619,8 +607,53 @@ footer p>span {
 
 /* header*/
 
+/*header*/
+
+#home-page-header,
+#tamsam-about-page header,
+#breed-standard-page header,
+#exports-page header,
+#my-404-page header,
+#category-page header,
+#bis-page header,
+.page-header {
+    background-color: rgb(19, 12, 0);
+    text-align: center;
+    padding: 4rem 0;
+}
+
 #tamsam-header {
-    background-color: #222;
+    text-align: center;
+    padding: 4rem 0;
+}
+
+#tamsam-header #title,
+#tamsam-header #subtitle {
+   background-color: inherit;
+}
+
+#title,
+.title {
+    text-align: center;
+    color: #fff;
+    background-color: rgb(19, 12, 0);
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    line-height: 1;
+    padding-bottom: 0;
+}
+
+#subtitle,
+.subtitle {
+    text-align: center;
+    color: hsl(33, 54%, 50%);
+    background-color: rgb(19, 12, 0);
+    font-style: italic;
+    font-size: 3rem;
+}
+
+#tamsam-header {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 3rem 2rem;
@@ -628,14 +661,6 @@ footer p>span {
     align-items: center;
     padding-bottom: 0;
     /*default padding: 4rem 0;*/
-}
-
-#tamsam-header * {
-    background-color: #222;
-}
-
-header .title {
-    color: #fff;
 }
 
 header #subtitle {
@@ -1201,6 +1226,14 @@ header #subtitle {
     padding: 0 1rem 0.3rem 1rem;
 }
 
+#links-and-lists .la {
+    font-size: 1.5rem;
+    vertical-align: baseline;
+    position: relative;
+    top: 0.1rem;
+    padding-right: 0.5rem;
+}
+
 /*buttons*/
 
 #buttons-buttons {
@@ -1572,23 +1605,11 @@ header #subtitle {
 
 #home-page-header,
 #home-page-header * {
-    background-color: rgb(19, 12, 0);
     margin-bottom: 0;
 }
 
-#home-page-header .title {
-    color: #fff;
-    font-size: 2.5rem;
-    letter-spacing: 0.2rem;
-    line-height: 1;
-    padding-bottom: 0;
-}
-
 #home-page-header .subtitle {
-    color: hsl(33, 74%, 50%);
     font-family: "Nothing You Could Do";
-    font-style: oblique;
-    font-size: 3rem;
     padding-bottom: 0;
 }
 
@@ -1743,7 +1764,12 @@ header #subtitle {
 
 #feature-header .subtitle {
     color: #fff;
+    background-color: hsl(187, 35%, 50%);
     font-family: "Nothing You Could Do";
+}
+
+#feature-header .title {
+    background-color: hsl(187, 35%, 50%);
 }
 
 #dash-and-coco-grid {
@@ -1859,27 +1885,36 @@ header #subtitle {
 }
 
 /*all headers*/
-#tamsam-about-page header, #tamsam-about-page header *,
-#breed-standard-page header, #breed-standard-page header *,
-#exports-page header, #exports-page header *,
-#my-404-page header, #my-404-page header *,
-#category-page header, #category-page header * {
+#tamsam-about-page header,
+#tamsam-about-page header *,
+#breed-standard-page header,
+#breed-standard-page header *,
+#exports-page header,
+#exports-page header *,
+#my-404-page header,
+#my-404-page header *,
+#category-page header,
+#category-page header *,
+#bis-page header,
+#bis-page header * {
     background-color: rgb(19, 12, 0);
 }
 
 #tamsam-about-page .subtitle,
 #breed-standard-page .subtitle,
 #exports-page .subtitle,
-#my-404-page .subtitle, 
-#category-page .subtitle {
-    color:hsl(33, 74%, 50%);
+#my-404-page .subtitle,
+#category-page .subtitle,
+#bis-page .subtitle {
+    color: hsl(33, 74%, 50%);
 }
 
 #tamsam-about-page .title,
 #breed-standard-page .title,
 #exports-page .title,
 #my-404-page .title,
-#category-page .title {
+#category-page .title,
+#bis-page .title {
     text-transform: uppercase;
     letter-spacing: 0.2rem;
 }
@@ -2199,14 +2234,16 @@ header #subtitle {
 /* breed-standard and exports*/
 
 
-#breed-standard-page, #exports-page {
+#breed-standard-page,
+#exports-page {
     background-color: hsl(187, 35%, 50%);
     position: relative;
     padding-bottom: 5rem;
     margin-bottom: 0;
 }
 
-#breed-standard-container, #exports-container {
+#breed-standard-container,
+#exports-container {
     background-color: white;
     width: 100vw;
     max-width: 1000px;
@@ -2231,37 +2268,37 @@ header #subtitle {
     flex-direction: column;
     justify-content: center;
     text-align: center;
- }
+}
 
- #bad-puppy img{
+#bad-puppy img {
     width: 2500px;
     max-width: 100%;
     height: auto;
     margin: 0 auto 3rem auto;
 }
 
-#bad-puppy h2  {
+#bad-puppy h2 {
     font-size: 2.5rem;
     text-transform: uppercase;
-     letter-spacing: 0.2rem;
- }
- 
+    letter-spacing: 0.2rem;
+}
+
 #bad-puppy h3 {
     font-size: 1.5rem;
-     font-weight: bold;
-     padding: 1rem 0 2rem 0;
- }
+    font-weight: bold;
+    padding: 1rem 0 2rem 0;
+}
 
- #bad-puppy h4 {
+#bad-puppy h4 {
     font-size: 1.25rem;
     font-style: oblique;
- }
- 
- .bad-puppy-p {
-     max-width: 1000px;
-     margin: 0 auto;
-     padding: 2rem;
- }
+}
+
+.bad-puppy-p {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+}
 
 /*PUPPIES GALLERY PAGE--------------------------------------------------------------*/
 
@@ -2271,184 +2308,380 @@ header #subtitle {
     top: 0px;
     left: 0px;
     text-align: left;
-  }
+}
 
- /*Contact page*/
- /*CONTACT PAGE-----------------------------------------------------------------------*/
-
+/*Contact page*/
 
 .tamsam-contact-form-container {
-    background-color: #f8f8f8;
+    background-color: hsl(0, 0%, 97%);
     max-width: 1200px;
     margin: 0 auto;
-    padding: 40px 40px 0px 40px ;
-    border: 1px solid #bbb;
+    padding: 2.5rem 2.5rem 0 2.5rem;
+    border: 1px solid hsl(0, 0%, 73%);
     border-bottom: none;
-    box-shadow: 1px 1px 3px #bbb;
-}
-  
-.tamsam-contact-form-container h1{
-    font-family: "Nothing You Could Do", cursive;
-    font-size:  48px;
-    text-transform: capitalize;
-    color: #ef5406;
+    box-shadow: 1px 1px 3px hsl(0, 0%, 73%);
 }
 
-.tamsam-contact-form-container h6{
-    font-family: "Rozha One", sans-serif;
-    font-size: 28px;
+.tamsam-contact-form-container h1 {
+    font-size: 3rem;
+    color: hsl(33, 74%, 50%);
+}
+
+.tamsam-contact-form-container h6 {
+    font-size: 2rem;
     font-weight: 400;
     text-transform: uppercase;
-    color: black;
+    color: #222;
     max-width: 1200px;
     margin: 0 auto;
-    padding-top: 20px;
-    padding-bottom: 40px;
-  
+    padding-top: 1.25rem;
+    padding-bottom: 2.5rem;
 }
 
-div.tamsam-contact-form, #wpforms-142 div.wpforms-container div.wpforms-container-full div.tamsam-contact-form {
-    background-color: #f8f8f8;
+div.tamsam-contact-form,
+#wpforms-142 div.wpforms-container div.wpforms-container-full div.tamsam-contact-form {
+    background-color: rgb(248, 248, 248);
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 40px 80px 40px ;
-    border: 1px solid #bbb;
-    box-shadow: 1px 1px 3px #bbb;
-    margin-bottom: 80px;
+    padding: 0 2.5rem 5rem 2.5rem;
+    border: 1px solid hsl(0, 0%, 73%);
+    ;
+    box-shadow: 1px 1px 3px hsl(0, 0%, 73%);
+    margin-bottom: 5rem;
 }
 
 @media only screen and (max-width: 767px) {
-    div#wpforms-142 div.wpforms-container div.wpforms-container-full div.tamsam-contact-form, div.tamsam-contact-form {
-        padding: 20px;
+
+    div.tamsam-contact-form,
+    div#wpforms-142 div.wpforms-container div.wpforms-container-full div.tamsam-contact-form {
+        padding: 1.25rem;
         width: 100vw;
     }
 }
 
-.tamsam-contact-form-label, label.wpforms-field-label {
-    font-family: "Rozha One", serif;
-    text-transform: uppercase !important;
-    font-size: 24px;
+.tamsam-contact-form-label,
+label.wpforms-field-label,
+#wpforms-142-field_6-container label.wpforms-field-label,
+#wpforms-142-field_2-container label.wpforms-field-label,
+#wpforms-142-field_1-container label.wpforms-field-label,
+#wpforms-142-field_0-container label.wpforms-field-label {
+    font-size: 1.5rem;
     font-weight: 400;
-    color: black;
+    color: #222;
     letter-spacing: 0.2em;
-    padding-top: 40px;
-    padding-right: 20px;
-}
-
-#wpforms-142-field_6-container label.wpforms-field-label,#wpforms-142-field_2-container label.wpforms-field-label, #wpforms-142-field_1-container label.wpforms-field-label,#wpforms-142-field_0-container label.wpforms-field-label {      
-    font-family: "Rozha One", serif;
-    text-transform: uppercase !important;
-    font-size: 24px;
-    font-weight: 400;
-    color: black;
-    letter-spacing: 0.2em;
-    padding-right: 20px;
-    padding-top: 40px;
+    padding-top: 5rem;
+    padding-right: 2.5rem;
 }
 
 button#wpforms-submit-142.wpforms-submit.tamsam-contact-form-submit-button {
-    font-family: Antic, sans-serif;
-    font-size: 15px;
-    text-transform: uppercase;
-    background-color:rgba(4, 122, 140, 0.7);
+    font-size: 1rem;
+    background-color: hsl(187, 35%, 50%);
     color: #fff;
-    padding: 10px 30px;
-    border: 1px solid #ddd;
+    padding: 1rem 2rem;
+    border: 1px solid hsl(0, 0%, 221%);
     border-radius: 5px;
-    margin-top: 40px;
+    margin-top: 5rem;
 }
 
 #wpforms-142-field_6 .wpforms-field-large .wpforms-valid {
-  font-family: Antic, sans-serif;
-  font-size: 15px;
+    font-size: 1rem;
 }
 
-.tamsam-contact-confirmation-message, div#wpforms-confirmation-142.wpforms-confirmation-container-full.wpforms-confirmation-scroll {
-  color: black;
-  background-color: #f8f8f8;
-  border: 1px solid #bbb;
-  padding: 10px;
+.tamsam-contact-confirmation-message,
+div#wpforms-confirmation-142.wpforms-confirmation-container-full.wpforms-confirmation-scroll {
+    color: #222;
+    background-color: hsl(0, 0%, 97%);
+    border: 1px solid hsl(0, 0%, 73%);
+    padding: 1rem;
 }
 
+/*multi dog pages*/
 
+#our-dogs-tabs {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1rem 0;
+    background-color: rgb(248, 248, 248);
+    border-radius: 0.5rem;
+    padding-top: 2rem;
+    padding-bottom: 0.5rem;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom: 0.5rem solid#fff;
+}
 
+#our-dogs-tabs button {
+    width: 10rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+#our-dogs-page {
+    background-color: rgb(19, 12, 0);
+    padding-bottom: 8rem;
+    margin-bottom: 0;
+}
 
+#category-container,
+#our-dogs-container {
+    max-width: 1600px;
+    display: grid;
+    gap: 8rem 5rem;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+}
 
+#our-dogs-container {
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0 auto;
+}
 
+#category-container {
+    margin: 5rem auto 0 auto;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+}
 
+#our-dogs-page h1 {
+    color:#fff;
+    font-size: 2rem;
+    padding-bottom: 3rem;
+}
 
- /*POST PAGES----------------------------------------------------------------------------------------------------------------------------------------------*/
+#our-dogs-page #category-container .single-dog-page {
+    padding: 2rem;
+}
 
-/*SINGLE DOG PAGES---------------------------------------------------------------------------------------------------------------------------------------*/
+#our-dogs-page .single-dog-page {
+    padding: 2rem;
+    margin: 0;
+    background-color: #fff;
+    border: 2px solid rgb(248, 248, 248);
+    border-radius: 5px;
+    width: 100%;
+}
 
-#single-dog-page, .single-dog-page {
-    background-color: #040200;
-    padding: 50px 30px ;
+#our-dogs-page .single-dog-container {
+    width: 100%;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#our-dogs-page .single-dog-photo-section {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+#our-dogs-page #category-container .single-dog-photo-section {
+    margin-bottom: 1rem;
+}
+
+#our-dogs-page #our-dogs-container .single-dog-photo-section {
+    margin-bottom: 2rem;
+}
+
+#our-dogs-page #our-dogs-container .single-dog-photo-text-container {
+    padding-bottom: 0;
+}
+
+#our-dogs-page img {
+    border-radius: 3px;
+    box-shadow: 3px 3px 5px hsl(0, 0%, 73%);
+    max-width: 100%;
+    height: auto;
+}
+
+#our-dogs-page .single-dog-info-section {
+    margin-bottom: 0;
+}
+
+#our-dogs-page .single-dog-info-content {
+    padding: 0 0 2rem 0;
+}
+
+#our-dogs-container .single-dog-photo-names h3 {
+    line-height: 2.5;
+}
+
+#our-dogs-page .single-dog-pedigree-contents {
+ padding-left: 0;
+ margin-bottom: 0;
+}
+
+#our-dogs-page .single-dog-pedigree-section {
+    width: 100%;
+    margin-bottom: 0;
+}
+
+@media only screen and (max-width: 1499px) {
+    #category-container,
+    #our-dogs-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media only screen and (max-width: 999px) {
+    #category-container, 
+    #our-dogs-container {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
+
+@media only screen and (max-width:767px) {
+    #category-page, 
+    #our-dogs-page {
+        padding: 2.5rem 1rem;
+    }
+
+    .single-dog-extra-photos-multiple,
+    .single-dog-extra-photos,
+    .single-dog-extra-photos-multiple-768px {
+        display: none;
+    }
+}
+
+@media only screen and (max-width:479px) {
+    #our-dogs-page .single-dog-info-section {
+        padding-bottom: 1.5rem;
+        margin-bottom: 1rem;
+    }
+}
+
+/*single dog*/
+
+.single-dog-extra-photos {
+    background-color: rgb(19, 12, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.single-dog-extra-photos-multiple,
+.single-dog-extra-photos-multiple-768px {
+    background-color: rgb(19, 12, 0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    padding: 5rem 6rem 0 6rem;
+}
+
+.single-dog-extra-photos-multiple img {
+    width: 1000px;
+    max-width: 100%;
+    height: auto;
+    padding-bottom: 5rem;
+}
+
+.single-dog-extra-photos-multiple-768px img {
+    width: 800px;
+    max-width: 100%;
+    height: auto;
+    padding-bottom: 5rem;
+}
+
+/*single dog pages*/
+
+#single-dog-page,
+.single-dog-page {
+    background-color: rgb(19, 12, 0);
+    padding: 3rem 2rem;
 }
 
 @media only screen and (max-width: 1199px) {
-    #single-dog-page, .single-dog-page {
-        padding-left: 20px; 
-        padding-right: 20px;
+
+    #single-dog-page,
+    .single-dog-page {
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
     }
 }
 
 @media only screen and (max-width: 991px) {
-    #single-dog-page, .single-dog-page {
-        padding-left: 15px; 
-        padding-right: 15px;
+
+    #single-dog-page,
+    .single-dog-page {
+        padding-left: 1rem;
+        padding-right: 1rem;
         padding-bottom: 2px;
-    
     }
 }
 
 @media only screen and (max-width: 767px) {
-    #single-dog-page , .single-dog-page {
+
+    #single-dog-page,
+    .single-dog-page {
         margin-top: 0;
     }
 }
 
 @media only screen and (max-width: 479px) {
-    #single-dog-page , .single-dog-page {
-        padding-left: 3px; 
+
+    #single-dog-page,
+    .single-dog-page {
+        padding-left: 3px;
         padding-right: 3px;
     }
-  #single-dog-page span, #single-dog-page p, .single-dog-page span, .single-dog-page p {
-    font-size: 14px;
-}
+
+    #single-dog-page span,
+    #single-dog-page p,
+    .single-dog-page span,
+    .single-dog-page p {
+        font-size: 14px;
+    }
 }
 
-#single-dog-container, .single-dog-container {
+#single-dog-container,
+.single-dog-container {
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
 }
 
-.single-dog-photo-section, .single-dog-info-section, .single-dog-pedigree-section, .single-dog-full-pedigree-section,.single-dog-extra-photos {
+.single-dog-photo-section,
+.single-dog-info-section,
+.single-dog-pedigree-section,
+.single-dog-full-pedigree-section,
+.single-dog-extra-photos {
     border: 2px solid #fff;
     border-radius: 5px;
     background-color: white;
-    margin-bottom: 50px;  
+    margin-bottom: 3rem;
 }
 
 .single-dog-photo-section {
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 20px;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    padding-top: 1.25rem;
 }
 
-.single-dog-section-header  {
-    background-color: #040200;
+
+.single-dog-section-header {
+    background-color: rgb(19, 12, 0);
+    border-radius: 0.25rem;
+    padding-top: 0.5rem;
+    margin-bottom: 2rem;
     height: 40px;
     display: flex;
     align-items: center;
 }
 
 .single-dog-section-header h6 {
-    color: white;
+    color: #fff;
     font-weight: normal;
-    padding-left: 20px;
+    padding-left: 1.25rem;
 }
 
 div.single-dog-photo-image-container {
@@ -2459,25 +2692,23 @@ div.single-dog-photo-image-container {
 }
 
 img.single-dog-photo-image {
-    box-sizing: border-box;
     width: 1200px;
     max-width: 100%;
     height: auto;
 }
 
 div.single-dog-photo-text-container {
-    padding: 15px 0 25px 0;
+    padding: 1rem 0 1.5rem 0;
+}
+
+#our-dogs-page .single-dog-photo-text-container {
+    padding-left: 0;
+    padding-right: 0;
 }
 
 div.single-dog-photo-names h2 {
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-top: 1rem;
 }
-
-
-.single-dog-photo-section a:hover,  .single-dog-info-section a:hover,  .single-dog-pedigree-section a:hover  {
-    color: #047a8c;
-} 
 
 /*end photo section start main info section DOGS*/
 
@@ -2505,7 +2736,7 @@ div.single-dog-photo-names h2 {
 }
 
 .single-dog-info-section-contents-no-small-photos {
-    margin-top: 25px;
+    margin-top: 1.5rem;
 }
 
 .single-dog-info-content {
@@ -2519,115 +2750,118 @@ div.single-dog-photo-names h2 {
 }
 
 span.single-dog-info-icon-container {
+    position: relative;
+    top: -5px;
     box-sizing: border-box;
-    width: 28px;
-    height: 28px;
-    background-color: #eee;
+    width: 2rem;
+    height: 2rem;
+    background-color: hsl(0, 0%, 93%);
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 6px;
-    margin-bottom: 8px;
+    margin-bottom: 0.75rem;
 }
 
-#single-dog-page span.single-dog-info-icon, .single-dog-page span.single-dog-info-icon {
+#single-dog-page span.single-dog-info-icon,
+.single-dog-page span.single-dog-info-icon {
     font-size: 18px;
-    line-height: 40px;
-    color: #000;
+    color: #222;
 }
 
 span.single-dog-info-label {
-    color: #444;
-    line-height: 40px;
+    color: hsl(0, 0%, 42%);
+    padding-bottom: 1rem;
 }
 
 span.single-dog-info-value {
-    color:#444;
-    line-height: 40px;
+    color: #222;
+    padding-bottom: 1rem;
 }
 
+
 @media only screen and (max-width: 767px) {
-  
     .single-dog-small-all-image-container .image-flex-container-centered {
         width: 100%;
-  }
-       .single-dog-info-row {
+    }
+
+    .single-dog-info-row {
         grid-template-columns: 40px 1fr 2fr;
     }
 }
 
 @media only screen and (max-width: 479px) {
-  
-   .single-dog-info-row {
-     font-size: 13px;
+    .single-dog-info-row {
+        font-size: 13px;
     }
-  
-  .single-dog-small-all-image-container {
-    padding: 5px 0 0 0;
-  }
-  
-  .single-dog-small-all-image-container .image-flex-container-centered {
-    padding: 0;
-  }
-  
-  .single-dog-info-content {
-    padding: 20px 10px 55px 10px;
-    background-color: #040200;
-    border-radius: 5px;
-}
-   span.single-dog-info-label, span.single-dog-info-value {
-     color: white;
-}
+
+    .single-dog-small-all-image-container {
+        padding: 5px 0 0 0;
+    }
+
+    .single-dog-small-all-image-container .image-flex-container-centered {
+        padding: 0;
+    }
+
+    .single-dog-info-content {
+        padding: 20px 10px 55px 10px;
+        background-color: rgb(19, 12, 0);
+        border-radius: 5px;
+    }
+
+    span.single-dog-info-label,
+    span.single-dog-info-value {
+        color: #fff;
+    }
 }
 
 /*Pedigree section*/
 .single-dog-pedigree-contents {
-    margin-top: 20px;
-    margin-bottom: 25px;
-    padding-left: 20px;
+    margin-top: 1.25rem;
+    margin-bottom: 1.5rem;
+    padding-left: 1.25rem;
 }
 
 @media only screen and (max-width: 479px) {
-  .single-dog-pedigree-contents {
-    padding: 20px 10px 25px 10px;
-    background-color: #040200;
-    margin-block-start:1px;
-    margin-block-end: 0;
-  }
+    .single-dog-pedigree-contents {
+        padding: 20px 10px 25px 10px;
+        background-color: rgb(19, 12, 0);
+        margin-block-start: 1px;
+        margin-block-end: 0;
+    }
 }
-  
+
 /*Full Pedigree section*/
 .single-dog-pedigree {
-    background-color: #040200;
-    border-top: 1px solid #f8f8f8;
+    background-color: rgb(19, 12, 0);
+    border-top: 1px solid hsl(0, 0%, 97%);
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
     grid-template-areas: "s gs-p ggs-pp"
-    "s gs-p ggd-pp"
-    "s gd-p ggs-pm"
-    "s gd-p ggd-pm"
-    "d gs-m ggs-mp"
-    "d gs-m ggd-mp"
-    "d gd-m ggs-mm"
-    "d gd-m ggd-mm";
+        "s gs-p ggd-pp"
+        "s gd-p ggs-pm"
+        "s gd-p ggd-pm"
+        "d gs-m ggs-mp"
+        "d gs-m ggd-mp"
+        "d gd-m ggs-mm"
+        "d gd-m ggd-mm";
 }
 
 @media only screen and (max-width: 767px) {
     .single-dog-pedigree {
         grid-template-columns: 1fr 1fr;
         grid-template-areas: "s gs-p"
-        "s gd-p"
-        "d gs-m"
-        "d gd-m";
+            "s gd-p"
+            "d gs-m"
+            "d gd-m";
     }
 }
 
 .pedigree-entry-container {
-    padding: 20px;
+    padding: 1.25rem;
     border: 1px solid #222;
-    color: white;
+    color: #fff;
 }
 
 .single-dog-sire {
@@ -2687,361 +2921,235 @@ span.single-dog-info-value {
 }
 
 @media only screen and (max-width: 767px) {
-.single-dog-pp-great-grandsire {
-    display: none;
-}
-.single-dog-pp-great-granddam {
-    display: none;
-}
-.single-dog-pm-great-grandsire {
-    display: none;
-}
-.single-dog-pm-great-granddam {
-    display: none;
-}
-.single-dog-mp-great-grandsire {
-    display: none;
-}
-.single-dog-mp-great-granddam {
-    display: none;
-}
-.single-dog-mm-great-grandsire {
-    display: none;
-}
-.single-dog-mm-great-granddam {
-    display: none;
-}
-}
 
-/*VIP and PET and VINTAGE and CHAMPION and BIS and BREEDING and SHOWING and FUTURE DOGS PAGE------------------------------------------------------------------------*/
-#vip-page, #champion-page, #vintage-page, #bis-page, #breeding-page, #showing-page, #future-page, #pet-page, #past-champion-page, #category-page {
-    background-color: rgb(19,12, 0);
-    padding: 0 2rem 3rem 2rem;
-}
-
-#vip-container,  #pet-container, #champion-container, #vintage-container, #bis-container, #showing-container, #breeding-container, #future-container, #past-champion-container, #category-container {
-    max-width: 1600px;
-    margin-left: auto;
-    margin-right: auto;
-    display: grid;
-    justify-content: center;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 2.5rem;
-}
-
-#vip-page .single-dog-page, #pet-page .single-dog-page,  #champion-page .single-dog-page, #breeding-page .single-dog-page, #category-page .single-dog-page, 
-#vintage-page .single-dog-page, #bis-page .single-dog-page,  #showing-page .single-dog-page, #future-page .single-dog-page, #past-champion-page .single-dog-page {
-    padding: 0;
-    background-color: #fff;
-    border: 2px solid rgb(248, 248, 248);
-    border-radius: 5px;
-    width: 100%;
-}
-
-#vip-page .single-dog-container, #pet-page .single-dog-container, #champion-page .single-dog-container, #breeding-page .single-dog-container, #category-page .single-dog-container,
-#vintage-page .single-dog-container, #bis-page .single-dog-container,  #showing-page .single-dog-container, #future-page .single-dog-container, #past-champion-page .single-dog-container {
-    width: 100%;
-    margin-bottom: 0;
-    display: flex;
-    flex-direction: column;
-}
-
-#vip-page .single-dog-photo-section,  #pet-page .single-dog-photo-section, #champion-page .single-dog-photo-section, #breeding-page .single-dog-photo-section, #category-page .single-dog-photo-section,
-#vintage-page .single-dog-photo-section, #bis-page .single-dog-photo-section,  #showing-page .single-dog-photo-section, #future-page .single-dog-photo-section, #past-champion-page .single-dog-photo-section {
-    margin-bottom: 0;
-
-}
-#vip-page .single-dog-info-section, #pet-page .single-dog-info-section, #champion-page .single-dog-info-section, #breeding-page .single-dog-info-section, 
-#vintage-page .single-dog-info-section, #bis-page .single-dog-info-section,  #showing-page .single-dog-info-section, #future-page .single-dog-info-section, #past-champion-page .single-dog-info-section {
-    margin-bottom: 0;
-}
-
-#vip-page .single-dog-info-section-contents-no-small-photos, #pet-page .single-dog-info-section-contents-no-small-photos, #champion-page .single-dog-info-section-contents-no-small-photos, #breeding-page .single-dog-info-section-contents-no-small-photos,
-    #vintage-page .single-dog-info-section-contents-no-small-photos, #bis-page .single-dog-info-section-contents-no-small-photos,  #showing-page .single-dog-info-section-contents-no-small-photos, #future-page .single-dog-info-section-contents-no-small-photos, #past-champion-page .single-dog-info-section-contents-no-small-photos {
-   margin-top: 0;
-}
-
-#vip-page .single-dog-pedigree-section, #pet-page .single-dog-pedigree-section, #champion-page .single-dog-pedigree-section, #future-page .single-dog-pedigree-section,
-#vintage-page .single-dog-pedigree-section, #bis-page .single-dog-pedigree-section, #breeding-page .single-dog-pedigree-section, #showing-page .single-dog-pedigree-section, #past-champion-page .single-dog-pedigree-section
-{
-    margin-bottom: 10px;
-}
-
-#vip-page .single-dog-container .single-dog-info-content, #pet-page .single-dog-container .single-dog-info-content, #champion-page .single-dog-container .single-dog-info-content , #future-page .single-dog-container .single-dog-info-content,
-#vintage-page .single-dog-container .single-dog-info-content, #bis-page .single-dog-container .single-dog-info-content, #breeding-page .single-dog-container .single-dog-info-content, #showing-page .single-dog-container .single-dog-info-content, #past-champion-page .single-dog-container .single-dog-info-content {
-    padding-bottom: 25px;
-}
-
-  #vip-page img,   #pet-page img, #champion-page img, #future-page img, #category-page img,
-  #vintage-page img,   #bis-page img, #showing-page img, #breeding-page img, #past-champion-page img {
-      border-radius: 3px;
-      box-shadow: 3px 3px 5px #bbb;
-      max-width: 100%;
-      height: auto;
-  }
-
-  #vip-page .single-dog-photo-image-container,   #pet-page .single-dog-photo-image-container, #champion-page  .single-dog-photo-image-container, #future-page  .single-dog-photo-image-container, #category-page .single-dog-photo-image-container,
-  #vintage-page .single-dog-photo-image-container,   #bis-page .single-dog-photo-image-container, #breeding-page  .single-dog-photo-image-container , #showing-page  .single-dog-photo-image-container, #past-champion-page  .single-dog-photo-image-container  {
-      padding-bottom: 15px;
-  }
-
-   #vip-page .single-dog-photo-names h3 a:visited,  #pet-page .single-dog-photo-names h3 a:visited,  #champion-page .single-dog-photo-names h3 a:visited, #breeding-page .single-dog-photo-names h3 a:visited, #category-page .single-dog-photo-names h2 a:visited,
-   #vintage-page .single-dog-photo-names h3 a:visited,  #bis-page .single-dog-photo-names h3 a:visited,  #showing-page .single-dog-photo-names h3 a:visited, #future-page .single-dog-photo-names h3 a:visited , #past-champion-page .single-dog-photo-names h3 a:visited {
-      color: #ef5406;
-  }
-
-  #vip-page .single-dog-photo-names h3 a:hover, #pet-page .single-dog-photo-names h3 a:hover, #champion-page .single-dog-photo-names h3 a:hover, #future-page .single-dog-photo-names h3 a:hover, #category-page .single-dog-photo-names h2 a:hover,
-  #vintage-page .single-dog-photo-names h3 a:hover, #bis-page .single-dog-photo-names h3 a:hover, #showing-page .single-dog-photo-names h3 a:hover, #breeding-page .single-dog-photo-names h3 a:hover, #champion-page .single-dog-photo-names h3 a:hover  {
-    color: #047a8c;
-}
-
-#category-page h2 {
-    text-align: center;
-    padding-bottom: 20px;
-    padding-top: 0;
-}
-
-#category-page h2 a, #category-page h2 a:visited {
-   color: black;
-}
-
-.single-dog-extra-photos {
-    background-color: #040200;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.single-dog-extra-photos-multiple, .single-dog-extra-photos-multiple-768px  {
-    background-color: #040200;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-    border: 2px solid #fff;
-    border-radius: 5px;
-    padding: 80px 100px 0px 100px;
-}
-
-.single-dog-extra-photos-multiple img {
-    width: 1000px;
-    max-width: 100%;
-    height: auto;
-    padding-bottom: 80px;
-}
-
-.single-dog-extra-photos-multiple-768px img {
-    width: 800px;
-    max-width: 100%;
-    height: auto;
-    padding-bottom: 80px;
-}
-
-
-@media only screen and (max-width: 1750px) {
-    #vip-container, #pet-container, #champion-container, #vintage-container, #bis-container, #breeding-container, #showing-container, #future-container, #past-champion-container, #category-container {
-    grid-template-columns: 1fr 1fr;
-}
-}
-
-@media only screen and (max-width: 991px) {
-    #vip-container, #pet-container , #champion-container, #vintage-container, #bis-container, #breeding-container, #showing-container, #future-container, #past-champion-container, #category-container {
-    grid-template-columns: 1fr;
-    gap: 20px;
-}
-}
-
-@media only screen and (max-width:767px) {
-    #vip-page, #pet-page, #champion-page, #vintage-page, #bis-page, #breeding-page, #showing-page, #future-page, #past-champion-page, #category-page {
-        padding: 40px 10px 40px 10px;
-    }
-    .single-dog-extra-photos-multiple, .single-dog-extra-photos, .single-dog-extra-photos-multiple-768px {
+    .single-dog-pp-great-grandsire,
+    .single-dog-pp-great-granddam,
+    .single-dog-pm-great-grandsire,
+    .single-dog-pm-great-granddam,
+    .single-dog-mp-great-grandsire,
+    .single-dog-mp-great-granddam,
+    .single-dog-mm-great-grandsire,
+    .single-dog-mm-great-granddam {
         display: none;
     }
 }
 
-@media only screen and (max-width:479px) {
-    #vip-page, #pet-page, #champion-page, #vintage-page, #bis-page, #breeding-page, #showing-page, #future-page, #past-champion-page, #category-page  {
-        padding: 40px 10px 40px 10px;
-    }
-  #vip-page .single-dog-info-section,   #pet-page .single-dog-info-section, #champion-page .single-dog-info-section, #vintage-page  .single-dog-info-section, #bis-page  .single-dog-info-section, #breeding-page  .single-dog-info-section, #showing-page  .single-dog-info-section, #future-page  .single-dog-info-section, #past-champion-page  .single-dog-info-section {
-    padding-bottom: 25px;
-    margin-bottom: 15px;
-}
-}  
-
-
-/*INDIVIDUAL DOG SINGLE PAGE EDITS*/
+/*IIndividual dog single page edits*/
 
 img.wp-image-1076 {
     width: 1000px;
     max-width: 100%;
     height: auto;
-} /*Coco*/
+}
+
+/*Coco*/
 .single-dog-small-all-image-container img.wp-image-38 {
     padding-right: 50px;
     width: 420px;
     height: auto;
-} /*Coco*/
+}
 
+/*Coco*/
 .single-dog-extra-photos img.wp-image-493 {
     width: 1000px;
     max-width: 100%;
     height: auto;
-    padding-top:80px;
-    padding-bottom: 80px;
-} /*Flame in blue coat*/
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+/*Flame in blue coat*/
 img.wp-image-492 {
     width: 440px;
     height: auto;
     max-width: 100%;
-  } /*Flame*/
+}
 
+/*Flame*/
 .single-dog-extra-photos img.wp-image-117 {
     width: 768px;
     max-width: 100%;
     height: auto;
-    padding-top:80px;
-    padding-bottom: 80px;
-} /*Frosty with leaf in mouth*/
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+/*Frosty with leaf in mouth*/
 img.wp-image-103 {
-width: 768px; 
-  height: auto;
-  max-width: 100%;
-} /*Frosty with pups*/
+    width: 768px;
+    height: auto;
+    max-width: 100%;
+}
+
+/*Frosty with pups*/
 #vintage-page img.wp-image-103 {
-    width: 300px; 
-    } /*Frosty with pups*/
- 
+    width: 300px;
+}
+
+/*Frosty with pups*/
 img.wp-image-854 {
-    width: 720px; 
+    width: 720px;
     height: auto;
     max-width: 100%;
-  } /*Shiraz*/
-  #category-page img.wp-image-854 {
-    width: 400px; 
-    height: auto;
-    max-width: 100%;
-  } /*Shiraz*/
- 
-  img.wp-image-495 {
-      width: 369px;
-         height: auto;
-    max-width: 100%;
-  } /*Jade*/
-  
-  img.wp-image-501 {
-      width: 338px;
-     height: auto;
-    max-width: 100%;
-  } /*Jazz*/
+}
 
-  img.wp-image-533 {
+/*Shiraz*/
+#category-page img.wp-image-854 {
+    width: 400px;
+    height: auto;
+    max-width: 100%;
+}
+
+/*Shiraz*/
+img.wp-image-495 {
+    width: 369px;
+    height: auto;
+    max-width: 100%;
+}
+
+/*Jade*/
+img.wp-image-501 {
+    width: 338px;
+    height: auto;
+    max-width: 100%;
+}
+
+/*Jazz*/
+img.wp-image-533 {
     width: 334px;
-     height: auto;
+    height: auto;
     max-width: 100%;
-} /*Piper*/
+}
 
+/*Piper*/
 img.wp-image-192 {
     width: 370px;
-   height: auto;
+    height: auto;
     max-width: 100%;
-} /*Codie*/
+}
 
+/*Codie*/
 img.wp-image-497 {
     width: 300px;
-   height: auto;
+    height: auto;
     max-width: 100%;
-} /*Cosmo*/
+}
 
+/*Cosmo*/
 img.wp-image-771 {
     width: 370px;
-   height: auto;
+    height: auto;
     max-width: 100%;
-} /*Tussock*/
+}
 
+/*Tussock*/
 img.wp-image-784 {
-  width: 640px; 
-  height: auto;
-  max-width: 100%;
-} /*Cruz*/
-  #bis-page  img.wp-image-784, #vip-page img.wp-image-784 {
-    width: 470px; 
+    width: 640px;
     height: auto;
     max-width: 100%;
-} /*Cruz*/  
+}
 
+/*Cruz*/
+#bis-page img.wp-image-784,
+#vip-page img.wp-image-784 {
+    width: 470px;
+    height: auto;
+    max-width: 100%;
+}
+
+/*Cruz*/
 img.wp-image-488 {
-    width: 768px; 
-  height: auto;
-  max-width: 100%;
-} /*memphis*/
+    width: 768px;
+    height: auto;
+    max-width: 100%;
+}
 
+/*memphis*/
 img.wp-image-796 {
-    width: 1000px; 
+    width: 1000px;
     height: auto;
     max-width: 100%;
-    padding-top: 80px;
-    padding-bottom: 80px;
-  } /*Havoc and Piper*/
-  img.wp-image-798 {
-    width: 243px; 
-    height: auto;
-    max-width: 100%;
-    padding-left: 20px;
-    padding-right: 20px;
-  } /*Havoc*/
-  img.wp-image-799 {
-    width: 321px; 
-    height: auto;
-    max-width: 100%;
-    padding-left: 20px;
-    padding-right: 20px;
-  } /*Havoc*/
-  #vintage-page img.wp-image-799,  #bis-page img.wp-image-799 {
-      padding: 0;
-  }/*Havoc*/
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
 
-  img.wp-image-809 {
-    width: 400px; 
-  height: auto;
-  max-width: 100%;
-} /*Texas*/
+/*Havoc and Piper*/
+img.wp-image-798 {
+    width: 243px;
+    height: auto;
+    max-width: 100%;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+}
+
+/*Havoc*/
+img.wp-image-799 {
+    width: 321px;
+    height: auto;
+    max-width: 100%;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+}
+
+/*Havoc*/
+#vintage-page img.wp-image-799,
+#bis-page img.wp-image-799 {
+    padding: 0;
+}
+
+/*Havoc*/
+img.wp-image-809 {
+    width: 400px;
+    height: auto;
+    max-width: 100%;
+}
+
+/*Texas*/
 img.wp-image-808 {
-    width: 250px; 
-  height: auto;
-  max-width: 100%;
-} /*Texas*/
-img.wp-image-807, img.wp-image-855{
-    width: 640px; 
-  height: auto;
-  max-width: 100%;
-} /*Texas and Shylo*/
+    width: 250px;
+    height: auto;
+    max-width: 100%;
+}
 
+/*Texas*/
+img.wp-image-807,
+img.wp-image-855 {
+    width: 640px;
+    height: auto;
+    max-width: 100%;
+}
+
+/*Texas and Shylo*/
 img.wp-image-892 {
- width: 900px; 
-  height: auto;
-  max-width: 100%;
-  padding-bottom: 10px;
-} /*Misty*/
-#champion-page img.wp-image-892, #bis-page img.wp-image-892  {
+    width: 900px;
+    height: auto;
+    max-width: 100%;
+    padding-bottom: 10px;
+}
+
+/*Misty*/
+#champion-page img.wp-image-892,
+#bis-page img.wp-image-892 {
     padding-bottom: 0;
 }
 
-img.wp-image-897, img.wp-image-896 {
- width: 768px; 
-  height: auto;
-  max-width: 100%;
-} /*Demi*/
-.single-dog-extra-photos-multiple img.wp-image-896, .single-dog-extra-photos-multiple img.wp-image-1031, .single-dog-extra-photos-multiple img.wp-image-1052 {
-width: 768px;    
-padding-top: 80px;
-padding-bottom: 80px;
-   } /*Demi*/
+img.wp-image-897,
+img.wp-image-896 {
+    width: 768px;
+    height: auto;
+    max-width: 100%;
+}
 
+/*Demi*/
+.single-dog-extra-photos-multiple img.wp-image-896,
+.single-dog-extra-photos-multiple img.wp-image-1031,
+.single-dog-extra-photos-multiple img.wp-image-1052 {
+    width: 768px;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
 
+/*Demi*/
 figcaption.demi-caption {
     text-align: center;
     padding-top: 10px;
@@ -3049,62 +3157,81 @@ figcaption.demi-caption {
     font-style: italic;
 }
 
-img.wp-image-886, img.wp-image-119 {
-    width: 768px; 
+img.wp-image-886,
+img.wp-image-119 {
+    width: 768px;
     height: auto;
     max-width: 100%;
-       } /*Luca*/
-img.wp-image-883, img.wp-image-885, img.wp-image-119 {
-        width: 640px; 
-        height: auto;
-        max-width: 100%;
-           } /*Luca*/
-                  
+}
+
+/*Luca*/
+img.wp-image-883,
+img.wp-image-885,
+img.wp-image-119 {
+    width: 640px;
+    height: auto;
+    max-width: 100%;
+}
+
+/*Luca*/
 img.wp-image-932 {
-    width: 456px; 
+    width: 456px;
     height: auto;
     max-width: 100%;
-} /*Benji*/    
+}
 
+/*Benji*/
 img.wp-image-923 {
-    width: 518px; 
+    width: 518px;
     height: auto;
     max-width: 100%;
-} /*Mint*/    
+}
+
+/*Mint*/
 img.wp-image-922 {
-    width: 600px; 
+    width: 600px;
     height: auto;
     max-width: 100%;
-} /*Mint*/    
-img.wp-image-925, img.wp-image-926 {
-    width: 600px; 
-    height: auto;
-    max-width: 100%;
-} /*Mint*/  
+}
 
+/*Mint*/
+img.wp-image-925,
+img.wp-image-926 {
+    width: 600px;
+    height: auto;
+    max-width: 100%;
+}
+
+/*Mint*/
 img.wp-image-949 {
-    width: 889px; 
+    width: 889px;
     height: auto;
     max-width: 100%;
-} /*Tyler*/    
+}
 
-img.wp-image-967, img.wp-image-38 {
-    width: 420px; 
+/*Tyler*/
+img.wp-image-967,
+img.wp-image-38 {
+    width: 420px;
     height: auto;
     max-width: 100%;
-} /*Dash and Coco*/    
+}
 
+/*Dash and Coco*/
 img.wp-image-72 {
-    width: 600px; 
+    width: 600px;
     height: auto;
     max-width: 100%;
-} /*Ace/Kona*/  
-#champion-page img.wp-image-72 {
-    width: 300px; 
-    height: auto;
-    max-width: 100%;
-} /*Ace/Kona*/  
+}
 
+/*Ace/Kona*/
+#champion-page img.wp-image-72 {
+    width: 300px;
+    height: auto;
+    max-width: 100%;
+}
+
+/*Ace/Kona*/
 img.wp-image-997 {
     width: 450px;
     height: auto;
@@ -3115,26 +3242,33 @@ img.wp-image-997 {
     width: 768px;
     height: auto;
     max-width: 100%
-} /*Jaffa*/
+}
 
+/*Jaffa*/
 .single-dog-extra-photos .wp-image-1040 {
     width: 768px;
     height: auto;
     max-width: 100%
-} /*Misty*/
+}
 
-.single-dog-extra-photos-multiple img.wp-image-1038, .single-dog-extra-photos-multiple img.wp-image-1039, .single-dog-extra-photos-multiple img.wp-image-1041 {
-    width: 768px;    
-    padding-top: 80px;
-    padding-bottom: 80px;
-       } /*Kona*/
+/*Misty*/
+.single-dog-extra-photos-multiple img.wp-image-1038,
+.single-dog-extra-photos-multiple img.wp-image-1039,
+.single-dog-extra-photos-multiple img.wp-image-1041 {
+    width: 768px;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
 
-  .wp-image-191 {
-    width: 470px; 
+/*Kona*/
+.wp-image-191 {
+    width: 470px;
     height: auto;
     max-width: 100%;
-  } /*Boris*/     
- 
+}
+
+/*Boris*/
+
 
 
 
