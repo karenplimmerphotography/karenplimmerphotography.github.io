@@ -47,31 +47,31 @@ function createDog(petName, title, pedigreeName, linkName, colour, dateYear, dat
   let breeLinkName = '<a href="https://www.tamsam.foxterrier.co.nz/bree">Ch Tamatea Claim To Fame <em>(Bree)</em></a>';
   let cocoLinkName = '<a href="https://www.foxterrier.co.nz/coco">Tamsam CocoChanel <em>(Coco)</em></a>';
   let codieLinkName = '<a href="https://www.foxterrier.co.nz/codie">Grand Ch Tamatea Tailormade <em>(Codie)</em></a>';
-  cosmoLinkName = '<a href="https://www.foxterrier.co.nz/cosmo">Ch Tamatea Free Spirit <em>(Cosmo)</em></a>';
-  cruzLinkName = '<a href="https://www.foxterrier.co.nz/cruz">Ch Tamsam Trooping The Colour <em>(Cruz)</em></a>';
-  dashLinkName = '<a href="https://www.foxterrier.co.nz/dash">Tamsam Dash Of Distinction <em>(Dash)</em></a>';
-  demiLinkName = '<a href="https://www.foxterrier.co.nz/demi">Ch Tamsam Give Me More <em>(Demi)</em></a>';
-  edenLinkName = '<a href="https://www.foxterrier.co.nz/eden">Ch Tamsam Pin Up Girl <em>(Eden)</em></a>';
-  flameLinkName = '<a href="https://www.foxterrier.co.nz/">Ch Tamatea Forbidden Flame <em>(Flame) </em></a>';
-  frostyLinkName = '<a href="https://www.tamsam.foxterrier.co.nz/frosty">Ch Tamsam Frosted Ice <em>(Frosty)</em></a>';
-  havocLinkName = '<a href="https://www.foxterrier.co.nz/havoc">Ch Tamsam Cry Havoc <em>(Havoc)</em></a>';
-  jadeLinkName = '<a href="https://www.foxterrier.co.nz/jade">Ch Tamatea Wild as The Wind <em>(Jade)</em></a>';
-  jaffaLinkName = '<a href="https://www.foxterrier.co.nz/jade">Ch Tamatea Wild as The Wind <em>(Jade)</em></a>';
-  jazzLinkName = '<a href="https://www.foxterrier.co.nz/jazz">ChTamatea Jazz-Ma-Tazz <em>(Jazz)</em></a>';
-  konaLinkName = '<a href="https://www.foxterrier.co.nz/kona">Ch Tamsam Master Of Puzzles <em>(Kona)</em></a>';
-  krugerLinkName = '<a href="https://www.foxterrier.co.nz/kruger">Tamatea Classic Kruger <em>(Kruger)</em></a>';
-  lucaLinkName = '';
-  memphisLinkName = '<a href="https://www.foxterrier.co.nz/memphis">Aust Grand Ch NZ Ch Tamsam Jamie\'s Choice <em>(Memphis)</em></a>';
-  mintLinkName = '<a href="https://www.foxterrier.co.nz/mint">Ch Tamsam All Right I\'m White <em>(Mint)</em></a>';
-  mistyLinkName = '';
-  piperLinkName = '<a href="https://www.foxterrier.co.nz/piper">Ch Tamsam Flashpoint <em>(Piper)</em></a>';
-  ravenLinkName = '<a href="https://www.foxterrier.co.nz/raven">Tamsam Painted Black <em>(Raven)</em></a>';
-  shirazLinkName = '<a href="https://www.foxterrier.co.nz/shiraz">Ch Tamsam Iced Shiraz <em>(Shiraz) </em></a>';
-  shyloLinkName = '<a href="https://www.foxterrier.co.nz/shylo">Ch Tamsam Flirt Alert <em>(Shylo)</em></a>';
-  texasLinkName = '';
-  tiaLinkName = '<a href="https://www.foxterrier.co.nz/tia">Ch Tamsam Every Inch A Lady <em>(Tia) </em></a>';
-  tussockLinkName = '<a href="https://www.foxterrier.co.nz/tussock">Ch Tamsam Limited Edition <em>(Tussock)</em></a>';
-  tylerLinkName = '<a href="https://www.foxterrier.co.nz/tyler">Ch Tamsam An Addictive Habit <em>(Tyler)</em></a>';
+  let cosmoLinkName = '<a href="https://www.foxterrier.co.nz/cosmo">Ch Tamatea Free Spirit <em>(Cosmo)</em></a>';
+  let cruzLinkName = '<a href="https://www.foxterrier.co.nz/cruz">Ch Tamsam Trooping The Colour <em>(Cruz)</em></a>';
+  let dashLinkName = '<a href="https://www.foxterrier.co.nz/dash">Tamsam Dash Of Distinction <em>(Dash)</em></a>';
+  let demiLinkName = '<a href="https://www.foxterrier.co.nz/demi">Ch Tamsam Give Me More <em>(Demi)</em></a>';
+  let edenLinkName = '<a href="https://www.foxterrier.co.nz/eden">Ch Tamsam Pin Up Girl <em>(Eden)</em></a>';
+  let flameLinkName = '<a href="https://www.foxterrier.co.nz/">Ch Tamatea Forbidden Flame <em>(Flame) </em></a>';
+  let frostyLinkName = '<a href="https://www.tamsam.foxterrier.co.nz/frosty">Ch Tamsam Frosted Ice <em>(Frosty)</em></a>';
+  let havocLinkName = '<a href="https://www.foxterrier.co.nz/havoc">Ch Tamsam Cry Havoc <em>(Havoc)</em></a>';
+  let jadeLinkName = '<a href="https://www.foxterrier.co.nz/jade">Ch Tamatea Wild as The Wind <em>(Jade)</em></a>';
+  let jaffaLinkName = '<a href="https://www.foxterrier.co.nz/jade">Ch Tamatea Wild as The Wind <em>(Jade)</em></a>';
+  let jazzLinkName = '<a href="https://www.foxterrier.co.nz/jazz">ChTamatea Jazz-Ma-Tazz <em>(Jazz)</em></a>';
+  let konaLinkName = '<a href="https://www.foxterrier.co.nz/kona">Ch Tamsam Master Of Puzzles <em>(Kona)</em></a>';
+  let krugerLinkName = '<a href="https://www.foxterrier.co.nz/kruger">Tamatea Classic Kruger <em>(Kruger)</em></a>';
+  let lucaLinkName = '';
+  let memphisLinkName = '<a href="https://www.foxterrier.co.nz/memphis">Aust Grand Ch NZ Ch Tamsam Jamie\'s Choice <em>(Memphis)</em></a>';
+  let mintLinkName = '<a href="https://www.foxterrier.co.nz/mint">Ch Tamsam All Right I\'m White <em>(Mint)</em></a>';
+  let mistyLinkName = '';
+  let piperLinkName = '<a href="https://www.foxterrier.co.nz/piper">Ch Tamsam Flashpoint <em>(Piper)</em></a>';
+  let ravenLinkName = '<a href="https://www.foxterrier.co.nz/raven">Tamsam Painted Black <em>(Raven)</em></a>';
+  let shirazLinkName = '<a href="https://www.foxterrier.co.nz/shiraz">Ch Tamsam Iced Shiraz <em>(Shiraz) </em></a>';
+  let shyloLinkName = '<a href="https://www.foxterrier.co.nz/shylo">Ch Tamsam Flirt Alert <em>(Shylo)</em></a>';
+  let texasLinkName = '';
+  let tiaLinkName = '<a href="https://www.foxterrier.co.nz/tia">Ch Tamsam Every Inch A Lady <em>(Tia) </em></a>';
+  let tussockLinkName = '<a href="https://www.foxterrier.co.nz/tussock">Ch Tamsam Limited Edition <em>(Tussock)</em></a>';
+  let tylerLinkName = '<a href="https://www.foxterrier.co.nz/tyler">Ch Tamsam An Addictive Habit <em>(Tyler)</em></a>';
   
   //'<a href="https://www.foxterrier.co.nz/"><em>()</em></a>',
   alaska = createDog('Alaska', 'Ch ', 'Tamsam Simply Alaska', '<a href="https://www.foxterrier.co.nz/alaska">Tamsam Simply Alaska <em>(Alaska)</em></a>', 'Tan & White', 2006, 'February', 13, 'Female', [pastChampion, pet, vintage], patSue, patSue, 'Jolly Well Solid Bronze (Imp USA) <em>(Stryder)</em>', breeLinkName, null, false, null, [frosty, shiraz], null, ['Jolly Well Solid Bronze (Imp USA) <em>(Stryder)</em>', bree, 'Tunnel Hill Street Wise', 'Tamatea Moulded In Bronze', havoc, flame], '', ''); //alaska
@@ -86,8 +86,8 @@ function createDog(petName, title, pedigreeName, linkName, colour, dateYear, dat
   demi = createDog('Demi', 'Ch ', 'Tamsam Give Me More', '<a href="https://www.foxterrier.co.nz/demi">Ch Tamsam Give Me More <em>(Demi)</em></a>', 'Tan & White', 2013, 'May', 5, 'Female', [bis, champion], suePat, suePat, cruzLinkName, 'Ch Tamsam Ideal Gift <em>(Sienna) </em>', ['Best In Show Fox Terrier Speciality'], true, null, [tia, 'Ch Tamsam Special Edition <em>(Pixie)</em>'], null, [cruz, 'Ch Tamsam Ideal Gift <em>(Sienna) </em>', memphis, shylo,'Grand Ch Tamsam Battle Cry', shylo], '', '');//demi
   eden = createDog('Eden', 'Ch ', 'Tamsam Pin Up Girl', '<a href="https://www.foxterrier.co.nz/eden">Ch Tamsam Pin Up Girl <em>(Eden)</em></a>', 'Tan & White', 2010, 'Decemeber', 20, 'Female', [champion], suePat, suePat, memphisLinkName, shyloLinkName, null, false, null, [tyler, 'Ch Tamsam Happy To Keepa <em>(Kenya)' ], [cruz], [cruz, shylo, cosmo, piper, havoc, 'Ch Rama Ranking Delight (Imp Aust)'], '', '');//eden
   flame = createDog('Flame', 'Ch ', 'Tamatea Forbidden Flame', '<a href="https://www.foxterrier.co.nz/">Ch Tamatea Forbidden Flame <em>(Flame) </em></a>', 'Tan & White', 1992, 'August', 11, 'Female', [vip], pat, pat, 'Ch Rama Returning Romantic (Imp Aust)', 'Ch Tamatea Every Inch A Lady', null, false, null, [cosmo, bree], null, ['Ch Rama Returning Romantic (Imp Aust', 'Ch Tamatea Every Inch A Lady', 'Aust Ch Ecirp Topline', 'Rama End Of Rainbowe', 'Aust NZ Ch Grenpark Reliance (Imp Aust)', 'Rama Easter Parade (Imp Aust)'], '', '');//flame
-  frosty = createDog('Frosty', 'Ch ', 'Tamsam Frosted Ice', '<a href="https://www.tamsam.foxterrier.co.nz/frosty">Ch Tamsam Frosted Ice <em>(Frosty)</em></a>', 'Tan & White', new Date(), 'Female', tags, breeder, owner, sire, dam, awards, bestInShow, specialMention, progeny, siblings, pedigree, '', '');//frosty
-  havoc = createDog('Havoc', 'Ch ', 'Tamsam Cry Havoc', '<a href="https://www.foxterrier.co.nz/havoc">Ch Tamsam Cry Havoc <em>(Havoc)</em></a>', 'Tan & White', new Date(), 'Male', tags, breeder, owner, sire, dam, awards, bestInShow, specialMention, progeny, siblings, pedigree, '', '');//havoc
+  frosty = createDog('Frosty', 'Ch ', 'Tamsam Frosted Ice', '<a href="https://www.tamsam.foxterrier.co.nz/frosty">Ch Tamsam Frosted Ice <em>(Frosty)</em></a>', 'Tan & White', 2009, 'June', 30, 'Female',[pastChampion, vintage], patSue, patSue, memphisLinkName, alaskaLinkName, null, null, null, [mint], [shiraz], [memphis, alaska, cosmo, piper, 'Jolly Well Solid Bronze (Imp USA) <em>(Stryder)</em>', bree], '', '');//frosty
+  havoc = createDog('Havoc', 'Ch ', 'Tamsam Cry Havoc', '<a href="https://www.foxterrier.co.nz/havoc">Ch Tamsam Cry Havoc <em>(Havoc)</em></a>', 'Tan & White', 2000, 'January', 28, 'Male', [bis, vintage, pastChampion], suePat, suePat, cosmoLinkName, 'Ch Tamatea Etched In Bronze', null, true, null, [shylo, bree, 'Ch Tamsam New Kid In Town'], null, [cosmoLinkName, 'Ch Tamatea Etched In Bronze', 'Ch Secret Weapon Of Scanden', flame, 'Rama Rule The Pass (Imp Aust)', jade ], '', '');//havoc
   /*jade = createDog('Jade', 'Ch ', 'Tamatea Wild as The Wind', '<a href="https://www.foxterrier.co.nz/jade">Ch Tamatea Wild as The Wind <em>(Jade)</em></a>', 'Tan & White', new Date(), 'Female', tags, breeder, owner, sire, dam, awards, bestInShow, specialMention, progeny, siblings, pedigree, '', '');//jade
   jaffa = createDog('Jaffa', 'Ch ', 'Tamsam Glamour Puss', '<a href="https://www.foxterrier.co.nz/jade">Ch Tamatea Wild as The Wind <em>(Jade)</em></a>', 'Tan & White', new Date(), 'Female', [champion], breeder, owner, sire, dam, awards, bestInShow, specialMention, progeny, siblings, pedigree, '', '');//jaffa
   jazz = createDog('Jazz', 'Ch ', 'Tamatea Jazz-Ma-Tazz', '<a href="https://www.foxterrier.co.nz/jazz">ChTamatea Jazz-Ma-Tazz <em>(Jazz)</em></a>', 'Black & White', new Date('1992-5-26'), 'Male', [vintage, past-champion], pat, pat, 'NZ Aust Ch All Talk Of Trehunsey (Tonto)', 'NZ Ch Grenpark Our Pick (Nyssa)', null, false, 'Brother and arch enemy of Kruger', null, 'Tamatea Classic Kruger', ['NZ Aust Ch All Talk Of Trehunsey (Tonto)', 'NZ Ch Grenpark Our Pick (Nyssa)', 'Ch Tamatea Desert Gold', 'Ch Tamatea The Enchantress', 'Aust Ch Grenpark Wiseman', 'Aust Ch Grenpark Fairpick'], '', '');//jazz
@@ -107,7 +107,7 @@ function createDog(petName, title, pedigreeName, linkName, colour, dateYear, dat
   tyler = createDog('Tyler', 'Ch ', 'Tamsam An Addictive Habit', '<a href="https://www.foxterrier.co.nz/tyler">Ch Tamsam An Addictive Habit <em>(Tyler)</em></a>', 'Tan & White', new Date(), 'Male', tags, breeder, owner, sire, dam, awards, bestInShow, specialMention, progeny, siblings, pedigree, '', '');//tyler
   */
   const tamsam = {
-    dogs: [alaska, benji, boris, bree, coco, codie, cosmo, cruz, dash, demi, eden, flame, frosty, havoc,/*jade, jaffa, jazz, kona, kruger, luca, memphis, mint, misty, piper, raven, shiraz, shylo, texas, tia, tussock, tyler*/ ],
+    dogs: [alaska, benji, boris, bree, coco, codie, cosmo, cruz, dash, demi, eden, flame, frosty, havoc/*, jade, jaffa, jazz, kona, kruger, luca, memphis, mint, misty, piper, raven, shiraz, shylo, texas, tia, tussock, tyler*/ ],
   
     showResults: [],
   

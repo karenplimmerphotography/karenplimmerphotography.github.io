@@ -24,7 +24,8 @@ html {
 body {
     color: #222;
     background-color: #fff;
-    font-family: Raleway, sans-serif;
+    font-family: Nunito, sans-serif;
+    font-weight: 300;
     line-height: 1.5;
 }
 
@@ -44,11 +45,15 @@ article {
 
 .vw1600 {
     width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
     padding: 2rem;
 }
 
 .vw1200 {
     width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
     padding: 2rem;
 }
 
@@ -74,6 +79,7 @@ h3,
 .h1,
 .h2,
 .h3 {
+    font-family: "Noto Sans Display", sans-serif;
     padding-bottom: 1rem;
 }
 
@@ -83,6 +89,7 @@ h6,
 .h4,
 .h5,
 .h6 {
+    font-family: "Noto Sans Display", sans-serif;
     padding-bottom: 0.5rem;
 }
 
@@ -146,18 +153,18 @@ p:last-child {
 /*links*/
 
 a {
-    color: #929292;
+    color: hsl(31, 75%, 50%);
     text-decoration: none;
     transition: all 400ms ease-in-out;
 }
 
-a:hover,
-a:active {
-    color: #bababa;
+a:visited {
+    color: hsl(235, 97%, 7%);
 }
 
-a:visited {
-    color: #6c6c6c
+a:hover,
+a:active {
+    color: hsl(212, 58%, 67%);
 }
 
 /*lists*/
@@ -186,8 +193,8 @@ ul li ul li {
 
 button {
     color: #fff;
-    background-color: #6c6c6c;
-    font-family: Raleway, sans-serif;
+    background-color: hsl(20, 57%, 45%);
+    font-family: Nunito, sans-serif;
     font-size: 0.9rem;
     width: 10rem;
     padding: 1.2rem;
@@ -199,6 +206,11 @@ button {
 
 button:active {
     padding: 1.35rem;
+}
+
+button:hover {
+    color: #fff;
+    background-color: hsl(20, 73%, 28%);
 }
 
 button.small-button {
@@ -227,7 +239,7 @@ button.long-button:active {
     grid-template-columns: repeat(3, 1fr);
     column-gap: 1rem;
     justify-content: space-between;
-    background-color: #ddd;
+    background-color: hsl(0, 0%, 97%);
     border-radius: 0.5rem;
     padding-top: 2rem;
     border-bottom-left-radius: 0;
@@ -236,6 +248,7 @@ button.long-button:active {
 }
 
 .tabs button {
+    background-color: hsl(20, 57%, 45%);
     margin: 0;
     padding-top: 1rem;
     padding-bottom: 1rem;
@@ -278,7 +291,7 @@ header nav li {
 }
 
 header nav a {
-    color: #929292;
+    color: hsl(31, 75%, 50%);
     font-size: 0.9rem;
     text-transform: uppercase;
     line-height: 2;
@@ -286,12 +299,12 @@ header nav a {
 }
 
 header nav a:visited {
-    color: #6c6c6c;
+    color: hsl(235, 97%, 7%);
 }
 
 header nav a:hover,
 header nav a:focus {
-    color: #bababa;
+    color: hsl(212, 58%, 67%);
     font-weight: bold;
 }
 
@@ -326,7 +339,7 @@ header nav a:focus {
     height: 100vh;
     width: 0;
     opacity: 0;
-    background-color: #929292;
+    background-color: hsl(212, 58%, 67%);
     border-right: 1px solid#fff;
     overflow-x: hidden;
     transition: all 1000ms ease-in-out;
@@ -336,7 +349,7 @@ header nav a:focus {
     position: relative;
     top: 100px;
     padding: 1rem 3rem;
-    color: #444;
+    color: hsl(31, 75%, 50%);
     text-transform: uppercase;
     display: block;
     width: 100%;
@@ -344,12 +357,12 @@ header nav a:focus {
 }
 
 .sidenav a:visited {
-    color: #bababa;
+    color: hsl(20, 57%, 45%);
 }
 
 .sidenav a:hover {
-    color: #ddd;
-    background-color: #6c6c6c;
+    color: hsl(210, 33%, 80%);
+    background-color: hsl(31, 26%, 54%);
 }
 
 #mobile-menu-open {
@@ -376,7 +389,7 @@ span#line1,
 span#line2,
 span#line3 {
     position: relative;
-    color: #444;
+    color: hsl(212, 58%, 67%);
     background-color: transparent;
     display: inline-block;
     font-size: 50px;
@@ -394,7 +407,7 @@ span#line3 {
 }
 
 span#hamburger:hover {
-    color: #6c6c6c;
+    color: hsl(20, 57%, 45%);
 }
 
 /*large screens hide mobile menu*/
@@ -417,7 +430,7 @@ span#hamburger:hover {
 /*footer*/
 
 footer nav {
-    background-color: #929292;
+    background-color: hsl(235, 97%, 7%);
     padding: 2rem 0;
 }
 
@@ -429,26 +442,22 @@ footer nav li {
 }
 
 footer nav a {
-    color: #444;
+    color: hsl(31, 75%, 50%);
     font-size: 0.9rem;
     text-transform: uppercase;
     letter-spacing: 0.08rem;
     transition: color 300ms ease-in-out, font-weight 300ms ease-in-out;
 }
 
-footer nav li:hover,
-footer nav li:focus {
-    background-color: #bbb;
-}
-
 footer nav li a:visited {
-    color: #ddd;
+    color: hsl(20, 57%, 45%);
     font-weight: 700;
 }
 
-footer nav li a:hover,
-footer nav li a:focus {
-    color: #bababa;
+footer nav li:hover,
+footer nav li:focus {
+    background-color:hsl(20, 57%, 45%);
+    color: hsl(210, 33%, 80%);
     font-weight: 700;
 }
 
@@ -614,10 +623,9 @@ footer p>span {
 #breed-standard-page header,
 #exports-page header,
 #my-404-page header,
-#category-page header,
-#bis-page header,
+#our-dogs-page header,
 .page-header {
-    background-color: rgb(19, 12, 0);
+    background-color: hsl(235, 97%, 7%);
     text-align: center;
     padding: 4rem 0;
 }
@@ -636,7 +644,7 @@ footer p>span {
 .title {
     text-align: center;
     color: #fff;
-    background-color: rgb(19, 12, 0);
+    background-color: hsl(235, 97%, 7%);
     font-size: 2.5rem;
     text-transform: uppercase;
     letter-spacing: 0.2rem;
@@ -647,8 +655,8 @@ footer p>span {
 #subtitle,
 .subtitle {
     text-align: center;
-    color: hsl(33, 54%, 50%);
-    background-color: rgb(19, 12, 0);
+    color: hsl(31, 75%, 50%);
+    background-color: hsl(235, 97%, 7%);
     font-style: italic;
     font-size: 3rem;
 }
@@ -1557,7 +1565,67 @@ header #subtitle {
 
 
 
+/*Nav-OXY-Pro-----------------------------------------------------------------------------------------------------------------------------------------------*/
+#-pro-menu-1-79.oxy-pro-menu {
+    background-color: hsl(212, 58%, 67%);
+  } 
+  
+  .oxy-pro-menu-off-canvas-container {
+    align-items: start;
+    justify-content: start;
+    padding-top: 80px;
+    }
+      
+  .oxy-pro-menu-container > div:first-child {
+    margin-top:60px;
+    }
+  
+  #-pro-menu-1-79 .oxy-pro-menu-mobile-close-icon {
+    position: fixed;
+    top: 60px;
+    left: 10px;
+  }
+      
+  #-pro-menu-1-79 .oxy-pro-menu-mobile-open-icon {
+     position: fixed;
+     top: 60px;
+     left:10px;
+    }
+  
+  #-pro-menu-1-79 ul li a, 
+  #-pro-menu-1-79 ul.sub-menu li a {
+    color: hsl(31, 75%, 50%);
+  }
+  
+  #-pro-menu-1-79 ul li a:visited, 
+  #-pro-menu-1-79 ul.sub-menu li a:visited {
+    color: hsl(20, 57%, 45%);
+  }
 
+  #-pro-menu-1-79 ul li a:hover, 
+  #-pro-menu-1-79 ul.sub-menu li a:hover {
+    color: hsl(210, 33%, 80%);
+  }
+  
+  
+  @media only screen and (max-width: 767px) {
+  #-pro-menu-1-79.oxy-pro-menu {
+    background-color: transparent;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 10px;
+    margin-top: 0px;
+    }
+  div#div_block-3-98.ct-div-block {
+      display: none;
+  }
+  .oxy-pro-menu-container {
+      display: none;
+  }
+    #-pro-menu-1-79 .oxy-pro-menu-list .menu-item a {
+      padding-right:5px;
+  }
+  }
 
 
 
@@ -1566,13 +1634,13 @@ header #subtitle {
 /*Tamsam Home Page*/
 
 #tamsam-home-page {
-    background-color: rgb(19, 12, 0);
+    background-color: hsl(235, 97%, 7%);
     margin-bottom: 0;
     padding-top: 1rem;
 }
 
 #page-controls {
-    background-color: rgb(19, 12, 0);
+    background-color: hsl(235, 97%, 7%);
     margin: 2rem 4rem 0 4rem;
 }
 
@@ -1586,7 +1654,7 @@ header #subtitle {
 }
 
 #page-subheader-buttons {
-    background-color: rgb(19, 12, 0);
+    background-color: hsl(235, 97%, 7%);
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -1595,7 +1663,7 @@ header #subtitle {
 
 #all-page-buttons {
     /*group of buttons to show or hide*/
-    background-color: rgb(19, 12, 0);
+    background-color: hsl(235, 97%, 7%);
     display: none;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -1608,21 +1676,10 @@ header #subtitle {
     margin-bottom: 0;
 }
 
-#home-page-header .subtitle {
-    font-family: "Nothing You Could Do";
-    padding-bottom: 0;
-}
-
-#tamsam-home-page p,
-#tamsam-home-page li {
-    font-family: "Source Sans Pro", sans-serif;
-    font-weight: 300;
-}
-
 /*Hero Image*/
 
 #tamsam-hero-image {
-    background-color: rgb(19, 12, 0);
+    background-color: hsl(235, 97%, 7%);
     text-align: center;
     width: 100%;
     padding-bottom: 3rem;
@@ -1638,7 +1695,7 @@ header #subtitle {
 }
 
 #tamsam-hero-image h3 {
-    color: hsl(33, 74%, 50%);
+    color: hsl(31, 75%, 50%);
     /*decreased saturation 10%*/
 }
 
@@ -1651,7 +1708,7 @@ header #subtitle {
 
 /*grid nav info*/
 #tamsam-nav-info-article-container {
-    background-color: rgb(19, 12, 0);
+    background-color: hsl(235, 97%, 7%);
     padding-bottom: 8rem;
     margin-bottom: 0;
 }
@@ -1677,7 +1734,7 @@ header #subtitle {
 
 #tamsam-nav-info h4 {
     /*decreased saturation 20% on white*/
-    color: hsl(33, 54%, 50%);
+    color: hsl(31, 75%, 50%);
 }
 
 #tamsam-nav-info ul {
@@ -1689,7 +1746,7 @@ header #subtitle {
     max-width: 1200px;
     margin: 0 auto;
     background-color: #fff;
-    box-shadow: 1px 1px 5px rgb(200, 200, 200);
+    box-shadow: 1px 1px 5px hsl(0, 0%, 78%);
     padding: 1rem;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -1752,24 +1809,23 @@ header #subtitle {
 }
 
 #tamsam-footer-home-page {
-    background-color: rgb(19, 12, 0);
+    background-color: hsl(235, 97%, 7%);
     margin-bottom: 0;
 }
 
 #feature-header {
     text-align: center;
-    background-color: hsl(187, 35%, 50%);
+    background-color: hsl(212, 58%, 67%);
     padding: 4rem 1rem 10rem 1rem;
 }
 
 #feature-header .subtitle {
     color: #fff;
-    background-color: hsl(187, 35%, 50%);
-    font-family: "Nothing You Could Do";
+    background-color: hsl(212, 58%, 67%);
 }
 
 #feature-header .title {
-    background-color: hsl(187, 35%, 50%);
+    background-color: hsl(212, 58%, 67%);
 }
 
 #dash-and-coco-grid {
@@ -1779,7 +1835,7 @@ header #subtitle {
     gap: 2rem 4rem;
     justify-items: center;
     align-items: center;
-    background-color: rgb(19, 12, 0);
+    background-color: hsl(235, 97%, 7%);
     padding: 0 2rem;
     margin-bottom: 0;
 }
@@ -1801,7 +1857,7 @@ header #subtitle {
 }
 
 #dash-and-coco-grid figure img {
-    box-shadow: 1px 1px 5px rgb(200, 200, 200);
+    box-shadow: 1px 1px 5px hsl(0, 0%, 78%);
     width: auto;
     height: auto;
 }
@@ -1823,7 +1879,7 @@ header #subtitle {
 
 #dash-and-coco-grid figcaption {
     text-align: center;
-    color: hsl(33, 74%, 50%);
+    color: hsl(31, 75%, 50%);
     padding: 2rem 1rem;
 }
 
@@ -1893,36 +1949,16 @@ header #subtitle {
 #exports-page header *,
 #my-404-page header,
 #my-404-page header *,
-#category-page header,
-#category-page header *,
-#bis-page header,
-#bis-page header * {
-    background-color: rgb(19, 12, 0);
+#our-dogs-page header,
+#our-dogs-page header * {
+    background-color: hsl(235, 97%, 7%);
 }
 
-#tamsam-about-page .subtitle,
-#breed-standard-page .subtitle,
-#exports-page .subtitle,
-#my-404-page .subtitle,
-#category-page .subtitle,
-#bis-page .subtitle {
-    color: hsl(33, 74%, 50%);
-}
-
-#tamsam-about-page .title,
-#breed-standard-page .title,
-#exports-page .title,
-#my-404-page .title,
-#category-page .title,
-#bis-page .title {
-    text-transform: uppercase;
-    letter-spacing: 0.2rem;
-}
 
 /*about page*/
 
 #tamsam-about-page {
-    background-color: rgb(248, 248, 248);
+    background-color: hsl(0, 0%, 97%);
     padding: 5rem 0 0 0;
     margin-bottom: 0;
 }
@@ -1991,7 +2027,7 @@ header #subtitle {
 }
 
 #together {
-    background-color: hsl(187, 35%, 50%);
+    background-color: hsl(212, 58%, 67%);
     padding: 3rem 0 6rem 0;
     margin-bottom: 0;
 }
@@ -2023,7 +2059,7 @@ header #subtitle {
 .tamsam-about-pat,
 .tamsam-about-sue {
     color: #fff;
-    background-color: hsl(187, 35%, 50%);
+    background-color: hsl(212, 58%, 67%);
     overflow: scroll;
     height: 748px;
     padding: 2rem 0 1rem 0;
@@ -2049,7 +2085,7 @@ header #subtitle {
 }
 
 #coffee {
-    background-color: hsl(184, 35%, 80%);
+    background-color: hsl(210, 33%, 80%);
     margin-bottom: 0;
 }
 
@@ -2063,7 +2099,7 @@ header #subtitle {
         "coffee1 coffeeq  coffee2";
     align-items: center;
     padding: 4rem 0 3rem 0;
-    background-color: hsl(184, 35%, 80%);
+    background-color: hsl(210, 33%, 80%);
 }
 
 .tamsam-coffee h3 {
@@ -2233,10 +2269,9 @@ header #subtitle {
 
 /* breed-standard and exports*/
 
-
 #breed-standard-page,
 #exports-page {
-    background-color: hsl(187, 35%, 50%);
+    background-color: hsl(212, 58%, 67%);
     position: relative;
     padding-bottom: 5rem;
     margin-bottom: 0;
@@ -2319,7 +2354,7 @@ header #subtitle {
     padding: 2.5rem 2.5rem 0 2.5rem;
     border: 1px solid hsl(0, 0%, 73%);
     border-bottom: none;
-    box-shadow: 1px 1px 3px hsl(0, 0%, 73%);
+    box-shadow: 1px 1px 3px hsl(0, 0%, 78%);
 }
 
 .tamsam-contact-form-container h1 {
@@ -2340,18 +2375,16 @@ header #subtitle {
 
 div.tamsam-contact-form,
 #wpforms-142 div.wpforms-container div.wpforms-container-full div.tamsam-contact-form {
-    background-color: rgb(248, 248, 248);
+    background-color: hsl(0, 0%, 97%);
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 2.5rem 5rem 2.5rem;
-    border: 1px solid hsl(0, 0%, 73%);
-    ;
-    box-shadow: 1px 1px 3px hsl(0, 0%, 73%);
+    border: 1px solid hsl(0, 0%, 78%);
+    box-shadow: 1px 1px 3px hsl(0, 0%, 78%);
     margin-bottom: 5rem;
 }
 
 @media only screen and (max-width: 767px) {
-
     div.tamsam-contact-form,
     div#wpforms-142 div.wpforms-container div.wpforms-container-full div.tamsam-contact-form {
         padding: 1.25rem;
@@ -2375,10 +2408,10 @@ label.wpforms-field-label,
 
 button#wpforms-submit-142.wpforms-submit.tamsam-contact-form-submit-button {
     font-size: 1rem;
-    background-color: hsl(187, 35%, 50%);
+    background-color: hsl(212, 58%, 67%);
     color: #fff;
     padding: 1rem 2rem;
-    border: 1px solid hsl(0, 0%, 221%);
+    border: 1px solid hsl(0, 0%, 78%);
     border-radius: 5px;
     margin-top: 5rem;
 }
@@ -2391,7 +2424,7 @@ button#wpforms-submit-142.wpforms-submit.tamsam-contact-form-submit-button {
 div#wpforms-confirmation-142.wpforms-confirmation-container-full.wpforms-confirmation-scroll {
     color: #222;
     background-color: hsl(0, 0%, 97%);
-    border: 1px solid hsl(0, 0%, 73%);
+    border: 1px solid hsl(0, 0%, 78%);
     padding: 1rem;
 }
 
@@ -2403,14 +2436,14 @@ div#wpforms-confirmation-142.wpforms-confirmation-container-full.wpforms-confirm
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 1rem 0;
-    background-color: rgb(248, 248, 248);
+    background-color: hsl(235, 97%, 7%);
+    border-bottom: 2px solid hsl(0, 0%, 93%);
     border-radius: 0.5rem;
     padding-top: 2rem;
-    padding-bottom: 0.5rem;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
-    border-bottom: 0.5rem solid#fff;
 }
+
 
 #our-dogs-tabs button {
     width: 10rem;
@@ -2421,13 +2454,14 @@ div#wpforms-confirmation-142.wpforms-confirmation-container-full.wpforms-confirm
 }
 
 #our-dogs-page {
-    background-color: rgb(19, 12, 0);
+    background-color: hsl(235, 97%, 7%);
     padding-bottom: 8rem;
     margin-bottom: 0;
 }
 
 #category-container,
 #our-dogs-container {
+    background-color: hsl(235, 97%, 7%);
     max-width: 1600px;
     display: grid;
     gap: 8rem 5rem;
@@ -2460,12 +2494,12 @@ div#wpforms-confirmation-142.wpforms-confirmation-container-full.wpforms-confirm
     padding: 2rem;
     margin: 0;
     background-color: #fff;
-    border: 2px solid rgb(248, 248, 248);
     border-radius: 5px;
     width: 100%;
 }
 
 #our-dogs-page .single-dog-container {
+    background-color: #fff;
     width: 100%;
     margin-bottom: 0;
     display: flex;
@@ -2493,7 +2527,7 @@ div#wpforms-confirmation-142.wpforms-confirmation-container-full.wpforms-confirm
 
 #our-dogs-page img {
     border-radius: 3px;
-    box-shadow: 3px 3px 5px hsl(0, 0%, 73%);
+    box-shadow: 3px 3px 5px hsl(0, 0%, 78%);
     max-width: 100%;
     height: auto;
 }
@@ -2558,7 +2592,7 @@ div#wpforms-confirmation-142.wpforms-confirmation-container-full.wpforms-confirm
 /*single dog*/
 
 .single-dog-extra-photos {
-    background-color: rgb(19, 12, 0);
+    background-color: hsl(0, 0%, 0%);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -2566,7 +2600,7 @@ div#wpforms-confirmation-142.wpforms-confirmation-container-full.wpforms-confirm
 
 .single-dog-extra-photos-multiple,
 .single-dog-extra-photos-multiple-768px {
-    background-color: rgb(19, 12, 0);
+    background-color: hsl(0, 0%, 0%);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -2596,12 +2630,18 @@ div#wpforms-confirmation-142.wpforms-confirmation-container-full.wpforms-confirm
 
 #single-dog-page,
 .single-dog-page {
-    background-color: rgb(19, 12, 0);
-    padding: 3rem 2rem;
+    background-color: hsl(20, 73%, 28%);
+    padding: 5rem 2rem 3rem 2rem;
+    margin-bottom: 0;
+}
+
+#single-dog-page-black-dog {
+    background-color: hsl(235, 97%, 7%);
+    padding: 5rem 2rem 3rem 2rem;
+    margin-bottom: 0;
 }
 
 @media only screen and (max-width: 1199px) {
-
     #single-dog-page,
     .single-dog-page {
         padding-left: 1.25rem;
@@ -2610,7 +2650,6 @@ div#wpforms-confirmation-142.wpforms-confirmation-container-full.wpforms-confirm
 }
 
 @media only screen and (max-width: 991px) {
-
     #single-dog-page,
     .single-dog-page {
         padding-left: 1rem;
@@ -2620,7 +2659,6 @@ div#wpforms-confirmation-142.wpforms-confirmation-container-full.wpforms-confirm
 }
 
 @media only screen and (max-width: 767px) {
-
     #single-dog-page,
     .single-dog-page {
         margin-top: 0;
@@ -2628,7 +2666,6 @@ div#wpforms-confirmation-142.wpforms-confirmation-container-full.wpforms-confirm
 }
 
 @media only screen and (max-width: 479px) {
-
     #single-dog-page,
     .single-dog-page {
         padding-left: 3px;
@@ -2645,9 +2682,27 @@ div#wpforms-confirmation-142.wpforms-confirmation-container-full.wpforms-confirm
 
 #single-dog-container,
 .single-dog-container {
+    background-color: hsl(20, 73%, 28%);
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
+}
+
+#single-dog-page-black-dog #single-dog-container {
+    background-color: hsl(235, 97%, 7%);
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#single-dog-container a,
+.single-dog-container a {
+    color: hsl(235, 97%, 7%);
+}
+
+#single-dog-container a:hover,
+.single-dog-container a:hover {
+    color: hsl(212, 58%, 67%);
 }
 
 .single-dog-photo-section,
@@ -2657,8 +2712,12 @@ div#wpforms-confirmation-142.wpforms-confirmation-container-full.wpforms-confirm
 .single-dog-extra-photos {
     border: 2px solid #fff;
     border-radius: 5px;
-    background-color: white;
+    background-color: #fff;
     margin-bottom: 3rem;
+}
+
+.single-dog-full-pedigree-section {
+    background-color: hsl(0, 0%, 0%);
 }
 
 .single-dog-photo-section {
@@ -2667,15 +2726,18 @@ div#wpforms-confirmation-142.wpforms-confirmation-container-full.wpforms-confirm
     padding-top: 1.25rem;
 }
 
-
 .single-dog-section-header {
-    background-color: rgb(19, 12, 0);
+    background-color: hsl(0, 0%, 0%);
     border-radius: 0.25rem;
-    padding-top: 0.5rem;
-    margin-bottom: 2rem;
-    height: 40px;
+    padding-top: 0.4rem;
+    margin-top: 0.4rem;
+    margin-bottom: 0.5rem;
     display: flex;
     align-items: center;
+}
+
+#single-dog-page-black-dog .single-dog-section-header {
+    background-color: hsl(235, 97%, 7%);
 }
 
 .single-dog-section-header h6 {
@@ -2709,6 +2771,11 @@ div.single-dog-photo-text-container {
 div.single-dog-photo-names h2 {
     padding-top: 1rem;
 }
+
+div.single-dog-photo-names h3 a {
+    color: hsl(31, 75%, 50%);
+}
+
 
 /*end photo section start main info section DOGS*/
 
@@ -2805,7 +2872,7 @@ span.single-dog-info-value {
 
     .single-dog-info-content {
         padding: 20px 10px 55px 10px;
-        background-color: rgb(19, 12, 0);
+        background-color: hsl(0, 0%, 0%);
         border-radius: 5px;
     }
 
@@ -2825,7 +2892,7 @@ span.single-dog-info-value {
 @media only screen and (max-width: 479px) {
     .single-dog-pedigree-contents {
         padding: 20px 10px 25px 10px;
-        background-color: rgb(19, 12, 0);
+        background-color: hsl(0, 0%, 0%);
         margin-block-start: 1px;
         margin-block-end: 0;
     }
@@ -2833,7 +2900,7 @@ span.single-dog-info-value {
 
 /*Full Pedigree section*/
 .single-dog-pedigree {
-    background-color: rgb(19, 12, 0);
+    background-color: hsl(0, 0%, 0%);
     border-top: 1px solid hsl(0, 0%, 97%);
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -2848,6 +2915,14 @@ span.single-dog-info-value {
         "d gd-m ggd-mm";
 }
 
+#single-dog-page-black-dog .single-dog-pedigree {
+    background-color: hsl(235, 97%, 7%);
+}
+
+#single-dog-page-black-dog .single-dog-full-pedigree-section {
+    background-color: hsl(235, 97%, 7%);
+}
+
 @media only screen and (max-width: 767px) {
     .single-dog-pedigree {
         grid-template-columns: 1fr 1fr;
@@ -2858,10 +2933,29 @@ span.single-dog-info-value {
     }
 }
 
+#single-dog-page-black-dog .single-dog-pedigree a,
+#single-dog-page .single-dog-pedigree a {
+    color: hsl(31, 75%, 50%);
+}
+
+#single-dog-page-black-dog .single-dog-pedigree a:hover,
+#single-dog-page .single-dog-pedigree a:hover {
+    color: hsl(212, 58%, 67%);
+}
+
 .pedigree-entry-container {
-    padding: 1.25rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    height: 5rem;
     border: 1px solid #222;
     color: #fff;
+    display: flex;
+    align-items: center;
+}
+
+.pedigree-entry-container p {
+    padding-bottom: 0;
+    margin-bottom: 0;
 }
 
 .single-dog-sire {
@@ -2941,14 +3035,12 @@ img.wp-image-1076 {
     max-width: 100%;
     height: auto;
 }
-
 /*Coco*/
 .single-dog-small-all-image-container img.wp-image-38 {
     padding-right: 50px;
     width: 420px;
     height: auto;
 }
-
 /*Coco*/
 .single-dog-extra-photos img.wp-image-493 {
     width: 1000px;
@@ -2957,14 +3049,12 @@ img.wp-image-1076 {
     padding-top: 5rem;
     padding-bottom: 5rem;
 }
-
 /*Flame in blue coat*/
 img.wp-image-492 {
     width: 440px;
     height: auto;
     max-width: 100%;
 }
-
 /*Flame*/
 .single-dog-extra-photos img.wp-image-117 {
     width: 768px;
@@ -2973,97 +3063,82 @@ img.wp-image-492 {
     padding-top: 5rem;
     padding-bottom: 5rem;
 }
-
 /*Frosty with leaf in mouth*/
 img.wp-image-103 {
     width: 768px;
     height: auto;
     max-width: 100%;
 }
-
 /*Frosty with pups*/
-#vintage-page img.wp-image-103 {
+#our-dogs-page img.wp-image-103 {
     width: 300px;
 }
-
 /*Frosty with pups*/
 img.wp-image-854 {
     width: 720px;
     height: auto;
     max-width: 100%;
 }
-
 /*Shiraz*/
-#category-page img.wp-image-854 {
+#our-dogs-page img.wp-image-854 {
     width: 400px;
     height: auto;
     max-width: 100%;
 }
-
 /*Shiraz*/
 img.wp-image-495 {
     width: 369px;
     height: auto;
     max-width: 100%;
 }
-
 /*Jade*/
 img.wp-image-501 {
     width: 338px;
     height: auto;
     max-width: 100%;
 }
-
 /*Jazz*/
 img.wp-image-533 {
     width: 334px;
     height: auto;
     max-width: 100%;
 }
-
 /*Piper*/
 img.wp-image-192 {
     width: 370px;
     height: auto;
     max-width: 100%;
 }
-
 /*Codie*/
 img.wp-image-497 {
     width: 300px;
     height: auto;
     max-width: 100%;
 }
-
 /*Cosmo*/
 img.wp-image-771 {
     width: 370px;
     height: auto;
     max-width: 100%;
 }
-
 /*Tussock*/
 img.wp-image-784 {
     width: 640px;
     height: auto;
     max-width: 100%;
 }
-
 /*Cruz*/
-#bis-page img.wp-image-784,
-#vip-page img.wp-image-784 {
+#our-dogs-page img.wp-image-784 {
     width: 470px;
     height: auto;
     max-width: 100%;
 }
-
 /*Cruz*/
 img.wp-image-488 {
     width: 768px;
     height: auto;
     max-width: 100%;
 }
-
 /*memphis*/
 img.wp-image-796 {
     width: 1000px;
@@ -3072,7 +3147,6 @@ img.wp-image-796 {
     padding-top: 5rem;
     padding-bottom: 5rem;
 }
-
 /*Havoc and Piper*/
 img.wp-image-798 {
     width: 243px;
@@ -3081,36 +3155,28 @@ img.wp-image-798 {
     padding-left: 1.25rem;
     padding-right: 1.25rem;
 }
-
 /*Havoc*/
 img.wp-image-799 {
     width: 321px;
     height: auto;
     max-width: 100%;
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
 }
-
 /*Havoc*/
-#vintage-page img.wp-image-799,
-#bis-page img.wp-image-799 {
+#our-dogs-page img.wp-image-799 {
     padding: 0;
 }
-
 /*Havoc*/
 img.wp-image-809 {
     width: 400px;
     height: auto;
     max-width: 100%;
 }
-
 /*Texas*/
 img.wp-image-808 {
     width: 250px;
     height: auto;
     max-width: 100%;
 }
-
 /*Texas*/
 img.wp-image-807,
 img.wp-image-855 {
@@ -3118,28 +3184,18 @@ img.wp-image-855 {
     height: auto;
     max-width: 100%;
 }
-
-/*Texas and Shylo*/
+/*Misty*/
 img.wp-image-892 {
     width: 900px;
     height: auto;
     max-width: 100%;
-    padding-bottom: 10px;
 }
-
-/*Misty*/
-#champion-page img.wp-image-892,
-#bis-page img.wp-image-892 {
-    padding-bottom: 0;
-}
-
 img.wp-image-897,
 img.wp-image-896 {
     width: 768px;
     height: auto;
     max-width: 100%;
 }
-
 /*Demi*/
 .single-dog-extra-photos-multiple img.wp-image-896,
 .single-dog-extra-photos-multiple img.wp-image-1031,
@@ -3148,7 +3204,6 @@ img.wp-image-896 {
     padding-top: 5rem;
     padding-bottom: 5rem;
 }
-
 /*Demi*/
 figcaption.demi-caption {
     text-align: center;
@@ -3156,14 +3211,12 @@ figcaption.demi-caption {
     font-size: 14px;
     font-style: italic;
 }
-
 img.wp-image-886,
 img.wp-image-119 {
     width: 768px;
     height: auto;
     max-width: 100%;
 }
-
 /*Luca*/
 img.wp-image-883,
 img.wp-image-885,
@@ -3172,28 +3225,24 @@ img.wp-image-119 {
     height: auto;
     max-width: 100%;
 }
-
 /*Luca*/
 img.wp-image-932 {
     width: 456px;
     height: auto;
     max-width: 100%;
 }
-
 /*Benji*/
 img.wp-image-923 {
     width: 518px;
     height: auto;
     max-width: 100%;
 }
-
 /*Mint*/
 img.wp-image-922 {
     width: 600px;
     height: auto;
     max-width: 100%;
 }
-
 /*Mint*/
 img.wp-image-925,
 img.wp-image-926 {
@@ -3201,14 +3250,12 @@ img.wp-image-926 {
     height: auto;
     max-width: 100%;
 }
-
 /*Mint*/
 img.wp-image-949 {
     width: 889px;
     height: auto;
     max-width: 100%;
 }
-
 /*Tyler*/
 img.wp-image-967,
 img.wp-image-38 {
@@ -3216,41 +3263,35 @@ img.wp-image-38 {
     height: auto;
     max-width: 100%;
 }
-
 /*Dash and Coco*/
 img.wp-image-72 {
     width: 600px;
     height: auto;
     max-width: 100%;
 }
-
 /*Ace/Kona*/
-#champion-page img.wp-image-72 {
+#our-dogs-page  img.wp-image-72 {
     width: 300px;
     height: auto;
     max-width: 100%;
 }
-
 /*Ace/Kona*/
 img.wp-image-997 {
     width: 450px;
     height: auto;
     max-width: 100%
 }
-
 .single-dog-extra-photos .wp-image-1036 {
     width: 768px;
     height: auto;
     max-width: 100%
 }
-
 /*Jaffa*/
 .single-dog-extra-photos .wp-image-1040 {
     width: 768px;
     height: auto;
     max-width: 100%
 }
-
 /*Misty*/
 .single-dog-extra-photos-multiple img.wp-image-1038,
 .single-dog-extra-photos-multiple img.wp-image-1039,
@@ -3259,7 +3300,6 @@ img.wp-image-997 {
     padding-top: 5rem;
     padding-bottom: 5rem;
 }
-
 /*Kona*/
 .wp-image-191 {
     width: 470px;
@@ -3267,7 +3307,6 @@ img.wp-image-997 {
     max-width: 100%;
 }
 
-/*Boris*/
 
 
 
@@ -3275,12 +3314,11 @@ img.wp-image-997 {
 
 
 
-
-
-
+#kruger {
+    margin-bottom: 0;
+}
 
 .footer-default {
-    background-color: rgb(19, 12, 0);
     color: #ddd;
     border-top: 1px solid #bbb;
     display: flex;
@@ -3289,20 +3327,17 @@ img.wp-image-997 {
     padding: 4rem 2rem;
 }
 
+.footer-default,
 .footer-default * {
-    background-color: rgb(19, 12, 0);
+    background-color: hsl(235, 97%, 7%);
+}
+
+.footer-black,
+.footer-black * {
+    background-color: hsl(0, 0%, 0%);
 }
 
 .footer-default p {
     text-align: center;
     line-height: 1;
-}
-
-.footer-default .title {
-    color: #fff;
-}
-
-.footer-default .subtitle {
-    color: hsl(33, 74%, 50%);
-    font-family: "Nothing You Could Do";
 }
